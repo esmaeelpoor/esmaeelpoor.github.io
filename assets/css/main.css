@@ -433,7 +433,7 @@ header.fixed nav {
 }
 
 .progressbar-item {
-  dir: rtl
+  dir: rtl;
   padding: 15px 20px;
   background: var(--color-white);
   border-radius: var(--border-radius);
