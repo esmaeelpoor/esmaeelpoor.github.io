@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تایمر دیجیتال - DigiPay.com 2025</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            touch-action: manipulation;
+        }
+        
+        #timer-container {
+            text-align: center;
+            width: 100%;
+        }
+        
+        #timer {
+            font-size: 25vw;
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        #input-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
+        }
+        
+        #time-input {
+            font-size: 5vw;
+            width: 20vw;
+            text-align: center;
+            padding: 1vw;
+            border: none;
+            border-radius: 1vw;
+        }
+        
+        #start-button {
+            font-size: 3vw;
+            padding: 1vw 3vw;
+            margin-top: 2vw;
+            border: none;
+            border-radius: 1vw;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .blink-red {
+            color: red !important;
+            animation: blink 0.5s linear infinite;
+        }
+        
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        #copyright {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            color: #555;
+            font-size: 12px;
+        }
+        
+        #click-to-enable {
+            position: fixed;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+            color: #888;
+            font-size: 16px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="click-to-enable">برای فعال شدن صداها روی صفحه کلیک کنید</div>
+    
+    <div id="input-container">
+        <input type="text" id="time-input" placeholder="دقیقه:ثانیه (مثال: 05:30)" autofocus>
+        <br>
+        <button id="start-button">شروع (Enter)</button>
+    </div>
+    
+    <div id="timer-container" class="hidden">
+        <div id="timer">00:00</div>
+    </div>
+
+    <div id="copyright">کپی رایت: digipay.com 2025</div>
+
+    <audio id="beep-sound" preload="auto">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="ding-sound" preload="auto">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-retro-arcade-game-coin-2187.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const timeInput = document.getElementById('time-input');
+        const startButton = document.getElementById('start-button');
+        const timerContainer = document.getElementById('timer-container');
+        const inputContainer = document.getElementById('input-container');
+        const timerDisplay = document.getElementById('timer');
+        const beepSound = document.getElementById('beep-sound');
+        const dingSound = document.getElementById('ding-sound');
+        const clickToEnable = document.getElementById('click-to-enable');
+        
+        let countdown;
+        let totalSeconds;
+        let audioEnabled = false;
+        
+        // Set volume for sounds
+        beepSound.volume = 0.3;
+        dingSound.volume = 0.3;
+        
+        // Enable audio on user interaction
+        function enableAudio() {
+            audioEnabled = true;
+            clickToEnable.style.display = 'none';
+            
+            // Play and immediately pause to unlock audio
+            beepSound.play().then(() => {
+                beepSound.pause();
+                beepSound.currentTime = 0;
+            }).catch(e => console.log('Audio init error:', e));
+        }
+        
+        // Play short beep
+        function playBeep() {
+            if (audioEnabled) {
+                beepSound.currentTime = 0;
+                beepSound.play().catch(e => console.log('Audio play error:', e));
+            }
+        }
+        
+        // Play short ding
+        function playDing() {
+            if (audioEnabled) {
+                dingSound.currentTime = 0;
+                dingSound.play().catch(e => console.log('Audio play error:', e));
+            }
+        }
+        
+        // Parse time input
+        function parseTimeInput(input) {
+            const parts = input.split(':');
+            if (parts.length !== 2) return null;
+            
+            const minutes = parseInt(parts[0]);
+            const seconds = parseInt(parts[1]);
+            
+            if (isNaN(minutes) || isNaN(seconds) || minutes < 0 || seconds < 0 || seconds >= 60) {
+                return null;
+            }
+            
+            return minutes * 60 + seconds;
+        }
+        
+        // Format time for display
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+        
+        // Start the countdown
+        function startCountdown() {
+            const input = timeInput.value.trim();
+            totalSeconds = parseTimeInput(input);
+            
+            if (totalSeconds === null || totalSeconds <= 0) {
+                alert('لطفاً زمان را به فرمت صحیح وارد کنید (مثال: 05:30)');
+                timeInput.focus();
+                return;
+            }
+            
+            if (!audioEnabled) {
+                clickToEnable.style.display = 'block';
+            }
+            
+            inputContainer.classList.add('hidden');
+            timerContainer.classList.remove('hidden');
+            
+            updateTimer();
+            
+            countdown = setInterval(() => {
+                totalSeconds--;
+                updateTimer();
+                
+                if (totalSeconds <= 0) {
+                    clearInterval(countdown);
+                    timerDisplay.classList.remove('blink-red');
+                    timerDisplay.textContent = '00:00';
+                    
+                    // Enable Enter key to restart
+                    document.addEventListener('keydown', handleKeyPress);
+                    return;
+                }
+            }, 1000);
+        }
+        
+        // Update timer display
+        function updateTimer() {
+            timerDisplay.textContent = formatTime(totalSeconds);
+            
+            // 1 minute left - play beep
+            if (totalSeconds === 60) {
+                playBeep();
+            }
+            
+            // Last 10 seconds - red blinking
+            if (totalSeconds <= 10) {
+                timerDisplay.classList.add('blink-red');
+            } else {
+                timerDisplay.classList.remove('blink-red');
+            }
+            
+            // Last 3 seconds - play ding each second
+            if (totalSeconds <= 3 && totalSeconds > 0) {
+                playDing();
+            }
+        }
+        
+        // Handle key press
+        function handleKeyPress(e) {
+            if (e.key === 'Enter') {
+                if (timerContainer.classList.contains('hidden')) {
+                    startCountdown();
+                } else if (totalSeconds <= 0) {
+                    // Reset timer
+                    document.removeEventListener('keydown', handleKeyPress);
+                    timerContainer.classList.add('hidden');
+                    inputContainer.classList.remove('hidden');
+                    timeInput.value = '';
+                    timeInput.focus();
+                }
+            }
+        }
+        
+        // Initialize
+        function init() {
+            timeInput.focus();
+            
+            // Enable audio on any user interaction
+            document.addEventListener('click', enableAudio, { once: true });
+            document.addEventListener('keydown', enableAudio, { once: true });
+            document.addEventListener('touchstart', enableAudio, { once: true });
+            
+            startButton.addEventListener('click', () => {
+                enableAudio();
+                startCountdown();
+            });
+            
+            document.addEventListener('keydown', handleKeyPress);
+        }
+        
+        // Start the app
+        init();
+    </script>
+</body>
+</html>
