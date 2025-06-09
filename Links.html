@@ -1,0 +1,169 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لینک‌های جذاب</title>
+    <style>
+        body {
+            font-family: 'Vazirmatn', Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #fff;
+        }
+        .container {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .link-card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.25);
+        }
+        .link-card a {
+            color: #ffd700;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .link-card a:hover {
+            color: #fff;
+        }
+        .link-card.empty a {
+            color: #ccc;
+            cursor: default;
+        }
+        .link-card.empty:hover {
+            transform: none;
+            box-shadow: none;
+            background: rgba(255, 255, 255, 0.15);
+        }
+        @media (max-width: 600px) {
+            .link-grid {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>لینک‌های جذاب</h1>
+        <div class="link-grid">
+            <div class="link-card">
+                <a href="https://old.aviny.com/Quran/Estekhareh/manual.aspx" target="_blank">استخاره آنلاین</a>
+            </div>
+            <div class="link-card empty">
+                <a href="#">لینک ۲</a>
+            </div>
+            <div class="link-card empty">
+                <a href="#">لینک ۳</a>
+            </div>
+            <div class="link-card empty">
+                <a href="#">لینک ۴</a>
+            </div>
+            <div class="link-card empty">
+                <a href="#">لینک ۵</a>
+            </div>
+            <div class="link-card empty">
+                <a href="#">لینک ۶</a>
+            </div>
+            <div class="link-card empty">
+                <a href="#">لینک ۷</a>
+            </div>
+            <div class="link-card empty">
+                <a href="#">لینک ۸</a>
+            </div>
+            <div class="link-card empty">
+                <a href="#">لینک ۹</a>
+            </div>
+            <div class="link-card empty">
+                <a href="https://esmaeelpoor.ir"  target="_blank">وب سایت شخصی علی اسماعیل‌پور </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.link-card.empty a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('این لینک هنوز تنظیم نشده است!');
+            });
+        });
+    </script>
+</body>
+</html>
