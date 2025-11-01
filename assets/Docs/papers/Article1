@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- ============ BASIC SEO ============ -->
+  <title>ایران در بانک صنعت: بررسی تحلیلی مدل نیروهای پنجگانهٔ پورتر مبتنی‌بر SWOT</title>
+  <meta name="description" content="تحلیل ساختار رقابتی و جایگاه ایران در صنعت بانکداری با تلفیق چارچوب نیروهای پنجگانهٔ پورتر و ماتریس SWOT.">
+  <link rel="canonical" href="https://www.esmaeelpoor.ir/papers/iran-bank-industry-porter-swot.html">
+
+  <!-- ============ GOOGLE SCHOLAR (Highwire Press) ============ -->
+  <meta name="citation_title" content="ایران در بانک صنعت: بررسی تحلیلی مدل نیروهای پنجگانهٔ پورتر مبتنی‌بر SWOT">
+  <meta name="citation_author" content="علی اسماعیل‌پور">
+  <!-- اگر هم‌نویسنده‌ای دارید، این خط را تکرار کنید -->
+  <!-- <meta name="citation_author" content="نام هم‌نویسنده"> -->
+  <meta name="citation_publication_date" content="2015/01/01"> <!-- TODO: تاریخ دقیق انتشار -->
+  <meta name="citation_language" content="fa">
+  <meta name="citation_keywords" content="بانکداری ایران, نیروهای پنجگانه پورتر, SWOT, تحلیل صنعت, رقابت‌پذیری, راهبرد">
+  <meta name="citation_pdf_url" content="https://www.esmaeelpoor.ir/papers/iran-bank-industry-porter-swot.pdf"> <!-- TODO: لینک مستقیم PDF -->
+
+  <!-- ============ OPEN GRAPH / TWITTER ============ -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ایران در بانک صنعت: بررسی تحلیلی مدل نیروهای پنجگانهٔ پورتر مبتنی‌بر SWOT">
+  <meta property="og:description" content="تحلیل ساختار رقابتی و جایگاه ایران در صنعت بانکداری با تلفیق چارچوب پورتر و ماتریس SWOT.">
+  <meta property="og:url" content="https://www.esmaeelpoor.ir/papers/iran-bank-industry-porter-swot.html">
+  <meta property="og:locale" content="fa_IR">
+  <!-- اگر تصویر شاخص دارید -->
+  <!-- <meta property="og:image" content="https://www.esmaeelpoor.ir/assets/og/iran-banking-porter-swot.jpg"> -->
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ایران در بانک صنعت: بررسی تحلیلی مدل نیروهای پنجگانهٔ پورتر مبتنی‌بر SWOT">
+  <meta name="twitter:description" content="تحلیل ساختار رقابتی و جایگاه ایران در صنعت بانکداری با تلفیق چارچوب پورتر و ماتریس SWOT.">
+
+  <!-- ============ SCHEMA.ORG JSON-LD ============ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "ایران در بانک صنعت: بررسی تحلیلی مدل نیروهای پنجگانهٔ پورتر مبتنی‌بر SWOT",
+    "name": "ایران در بانک صنعت: بررسی تحلیلی مدل نیروهای پنجگانهٔ پورتر مبتنی‌بر SWOT",
+    "inLanguage": "fa",
+    "author": [
+      { "@type": "Person", "name": "علی اسماعیل‌پور" }
+    ],
+    "datePublished": "2015-01-01",  /* TODO: تاریخ دقیق */
+    "keywords": ["بانکداری ایران","نیروهای پنجگانه پورتر","SWOT","تحلیل صنعت","رقابت‌پذیری","راهبرد"],
+    "description": "این مقاله با ترکیب چارچوب نیروهای پنجگانهٔ پورتر و ماتریس SWOT، ساختار رقابتی صنعت بانکداری ایران را بررسی می‌کند و پیامدهای راهبردی آن را برای بازیگران بازار تحلیل می‌کند.",
+    "publisher": { "@type": "Organization", "name": "Independent Publication" },
+    "url": "https://www.esmaeelpoor.ir/papers/iran-bank-industry-porter-swot.html",
+    "encoding": {
+      "@type": "MediaObject",
+      "contentUrl": "https://www.esmaeelpoor.ir/papers/iran-bank-industry-porter-swot.pdf",  /* TODO: لینک مستقیم PDF */
+      "fileFormat": "application/pdf"
+    }
+  }
+  </script>
+
+  <!-- ============ STYLES ============ -->
+  <style>
+    :root{
+      --bg:#0f172a;        /* slate-900 */
+      --card:#0b1224;      /* deep navy */
+      --muted:#94a3b8;     /* slate-400 */
+      --text:#e2e8f0;      /* slate-200 */
+      --accent:#38bdf8;    /* sky-400 */
+      --accent2:#818cf8;   /* indigo-400 */
+      --chip:#1f2a44;
+      --border: rgba(255,255,255,0.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background: radial-gradient(1200px 600px at 80% -10%, rgba(56,189,248,.18), transparent 60%), var(--bg); color:var(--text); font-family: IRANSans, Vazirmatn, "Segoe UI", Roboto, Arial, sans-serif; line-height:1.7}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{color:#7dd3fc}
+    .wrap{max-width:980px;margin:0 auto;padding:32px 20px}
+    .hero{
+      background: linear-gradient(135deg, rgba(129,140,248,.12), rgba(56,189,248,.06));
+      border:1px solid var(--border);
+      padding:28px; border-radius:20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25), inset 0 0 0 1px rgba(255,255,255,.02);
+      position:relative; overflow:hidden;
+    }
+    .hero:before{
+      content:""; position:absolute; inset:-2px; background:
+        radial-gradient(400px 200px at 20% 0%, rgba(129,140,248,.25), transparent 40%),
+        radial-gradient(300px 200px at 100% 80%, rgba(56,189,248,.18), transparent 40%);
+      z-index:0; filter: blur(10px); opacity:.8;
+    }
+    .hero > *{position:relative; z-index:1}
+    h1{margin:0 0 8px 0; font-size: clamp(24px, 4.2vw, 40px); line-height:1.35}
+    .subtitle{color:var(--muted); margin-bottom:14px}
+    .meta{display:flex; gap:12px; flex-wrap:wrap; margin:12px 0 18px 0}
+    .chip{padding:6px 10px; border-radius:999px; background:var(--chip); border:1px solid var(--border); color:#cbd5e1; font-size:14px}
+    .cta{
+      display:inline-flex; align-items:center; gap:10px;
+      background:linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#031225; font-weight:700; border-radius:999px; padding:12px 18px; border:none; cursor:pointer;
+      box-shadow: 0 8px 22px rgba(56,189,248,.35);
+    }
+    .cta svg{width:18px;height:18px}
+    .grid{display:grid; grid-template-columns: 1.1fr .9fr; gap:24px; margin-top:26px}
+    @media (max-width:900px){ .grid{grid-template-columns:1fr} }
+    .card{
+      background: var(--card);
+      border:1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 10px 24px rgba(0,0,0,.25);
+    }
+    h2{margin:6px 0 12px 0; font-size: clamp(18px, 2.8vw, 24px)}
+    p{margin:0 0 12px 0}
+    .cite{font-family: "Courier New", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background:#0a1329; border:1px dashed var(--border); padding:16px; border-radius:12px; color:#cbd5e1}
+    .footer{margin:28px 0 12px; color:var(--muted); font-size:14px}
+    .kw{display:flex; gap:8px; flex-wrap:wrap}
+    .kw .chip{background:#0e1a36}
+    .badge{display:inline-block; padding:4px 10px; border-radius:10px; border:1px solid var(--border); color:#cbd5e1; font-size:12px; background:#0e1a36}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <h1>ایران در بانک صنعت: بررسی تحلیلی مدل نیروهای پنجگانهٔ پورتر مبتنی‌بر SWOT</h1>
+      <div class="subtitle">علی اسماعیل‌پور</div>
+      <div class="meta">
+        <span class="chip">زبان: فارسی</span>
+        <span class="chip">نوع: پیش‌چاپ / مقاله تحلیلی</span>
+        <span class="chip">موضوع: راهبرد، بانکداری، رقابت‌پذیری</span>
+      </div>
+      <a class="cta" href="https://www.esmaeelpoor.ir/papers/iran-bank-industry-porter-swot.pdf" target="_blank" rel="noopener">
+        <!-- TODO: لینک مستقیم PDF -->
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 20h14v-2H5v2zm7-18-5.5 5.5 1.42 1.42L11 6.83V16h2V6.83l3.08 3.09 1.42-1.42L12 2z"/></svg>
+        دانلود نسخه PDF
+      </a>
+    </header>
+
+    <section class="grid">
+      <article class="card">
+        <h2>چکیده</h2>
+        <p>
+          این مقاله با ترکیب چارچوب <strong>نیروهای پنجگانهٔ پورتر</strong> و ماتریس <strong>SWOT</strong>، ساختار رقابتی صنعت بانکداری ایران را واکاوی
+          می‌کند. ابتدا شدت رقابت، تهدید ورود تازه‌واردان، قدرت چانه‌زنی مشتریان و تأمین‌کنندگان، و تهدید کالاها/خدمات جایگزین
+          بر اساس شواهد در دسترس تحلیل می‌شود؛ سپس با استخراج قوت‌ها و ضعف‌های درون‌زا و فرصت‌ها و تهدیدهای برون‌زا،
+          پیامدهای راهبردی برای سیاست‌گذاران و بانک‌ها جمع‌بندی می‌گردد.
+        </p>
+
+        <h2>کلیدواژه‌ها</h2>
+        <div class="kw">
+          <span class="chip">بانکداری ایران</span>
+          <span class="chip">نیروهای پنجگانهٔ پورتر</span>
+          <span class="chip">SWOT</span>
+          <span class="chip">تحلیل صنعت</span>
+          <span class="chip">راهبرد رقابتی</span>
+        </div>
+
+        <h2>ارجاع پیشنهادی (APA)</h2>
+        <div class="cite">
+          اسماعیل‌پور، ع. (2015). ایران در بانک صنعت: بررسی تحلیلی مدل نیروهای پنجگانهٔ پورتر مبتنی‌بر SWOT. نسخهٔ پیش‌چاپ. بازیابی از: https://www.esmaeelpoor.ir/papers/iran-bank-industry-porter-swot.html
+          <!-- TODO: تاریخ و سال را دقیق کنید -->
+        </div>
+
+        <h2>Suggested citation (APA, English)</h2>
+        <div class="cite" dir="ltr">
+          Esmaeelpoor, A. (2015). Iran in the Banking Industry: An analytical study of Porter’s Five Forces based on SWOT. Preprint. Retrieved from https://www.esmaeelpoor.ir/papers/iran-bank-industry-porter-swot.html
+          <!-- TODO: year/date -->
+        </div>
+      </article>
+
+      <aside class="card">
+        <h2>جزئیات نشر</h2>
+        <p><span class="badge">نویسنده</span> علی اسماعیل‌پور</p>
+        <!-- اگر هم‌نویسنده دارید، اینجا اضافه کنید -->
+        <!-- <p><span class="badge">هم‌نویسنده</span> ...</p> -->
+        <p><span class="badge">وضعیت</span> پیش‌چاپ (نسخهٔ آزاد دسترسی)</p>
+        <p><span class="badge">فایل</span> <a href="https://www.esmaeelpoor.ir/papers/iran-bank-industry-porter-swot.pdf" target="_blank" rel="noopener">PDF کامل</a></p>
+        <p class="footer">برای نمایه‌شدن در گوگل اسکالر، این صفحه باید به‌طور عمومی در دسترس باشد و لینک مستقیم PDF در آن موجود باشد.</p>
+      </aside>
+    </section>
+
+    <footer class="footer">
+      © <span id="y"></span> علی اسماعیل‌پور — این نسخه برای ایندکس در Google Scholar بهینه شده است.
+    </footer>
+  </div>
+
+  <script>
+    // سال جاری در فوتر
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
