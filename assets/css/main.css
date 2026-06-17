@@ -1291,6 +1291,6 @@ body.darkmode a.btn-default {
 
 .project-item .project-content .btn-view {
   margin-top: auto;
-  align-self: flex-start;
+  align-self: flex-end;
 }
 /* css end */
