@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sabz.org — Premium Domain Available</title>
+  <meta name="description" content="Sabz.org is a rare four-letter .ORG domain meaning green in Persian. Available for acquisition." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg: #07120d;
+  --bg-soft: #0d1d14;
+  --text: #f2fff6;
+  --muted: #a9bcae;
+  --green: #61e294;
+  --green-2: #b7ff7a;
+  --line: rgba(255,255,255,.12);
+  --glass: rgba(255,255,255,.07);
+  --shadow: 0 30px 90px rgba(0,0,0,.42);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(97,226,148,.24), transparent 32%),
+    radial-gradient(circle at 85% 20%, rgba(183,255,122,.18), transparent 28%),
+    linear-gradient(180deg, #06110b 0%, #09140f 50%, #040806 100%);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .15;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px clamp(20px, 5vw, 72px);
+  backdrop-filter: blur(18px);
+  background: rgba(4, 12, 8, .62);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: -.03em;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--green), var(--green-2));
+  color: #04200d;
+  box-shadow: 0 12px 30px rgba(97,226,148,.25);
+}
+
+.nav {
+  display: flex;
+  gap: 26px;
+}
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.nav a:hover { color: var(--text); }
+
+.hero {
+  min-height: 86vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(330px, .85fr);
+  gap: clamp(28px, 5vw, 76px);
+  align-items: center;
+  padding: clamp(54px, 7vw, 110px) clamp(20px, 5vw, 72px);
+}
+
+.hero-content { max-width: 850px; }
+.eyebrow, .kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--green-2);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-weight: 800;
+}
+.pulse {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 0 rgba(97,226,148,.65);
+  animation: pulse 1.9s infinite;
+}
+@keyframes pulse {
+  70% { box-shadow: 0 0 0 14px rgba(97,226,148,0); }
+  100% { box-shadow: 0 0 0 0 rgba(97,226,148,0); }
+}
+
+h1 {
+  margin: 18px 0 10px;
+  font-size: clamp(72px, 13vw, 176px);
+  line-height: .88;
+  letter-spacing: -.09em;
+  background: linear-gradient(120deg, #ffffff 5%, #b7ff7a 50%, #61e294 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.meaning {
+  margin: 0 0 20px;
+  font-size: clamp(22px, 3vw, 38px);
+  line-height: 1.16;
+  letter-spacing: -.04em;
+  max-width: 760px;
+}
+.lead {
+  color: var(--muted);
+  font-size: clamp(17px, 1.7vw, 21px);
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 34px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  font-family: inherit;
+  font-size: 15px;
+}
+.btn:hover { transform: translateY(-2px); }
+.primary {
+  color: #052411;
+  background: linear-gradient(135deg, var(--green), var(--green-2));
+  box-shadow: 0 18px 40px rgba(97,226,148,.25);
+}
+.secondary {
+  color: var(--text);
+  background: rgba(255,255,255,.08);
+  border: 1px solid var(--line);
+}
+
+.trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+.trust-row span, .tags span {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.055);
+  color: var(--muted);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.domain-card {
+  border: 1px solid var(--line);
+  border-radius: 34px;
+  background: linear-gradient(180deg, rgba(255,255,255,.11), rgba(255,255,255,.045));
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transform: rotate(2deg);
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  50% { transform: rotate(1deg) translateY(-10px); }
+}
+.card-top {
+  display: flex;
+  gap: 8px;
+  padding: 18px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,.05);
+}
+.dot { width: 11px; height: 11px; border-radius: 50%; background: rgba(255,255,255,.35); }
+.card-body { padding: 32px; }
+.label { color: var(--muted); font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .14em; }
+.domain-name {
+  margin: 12px 0 20px;
+  font-size: clamp(38px, 5vw, 66px);
+  font-weight: 900;
+  letter-spacing: -.06em;
+}
+.translation {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--green-2);
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+.arrow { color: var(--muted); }
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.mini-grid div {
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(0,0,0,.2);
+  border: 1px solid var(--line);
+}
+.mini-grid strong { display: block; }
+.mini-grid small { color: var(--muted); }
+
+.section {
+  padding: clamp(58px, 7vw, 100px) clamp(20px, 5vw, 72px);
+}
+.section-heading {
+  max-width: 780px;
+  margin-bottom: 34px;
+}
+h2 {
+  margin: 12px 0 16px;
+  font-size: clamp(36px, 5vw, 72px);
+  line-height: 1;
+  letter-spacing: -.06em;
+}
+.section p, .split p, .inquiry-card p {
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 17px;
+}
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.feature, .quote-card, .inquiry-card {
+  border: 1px solid var(--line);
+  background: var(--glass);
+  border-radius: 30px;
+  box-shadow: 0 24px 70px rgba(0,0,0,.18);
+}
+.feature { padding: 28px; }
+.icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 17px;
+  background: rgba(97,226,148,.13);
+  color: var(--green-2);
+  font-weight: 900;
+  margin-bottom: 22px;
+}
+.feature h3 { margin: 0 0 10px; font-size: 22px; letter-spacing: -.03em; }
+.feature p { font-size: 15px; margin: 0; }
+
+.split {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 50px;
+  align-items: center;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.tags span { color: var(--text); }
+
+.quote-card {
+  padding: clamp(28px, 5vw, 60px);
+  background:
+    linear-gradient(135deg, rgba(97,226,148,.18), rgba(255,255,255,.05)),
+    rgba(255,255,255,.06);
+}
+.quote-card p {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 56px);
+  line-height: 1.12;
+  letter-spacing: -.055em;
+  color: var(--text);
+}
+
+.inquiry-card {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 38px;
+  padding: clamp(26px, 4vw, 54px);
+}
+.inquiry-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+label {
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+input, select, textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 15px 16px;
+  background: rgba(0,0,0,.22);
+  color: var(--text);
+  outline: none;
+  font-family: inherit;
+  font-size: 15px;
+}
+input:focus, select:focus, textarea:focus { border-color: rgba(183,255,122,.6); }
+textarea { resize: vertical; }
+.full { grid-column: 1 / -1; }
+.form-note { margin: 0; font-size: 12px !important; }
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 30px clamp(20px, 5vw, 72px);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  background: rgba(0,0,0,.62);
+  backdrop-filter: blur(16px);
+}
+.modal-overlay.is-open { display: flex; }
+.modal-panel {
+  width: min(760px, 100%);
+  max-height: min(86vh, 820px);
+  overflow-y: auto;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(97,226,148,.18), transparent 36%),
+    linear-gradient(180deg, rgba(15,32,23,.98), rgba(5,13,8,.98));
+  box-shadow: 0 38px 120px rgba(0,0,0,.58);
+  padding: clamp(24px, 4vw, 42px);
+  transform: translateY(12px) scale(.98);
+  opacity: 0;
+  transition: opacity .22s ease, transform .22s ease;
+}
+.modal-overlay.is-open .modal-panel {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+.modal-head h2 {
+  margin: 6px 0 0;
+  font-size: clamp(34px, 5vw, 58px);
+}
+.modal-close {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.08);
+  color: var(--text);
+  font-size: 24px;
+  cursor: pointer;
+}
+.modal-close:hover { background: rgba(255,255,255,.14); }
+.modal-copy {
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 17px;
+}
+.modal-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 24px 0 4px;
+  padding: 0;
+  list-style: none;
+}
+.modal-list li {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255,255,255,.06);
+  padding: 15px 16px;
+  color: var(--text);
+  font-weight: 700;
+}
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+.modal-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 22px;
+}
+body.modal-locked { overflow: hidden; }
+
+@media (max-width: 640px) {
+  .modal-list, .modal-form { grid-template-columns: 1fr; }
+}
+
+
+@media (max-width: 900px) {
+  .nav { display: none; }
+  .hero, .split, .inquiry-card { grid-template-columns: 1fr; }
+  .domain-card { transform: none; animation: none; }
+  .value-grid { grid-template-columns: 1fr; }
+  .inquiry-form { grid-template-columns: 1fr; }
+  .footer { flex-direction: column; }
+}
+
+@media (max-width: 520px) {
+  .hero-actions { flex-direction: column; }
+  .btn { width: 100%; }
+  .mini-grid { grid-template-columns: 1fr; }
+}
+
+  </style>
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Sabz.org home">
+      <span class="brand-mark">S</span>
+      <span>Sabz.org</span>
+    </a>
+    <nav class="nav">
+      <a href="#" data-modal="nameModal">The Name</a>
+      <a href="#" data-modal="usesModal">Use Cases</a>
+      <a href="#" data-modal="inquireModal">Inquire</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="pulse"></span>
+          Premium domain available for acquisition
+        </div>
+        <h1>Sabz.org</h1>
+        <p class="meaning">A rare four-letter <strong>.ORG</strong> domain meaning <strong>“green”</strong> in Persian.</p>
+        <p class="lead">
+          Short, memorable, and globally pronounceable — ideal for environmental, cultural, educational,
+          nonprofit, and community-focused initiatives.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#" data-modal="inquireModal">Make an inquiry</a>
+          <a class="btn secondary" href="mailto:esmaeelpoor@gmail.com?subject=Inquiry%20about%20Sabz.org">Email owner</a>
+        </div>
+        <div class="trust-row" aria-label="Domain highlights">
+          <span>4 letters</span>
+          <span>No hyphen</span>
+          <span>No numbers</span>
+          <span>Exact word</span>
+        </div>
+      </div>
+
+      <div class="domain-card" aria-label="Premium domain card">
+        <div class="card-top">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="card-body">
+          <span class="label">Domain</span>
+          <div class="domain-name">sabz.org</div>
+          <div class="translation">
+            <span>sabz</span>
+            <span class="arrow">→</span>
+            <span>green</span>
+          </div>
+          <div class="mini-grid">
+            <div>
+              <strong>.ORG</strong>
+              <small>trust & purpose</small>
+            </div>
+            <div>
+              <strong>Persian</strong>
+              <small>real word</small>
+            </div>
+            <div>
+              <strong>Brandable</strong>
+              <small>clean spelling</small>
+            </div>
+            <div>
+              <strong>Scarce</strong>
+              <small>short asset</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="value" class="section value-section">
+      <div class="section-heading">
+        <span class="kicker">Why this name matters</span>
+        <h2>A concise identity for a meaningful mission.</h2>
+        <p>
+          “Sabz” carries a positive, natural, and culturally rich meaning. Combined with .ORG,
+          it becomes a strong fit for projects built around trust, public value, and long-term impact.
+        </p>
+      </div>
+      <div class="value-grid">
+        <article class="feature">
+          <div class="icon">✦</div>
+          <h3>Short and memorable</h3>
+          <p>Only four letters before the extension. Easy to type, say, remember, and print.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">葉</div>
+          <h3>Meaningful word</h3>
+          <p>“Sabz” means “green” in Persian — a direct, positive, and emotionally clear word.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">◌</div>
+          <h3>Perfect .ORG match</h3>
+          <p>Strong alignment with nonprofits, public-interest projects, education, culture, and ecology.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="uses" class="section use-section">
+      <div class="split">
+        <div>
+          <span class="kicker">Potential use cases</span>
+          <h2>Built for a serious global or Persian-facing project.</h2>
+          <p>
+            Sabz.org can serve as the primary identity for an initiative that needs a clean,
+            trustworthy, and mission-oriented digital home.
+          </p>
+        </div>
+        <div class="tags">
+          <span>Environmental NGO</span>
+          <span>Sustainability platform</span>
+          <span>Persian cultural project</span>
+          <span>Educational foundation</span>
+          <span>Community movement</span>
+          <span>Climate campaign</span>
+          <span>Green media</span>
+          <span>Public-interest research</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section proof-section">
+      <div class="quote-card">
+        <p>
+          “A premium domain is not just an address. It is the shortest possible way to say what a project stands for.”
+        </p>
+      </div>
+    </section>
+
+    <section id="inquire" class="section inquiry-section">
+      <div class="inquiry-card">
+        <div>
+          <span class="kicker">Acquisition inquiry</span>
+          <h2>Serious offers are welcome.</h2>
+          <p>
+            To discuss acquisition, send a brief note including your name, organization,
+            intended use, and offer range. Secure transfer can be arranged through a trusted escrow or marketplace.
+          </p>
+        </div>
+
+        <form class="inquiry-form" id="inquiryForm">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Organization / Project
+            <input type="text" name="organization" placeholder="Company, nonprofit, or project" />
+          </label>
+          <label>
+            Offer range
+            <select name="offer">
+              <option value="">Select a range</option>
+              <option>$10,000–$25,000</option>
+              <option>$25,000–$50,000</option>
+              <option>$50,000–$100,000</option>
+              <option>$100,000+</option>
+            </select>
+          </label>
+          <label class="full">
+            Message
+            <textarea name="message" rows="4" placeholder="Tell us about your interest in Sabz.org"></textarea>
+          </label>
+          <button class="btn primary full" type="submit">Prepare email inquiry</button>
+          <p class="form-note">This form opens your email app. No data is stored on this page.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+
+
+  <div class="modal-overlay" id="nameModal" role="dialog" aria-modal="true" aria-labelledby="nameModalTitle">
+    <div class="modal-panel">
+      <div class="modal-head">
+        <div>
+          <span class="kicker">The Name</span>
+          <h2 id="nameModalTitle">Sabz means “green”.</h2>
+        </div>
+        <button class="modal-close" type="button" aria-label="Close window">×</button>
+      </div>
+      <p class="modal-copy">
+        Sabz is a short Persian word with a clear, positive meaning: green. It carries associations with nature,
+        renewal, growth, culture, and public value. Combined with .ORG, it becomes a strong identity for a serious
+        mission-driven project.
+      </p>
+      <ul class="modal-list">
+        <li>4-letter domain</li>
+        <li>Persian real word</li>
+        <li>No hyphen or numbers</li>
+        <li>Clean global spelling</li>
+      </ul>
+      <div class="modal-actions">
+        <a class="btn primary" href="#" data-modal="inquireModal">Make an inquiry</a>
+        <a class="btn secondary" href="mailto:esmaeelpoor@gmail.com?subject=Inquiry%20about%20Sabz.org">Email owner</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="usesModal" role="dialog" aria-modal="true" aria-labelledby="usesModalTitle">
+    <div class="modal-panel">
+      <div class="modal-head">
+        <div>
+          <span class="kicker">Use Cases</span>
+          <h2 id="usesModalTitle">Ideal for purpose-led brands.</h2>
+        </div>
+        <button class="modal-close" type="button" aria-label="Close window">×</button>
+      </div>
+      <p class="modal-copy">
+        Sabz.org is especially suitable for organizations and projects that need trust, clarity, and a memorable
+        public-facing identity — particularly across Persian-speaking, environmental, cultural, educational, and
+        global nonprofit contexts.
+      </p>
+      <ul class="modal-list">
+        <li>Environmental NGO</li>
+        <li>Sustainability platform</li>
+        <li>Persian cultural project</li>
+        <li>Educational foundation</li>
+        <li>Climate campaign</li>
+        <li>Green media</li>
+        <li>Organic agriculture</li>
+        <li>Community movement</li>
+      </ul>
+      <div class="modal-actions">
+        <a class="btn primary" href="#" data-modal="inquireModal">Discuss acquisition</a>
+        <a class="btn secondary" href="#inquire">View full form</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="inquireModal" role="dialog" aria-modal="true" aria-labelledby="inquireModalTitle">
+    <div class="modal-panel">
+      <div class="modal-head">
+        <div>
+          <span class="kicker">Acquisition Inquiry</span>
+          <h2 id="inquireModalTitle">Make an inquiry.</h2>
+        </div>
+        <button class="modal-close" type="button" aria-label="Close window">×</button>
+      </div>
+      <p class="modal-copy">
+        Send a brief note with your name, organization, intended use, and offer range. The transfer can be handled
+        securely through escrow or a trusted domain marketplace.
+      </p>
+      <form class="modal-form" id="modalInquiryForm">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@example.com" required />
+        </label>
+        <label>
+          Organization / Project
+          <input type="text" name="organization" placeholder="Company, nonprofit, or project" />
+        </label>
+        <label>
+          Offer range
+          <select name="offer">
+            <option value="">Select a range</option>
+            <option>$10,000–$25,000</option>
+            <option>$25,000–$50,000</option>
+            <option>$50,000–$100,000</option>
+            <option>$100,000+</option>
+          </select>
+        </label>
+        <label class="full">
+          Message
+          <textarea name="message" rows="4" placeholder="Tell us about your interest in Sabz.org"></textarea>
+        </label>
+        <button class="btn primary full" type="submit">Prepare email inquiry</button>
+        <p class="form-note full">This form opens your email app. No data is stored on this page.</p>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Sabz.org</span>
+    <span>Premium domain available for acquisition</span>
+  </footer>
+
+  <script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const form = document.getElementById('inquiryForm');
+
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+  prepareInquiryEmail(form);
+});
+
+
+
+const modalTriggers = document.querySelectorAll('[data-modal]');
+const modalOverlays = document.querySelectorAll('.modal-overlay');
+let lastFocusedElement = null;
+
+function openModal(id) {
+  const modal = document.getElementById(id);
+  if (!modal) return;
+  closeAllModals();
+  lastFocusedElement = document.activeElement;
+  modal.classList.add('is-open');
+  document.body.classList.add('modal-locked');
+  const firstInput = modal.querySelector('input, select, textarea, button, a');
+  if (firstInput) firstInput.focus({ preventScroll: true });
+}
+
+function closeAllModals() {
+  modalOverlays.forEach((modal) => modal.classList.remove('is-open'));
+  document.body.classList.remove('modal-locked');
+  if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+    lastFocusedElement.focus({ preventScroll: true });
+  }
+}
+
+modalTriggers.forEach((trigger) => {
+  trigger.addEventListener('click', (event) => {
+    event.preventDefault();
+    openModal(trigger.getAttribute('data-modal'));
+  });
+});
+
+modalOverlays.forEach((overlay) => {
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay || event.target.classList.contains('modal-close')) {
+      closeAllModals();
+    }
+  });
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeAllModals();
+});
+
+function prepareInquiryEmail(sourceForm) {
+  const data = new FormData(sourceForm);
+  const name = data.get('name') || '';
+  const email = data.get('email') || '';
+  const organization = data.get('organization') || '';
+  const offer = data.get('offer') || '';
+  const message = data.get('message') || '';
+
+  const subject = 'Inquiry about Sabz.org';
+  const body = `Hello,\n\nI am interested in acquiring Sabz.org.\n\nName: ${name}\nEmail: ${email}\nOrganization / Project: ${organization}\nOffer range: ${offer}\n\nMessage:\n${message}\n\nBest regards,\n${name}`;
+
+  const ownerEmail = 'esmaeelpoor@gmail.com';
+  window.location.href = `mailto:${ownerEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+const modalForm = document.getElementById('modalInquiryForm');
+if (modalForm) {
+  modalForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    prepareInquiryEmail(modalForm);
+  });
+}
+
+const revealItems = document.querySelectorAll('.feature, .quote-card, .inquiry-card, .domain-card');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+revealItems.forEach((item) => {
+  item.style.opacity = '0';
+  item.style.transform += ' translateY(14px)';
+  item.style.transition = 'opacity .7s ease, transform .7s ease';
+  observer.observe(item);
+});
+
+const style = document.createElement('style');
+style.textContent = `.is-visible { opacity: 1 !important; transform: translateY(0) !important; }`;
+document.head.appendChild(style);
+
+  </script>
+  <!-- Cloudflare Web Analytics -->
+  <!-- Replace PASTE_CLOUDFLARE_WEB_ANALYTICS_TOKEN_HERE with the token from Cloudflare Web Analytics > Manage site. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"PASTE_CLOUDFLARE_WEB_ANALYTICS_TOKEN_HERE"}'></script>
+
+</body>
+</html>
