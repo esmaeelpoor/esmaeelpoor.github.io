@@ -1,0 +1,1130 @@
+
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دامنه‌های منتخب برای فروش | Domain Portfolio</title>
+  <style>
+    :root {
+      --bg: #090b14;
+      --bg-2: #101525;
+      --card: rgba(255, 255, 255, 0.075);
+      --card-strong: rgba(255, 255, 255, 0.12);
+      --text: #f7f7fb;
+      --muted: #aeb7c8;
+      --line: rgba(255, 255, 255, 0.13);
+      --gold: #f5c96b;
+      --green: #6ee7b7;
+      --cyan: #7dd3fc;
+      --danger: #fb7185;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+      --radius: 26px;
+      --radius-sm: 16px;
+      --font: Tahoma, Arial, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(125, 211, 252, 0.18), transparent 28%),
+        radial-gradient(circle at 88% 8%, rgba(245, 201, 107, 0.18), transparent 26%),
+        radial-gradient(circle at 70% 84%, rgba(110, 231, 183, 0.14), transparent 28%),
+        linear-gradient(135deg, var(--bg), var(--bg-2));
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.08));
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(1180px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(9, 11, 20, 0.72);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 76px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      white-space: nowrap;
+    }
+
+    .mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--gold), var(--green));
+      color: #111827;
+      box-shadow: 0 14px 34px rgba(245, 201, 107, 0.24);
+      font-weight: 1000;
+      direction: ltr;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .nav-actions a {
+      text-decoration: none;
+      border: 1px solid var(--line);
+      padding: 10px 14px;
+      border-radius: 999px;
+      transition: 0.22s ease;
+    }
+
+    .nav-actions a:hover {
+      color: var(--text);
+      border-color: rgba(255,255,255,0.32);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .hero {
+      padding: 86px 0 38px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: #0b1220;
+      background: linear-gradient(135deg, var(--green), var(--cyan));
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-size: 13px;
+      font-weight: 800;
+      box-shadow: 0 16px 44px rgba(125,211,252,0.16);
+    }
+
+    .hero h1 {
+      margin: 22px 0 16px;
+      font-size: clamp(36px, 6vw, 78px);
+      line-height: 1.08;
+      letter-spacing: -0.07em;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, #ffffff, var(--gold), var(--green));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      white-space: nowrap;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 2;
+      max-width: 690px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn,
+    button.btn {
+      border: 0;
+      cursor: pointer;
+      font-family: inherit;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      font-weight: 900;
+      color: #0b1220;
+      background: linear-gradient(135deg, var(--gold), var(--green));
+      box-shadow: 0 18px 38px rgba(110, 231, 183, 0.12);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+      min-height: 48px;
+    }
+
+    .btn:hover { transform: translateY(-2px); filter: brightness(1.04); }
+    .btn.secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid var(--line);
+      box-shadow: none;
+    }
+
+    .hero-panel {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.105), rgba(255,255,255,0.045));
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-panel::after {
+      content: "";
+      position: absolute;
+      inset: auto -60px -80px auto;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(245,201,107,0.22), transparent 68%);
+      pointer-events: none;
+    }
+
+    .domain-showcase {
+      display: grid;
+      gap: 13px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .showcase-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 17px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.065);
+      border: 1px solid rgba(255,255,255,0.105);
+    }
+
+    .showcase-item b {
+      direction: ltr;
+      display: inline-block;
+      font-size: 24px;
+      letter-spacing: -0.02em;
+    }
+
+    .showcase-item small {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #111827;
+      background: rgba(245,201,107,0.95);
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin: 16px 0 54px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 18px;
+    }
+
+    .stat strong {
+      display: block;
+      direction: ltr;
+      text-align: right;
+      font-size: 27px;
+      letter-spacing: -0.04em;
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin: 0 0 18px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(25px, 4vw, 42px);
+      letter-spacing: -0.05em;
+    }
+
+    .section-head p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    .tools {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .search {
+      min-width: min(360px, 100%);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 14px;
+    }
+
+    .search input {
+      width: 100%;
+      border: 0;
+      outline: none;
+      background: transparent;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 14px;
+      padding: 9px 0;
+    }
+
+    .search input::placeholder { color: rgba(174,183,200,0.78); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding-bottom: 74px;
+    }
+
+    .card {
+      min-height: 100%;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.095), rgba(255,255,255,0.048));
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: 0 18px 48px rgba(0,0,0,0.18);
+      transition: 0.22s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 0%, rgba(125,211,252,0.16), transparent 28%);
+      opacity: 0;
+      transition: 0.22s ease;
+      pointer-events: none;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(245,201,107,0.42);
+      background: linear-gradient(180deg, rgba(255,255,255,0.13), rgba(255,255,255,0.058));
+    }
+
+    .card:hover::before { opacity: 1; }
+
+    .card-inner { position: relative; z-index: 1; }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .domain {
+      direction: ltr;
+      text-align: left;
+      display: inline-block;
+      font-size: 31px;
+      font-weight: 1000;
+      letter-spacing: -0.04em;
+    }
+
+    .domain-link,
+    .showcase-domain-link {
+      color: inherit;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .domain-link:hover,
+    .showcase-domain-link:hover {
+      color: var(--gold);
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+
+    .pill {
+      border: 1px solid rgba(255,255,255,0.13);
+      background: rgba(255,255,255,0.07);
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .meta {
+      display: grid;
+      gap: 9px;
+      margin: 12px 0 16px;
+    }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 84px 1fr;
+      gap: 8px;
+      font-size: 13px;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .meta-row b { color: var(--text); font-weight: 800; }
+    .ltr { direction: ltr; unicode-bidi: embed; }
+
+    .value {
+      color: #d7deea;
+      line-height: 2;
+      font-size: 14px;
+      min-height: 84px;
+      margin: 0 0 18px;
+    }
+
+    .card .btn {
+      width: 100%;
+      min-height: 46px;
+      padding: 12px 16px;
+    }
+
+    .trust {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 16px;
+      margin-bottom: 34px;
+    }
+
+    .trust-box {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 22px;
+      color: var(--muted);
+      line-height: 2;
+    }
+
+    .trust-box h3 {
+      color: var(--text);
+      margin: 0 0 10px;
+      letter-spacing: -0.03em;
+    }
+
+    .trust-box ul {
+      margin: 12px 0 0;
+      padding: 0 21px 0 0;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0 36px;
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 13px;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 22px;
+      background: rgba(2, 6, 23, 0.76);
+      backdrop-filter: blur(18px);
+    }
+
+    .modal-backdrop.active { display: flex; }
+
+    .modal {
+      width: min(610px, 100%);
+      max-height: min(92vh, 760px);
+      overflow: auto;
+      border: 1px solid rgba(255,255,255,0.18);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(125,211,252,0.16), transparent 30%),
+        linear-gradient(180deg, rgba(25, 30, 47, 0.98), rgba(9, 11, 20, 0.98));
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .modal-head {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .modal h3 {
+      margin: 0 0 7px;
+      font-size: 25px;
+      letter-spacing: -0.04em;
+    }
+
+    .modal p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    .close {
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: rgba(255,255,255,0.07);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    form {
+      display: grid;
+      gap: 13px;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+    label {
+      font-size: 13px;
+      color: #d9e0ed;
+      font-weight: 800;
+    }
+
+    input, textarea {
+      width: 100%;
+      font-family: inherit;
+      border: 1px solid rgba(255,255,255,0.14);
+      outline: none;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.065);
+      color: var(--text);
+      padding: 14px 15px;
+      font-size: 15px;
+      transition: 0.2s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: rgba(125,211,252,0.56);
+      box-shadow: 0 0 0 4px rgba(125,211,252,0.1);
+    }
+
+    input[readonly] {
+      color: var(--gold);
+      font-weight: 900;
+      direction: ltr;
+      text-align: left;
+    }
+
+    .two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .notice {
+      color: #d9e0ed;
+      font-size: 13px;
+      line-height: 1.9;
+      border: 1px dashed rgba(255,255,255,0.2);
+      border-radius: 16px;
+      padding: 12px 14px;
+      background: rgba(255,255,255,0.04);
+      white-space: pre-line;
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 5px;
+    }
+
+    .form-actions .btn { flex: 1; }
+
+    .toast {
+      position: fixed;
+      z-index: 80;
+      bottom: 22px;
+      right: 22px;
+      width: min(420px, calc(100% - 44px));
+      display: none;
+      border: 1px solid rgba(110,231,183,0.36);
+      background: rgba(9, 11, 20, 0.92);
+      color: var(--text);
+      border-radius: 18px;
+      padding: 14px 16px;
+      box-shadow: var(--shadow);
+      line-height: 1.8;
+      font-size: 13px;
+    }
+
+    .toast.active { display: block; }
+    .empty { display: none; color: var(--muted); padding: 22px 0 70px; line-height: 2; }
+    .empty.active { display: block; }
+
+    @media (max-width: 980px) {
+      .hero, .trust { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .section-head { align-items: start; flex-direction: column; }
+    }
+
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1180px); }
+      .nav { min-height: 68px; }
+      .nav-actions { display: none; }
+      .hero { padding-top: 54px; }
+      .grid, .stats, .two { grid-template-columns: 1fr; }
+      .domain { font-size: 27px; }
+      .showcase-item { align-items: start; flex-direction: column; }
+      .modal { padding: 18px; border-radius: 24px; }
+      .form-actions .btn { flex-basis: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <div class="brand">
+        <div class="mark">.IR</div>
+        <div>
+          <div>دامنه‌های منتخب برای فروش</div>
+          <small style="color: var(--muted); font-weight: 500;">Premium Persian, Tech & Purpose Domains</small>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <a href="#domains">مشاهده دامنه‌ها</a>
+        <a href="/cdn-cgi/l/email-protection#93f6e0fef2f6f6ffe3fcfce1d3f4fef2faffbdf0fcfeace0e6f1f9f6f0e7aeb6d7abb6d2d5b6d7abb6d1a2b6d7abb6d2d6b6d7aab6ababb6d7abb6d2a4b6d7abb6d1a0b6d7abb6d2d2b6a1a3b6d7aab6aba6b6d7abb6d1a3b6d7abb6d2a4b6d7d2b6d2aab6d7abb6d1a2b6d7aab6aba4b6a1a3b6d7abb6d2d6b6d7abb6d1a2b6d7d1b6abd0b6d7abb6d2d5b6a1a3b6d7abb6d2d5b6d7abb6d2a4b6d7aab6aba6b6d7aab6aba5b6d7aab6aba4">تماس مستقیم</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <div class="kicker">مجموعه‌ای محدود از دامنه‌های کوتاه، فارسی، تکنولوژیک و برندپذیر</div>
+        <h1>یک نام خوب، <span>نصف برند</span> است.</h1>
+        <p>
+          این صفحه برای معرفی و دریافت پیشنهاد خرید دامنه‌ها ساخته شده است. برای هر دامنه، ویژگی‌ها و دلیل ارزشمندی آن نوشته شده؛ اگر دامنه‌ای با پروژه شما جور است، روی «پیشنهاد قیمت» بزنید و مبلغ پیشنهادی خود را ارسال کنید.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn" href="#domains">دیدن لیست دامنه‌ها</a>
+          <a class="btn secondary" href="/cdn-cgi/l/email-protection#c2a7b1afa3a7a7aeb2adadb082a5afa3abaeeca1adaffdb1b7a0a8a7a1b6ffe786fbe7faf7e786fae780f2e786fae783f5e78683e783fbe786fae780f3e786fbe7faf5e7f0f2e786fae78384e786fae780f3e786fae783fae786fae783f5e786fae780f3e786fbe7faf5e7f0f2e786fae78387e786fae780f3e78680e7fa81e786fae78384e7f0f2e786fae78384e786fae783f5e786fbe7faf7e786fbe7faf4e786fbe7faf5">ایمیل به مالک</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="دامنه‌های برجسته">
+        <div class="domain-showcase">
+          <div class="showcase-item">
+            <div><b><a class="showcase-domain-link" href="https://b2g.ir" target="_blank" rel="noopener noreferrer">b2g.ir</a></b><br><small>مخفف جهانی Business to Government</small></div>
+            <span class="tag">B2G / GovTech</span>
+          </div>
+          <div class="showcase-item">
+            <div><b><a class="showcase-domain-link" href="https://karayee.ir" target="_blank" rel="noopener noreferrer">karayee.ir</a></b><br><small>معادل مستقیم «کارایی» برای بهره‌وری و مدیریت</small></div>
+            <span class="tag">فارسی ممتاز</span>
+          </div>
+          <div class="showcase-item">
+            <div><b><a class="showcase-domain-link" href="https://sabz.org" target="_blank" rel="noopener noreferrer">sabz.org</a></b><br><small>واژه واقعی فارسی به معنی «سبز» روی پسوند معتبر .ORG</small></div>
+            <span class="tag">چهارحرفی .ORG</span>
+          </div>
+          <div class="showcase-item">
+            <div><b><a class="showcase-domain-link" href="https://i18.ir" target="_blank" rel="noopener noreferrer">i18.ir</a></b><br><small>کوتاه، تکنولوژیک و مناسب برند دیجیتال</small></div>
+            <span class="tag">سه‌کاراکتری</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="stats" aria-label="آمار دامنه‌ها">
+      <div class="stat"><strong>18</strong><span>دامنه فعال و ثبت‌شده</span></div>
+      <div class="stat"><strong>7</strong><span>دامنه بسیار کوتاه سه یا چهار کاراکتری</span></div>
+      <div class="stat"><strong>.IR / .ORG</strong><span>مناسب بازار ایران، پروژه‌های جهانی و سازمان‌های مأموریت‌محور</span></div>
+      <div class="stat"><strong>2027–2031</strong><span>بازه انقضای دامنه‌ها بر اساس لیست مالک</span></div>
+    </section>
+
+    <section class="trust">
+      <div class="trust-box">
+        <h3>چرا این دامنه‌ها می‌توانند ارزشمند باشند؟</h3>
+        <p>
+          ارزش دامنه فقط به کوتاهی آن نیست؛ ترکیبِ کوتاه‌بودن، خوانایی، قابلیت برندشدن، ارتباط معنایی با یک صنعت، امکان تلفظ ساده، و کمیابی نام‌های تمیز روی پسوندهای معتبر مثل <span class="ltr">.ir</span> و <span class="ltr">.org</span> قیمت را می‌سازد.
+        </p>
+      </div>
+      <div class="trust-box">
+        <h3>روند پیشنهاد خرید</h3>
+        <ul>
+          <li>دامنه موردنظر را انتخاب کنید.</li>
+          <li>مبلغ پیشنهادی و اطلاعات تماس را وارد کنید.</li>
+          <li>ایمیل آماده برای مالک دامنه ساخته می‌شود.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="domains">
+      <div class="section-head">
+        <div>
+          <h2>فهرست دامنه‌ها</h2>
+          <p>روی هر دامنه که خواستید، دکمه پیشنهاد قیمت را بزنید.</p>
+        </div>
+        <div class="tools">
+          <label class="search" for="q">
+            <span>جست‌وجو</span>
+            <input id="q" type="search" placeholder="مثلاً b2g، هوش، مالی، کوتاه..." autocomplete="off" />
+          </label>
+        </div>
+      </div>
+
+      <div class="grid" id="domainGrid"></div>
+      <div class="empty" id="emptyState">دامنه‌ای با این جست‌وجو پیدا نشد.</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      این صفحه مستقل از ایرنیک است و صرفاً برای معرفی دامنه‌های ثبت‌شده توسط مالک استفاده می‌شود. ارسال پیشنهاد به معنای قطعی‌شدن معامله نیست و انتقال دامنه پس از توافق نهایی انجام می‌شود.
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head">
+        <div>
+          <h3 id="modalTitle">ارسال پیشنهاد خرید دامنه</h3>
+          <p>فرم را تکمیل کنید؛ سپس ایمیل آماده با موضوع اختصاصی همین دامنه باز می‌شود.</p>
+        </div>
+        <button class="close" type="button" id="closeModal" aria-label="بستن">×</button>
+      </div>
+
+      <form id="offerForm">
+        <div class="field">
+          <label for="domainName">نام دامنه</label>
+          <input id="domainName" name="domainName" readonly required />
+        </div>
+
+        <div class="two">
+          <div class="field">
+            <label for="fullName">نام و نام خانوادگی</label>
+            <input id="fullName" name="fullName" placeholder="مثلاً علی رضایی" required />
+          </div>
+          <div class="field">
+            <label for="mobile">موبایل</label>
+            <input id="mobile" name="mobile" inputmode="tel" placeholder="مثلاً 0912xxxxxxx" required />
+          </div>
+        </div>
+
+        <div class="two">
+          <div class="field">
+            <label for="email">ایمیل</label>
+            <input id="email" name="email" type="email" placeholder="name@example.com" required />
+          </div>
+          <div class="field">
+            <label for="price">مبلغ پیشنهادی</label>
+            <input id="price" name="price" placeholder="مثلاً ۲۵۰,۰۰۰,۰۰۰ تومان" required />
+          </div>
+        </div>
+
+        <div class="notice" id="offerPreview" aria-live="polite">
+نام و نام خانوادگی: ...
+موبایل: ...
+ایمیل: ...
+دامنه: ...
+قیمت پیشنهادی: ...
+
+درخواست خرید دامنه فوق را دارم. لطفا بررسی نمایید.
+        </div>
+
+        <div class="form-actions">
+          <button class="btn" type="submit">ارسال پیشنهاد</button>
+          <button class="btn secondary" type="button" id="copyOffer">کپی متن پیشنهاد</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    const ownerEmail = "esmaeelpoor@gmail.com";
+
+    const domains = [
+      {
+        name: "22e.ir",
+        expire: "2029-07-17",
+        type: "۳ کاراکتری، عدد+حرف، بسیار کوتاه",
+        use: "برند تکنولوژی، کمپین، سرویس کوتاه‌لینک یا محصول دیجیتال",
+        value: "ترکیب دو عدد و یک حرف، کوتاه و کمیاب است. برای برندهایی که دنبال نام سریع، کُدگونه و قابل‌حفظ هستند، انتخاب جمع‌وجوری محسوب می‌شود.",
+        tags: "کوتاه سه کاراکتری تکنولوژی عدد حرف 22e"
+      },
+      {
+        name: "3bil.ir",
+        expire: "2030-04-16",
+        type: "۴ کاراکتری، خاص، قابل تلفظ",
+        use: "برند سرگرمی، بازی، ابزار، فروشگاه یا پروژه خلاقانه",
+        value: "نامی غیرتکراری و عجیب‌وغریب است؛ نقطه قوتش همین تمایز است. برای پروژه‌ای که شخصیت شوخ، تیز یا متفاوت می‌خواهد می‌تواند به‌یادماندنی شود.",
+        tags: "کوتاه خاص برندپذیر سرگرمی فروشگاه"
+      },
+      {
+        name: "b2g.ir",
+        expire: "2029-08-02",
+        type: "۳ کاراکتری، مخفف شناخته‌شده Business to Government",
+        use: "GovTech، مناقصات، سامانه‌های دولتی، مشاوره سازمانی",
+        value: "B2G یک اصطلاح بین‌المللی و مستقیم برای کسب‌وکارهای مرتبط با دولت است. دامنه کوتاه، حرفه‌ای و مناسب پروژه‌های جدی سازمانی است.",
+        tags: "کوتاه سه کاراکتری b2g govtech دولت سازمان مناقصه"
+      },
+      {
+        name: "d30.ir",
+        expire: "2030-04-07",
+        type: "۳ کاراکتری، عددی-حرفی، بسیار کوتاه",
+        use: "آموزش، محتوای درسی، اپلیکیشن یادگیری، برند جوان",
+        value: "D30 هم کوتاه است و هم می‌تواند برای مخاطب فارسی‌زبان حس «درس/سی/۳۰» بسازد. برای آموزش و برندهای جوان، قابلیت مانور تبلیغاتی خوبی دارد.",
+        tags: "کوتاه سه کاراکتری آموزش d30 درس سی"
+      },
+      {
+        name: "danim.ir",
+        expire: "2029-10-22",
+        type: "کلمه فارسی‌نما، روان و مثبت",
+        use: "آموزش، دانش، رسانه، پلتفرم یادگیری",
+        value: "«دانیم» حس دانستن و آگاهی دارد و تلفظش ساده است. این دامنه برای برندهای آموزشی و محتوایی، انسانی‌تر و گرم‌تر از نام‌های کاملاً فنی عمل می‌کند.",
+        tags: "دانیم دانش آموزش یادگیری فارسی"
+      },
+      {
+        name: "fi360.ir",
+        expire: "2029-02-19",
+        type: "Finance/Intelligence + 360، کوتاه و تخصصی",
+        use: "فین‌تک، مالی، بیمه، تحلیل سرمایه‌گذاری، داشبورد مدیریتی",
+        value: "ترکیب FI و 360 حس دید کامل، تحلیل همه‌جانبه و محصول مالی می‌دهد. برای یک ابزار تحلیلی یا مشاوره مالی نام قابل‌دفاعی است.",
+        tags: "finance fintech مالی بیمه سرمایه گذاری 360"
+      },
+      {
+        name: "haftdan.ir",
+        expire: "2029-10-22",
+        type: "فارسی، برندپذیر، فرهنگی",
+        use: "رسانه، آموزش، نشر، محتوای فرهنگی، فروشگاه خاص",
+        value: "«هفت‌دان» ترکیبی فارسی و خوش‌آواست و ظرفیت روایت‌سازی دارد. برای برندی که می‌خواهد ایرانی، فرهنگی و متفاوت به نظر برسد مناسب است.",
+        tags: "هفت دان فارسی فرهنگی رسانه نشر آموزش"
+      },
+      {
+        name: "hi3.ir",
+        expire: "2030-04-07",
+        type: "۳ کاراکتری، کوتاه، خوش‌حس و مدرن",
+        use: "شبکه اجتماعی، پیام‌رسان، برند جوان، کمپین دیجیتال",
+        value: "Hi حس ارتباط و شروع مکالمه دارد و عدد 3 آن را خاص‌تر می‌کند. دامنه کوتاه است و برای محصولی با شخصیت دوستانه و دیجیتال می‌تواند جواب بدهد.",
+        tags: "کوتاه سه کاراکتری hi social دیجیتال"
+      },
+      {
+        name: "hooshtaak.ir",
+        expire: "2028-06-14",
+        type: "ترکیب هوش + تاک، فارسی-انگلیسی",
+        use: "هوش مصنوعی، پادکست، گفت‌وگوی تخصصی، آموزش AI",
+        value: "نام به‌خوبی به حوزه گفت‌وگو درباره هوش و فناوری نزدیک است. برای رسانه یا سرویس مرتبط با AI، هم فارسی‌فهم است هم برندپذیر.",
+        tags: "هوش تاک هوش مصنوعی AI پادکست گفتگو"
+      },
+      {
+        name: "hooshtalk.ir",
+        expire: "2028-04-18",
+        type: "Hoosh + Talk، روشن و قابل برندشدن",
+        use: "چت‌بات، آموزش هوش مصنوعی، رسانه تکنولوژی، پادکست",
+        value: "از نظر معنایی مستقیم‌تر از بسیاری نام‌های AI است: گفت‌وگو و هوش. برای محصول مکالمه‌محور یا محتوای آموزشی درباره AI انتخاب بسیار قابل‌فهمی است.",
+        tags: "hooshtalk هوش talk AI چت بات پادکست"
+      },
+      {
+        name: "i18.ir",
+        expire: "2030-03-08",
+        type: "۳ کاراکتری، تکنولوژیک، بسیار کوتاه",
+        use: "نرم‌افزار، بین‌المللی‌سازی، ابزار دیجیتال، برند IT",
+        value: "کوتاهی، ظاهر فنی و شباهت ذهنی به الگوهای نام‌گذاری تکنولوژی مثل i18n، آن را برای پروژه‌های نرم‌افزاری و بین‌المللی جذاب می‌کند.",
+        tags: "کوتاه سه کاراکتری i18 نرم افزار IT internationalization"
+      },
+      {
+        name: "k-p.ir",
+        expire: "2027-02-05",
+        type: "دو حرفی با خط تیره، مینیمال",
+        use: "نام اختصاری شرکت، پروژه، کمپین یا برند شخصی",
+        value: "دامنه‌های بسیار کوتاه حتی با خط تیره هم به‌راحتی پیدا نمی‌شوند. برای برندی که حروف K و P برایش معنی دارد، نام تمیز و مستقیم است.",
+        tags: "کوتاه دو حرفی initials k p"
+      },
+      {
+        name: "karayee.ir",
+        expire: "2029-10-26",
+        type: "کلمه فارسی معنادار: کارایی",
+        use: "بهره‌وری، مدیریت عملکرد، مشاوره سازمانی، نرم‌افزار HR",
+        value: "یک واژه فارسی روشن، مثبت و تجاری است. برای محصولاتی که به بهره‌وری، سنجش عملکرد، مدیریت و بهبود فرایند مربوط‌اند، از نظر معنایی بسیار قوی است.",
+        tags: "کارایی بهره وری مدیریت عملکرد HR سازمانی فارسی"
+      },
+      {
+        name: "motebook.ir",
+        expire: "2029-08-03",
+        type: "برندپذیر، نزدیک به notebook/mote",
+        use: "یادداشت، دفترچه دیجیتال، آموزش، ابزار تولید محتوا",
+        value: "نام برای یک محصول یادداشت‌برداری یا محتوایی قابلیت شکل‌گیری دارد. نقطه قوت آن شباهت به الگوی آشنای «book» و امکان ساخت هویت بصری ساده است.",
+        tags: "notebook book note یادداشت آموزش محتوا"
+      },
+      {
+        name: "pazaa.ir",
+        expire: "2030-08-16",
+        type: "۵ حرفی، کوتاه، روان و برندپذیر",
+        use: "مارکت‌پلیس، مد، فروشگاه، اپلیکیشن مصرفی",
+        value: "پازا نامی کوتاه و قابل تلفظ است و وابستگی معنایی سنگین ندارد؛ این یعنی می‌تواند برای چند صنعت مختلف برند شود، از فروشگاه تا اپلیکیشن.",
+        tags: "پازا pazaa برندپذیر فروشگاه مارکت پلیس"
+      },
+      {
+        name: "quanteam.ir",
+        expire: "2029-11-20",
+        type: "Quant + Team، تخصصی و حرفه‌ای",
+        use: "فین‌تک، داده، هوش مصنوعی، تیم تحلیل کمی، سرمایه‌گذاری",
+        value: "ترکیب Quant و Team برای تیم‌های داده، تحلیل کمی و مالی بسیار طبیعی است. نام انگلیسی، تخصصی و مناسب بازار B2B است.",
+        tags: "quant team data fintech AI تحلیل کمی سرمایه گذاری"
+      },
+      {
+        name: "sabz.org",
+        expire: "آماده واگذاری",
+        expireLabel: "وضعیت",
+        type: "۴ حرفی، بدون خط تیره، بدون عدد، واژه واقعی فارسی به معنی «سبز»",
+        use: "سازمان مردم‌نهاد محیط‌زیستی، بنیاد آموزشی، پروژه فرهنگی فارسی، کمپین اقلیمی، رسانه سبز یا حرکت اجتماعی",
+        value: "Sabz.org یک دارایی دامنه‌ای کمیاب است: چهار حرف، املای تمیز، تلفظ ساده برای مخاطب جهانی، و معنای روشن «سبز» در فارسی. ترکیب این واژه با .ORG حس اعتماد، هدف عمومی و مأموریت بلندمدت می‌سازد؛ دقیقاً مناسب پروژه‌هایی که حول محیط‌زیست، آموزش، فرهنگ، پایداری یا منفعت عمومی شکل می‌گیرند.",
+        tags: "sabz سبز green org چهار حرفی بدون خط تیره بدون عدد محیط زیست sustainability nonprofit NGO فرهنگ آموزش کمپین اقلیم"
+      },
+      {
+        name: "tradegram7.ir",
+        expire: "2031-06-13",
+        type: "Trade + Gram + 7، توصیفی و تجاری",
+        use: "تجارت، شبکه معامله‌گران، آموزش بازار، رسانه مالی",
+        value: "نام مستقیماً به معامله و شبکه/رسانه اشاره می‌کند. عدد 7 می‌تواند بخشی از هویت برند، باشگاه کاربران یا ساختار محتوایی شود.",
+        tags: "trade gram trading تجارت معامله رسانه مالی"
+      }
+    ];
+
+    const grid = document.getElementById("domainGrid");
+    const q = document.getElementById("q");
+    const emptyState = document.getElementById("emptyState");
+    const modalBackdrop = document.getElementById("modalBackdrop");
+    const closeModalBtn = document.getElementById("closeModal");
+    const domainNameInput = document.getElementById("domainName");
+    const offerForm = document.getElementById("offerForm");
+    const copyOfferBtn = document.getElementById("copyOffer");
+    const offerPreview = document.getElementById("offerPreview");
+    const toast = document.getElementById("toast");
+
+    function escapeHtml(str) {
+      return String(str).replace(/[&<>'"]/g, (c) => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#039;", '"': "&quot;"
+      })[c]);
+    }
+
+
+    function domainUrl(domain) {
+      return `https://${String(domain).trim()}`;
+    }
+
+    function renderDomains(list) {
+      grid.innerHTML = list.map(item => `
+        <article class="card" data-tags="${escapeHtml(item.tags)} ${escapeHtml(item.name)}">
+          <div class="card-inner">
+            <div class="card-top">
+              <a class="domain domain-link" href="${escapeHtml(domainUrl(item.name))}" target="_blank" rel="noopener noreferrer" aria-label="باز کردن ${escapeHtml(item.name)}">${escapeHtml(item.name)}</a>
+              <span class="pill">ثبت‌شده</span>
+            </div>
+            <div class="meta">
+              <div class="meta-row"><b>مشخصات</b><span>${escapeHtml(item.type)}</span></div>
+              <div class="meta-row"><b>کاربرد</b><span>${escapeHtml(item.use)}</span></div>
+              <div class="meta-row"><b>${escapeHtml(item.expireLabel || "انقضا")}</b><span class="ltr">${escapeHtml(item.expire)}</span></div>
+            </div>
+            <p class="value">${escapeHtml(item.value)}</p>
+            <button class="btn offer-btn" type="button" data-domain="${escapeHtml(item.name)}">پیشنهاد قیمت</button>
+          </div>
+        </article>
+      `).join("");
+
+      emptyState.classList.toggle("active", list.length === 0);
+    }
+
+    function openModal(domain) {
+      domainNameInput.value = domain;
+      updateOfferPreview();
+      modalBackdrop.classList.add("active");
+      modalBackdrop.setAttribute("aria-hidden", "false");
+      setTimeout(() => document.getElementById("fullName").focus(), 80);
+    }
+
+    function closeModal() {
+      modalBackdrop.classList.remove("active");
+      modalBackdrop.setAttribute("aria-hidden", "true");
+    }
+
+    function getOfferText() {
+      const data = new FormData(offerForm);
+      return {
+        domain: data.get("domainName")?.trim() || "",
+        fullName: data.get("fullName")?.trim() || "",
+        mobile: data.get("mobile")?.trim() || "",
+        email: data.get("email")?.trim() || "",
+        price: data.get("price")?.trim() || ""
+      };
+    }
+
+    function fieldText(value) {
+      return value && value.trim() ? value.trim() : "...";
+    }
+
+    function buildEmailBody(offer, usePlaceholder = false) {
+      const value = usePlaceholder ? fieldText : (v) => v;
+      return [
+        `نام و نام خانوادگی: ${value(offer.fullName)}`,
+        `موبایل: ${value(offer.mobile)}`,
+        `ایمیل: ${value(offer.email)}`,
+        `دامنه: ${value(offer.domain)}`,
+        `قیمت پیشنهادی: ${value(offer.price)}`,
+        ``,
+        `درخواست خرید دامنه فوق را دارم. لطفا بررسی نمایید.`
+      ].join("\n");
+    }
+
+    function updateOfferPreview() {
+      offerPreview.textContent = buildEmailBody(getOfferText(), true);
+    }
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add("active");
+      clearTimeout(showToast.timer);
+      showToast.timer = setTimeout(() => toast.classList.remove("active"), 4200);
+    }
+
+    grid.addEventListener("click", (e) => {
+      const btn = e.target.closest(".offer-btn");
+      if (!btn) return;
+      openModal(btn.dataset.domain);
+    });
+
+    closeModalBtn.addEventListener("click", closeModal);
+    modalBackdrop.addEventListener("click", (e) => {
+      if (e.target === modalBackdrop) closeModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeModal();
+    });
+
+    offerForm.addEventListener("input", updateOfferPreview);
+
+    q.addEventListener("input", () => {
+      const term = q.value.trim().toLowerCase();
+      const filtered = domains.filter(item => {
+        const blob = `${item.name} ${item.type} ${item.use} ${item.value} ${item.tags}`.toLowerCase();
+        return blob.includes(term);
+      });
+      renderDomains(filtered);
+    });
+
+    offerForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (!offerForm.reportValidity()) return;
+
+      const offer = getOfferText();
+      const subject = `پیشنهاد قیمت برای دامنه ${offer.domain}`;
+      const body = buildEmailBody(offer);
+      const mailto = `mailto:${ownerEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      try {
+        await navigator.clipboard.writeText(body);
+        showToast("متن پیشنهاد کپی شد و ایمیل آماده باز می‌شود. اگر پنجره ایمیل باز نشد، متن کپی‌شده را دستی ارسال کنید.");
+      } catch (err) {
+        showToast("ایمیل آماده باز می‌شود. اگر باز نشد، از دکمه کپی متن پیشنهاد استفاده کنید.");
+      }
+
+      window.location.href = mailto;
+    });
+
+    copyOfferBtn.addEventListener("click", async () => {
+      if (!offerForm.reportValidity()) return;
+      const offer = getOfferText();
+      const subject = `پیشنهاد قیمت برای دامنه ${offer.domain}`;
+      const body = `موضوع: ${subject}\n\n${buildEmailBody(offer)}`;
+      try {
+        await navigator.clipboard.writeText(body);
+        showToast("موضوع و متن پیشنهاد کپی شد.");
+      } catch (err) {
+        showToast("مرورگر اجازه کپی نداد. متن را از ایمیل آماده کپی کنید.");
+      }
+    });
+
+    updateOfferPreview();
+    renderDomains(domains);
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"10ebfbc41a344ce3819f67ca933e331d","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
