@@ -73,7 +73,7 @@ btn.on('click', function(e) {
         origin: 'top',
         distance: '90px',
         duration: 2000,
-        reset: true
+        reset: false
     });
     ScrollReveal().reveal('.social-icon, .feature-item, .progressbar-item, .services-block, .project-item, .form-item', { interval: 100 });
     ScrollReveal().reveal('.sub-heading');
