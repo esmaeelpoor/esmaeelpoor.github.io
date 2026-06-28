@@ -1294,3 +1294,15 @@ body.darkmode a.btn-default {
   align-self: flex-end;
 }
 /* css end */
+
+.projects-small .project-image img{
+    height:150px;
+}
+
+.projects-small h3{
+    font-size:18px;
+}
+
+.projects-small .project-content{
+    padding:18px;
+}
