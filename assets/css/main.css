@@ -1296,6 +1296,5 @@ body.darkmode a.btn-default {
 /* css end */
 
 .projects-small .projects-inner{
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
+    grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
 }
