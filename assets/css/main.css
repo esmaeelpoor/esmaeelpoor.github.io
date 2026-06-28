@@ -1298,3 +1298,44 @@ body.darkmode a.btn-default {
 .projects-small .projects-inner{
     grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
 }
+
+
+
+.project-status{
+    display:inline-flex;
+    align-items:center;
+
+    padding:6px 14px;
+
+    margin:12px 0 18px;
+
+    border-radius:30px;
+
+    font-size:13px;
+    font-weight:700;
+
+    background:#FFF7E6;
+    color:#B76E00;
+
+    border:1px solid #FFD37A;
+
+    gap:8px;
+}
+
+.project-status::before{
+    content:"";
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:#F5A623;
+
+    animation:pulse 1.8s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(.8);opacity:.5;}
+50%{transform:scale(1.35);opacity:1;}
+100%{transform:scale(.8);opacity:.5;}
+}
