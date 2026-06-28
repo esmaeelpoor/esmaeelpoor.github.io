@@ -1295,14 +1295,7 @@ body.darkmode a.btn-default {
 }
 /* css end */
 
-.projects-small .project-image img{
-    height:150px;
-}
-
-.projects-small h3{
-    font-size:18px;
-}
-
-.projects-small .project-content{
-    padding:18px;
+.projects-small .projects-inner{
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
 }
