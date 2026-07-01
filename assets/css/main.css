@@ -1328,8 +1328,6 @@ body.darkmode a.btn-default {
     border-radius:50%;
 
     background:#F5A623;
-
-    animation:pulse 1.8s infinite;
 }
 
 .project-status{
