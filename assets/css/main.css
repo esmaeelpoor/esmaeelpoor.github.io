@@ -1320,15 +1320,6 @@ body.darkmode a.btn-default {
     gap:8px;
 }
 
-.project-status-fix::before{
-    content:"";
-    width:10px;
-    height:10px;
-
-    border-radius:50%;
-
-    background:#F5A623;
-}
 
 .project-status{
     display:inline-flex;
