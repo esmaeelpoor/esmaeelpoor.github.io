@@ -173,19 +173,17 @@ nav {
 .navigation-bar ul li a:before {
   content: "";
   position: absolute;
-  bottom: 0px;
-  top: auto;
+  right: 0;
+  bottom: -6px;
   width: 0%;
   height: 2px;
   background: var(--color-blue);
-  transition: all 0.4s ease-in-out;
+  transition: width 0.35s ease-in-out;
 }
 
 .navigation-bar ul li.active a:before,
 .navigation-bar ul li a:hover:before {
   width: 100%;
-  right: auto;
-  left: auto;
 }
 .navigation-bar .dark {
   display: none;
