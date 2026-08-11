@@ -1,5 +1,9 @@
 // Scrollspy
-var spy = new Gumshoe('#nav  a');
+var spy = new Gumshoe('#nav a', {
+    offset: 80,
+    reflow: true,
+    activeClass: 'active'
+});
 // Burger
    $('.burger').on('click', function (event) {
         $(this).toggleClass('open');
