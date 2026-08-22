@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 
 <html dir="rtl" lang="fa">
-
+<!--
+1405 / 05 / 31 - homepage update: document digitization case study - by Ali Esmaeelpoor
+-->
 <head>
 <title>علی اسماعیل‌پور | فناوری، داده، هوش مصنوعی و یادگیری</title>
 <meta charset="utf-8"/>
@@ -385,44 +387,28 @@ body.darkmode .service-tags span{background:rgba(255,255,255,.06);border-color:r
 }
 
 
-/* ===== Organizational Document Digitization Case Study ===== */
-.document-case{position:relative;overflow:hidden;padding:96px 0;background:linear-gradient(135deg,#0d1728 0%,#101f34 56%,#0b1525 100%);color:#fff}
-.document-case:before{content:'';position:absolute;width:520px;height:520px;border-radius:50%;right:-190px;top:-230px;background:radial-gradient(circle,rgba(80,199,247,.22),transparent 68%)}
-.document-case:after{content:'';position:absolute;width:420px;height:420px;border-radius:50%;left:-190px;bottom:-230px;background:radial-gradient(circle,rgba(234,183,94,.17),transparent 68%)}
+/* ===== Organizational Document Digitization — compact homepage feature ===== */
+.document-case{position:relative;overflow:hidden;padding:76px 0;background:linear-gradient(135deg,#0d1728 0%,#101f34 58%,#0b1525 100%);color:#fff}
+.document-case:before{content:'';position:absolute;width:420px;height:420px;border-radius:50%;right:-170px;top:-210px;background:radial-gradient(circle,rgba(80,199,247,.18),transparent 68%)}
+.document-case:after{content:'';position:absolute;width:340px;height:340px;border-radius:50%;left:-150px;bottom:-200px;background:radial-gradient(circle,rgba(234,183,94,.12),transparent 68%)}
 .document-case .container{position:relative;z-index:2}
-.document-case-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
-.document-case-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:#bfe4ff;font-size:12px;font-weight:700;margin-bottom:16px}
-.document-case-badge:before{content:'';width:7px;height:7px;border-radius:50%;background:#50c7f7;box-shadow:0 0 0 6px rgba(80,199,247,.10)}
-.document-case h2{font-size:clamp(32px,4vw,46px);line-height:1.55;color:#fff;margin:0 0 16px}
-.document-case-lead{font-size:16px;line-height:2.15;color:rgba(255,255,255,.76);margin:0 0 24px;max-width:720px}
-.document-case-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:24px 0}
-.document-case-stat{padding:16px 13px;border-radius:18px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.09)}
-.document-case-stat strong{display:block;color:#f2d497;font-size:20px;margin-bottom:4px}
-.document-case-stat span{display:block;color:rgba(255,255,255,.66);font-size:11px;line-height:1.8}
-.document-case-list{display:grid;gap:10px;margin:22px 0 26px;padding:0;list-style:none}
-.document-case-list li{position:relative;padding:12px 42px 12px 14px;border-radius:15px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.07);color:rgba(255,255,255,.76);font-size:13px;line-height:1.95}
-.document-case-list li:before{content:'✓';position:absolute;right:14px;top:13px;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(80,199,247,.12);color:#8edcff;font-weight:900;font-size:11px}
-.document-case-list strong{color:#fff}
-.document-case-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.document-case-link{display:inline-flex;align-items:center;gap:7px;padding:12px 20px;border-radius:999px;background:#fff;color:#0f172a!important;font-weight:800;transition:transform .25s ease,box-shadow .25s ease}
+.document-case-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:34px;align-items:center;padding:34px 38px;border-radius:28px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.10);box-shadow:0 22px 54px rgba(0,0,0,.18);backdrop-filter:blur(10px)}
+.document-case-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.055);color:#bfe4ff;font-size:11px;font-weight:700;margin-bottom:13px}
+.document-case-badge:before{content:'';width:7px;height:7px;border-radius:50%;background:#50c7f7;box-shadow:0 0 0 5px rgba(80,199,247,.09)}
+.document-case h2{font-size:clamp(28px,3.2vw,40px);line-height:1.55;color:#fff;margin:0 0 12px}
+.document-case-lead{font-size:15px;line-height:2.05;color:rgba(255,255,255,.75);margin:0;max-width:850px}
+.document-case-highlights{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.document-case-highlights span{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.76);font-size:11px}
+.document-case-action{display:flex;align-items:center;justify-content:flex-end}
+.document-case-link{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;padding:12px 19px;border-radius:999px;background:#fff;color:#0f172a!important;font-weight:800;transition:transform .25s ease,box-shadow .25s ease}
 .document-case-link:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(0,0,0,.18)}
-.document-case-source{font-size:11px;color:rgba(255,255,255,.48)}
-.document-case-visual{position:relative;min-height:510px;display:flex;align-items:center;justify-content:center}
-.document-case-image-shell{position:relative;width:min(100%,520px);border-radius:30px;overflow:hidden;background:#f4f4f2;border:1px solid rgba(255,255,255,.13);box-shadow:0 30px 70px rgba(0,0,0,.32)}
-.document-case-image-shell img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
-.document-case-image-shell:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 58%,rgba(7,16,29,.58));pointer-events:none}
-.document-case-image-caption{position:absolute;z-index:2;right:20px;left:20px;bottom:17px;color:#fff;font-size:11px;line-height:1.8;text-shadow:0 2px 8px rgba(0,0,0,.45)}
-.document-case-float{position:absolute;z-index:4;padding:12px 15px;border-radius:16px;background:rgba(9,20,35,.92);border:1px solid rgba(255,255,255,.10);box-shadow:0 16px 36px rgba(0,0,0,.25);backdrop-filter:blur(10px)}
-.document-case-float strong{display:block;font-size:13px;color:#fff;margin-bottom:3px}
-.document-case-float span{display:block;font-size:10px;color:rgba(255,255,255,.62);line-height:1.7}
-.document-case-float.one{right:-18px;top:56px}.document-case-float.two{left:-16px;top:185px}.document-case-float.three{right:18px;bottom:24px}
 .timeline-card .timeline-link{display:inline-flex;margin-top:10px;color:#1769d2;font-size:13px;font-weight:800}
 .case-grid.case-grid-four{grid-template-columns:repeat(2,1fr)}
 .case-card.scan-case-card{background:linear-gradient(145deg,#ffffff,#f5faff);border-color:rgba(29,139,255,.18)}
 .case-card.scan-case-card .badge{background:rgba(234,183,94,.13);color:#9a681d}
 body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
-@media(max-width:980px){.document-case-grid{grid-template-columns:1fr}.document-case-visual{min-height:auto}.document-case-image-shell{max-width:560px}.document-case-float.one{right:8px}.document-case-float.two{left:8px}}
-@media(max-width:768px){.document-case{padding:76px 0}.document-case-stats{grid-template-columns:1fr}.document-case-float{position:static;margin-top:8px}.document-case-visual{display:block}.document-case-image-shell{width:100%}.case-grid.case-grid-four{grid-template-columns:1fr}}
+@media(max-width:900px){.document-case-card{grid-template-columns:1fr}.document-case-action{justify-content:flex-start}}
+@media(max-width:768px){.document-case{padding:62px 0}.document-case-card{padding:28px 24px;border-radius:22px}.case-grid.case-grid-four{grid-template-columns:1fr}}
 
 </style>
 </head>
@@ -608,7 +594,7 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 <div class="timeline-card">
 <h3>دیجیتال‌سازی و مکانیزاسیون اسناد سازمانی</h3>
 <p>مدیریت پروژه‌های سازمانی با تیم‌های ۱۵ تا ۲۰ نفره؛ از تحلیل و قرارداد تا طراحی فرایند، نرم‌افزار اختصاصی «اسکن استودیو»، اسکن گروهی، پالایش نیمه‌خودکار اسناد و کنترل کیفیت. تمرکز اصلی بر سرعت، دقت، قابلیت ردیابی و محرمانگی اطلاعات بود.</p>
-<a class="timeline-link" href="/document-digitization/">مطالعه موردی کامل ←</a>
+<a class="timeline-link" href="/projects/document-digitization/">مطالعه موردی کامل ←</a>
 </div>
 </div>
 <div class="timeline-row reveal">
@@ -649,34 +635,20 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 
 <section class="document-case" id="document-digitization">
 <div class="container">
-<div class="document-case-grid">
-<div class="document-case-content reveal">
-<div class="document-case-badge">۱۳۸۷–۱۳۹۲ · مطالعه موردی مدیریت پروژه فناوری</div>
+<div class="document-case-card reveal">
+<div>
+<div class="document-case-badge">۱۳۸۷–۱۳۹۲ · مدیریت پروژه فناوری</div>
 <h2>دیجیتال‌سازی و مکانیزاسیون اسناد سازمانی</h2>
-<p class="document-case-lead">در دوره‌ای که بسیاری از سازمان‌ها در حال عبور از بایگانی کاغذی به آرشیو دیجیتال بودند، مدیریت مجموعه‌ای از پروژه‌های اسکن، کدگذاری و مکانیزاسیون اسناد را بر عهده داشتم؛ پروژه‌هایی که نرم‌افزار، فرایند، نیروی انسانی و بهبود عملیات را هم‌زمان درگیر می‌کردند.</p>
-<div class="document-case-stats">
-<div class="document-case-stat"><strong>۱۵–۲۰ نفر</strong><span>تیم‌های اجرایی متناسب با حجم پروژه</span></div>
-<div class="document-case-stat"><strong>Scan Studio</strong><span>نرم‌افزار اختصاصی پردازش و مدیریت اسناد</span></div>
-<div class="document-case-stat"><strong>۳ لایه نوآوری</strong><span>نرم‌افزار، روش اجرایی و ابزار فیزیکی</span></div>
-</div>
-<ul class="document-case-list">
-<li><strong>پردازش نیمه‌خودکار:</strong> پالایش صفحات سفید و تشخیص برخی کدها و الگوهای تصویری برای کاهش بررسی دستی.</li>
-<li><strong>اسکن چندپرونده‌ای:</strong> استفاده از صفحات جداکننده و تفکیک خودکار هر پرونده در پوشه مستقل برای افزایش ظرفیت پردازش.</li>
-<li><strong>بهبود عملیات فیزیکی:</strong> طراحی و ساخت سه سازه فلزی برای هم‌ترازی صفحات و بازگردانی سریع‌تر اسناد به پرونده‌های اصلی.</li>
-</ul>
-<div class="document-case-actions">
-<a class="document-case-link" href="/document-digitization/">مشاهده پرونده کامل پروژه ←</a>
-<span class="document-case-source">سابقه این فعالیت در نسخه آرشیوی وب‌سایت شرکت نیز مستند است.</span>
+<p class="document-case-lead">مدیریت پروژه‌های تبدیل انبوه پرونده‌های کاغذی به آرشیو دیجیتال، با تیم‌های ۱۵ تا ۲۰ نفره و ترکیبی از نرم‌افزار اختصاصی، طراحی فرایند و نوآوری‌های عملیاتی برای افزایش سرعت، دقت و محرمانگی اطلاعات.</p>
+<div class="document-case-highlights" aria-label="ویژگی‌های شاخص پروژه">
+<span>Scan Studio اختصاصی</span>
+<span>اسکن گروهی و تفکیک خودکار</span>
+<span>پالایش نیمه‌خودکار اسناد</span>
+<span>مهندسی و بهبود فرایند</span>
 </div>
 </div>
-<div class="document-case-visual reveal">
-<div class="document-case-image-shell">
-<img src="assets/images/projects/document-digitization-paper-aligner.png" alt="بازسازی مفهومی سازه فلزی هم‌ترازی اسناد در پروژه دیجیتال‌سازی" loading="lazy"/>
-<div class="document-case-image-caption">بازسازی مفهومی یکی از ابزارهای ساخته‌شده برای افزایش سرعت و دقت بازگردانی اسناد به پرونده‌ها</div>
-</div>
-<div class="document-case-float one"><strong>اسکن گروهی</strong><span>تفکیک خودکار پرونده‌ها با صفحات جداکننده</span></div>
-<div class="document-case-float two"><strong>پالایش خودکار</strong><span>کاهش حجم بررسی انسانی</span></div>
-<div class="document-case-float three"><strong>مهندسی فرایند</strong><span>حل گلوگاه قبل از افزایش نیروی انسانی</span></div>
+<div class="document-case-action">
+<a class="document-case-link" href="/projects/document-digitization/">مشاهده مطالعه موردی ←</a>
 </div>
 </div>
 </div>
@@ -805,7 +777,7 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 <li><strong>نوآوری:</strong> Scan Studio، اسکن گروهی و ابزارهای بهبود عملیات</li>
 <li><strong>مقیاس:</strong> تیم‌های اجرایی ۱۵ تا ۲۰ نفره</li>
 </ul>
-<a href="/document-digitization/">مطالعه موردی کامل ←</a>
+<a href="/projects/document-digitization/">مطالعه موردی کامل ←</a>
 </div>
 <div class="case-card reveal">
 <span class="badge">Data + Product</span>
