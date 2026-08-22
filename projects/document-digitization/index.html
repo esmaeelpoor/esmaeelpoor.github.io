@@ -1,1 +1,467 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>دیجیتال‌سازی و مکانیزاسیون اسناد سازمانی | علی اسماعیل‌پور</title>
+  <meta name="description" content="مطالعه موردی پروژه‌های دیجیتال‌سازی، اسکن، کدگذاری و مکانیزاسیون اسناد سازمانی در سال‌های ۱۳۸۷ تا ۱۳۹۲؛ مدیریت پروژه، طراحی فرایند، نرم‌افزار اختصاصی و نوآوری عملیاتی.">
+  <meta name="theme-color" content="#07101d">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <style>
+    @font-face{
+      font-family:'Vazir';
+      src:url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir.woff2') format('woff2');
+      font-weight:400;font-style:normal;font-display:swap
+    }
+    @font-face{
+      font-family:'Vazir';
+      src:url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Bold.woff2') format('woff2');
+      font-weight:700;font-style:normal;font-display:swap
+    }
+    @font-face{
+      font-family:'Vazir';
+      src:url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Black.woff2') format('woff2');
+      font-weight:900;font-style:normal;font-display:swap
+    }
+    :root{
+      --bg:#07101d;
+      --bg2:#0a1524;
+      --panel:#101d2f;
+      --panel2:#0d1929;
+      --text:#f6f8fc;
+      --muted:#aab8cc;
+      --line:rgba(255,255,255,.09);
+      --blue:#56a6ff;
+      --blue2:#82c1ff;
+      --gold:#d7ad5e;
+      --green:#7ed9b4;
+      --max:1220px;
+      --radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'Vazir',Tahoma,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 15% 3%,rgba(86,166,255,.13),transparent 26%),
+        radial-gradient(circle at 90% 10%,rgba(215,173,94,.09),transparent 22%),
+        linear-gradient(180deg,var(--bg),#091522 48%,#07111c);
+      line-height:1.95;
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none} a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+    button{font-family:inherit}
+    .container{width:min(var(--max),calc(100% - 38px));margin:auto}
+    .section{padding:92px 0;border-top:1px solid var(--line)}
+    .section-soft{background:linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,.005))}
+    .eyebrow{font-size:13px;font-weight:900;color:var(--gold);letter-spacing:.02em;margin-bottom:12px}
+    h1,h2,h3{line-height:1.45;margin-top:0}
+    h1{font-size:clamp(42px,6.4vw,76px);margin-bottom:18px;max-width:980px}
+    h2{font-size:clamp(30px,4vw,44px);margin-bottom:14px}
+    h3{font-size:21px;margin-bottom:10px}
+    p{margin-top:0}
+    .lead{font-size:18px;color:var(--muted);max-width:900px}
+    .muted{color:var(--muted)}
+    .note{font-size:13px;color:#8fa0b6}
 
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:50;
+      border-bottom:1px solid var(--line);
+      background:rgba(7,16,29,.84);
+      backdrop-filter:blur(16px);
+    }
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-weight:900;white-space:nowrap}
+    .brand span{font-size:12px;font-weight:400;color:var(--muted);margin-right:8px}
+    .navlinks{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+    .navlinks a{padding:8px 11px;border-radius:999px;color:#cbd6e5;font-size:13px}
+    .navlinks a:hover{background:rgba(255,255,255,.05);color:#fff}
+    .back{border:1px solid var(--line);padding:8px 12px!important}
+
+    /* Hero */
+    .hero{padding:86px 0 76px;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:58px;align-items:center}
+    .hero-copy .lead{font-size:20px;line-height:2.05}
+    .hero-role{display:inline-flex;align-items:center;gap:8px;margin:14px 0 26px;padding:9px 14px;border:1px solid rgba(86,166,255,.22);background:rgba(86,166,255,.055);border-radius:999px;color:#d8eaff;font-size:13px}
+    .hero-role i{width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 18px rgba(86,166,255,.8)}
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap}
+    .cta{display:inline-flex;align-items:center;gap:9px;padding:11px 16px;border-radius:13px;border:1px solid var(--line);font-weight:800;font-size:13px;transition:.2s}
+    .cta.primary{background:#f7fbff;color:#0a1524;border-color:#f7fbff}
+    .cta:hover{transform:translateY(-2px)}
+
+    /* Hero visual */
+    .scan-stage{position:relative;min-height:470px;display:grid;place-items:center}
+    .scan-halo{position:absolute;width:390px;height:390px;border-radius:50%;background:radial-gradient(circle,rgba(86,166,255,.16),rgba(86,166,255,.015) 55%,transparent 70%);filter:blur(2px)}
+    .machine{position:relative;width:min(430px,100%);height:330px;border:1px solid rgba(255,255,255,.11);background:linear-gradient(160deg,#15263e,#0b1728 60%,#081321);border-radius:30px;box-shadow:0 34px 70px rgba(0,0,0,.35),inset 0 1px rgba(255,255,255,.05);overflow:hidden}
+    .machine-top{height:78px;background:linear-gradient(180deg,#1a2d48,#11223a);border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between;padding:0 24px}
+    .machine-brand{font-weight:900;font-size:15px}.machine-brand small{display:block;color:var(--muted);font-size:9px;font-weight:400;margin-top:2px}
+    .lights{display:flex;gap:7px}.lights i{width:9px;height:9px;border-radius:50%;background:#26364a}.lights i:first-child{background:var(--green);box-shadow:0 0 15px rgba(126,217,180,.55)}
+    .tray{position:absolute;right:38px;left:38px;bottom:38px;height:165px;border-radius:20px;background:linear-gradient(180deg,#091522,#0e1c2d);border:1px solid rgba(255,255,255,.08);overflow:hidden}
+    .paper{position:absolute;width:64%;height:112px;right:18%;bottom:15px;border-radius:7px;background:#f8fafc;box-shadow:0 9px 24px rgba(0,0,0,.25);transform:perspective(400px) rotateX(2deg)}
+    .paper:before,.paper:after{content:'';position:absolute;right:14%;left:14%;height:7px;border-radius:5px;background:#d4deea}
+    .paper:before{top:28px;box-shadow:0 18px 0 #e0e7ef,0 36px 0 #d4deea,0 54px 0 #e0e7ef}
+    .separator{position:absolute;width:64%;height:112px;right:18%;bottom:15px;border-radius:7px;border:2px dashed rgba(86,166,255,.72);background:rgba(86,166,255,.12);transform:translateY(-10px);opacity:.35}
+    .beam{position:absolute;right:8%;left:8%;height:3px;top:95px;background:linear-gradient(90deg,transparent,var(--blue),#fff,var(--blue),transparent);box-shadow:0 0 22px rgba(86,166,255,.95);animation:scan 3.4s ease-in-out infinite}
+    .folders{position:absolute;left:18px;bottom:22px;display:grid;gap:7px}
+    .folder{width:94px;height:34px;border-radius:7px;background:rgba(215,173,94,.12);border:1px solid rgba(215,173,94,.26);color:#e8c989;font-size:9px;display:flex;align-items:center;justify-content:center;transform:translateX(-6px);opacity:.85}
+    .folder:nth-child(2){background:rgba(86,166,255,.09);border-color:rgba(86,166,255,.22);color:#9ed0ff;transform:translateX(4px)}
+    .folder:nth-child(3){background:rgba(126,217,180,.08);border-color:rgba(126,217,180,.22);color:#a7e7cd;transform:translateX(-1px)}
+    @keyframes scan{0%,100%{transform:translateY(0);opacity:.55}50%{transform:translateY(160px);opacity:1}}
+
+    /* stats */
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+    .stat{padding:20px 20px 18px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.028)}
+    .stat strong{display:block;font-size:30px;line-height:1.2;color:var(--gold);margin-bottom:5px}
+    .stat span{font-size:12px;color:var(--muted)}
+
+    /* Problem & role */
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+    .panel{padding:28px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.018));border-radius:var(--radius)}
+    .panel ul{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+    .panel li{position:relative;padding-right:18px;color:#d9e3ef}
+    .panel li:before{content:'';position:absolute;right:0;top:13px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+    .role-cloud{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+    .pill{padding:7px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.025);font-size:11px;color:#c8d4e4}
+
+    /* process */
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:34px;counter-reset:step}
+    .step{position:relative;padding:22px 18px 20px;border-radius:18px;border:1px solid var(--line);background:#0c1828;min-height:155px;overflow:hidden}
+    .step:after{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;left:12px;bottom:-8px;font-size:50px;font-weight:900;color:rgba(255,255,255,.035);line-height:1}
+    .step b{display:block;margin-bottom:8px;color:#fff}.step p{font-size:12px;color:var(--muted);margin:0;line-height:1.85}
+    .step .dot{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;margin-bottom:15px;background:rgba(86,166,255,.09);border:1px solid rgba(86,166,255,.22);color:var(--blue);font-weight:900}
+
+    /* innovation */
+    .innovation-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
+    .innovation{position:relative;padding:28px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(145deg,#101e31,#0b1728);overflow:hidden;transition:transform .25s,border-color .25s}
+    .innovation:hover{transform:translateY(-4px);border-color:rgba(86,166,255,.27)}
+    .innovation .num{position:absolute;left:18px;top:8px;font-size:68px;font-weight:900;color:rgba(255,255,255,.035);line-height:1}
+    .innovation .icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:rgba(215,173,94,.08);border:1px solid rgba(215,173,94,.18);margin-bottom:18px;font-size:21px}
+    .innovation p{color:var(--muted);font-size:14px;margin:0}
+    .innovation strong{color:var(--blue2)}
+
+    /* architecture */
+    .logic-flow{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;align-items:center;margin-top:34px}
+    .logic-item{position:relative;text-align:center;padding:15px 9px;border-radius:15px;background:#0d1a2b;border:1px solid var(--line);font-size:11px;color:#d8e4f2;min-height:78px;display:grid;place-items:center}
+    .logic-item:not(:last-child):after{content:'←';position:absolute;left:-11px;top:50%;transform:translateY(-50%);color:var(--blue);font-size:16px;font-weight:900;z-index:2}
+    .logic-item.emph{border-color:rgba(215,173,94,.28);background:rgba(215,173,94,.055);color:#f0d9a8}
+
+    /* physical innovation */
+    .jogger-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center}
+    .jogger-visual{margin:0;position:relative;border-radius:30px;border:1px solid var(--line);overflow:hidden;background:#f1f1ef;box-shadow:0 28px 65px rgba(0,0,0,.28)}
+    .jogger-visual:before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(145deg,rgba(255,255,255,.18),transparent 38%,rgba(7,16,29,.06));z-index:1}
+    .jogger-visual img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center}
+    .jogger-label{position:absolute;z-index:2;right:18px;left:18px;bottom:16px;padding:10px 13px;border-radius:13px;background:rgba(7,16,29,.78);backdrop-filter:blur(8px);color:#e6edf7;font-size:11px;line-height:1.75;text-align:right;border:1px solid rgba(255,255,255,.10)}
+    .jogger-copy .mini-points{display:grid;gap:10px;margin-top:22px}
+    .jogger-copy .mini-point{display:flex;gap:10px;align-items:flex-start;padding:11px 13px;border-radius:14px;background:rgba(255,255,255,.025);border:1px solid var(--line);color:#cfdae8;font-size:12px}
+    .jogger-copy .mini-point i{flex:0 0 8px;width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:9px;box-shadow:0 0 12px rgba(215,173,94,.35)}
+
+    /* security */
+    .security{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+    .security-card{padding:22px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.022)}
+    .security-card b{display:block;margin-bottom:7px}.security-card p{font-size:12px;color:var(--muted);margin:0}
+
+    /* clients */
+    .clients{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+    .client{padding:11px 14px;border-radius:13px;background:#0d1a2b;border:1px solid var(--line);font-size:13px;color:#dbe5f2}
+
+    /* archive */
+    .archive-box{padding:30px;border-radius:26px;border:1px solid rgba(215,173,94,.22);background:linear-gradient(145deg,rgba(215,173,94,.07),rgba(255,255,255,.018));display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+    .archive-box p{color:var(--muted);margin-bottom:0}
+    .archive-btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:12px;background:var(--gold);color:#17202c;font-weight:900;font-size:12px;white-space:nowrap}
+
+    /* closing */
+    .closing{padding:86px 0}
+    .quote{max-width:920px;font-size:clamp(25px,3vw,38px);font-weight:900;line-height:1.75;margin:0}
+    .quote span{color:var(--gold)}
+    footer{border-top:1px solid var(--line);padding:34px 0;color:#8291a5;font-size:12px}
+    .footer-row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+    /* reveal */
+    [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+    [data-reveal].show{opacity:1;transform:none}
+
+    @media(max-width:1020px){
+      .hero-grid,.jogger-grid{grid-template-columns:1fr}.scan-stage{min-height:410px}
+      .process{grid-template-columns:repeat(2,1fr)}
+      .logic-flow{grid-template-columns:repeat(4,1fr)}
+      .logic-item:not(:last-child):after{display:none}
+      .stats{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:760px){
+      .navlinks a:not(.back){display:none}
+      .hero{padding-top:54px}
+      .two-col,.innovation-grid,.security{grid-template-columns:1fr}
+      .process{grid-template-columns:1fr 1fr}
+      .logic-flow{grid-template-columns:repeat(2,1fr)}
+      .archive-box{grid-template-columns:1fr}
+      .archive-btn{justify-self:start}
+      .section{padding:70px 0}
+    }
+    @media(max-width:520px){
+      .container{width:min(var(--max),calc(100% - 24px))}
+      .brand span{display:none}
+      h1{font-size:39px}
+      .hero-copy .lead{font-size:17px}
+      .stats,.process{grid-template-columns:1fr}
+      .scan-stage{min-height:350px}.machine{height:285px}.tray{height:145px}.beam{top:86px}
+      .logic-flow{grid-template-columns:1fr}
+      .jogger-visual img{aspect-ratio:4/3}
+    }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}.beam{animation:none}[data-reveal]{opacity:1;transform:none;transition:none}.cta,.innovation{transition:none}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="https://esmaeelpoor.ir/">علی اسماعیل‌پور <span>/ پروژه‌های منتخب</span></a>
+    <nav class="navlinks" aria-label="ناوبری صفحه">
+      <a href="#problem">مسئله</a>
+      <a href="#process">فرایند</a>
+      <a href="#innovation">نوآوری‌ها</a>
+      <a href="#security">محرمانگی</a>
+      <a class="back" href="https://esmaeelpoor.ir/">بازگشت به سایت</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy" data-reveal>
+        <div class="eyebrow">۱۳۸۷ تا حدود ۱۳۹۲</div>
+        <h1>دیجیتال‌سازی و مکانیزاسیون اسناد سازمانی</h1>
+        <div class="hero-role"><i></i> مدیر پروژه، طراح فرایند و توسعه‌دهنده راهکارهای عملیاتی</div>
+        <p class="lead">مدیریت پروژه‌هایی برای تبدیل آرشیوهای حجیم کاغذی به اسناد دیجیتال ساخت‌یافته؛ با ترکیبی از <strong>نرم‌افزار اختصاصی، طراحی فرایند، مدیریت تیم و نوآوری عملیاتی</strong> برای افزایش سرعت، دقت و حفظ محرمانگی اطلاعات.</p>
+        <div class="cta-row">
+          <a class="cta primary" href="#innovation">مشاهده نوآوری‌های پروژه</a>
+          <a class="cta" href="#archive">سند آرشیوی همان سال‌ها</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>۱۳۸۷–۱۳۹۲</strong><span>دوره اجرای پروژه‌ها</span></div>
+          <div class="stat"><strong>۱۵–۲۰ نفر</strong><span>اندازه تقریبی تیم‌های اجرایی</span></div>
+          <div class="stat"><strong>۳ سازه</strong><span>ابزار ساخته‌شده برای هم‌ترازی اسناد</span></div>
+          <div class="stat"><strong>اختصاصی</strong><span>نرم‌افزار اسکن استودیو برای عملیات اسناد</span></div>
+        </div>
+      </div>
+
+      <div class="scan-stage" aria-hidden="true" data-reveal>
+        <div class="scan-halo"></div>
+        <div class="machine">
+          <div class="machine-top">
+            <div class="machine-brand">اسکن استودیو<small>پردازش و تفکیک اسناد</small></div>
+            <div class="lights"><i></i><i></i><i></i></div>
+          </div>
+          <div class="beam"></div>
+          <div class="tray">
+            <div class="separator"></div>
+            <div class="paper"></div>
+          </div>
+          <div class="folders">
+            <div class="folder">پرونده ۰۱</div>
+            <div class="folder">پرونده ۰۲</div>
+            <div class="folder">پرونده ۰۳</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="problem">
+    <div class="container">
+      <div class="eyebrow">مسئله</div>
+      <h2>کار فقط «اسکن کردن» نبود</h2>
+      <p class="lead">پرونده‌های سازمانی باید بدون برهم خوردن ترتیب و ساختارشان از بایگانی خارج می‌شدند، اسکن و کدگذاری می‌شدند، کیفیتشان کنترل می‌شد و دوباره صحیح به پرونده فیزیکی بازمی‌گشتند. گلوگاه اصلی، مدیریت یک زنجیره عملیاتی پرحجم با خطای حداقلی بود.</p>
+
+      <div class="two-col">
+        <article class="panel" data-reveal>
+          <h3>چالش‌های اصلی</h3>
+          <ul>
+            <li>حجم بالای پرونده‌ها و تکرار زیاد عملیات دستی</li>
+            <li>نیاز به حفظ ترتیب و ساختار هر پرونده پس از اسکن</li>
+            <li>کدگذاری و دسته‌بندی دقیق اسناد برای استفاده سازمانی</li>
+            <li>بازگرداندن صفحات به پرونده بدون پانچ اضافی و آسیب به سند</li>
+            <li>کنترل دسترسی و محرمانگی در تمام چرخه دریافت تا تحویل</li>
+          </ul>
+        </article>
+
+        <article class="panel" data-reveal>
+          <h3>نقش من در پروژه</h3>
+          <p class="muted">مسئولیت از شناخت مسئله شروع می‌شد و تا تحویل پروژه ادامه داشت؛ نه فقط مدیریت عملیات روزانه.</p>
+          <div class="role-cloud">
+            <span class="pill">تحلیل نیاز</span>
+            <span class="pill">طراحی روش اجرا</span>
+            <span class="pill">برآورد منابع و زمان</span>
+            <span class="pill">مذاکره و قرارداد</span>
+            <span class="pill">تشکیل و هدایت تیم</span>
+            <span class="pill">نظارت بر توسعه نرم‌افزار</span>
+            <span class="pill">کنترل کیفیت</span>
+            <span class="pill">مدیریت تحویل</span>
+            <span class="pill">بهبود مستمر فرایند</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="process">
+    <div class="container">
+      <div class="eyebrow">فرایند اجرا</div>
+      <h2>از پرونده کاغذی تا آرشیو دیجیتال</h2>
+      <p class="lead">فرایند به‌گونه‌ای طراحی شده بود که هر مرحله قابل کنترل باشد و خطا در یک مرحله به مراحل بعد منتقل نشود.</p>
+      <div class="process">
+        <article class="step" data-reveal><span class="dot">۱</span><b>دریافت و ثبت</b><p>تحویل کنترل‌شده پرونده‌ها و ثبت اولیه برای جلوگیری از گم‌شدن یا جابه‌جایی.</p></article>
+        <article class="step" data-reveal><span class="dot">۲</span><b>آماده‌سازی</b><p>بررسی فیزیکی، مرتب‌سازی و آماده کردن اسناد برای ورود به خط اسکن.</p></article>
+        <article class="step" data-reveal><span class="dot">۳</span><b>اسکن گروهی</b><p>قرار دادن چند پرونده در یک دسته و استفاده از صفحات جداکننده برای کاهش توقف اپراتور.</p></article>
+        <article class="step" data-reveal><span class="dot">۴</span><b>پالایش اولیه</b><p>حذف صفحات سفید و کنار گذاشتن تصاویر غیرضروری پیش از ورود به مرحله کدگذاری.</p></article>
+        <article class="step" data-reveal><span class="dot">۵</span><b>تشخیص و تفکیک</b><p>شناسایی جداکننده‌ها و برخی الگوها و کدها و ایجاد خودکار پوشه مستقل برای هر پرونده.</p></article>
+        <article class="step" data-reveal><span class="dot">۶</span><b>بررسی انسانی</b><p>ارجاع فقط موارد مبهم یا نامشخص به اپراتور برای تشخیص و کدگذاری نهایی.</p></article>
+        <article class="step" data-reveal><span class="dot">۷</span><b>کنترل کیفیت</b><p>بررسی خوانایی، ترتیب، صحت دسته‌بندی و کامل بودن مجموعه دیجیتال.</p></article>
+        <article class="step" data-reveal><span class="dot">۸</span><b>بازگردانی و تحویل</b><p>مرتب‌سازی مجدد اسناد، بازگرداندن به پرونده فیزیکی و تحویل خروجی دیجیتال.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="innovation">
+    <div class="container">
+      <div class="eyebrow">نوآوری عملیاتی</div>
+      <h2>به‌جای افزودن نیروی انسانی، گلوگاه را تغییر می‌دادیم</h2>
+      <p class="lead">در طول پروژه‌ها، چند راهکار نرم‌افزاری، تجهیزاتی و اجرایی برای افزایش ظرفیت پردازش بدون افت دقت طراحی و استفاده شد.</p>
+
+      <div class="innovation-grid">
+        <article class="innovation" data-reveal>
+          <div class="num">01</div><div class="icon">⌘</div>
+          <h3>نرم‌افزار اختصاصی «اسکن استودیو»</h3>
+          <p>برای مدیریت فرایند اسکن و پردازش اسناد، نرم‌افزار اختصاصی شرکت توسعه داده شد. این نرم‌افزار بخشی از عملیات تکراری را از اپراتور می‌گرفت و جریان پردازش را ساخت‌یافته‌تر می‌کرد.</p>
+        </article>
+        <article class="innovation" data-reveal>
+          <div class="num">02</div><div class="icon">▤</div>
+          <h3>اسکن چندپرونده‌ای با تفکیک خودکار</h3>
+          <p>به‌جای اسکن جداگانه هر پرونده، چند پرونده متناسب در یک دسته قرار می‌گرفت. <strong>صفحات جداکننده</strong> میان پرونده‌ها باعث می‌شد سیستم هر پرونده را خودکار در پوشه مستقل ذخیره کند و توقف‌های مکرر اپراتور کاهش یابد.</p>
+        </article>
+        <article class="innovation" data-reveal>
+          <div class="num">03</div><div class="icon">◫</div>
+          <h3>پالایش و تشخیص نیمه‌خودکار</h3>
+          <p>صفحات سفید در ابتدا پالایش می‌شدند و برخی کدها و نشانه‌های تصویری ساده با الگوهای از پیش تعریف‌شده شناسایی می‌شدند؛ در نتیجه فقط موارد نامشخص برای بررسی انسانی باقی می‌ماند.</p>
+        </article>
+        <article class="innovation" data-reveal>
+          <div class="num">04</div><div class="icon">⌁</div>
+          <h3>ساخت ابزار هم‌ترازی اسناد</h3>
+          <p>برای بازگرداندن سریع صفحات به پرونده و استفاده از سوراخ‌های قبلی، یک سازه فلزی شیب‌دار با تکیه‌گاه ۹۰ درجه طراحی شد. پس از موفقیت نمونه اولیه، <strong>سه نمونه</strong> از آن در عملیات استفاده شد.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="eyebrow">منطق نرم‌افزار</div>
+      <h2>کاهش کار دستی با پردازش استثناها</h2>
+      <p class="lead">هدف این نبود که انسان از فرایند حذف شود؛ هدف این بود که اپراتور زمانش را روی مواردی بگذارد که واقعاً به تشخیص انسانی نیاز دارند.</p>
+      <div class="logic-flow" aria-label="جریان پردازش اسناد">
+        <div class="logic-item">ورود تصاویر اسکن‌شده</div>
+        <div class="logic-item">حذف صفحات سفید</div>
+        <div class="logic-item emph">تشخیص صفحه جداکننده</div>
+        <div class="logic-item">ساخت پوشه پرونده</div>
+        <div class="logic-item">تشخیص کد و الگوی ساده</div>
+        <div class="logic-item emph">ارجاع موارد مبهم به اپراتور</div>
+        <div class="logic-item">کنترل کیفیت و ذخیره نهایی</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container jogger-grid">
+      <figure class="jogger-visual" data-reveal>
+        <img src="images/paper-aligner-concept.png" alt="بازسازی مفهومی سازه فلزی یک‌تکه و شیب‌دار برای هم‌تراز کردن دسته‌های کاغذ" loading="lazy">
+        <figcaption class="jogger-label">بازسازی مفهومی سازه‌ای که برای هم‌تراز کردن دسته‌های کاغذ ساخته شد؛ یک ورق فلزی یک‌تکه با سطح شیب‌دار و خم انتهایی ۹۰ درجه.</figcaption>
+      </figure>
+      <div class="jogger-copy" data-reveal>
+        <div class="eyebrow">حل مسئله در کف عملیات</div>
+        <h2>یک ابزار ساده برای یک گلوگاه پرهزینه</h2>
+        <p class="lead">بعد از اسکن، صفحات باید با همان ترتیب و حتی‌الامکان با استفاده از سوراخ‌های قبلی به پرونده برمی‌گشتند. پانچ دوباره هم زمان‌بر بود و هم می‌توانست به اسناد آسیب بزند.</p>
+        <p class="muted">پس از بررسی نمونه‌های خارجی دستگاه‌های مرتب‌سازی کاغذ و با توجه به نبود امکان تهیه آنها، یک سازه ساده از ورق فلزی طراحی و ساخته شد. سطح شیب‌دار، دسته کاغذ را به سمت انتهای خم‌شده هدایت می‌کرد و با چند حرکت کوتاه، لبه‌ها و گوشه‌های صفحات سریع‌تر هم‌راستا می‌شدند.</p>
+        <p class="muted">این هم‌راستایی کمک می‌کرد سوراخ‌های قبلی صفحات نیز بهتر روی هم قرار بگیرند. پس از موفقیت نمونه اولیه، سه نمونه از این ابزار ساخته و وارد فرایند روزانه شدند.</p>
+        <div class="mini-points">
+          <div class="mini-point"><i></i><span>کاهش زمان مرتب‌سازی و بازگردانی اسناد</span></div>
+          <div class="mini-point"><i></i><span>کاهش نیاز به پانچ مجدد و آسیب فیزیکی به صفحات</span></div>
+          <div class="mini-point"><i></i><span>افزایش یکنواختی و دقت در عملیات دستی تیم</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="security">
+    <div class="container">
+      <div class="eyebrow">محرمانگی و کنترل</div>
+      <h2>سرعت بدون کنترل، ارزش نداشت</h2>
+      <p class="lead">ماهیت بسیاری از پرونده‌های سازمانی ایجاب می‌کرد که گردش اسناد و دسترسی افراد، از لحظه تحویل تا بازگردانی، تحت قواعد مشخص انجام شود.</p>
+      <div class="security">
+        <article class="security-card" data-reveal><b>دسترسی کنترل‌شده</b><p>دسترسی به اسناد بر اساس هماهنگی‌ها و ضوابط کارفرما انجام می‌شد و افراد فقط در حدود مسئولیت خود به اطلاعات دسترسی داشتند.</p></article>
+        <article class="security-card" data-reveal><b>ردیابی گردش اسناد</b><p>دریافت، پردازش، کنترل و بازگرداندن پرونده‌ها به‌صورت مرحله‌ای مدیریت می‌شد تا احتمال جابه‌جایی یا مفقودی کاهش یابد.</p></article>
+        <article class="security-card" data-reveal><b>احراز صلاحیت و اعتماد سازمانی</b><p>برای حضور در برخی محیط‌های کاری و دسترسی مدیریتی، فرایندهای رسمی موردنظر کارفرما طی و الزامات محرمانگی رعایت می‌شد.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">نمونه کارفرمایان</div>
+      <h2>پروژه‌های سازمانی در چند مجموعه شاخص</h2>
+      <p class="lead">این تجربه در پروژه‌های واقعی و در محیط‌های سازمانی مختلف شکل گرفت.</p>
+      <div class="clients" data-reveal>
+        <span class="client">سازمان اوقاف و امور خیریه ـ اصفهان</span>
+        <span class="client">سازمان اوقاف و امور خیریه ـ کاشان</span>
+        <span class="client">سازمان اوقاف و امور خیریه ـ نجف‌آباد</span>
+        <span class="client">شرکت همراه اول</span>
+        <span class="client">دانشگاه المصطفی</span>
+      </div>
+      <p class="note" style="margin-top:16px">نام کارفرمایان بر اساس سوابق این دوره درج شده است؛ جزئیات پروژه‌ها در این صفحه در سطح غیرحساس و رزومه‌ای ارائه شده‌اند.</p>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="archive">
+    <div class="container">
+      <div class="archive-box" data-reveal>
+        <div>
+          <div class="eyebrow">سند تاریخی</div>
+          <h2 style="font-size:28px;margin-bottom:8px">معرفی گروه اسکن و تصویربرداری در وب‌سایت همان سال‌ها</h2>
+          <p>نسخه‌ای از معرفی خدمات «اسکن، تصویربرداری و مکانیزاسیون اسناد» شرکت مهندسی سبز در آرشیو وب باقی مانده است. در آن صفحه، پالایش و سبک‌سازی، تفکیک و مرتب‌سازی اسناد، دسترسی حفاظت‌شده و ارائه آرشیو الکترونیکی به‌عنوان بخشی از خدمات معرفی شده بود.</p>
+        </div>
+        <a class="archive-btn" target="_blank" rel="noopener" href="https://web.archive.org/web/20110913065800/http://www.sabz-co.com/index.php?option=com_content&view=article&id=77:1388-06-05-12-46-03&catid=2:services&Itemid=66">مشاهده نسخه آرشیوشده</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="container" data-reveal>
+      <div class="eyebrow">آنچه از این تجربه مانده است</div>
+      <p class="quote">«قبل از افزایش نیروی انسانی، <span>گلوگاه فرایند</span> را پیدا کن؛ گاهی یک تغییر نرم‌افزاری، یک ابزار ساده یا یک روش اجرایی بهتر، ظرفیت کل عملیات را تغییر می‌دهد.»</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <span>علی اسماعیل‌پور — پروژه‌های منتخب فناوری و مدیریت</span>
+    <a href="https://esmaeelpoor.ir/">esmaeelpoor.ir</a>
+  </div>
+</footer>
+
+<script>
+  const els=[...document.querySelectorAll('[data-reveal]')];
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}})
+    },{threshold:.12});
+    els.forEach(el=>io.observe(el));
+  }else{
+    els.forEach(el=>el.classList.add('show'));
+  }
+</script>
+</body>
+</html>
