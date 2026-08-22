@@ -13,24 +13,24 @@
 <meta content="home" name="pageName"/>
 <link href="https://esmaeelpoor.ir/" rel="canonical"/>
 <meta content="INDEX,FOLLOW" data-react-helmet="true" name="robots"/>
-<meta content="8FD149B846B65711A7D67A63FA357D1C" name="msvalidate.01"/>
-<meta content="BPHuZAJeb52tnlVrzhkErqazzpAUHHWDHv5Yl_f9agk" name="google-site-verification"/>
+<meta content="8FD149B846B65711A7D67A63FA357D1C" name="msvalidate.01">
+<meta content="BPHuZAJeb52tnlVrzhkErqazzpAUHHWDHv5Yl_f9agk" name="google-site-verification">
 <link href="assets/images/favicon.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="assets/css/main.css" rel="stylesheet"/>
+<link href="assets/css/main.css?v=20260822-hotfix2" rel="stylesheet"/>
 <link href="assets/css/owl.carousel.css" rel="stylesheet"/>
 <link href="assets/css/owl.theme.green.css" rel="stylesheet"/>
-<meta content="Ali Esmaeelpoor" name="author">
-<meta content="fa_IR" property="og:locale"/>
-<meta content="website" property="og:type"/>
-<meta content="علی اسماعیل‌پور | فناوری، داده، هوش مصنوعی و یادگیری" property="og:title"/>
-<meta content="سایت شخصی علی اسماعیل‌پور؛ مسیر حرفه‌ای از ۱۳۷۸ در نرم‌افزار، دیجیتال‌سازی سازمانی، داده، مدیریت پروژه، هوش مصنوعی، سواد مالی، نشر و طراحی محصولات آموزشی." property="og:description"/>
-<meta content="https://esmaeelpoor.ir/" property="og:url"/>
-<meta content="وب سایت شخصی علی اسماعیل‌پور" property="og:site_name">
-<meta content="2026-08-22T13:39:00+03:30" property="og:updated_time">
-<meta content="https://esmaeelpoor.ir/assets/images/aliesmaeelpoor-2.png" property="og:image">
-<meta content="https://esmaeelpoor.ir/assets/images/aliesmaeelpoor-2.png" property="og:image:secure_url">
-<meta content="1200" property="og:image:width">
-<meta content="1500" property="og:image:height">
+<meta content="Ali Esmaeelpoor" name="author"/>
+<meta content="fa_IR" property="og:locale">
+<meta content="website" property="og:type">
+<meta content="علی اسماعیل‌پور | فناوری، داده، هوش مصنوعی و یادگیری" property="og:title">
+<meta content="سایت شخصی علی اسماعیل‌پور؛ مسیر حرفه‌ای از ۱۳۷۸ در نرم‌افزار، دیجیتال‌سازی سازمانی، داده، مدیریت پروژه، هوش مصنوعی، سواد مالی، نشر و طراحی محصولات آموزشی." property="og:description">
+<meta content="https://esmaeelpoor.ir/" property="og:url">
+<meta content="وب سایت شخصی علی اسماعیل‌پور" property="og:site_name"/>
+<meta content="2026-08-22T13:39:00+03:30" property="og:updated_time"/>
+<meta content="https://esmaeelpoor.ir/assets/images/aliesmaeelpoor-2.png" property="og:image"/>
+<meta content="https://esmaeelpoor.ir/assets/images/aliesmaeelpoor-2.png" property="og:image:secure_url"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="1500" property="og:image:height"/>
 <meta content="علی اسماعیل‌پور" property="og:image:alt"/>
 <meta content="image/png" property="og:image:type"/>
 <script type="application/ld+json">
@@ -60,20 +60,371 @@
 	  ]
 	}
 	</script>
-</meta></meta></meta></meta></meta></meta></meta></head>
+<style>
+
+:root{
+  --ai-blue:#1d8bff;
+  --ai-cyan:#50c7f7;
+  --ai-gold:#eab75e;
+  --ink:#0f172a;
+  --soft:#f6f8fb;
+  --muted:#64748b;
+  --card:#ffffff;
+}
+html{scroll-behavior:smooth;}
+body{background:#fff;}
+.section-intro{max-width:780px;margin:0 auto 35px auto;text-align:center;color:#5d6778;line-height:1.95}
+.reveal{opacity:0;transform:translateY(32px);transition:all .8s ease;}
+.reveal.in-view{opacity:1;transform:none;}
+.hero-section.ai-hero{position:relative;overflow:hidden;padding:110px 0 70px;background:radial-gradient(circle at top right,rgba(29,139,255,.12),transparent 35%),linear-gradient(135deg,#f8fbff 0%,#ffffff 45%,#f6f8fb 100%);}
+.hero-section.ai-hero .container{position:relative;z-index:2;}
+#hero-network{position:absolute;inset:0;width:100%;height:100%;z-index:1;opacity:.85;}
+.ai-hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:38px;align-items:center;}
+.ai-hero-content .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:rgba(29,139,255,.08);color:#2563eb;font-size:14px;font-weight:700;margin-bottom:20px;}
+.ai-hero-content .eyebrow:before{content:'';width:10px;height:10px;background:linear-gradient(135deg,var(--ai-blue),var(--ai-cyan));border-radius:50%;box-shadow:0 0 0 6px rgba(29,139,255,.12);}
+.ai-hero-content h1{font-size:66px;line-height:1.05;margin-bottom:14px;color:var(--ink);}
+.ai-hero-content h4{font-size:28px;line-height:1.6;color:#22304a;margin-bottom:16px;font-weight:700;}
+.ai-hero-content .paragraph{font-size:17px;line-height:2.1;color:#445166;max-width:640px;margin-bottom:26px;}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px;}
+.hero-cta .btn{box-shadow:0 12px 28px rgba(15,23,42,.1);}
+.hero-stats{display:grid;grid-template-columns:repeat(4,minmax(110px,1fr));gap:16px;margin-top:18px;}
+.stat-chip{background:rgba(255,255,255,.84);backdrop-filter:blur(8px);border:1px solid rgba(29,139,255,.12);border-radius:20px;padding:18px 14px;box-shadow:0 12px 26px rgba(24,39,75,.08);text-align:center;}
+.stat-chip strong{display:block;font-size:28px;color:var(--ink);margin-bottom:6px;}
+.stat-chip span{font-size:13px;color:#5b6679;line-height:1.7;display:block;}
+.ai-portrait-wrap{position:relative;display:flex;align-items:center;justify-content:center;}
+.ai-portrait-glow{position:absolute;width:84%;aspect-ratio:1/1;background:radial-gradient(circle,rgba(80,199,247,.28),rgba(29,139,255,.10) 45%,transparent 70%);filter:blur(18px);z-index:0;}
+.ai-portrait-card{position:relative;z-index:1;max-width:520px;width:100%;padding:18px;border-radius:34px;background:linear-gradient(145deg,rgba(255,255,255,.84),rgba(250,252,255,.65));box-shadow:0 22px 60px rgba(15,23,42,.16);border:1px solid rgba(255,255,255,.7);backdrop-filter:blur(8px);}
+.ai-portrait-card img{display:block;width:100%;border-radius:24px;object-fit:cover;max-height:700px;}
+.hero-floating-note{position:absolute;right:-6px;bottom:38px;background:#0f172a;color:#fff;padding:14px 18px;border-radius:18px;box-shadow:0 18px 45px rgba(15,23,42,.2);max-width:240px;}
+.hero-floating-note strong{display:block;font-size:14px;margin-bottom:6px;color:#fff;}
+.hero-floating-note span{display:block;font-size:12px;line-height:1.9;color:rgba(255,255,255,.78);}
+.ai-strip{background:#0f172a;color:#fff;padding:22px 0;position:relative;overflow:hidden;}
+.ai-strip:before{content:'';position:absolute;left:-10%;top:0;width:120%;height:100%;background:linear-gradient(90deg,transparent,rgba(80,199,247,.12),transparent);animation:shine 12s linear infinite;}
+.ai-strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;position:relative;z-index:1;}
+.ai-strip-item{padding:8px 14px;border-left:1px solid rgba(255,255,255,.1);}
+.ai-strip-item:last-child{border-left:none;}
+.ai-strip-item strong{display:block;font-size:20px;margin-bottom:4px;}
+.ai-strip-item span{display:block;color:rgba(255,255,255,.75);font-size:14px;line-height:1.8;}
+.brand-dna{padding:95px 0;background:linear-gradient(180deg,#fff,#f8fbff);}
+.dna-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.dna-card{position:relative;background:#fff;border:1px solid rgba(29,139,255,.1);border-radius:24px;padding:30px;box-shadow:0 15px 40px rgba(15,23,42,.08);overflow:hidden;transition:transform .35s ease,box-shadow .35s ease;}
+.dna-card:hover{transform:translateY(-8px);box-shadow:0 22px 50px rgba(15,23,42,.14);}
+.dna-card .icon{width:58px;height:58px;border-radius:18px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;background:linear-gradient(145deg,rgba(29,139,255,.12),rgba(80,199,247,.18));color:#0f172a;font-size:28px;}
+.dna-card h3{font-size:24px;margin-bottom:12px;color:#0f172a;}
+.dna-card p{font-size:15px;line-height:2;color:#556274;}
+.dna-card h3,.dna-card p,.dna-card .micro-map,.dna-card .vector-icon{position:relative;z-index:2;transform:translateZ(0);backface-visibility:hidden;-webkit-font-smoothing:antialiased;}
+
+.dna-card .micro-map{margin-top:16px;padding-top:16px;border-top:1px dashed rgba(100,116,139,.28);font-size:13px;color:#617086;line-height:2;}
+.timeline-ai{padding:95px 0;background:#fff;}
+.timeline-track{position:relative;max-width:1040px;margin:0 auto;padding:20px 0;}
+.timeline-track:before{content:'';position:absolute;right:50%;top:0;transform:translateX(50%);width:4px;height:100%;background:linear-gradient(180deg,rgba(29,139,255,.1),rgba(29,139,255,.6),rgba(29,139,255,.08));border-radius:999px;}
+.timeline-progress{position:absolute;right:50%;top:0;transform:translateX(50%);width:4px;height:0;background:linear-gradient(180deg,var(--ai-blue),var(--ai-cyan),var(--ai-gold));border-radius:999px;transition:height .45s ease;}
+.timeline-row{display:grid;grid-template-columns:1fr 120px 1fr;gap:18px;align-items:center;margin:12px 0;}
+.timeline-row:nth-child(even) .timeline-card{grid-column:3/4;}
+.timeline-row:nth-child(even) .timeline-year{grid-column:2/3;}
+.timeline-row:nth-child(odd) .timeline-card{grid-column:1/2;}
+.timeline-row:nth-child(odd) .timeline-year{grid-column:2/3;}
+.timeline-year{position:relative;text-align:center;font-weight:800;color:#0f172a;z-index:2;}
+.timeline-year .dot{display:block;margin:0 auto 8px auto;width:22px;height:22px;border-radius:50%;background:#fff;border:5px solid rgba(29,139,255,.25);box-shadow:0 0 0 8px rgba(29,139,255,.08);transition:all .3s ease;}
+.timeline-row.active .timeline-year .dot{border-color:var(--ai-blue);box-shadow:0 0 0 10px rgba(29,139,255,.12),0 10px 20px rgba(29,139,255,.16);transform:scale(1.05);}
+.timeline-card{background:#fff;border-radius:22px;padding:26px;border:1px solid rgba(29,139,255,.12);box-shadow:0 14px 38px rgba(15,23,42,.08);}
+.timeline-card h3{font-size:22px;margin-bottom:10px;color:#0f172a;}
+.timeline-card p{font-size:15px;line-height:2;color:#566377;}
+.case-study{padding:90px 0;background:linear-gradient(180deg,#f8fbff,#fff);}
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.case-card{background:#fff;border-radius:24px;padding:28px;border:1px solid rgba(29,139,255,.1);box-shadow:0 15px 42px rgba(15,23,42,.08);transition:transform .35s ease, box-shadow .35s ease;}
+.case-card:hover{transform:translateY(-8px);box-shadow:0 22px 52px rgba(15,23,42,.14);}
+.case-card .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(29,139,255,.08);color:#2563eb;font-size:12px;font-weight:700;margin-bottom:14px;}
+.case-card h3{font-size:24px;margin-bottom:10px;color:#0f172a;}
+.case-card ul{margin:12px 0 18px 0;padding:0;list-style:none;}
+.case-card li{font-size:14px;line-height:2;color:#566377;position:relative;padding-right:18px;}
+.case-card li:before{content:'•';position:absolute;right:0;color:var(--ai-blue);}
+.case-card a{font-weight:700;color:#2563eb;}
+.idea-lab{padding:95px 0;background:#0d1425;position:relative;overflow:hidden;}
+.idea-lab:before,.idea-lab:after{content:'';position:absolute;border-radius:50%;filter:blur(60px);opacity:.25;}
+.idea-lab:before{width:360px;height:360px;left:-80px;top:-40px;background:#50c7f7;}
+.idea-lab:after{width:320px;height:320px;right:-60px;bottom:-60px;background:#eab75e;}
+.idea-lab .container{position:relative;z-index:2;}
+.idea-lab h2,.idea-lab .section-intro{color:#fff;}
+.idea-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.idea-orb{position:relative;min-height:230px;border-radius:26px;background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;padding:24px;overflow:hidden;transition:transform .35s ease,border-color .35s ease;}
+.idea-orb:hover{transform:translateY(-10px) scale(1.02);border-color:rgba(255,255,255,.32);}
+.idea-orb:before{content:'';position:absolute;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(80,199,247,.33),transparent 65%);top:-20px;right:-12px;}
+.idea-orb .inner{position:relative;text-align:center;color:#fff;}
+.idea-orb .emoji{font-size:32px;display:block;margin-bottom:12px;}
+.idea-orb h3{font-size:22px;color:#fff;margin-bottom:10px;}
+.idea-orb p{font-size:14px;line-height:2;color:rgba(255,255,255,.82);}
+.namesakes-mini{padding:70px 0 0 0;}
+.namesakes-card{background:#f8fbff;border:1px solid rgba(29,139,255,.12);border-radius:22px;padding:28px;display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:0 12px 32px rgba(15,23,42,.05);}
+.namesakes-card h3{margin-bottom:10px;color:#0f172a;}
+.namesakes-card p{line-height:2;color:#58667a;max-width:760px;}
+body.darkmode .ai-hero{background:linear-gradient(135deg,#0e1729 0%,#101826 40%,#0f172a 100%);} 
+body.darkmode .ai-hero-content h1,body.darkmode .ai-hero-content h4{color:#fff;}
+body.darkmode .ai-hero-content .paragraph{color:rgba(255,255,255,.75);} 
+body.darkmode .stat-chip,body.darkmode .dna-card,body.darkmode .timeline-card,body.darkmode .case-card{background:#111a2f;color:#fff;border-color:rgba(255,255,255,.08);} 
+body.darkmode .dna-card h3,body.darkmode .timeline-card h3,body.darkmode .case-card h3{color:#fff;} 
+body.darkmode .dna-card p,body.darkmode .timeline-card p,body.darkmode .case-card li,body.darkmode .section-intro{color:rgba(255,255,255,.7);} 
+@keyframes shine{0%{transform:translateX(-20%)}100%{transform:translateX(20%)}}
+@media (max-width:1100px){
+  .ai-hero-inner,.dna-grid,.case-grid,.idea-grid{grid-template-columns:1fr 1fr;}
+  .timeline-track:before,.timeline-progress{right:28px;transform:none;}
+  .timeline-row{grid-template-columns:1fr 70px;}
+  .timeline-row .timeline-card{grid-column:1/2 !important;}
+  .timeline-row .timeline-year{grid-column:2/3 !important;}
+}
+@media (max-width:768px){
+  .ai-hero-inner,.dna-grid,.case-grid,.idea-grid,.ai-strip-grid,.hero-stats{grid-template-columns:1fr;}
+  .ai-hero-content h1{font-size:44px;}
+  .ai-hero-content h4{font-size:22px;}
+  .ai-portrait-card{max-width:420px;margin:0 auto;}
+  .hero-floating-note{right:8px;left:8px;bottom:12px;max-width:none;}
+  .timeline-track:before,.timeline-progress{right:14px;}
+  .timeline-row{grid-template-columns:1fr 56px;gap:12px;}
+  .namesakes-card{flex-direction:column;align-items:flex-start;}
+}
+
+.publishing-highlight{padding:90px 0;background:linear-gradient(180deg,#fff,#f7faff);}
+.publishing-container{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;}
+.publishing-badge{color:#1769d2;font-weight:700;margin-bottom:15px;}
+.publishing-content h2{font-size:38px;line-height:1.7;color:#101828;}
+.publishing-content h2 span{color:#d39b3d;}
+.publishing-content p{font-size:17px;line-height:2.2;color:#475467;}
+.publishing-stats{display:flex;gap:15px;margin:30px 0;}
+.publishing-stat{flex:1;background:#fff;border:1px solid rgba(29,139,255,.12);border-radius:20px;padding:18px;text-align:center;box-shadow:0 10px 25px rgba(15,23,42,.06);}
+.publishing-stat strong{display:block;font-size:30px;color:#d39b3d;}
+.publishing-stat span{color:#64748b;font-size:13px;}
+.publishing-btn{display:inline-block;background:#101828;color:#fff!important;padding:13px 28px;border-radius:40px;}
+.publishing-visual{position:relative;height:390px;}
+.publishing-book{position:absolute;width:170px;height:240px;border-radius:8px;box-shadow:0 20px 45px rgba(15,23,42,.2);}
+.publishing-book.one{right:100px;top:40px;background:linear-gradient(135deg,#d7ad5e,#fff);transform:rotate(12deg);}
+.publishing-book.two{right:170px;top:80px;background:linear-gradient(135deg,#1d8bff,#0f172a);transform:rotate(-8deg);}
+.publishing-book.three{right:230px;top:120px;background:linear-gradient(135deg,#eee,#999);transform:rotate(-18deg);}
+.publishing-card{position:absolute;bottom:20px;left:20px;background:#101828;color:#fff;padding:22px;border-radius:20px;line-height:2;}
+@media(max-width:900px){.publishing-container{grid-template-columns:1fr}.publishing-stats{flex-direction:column}}
+
+
+
+/* Final Hero refinement - personal brand style */
+.hero-section.ai-hero{
+    padding:90px 0 50px;
+    background:linear-gradient(135deg,#ffffff 0%,#f7f9fc 100%);
+}
+.ai-hero-inner{
+    display:flex;
+    flex-direction:row-reverse;
+    gap:70px;
+    align-items:center;
+}
+.ai-hero-content{
+    flex:1;
+    text-align:right;
+}
+.ai-hero-content .eyebrow{
+    background:#eef6ff;
+    color:#1769d2;
+}
+.ai-hero-content h1{
+    font-size:58px;
+    font-weight:900;
+    color:#101828;
+}
+.ai-hero-content h4{
+    font-size:30px;
+    line-height:1.8;
+    color:#26364d;
+}
+.ai-hero-content .paragraph{
+    font-size:18px;
+    line-height:2.2;
+    color:#475467;
+}
+.ai-portrait-wrap{
+    flex:0 0 420px;
+}
+.ai-portrait-card{
+    padding:0;
+    background:#fff;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 25px 70px rgba(15,23,42,.15);
+    border:none;
+}
+.ai-portrait-card img{
+    width:100%;
+    height:auto;
+    max-height:none;
+    border-radius:30px;
+    object-fit:cover;
+}
+.ai-portrait-glow{
+    display:none;
+}
+.hero-floating-note{
+    display:none;
+}
+/* remove artificial AI logos feeling */
+#hero-network{
+    opacity:.18;
+}
+.ai-strip{
+    background:#101828;
+}
+.hero-stats{
+    margin-top:35px;
+}
+.stat-chip strong{
+    font-size:24px;
+}
+@media(max-width:900px){
+ .ai-hero-inner{
+   flex-direction:column;
+ }
+ .ai-portrait-wrap{
+   flex-basis:auto;
+   width:100%;
+ }
+ .ai-hero-content h1{
+   font-size:42px;
+ }
+}
+
+
+
+/* ===== Brand refinement 1405/05/27 ===== */
+.ai-strip-item strong{font-size:18px}
+.ai-strip-item strong small{display:block;margin-top:3px;font-size:10px;font-weight:500;letter-spacing:.4px;color:rgba(255,255,255,.48);direction:ltr;text-align:right}
+.hero-focus{display:flex;gap:8px;flex-wrap:wrap;margin:-4px 0 24px}
+.hero-focus span{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(29,139,255,.14);background:rgba(255,255,255,.76);color:#334155;padding:7px 11px;border-radius:999px;font-size:12px;box-shadow:0 7px 18px rgba(15,23,42,.04)}
+.hero-focus span:before{content:'';width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,var(--ai-blue),var(--ai-cyan))}
+
+/* Keep the page focused: the old duplicate KPI strip is intentionally removed. */
+
+.dna-card .vector-icon{width:60px;height:60px;border-radius:18px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;background:linear-gradient(145deg,rgba(29,139,255,.10),rgba(80,199,247,.17));border:1px solid rgba(29,139,255,.09)}
+.dna-card .vector-icon svg{width:32px;height:32px;stroke:#1769d2;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* Publishing: original inline vector, no stock/copy image */
+.publishing-highlight{position:relative;overflow:hidden}
+.publishing-highlight:before{content:'';position:absolute;width:420px;height:420px;left:-150px;top:-120px;border-radius:50%;background:radial-gradient(circle,rgba(29,139,255,.10),transparent 68%)}
+.publishing-container{position:relative;z-index:1}
+.publishing-visual{height:430px;display:flex;align-items:center;justify-content:center}
+.publishing-vector-shell{position:relative;width:min(100%,480px);height:390px;border-radius:34px;background:linear-gradient(145deg,#0c1728,#111f35);box-shadow:0 28px 65px rgba(15,23,42,.20);overflow:hidden;border:1px solid rgba(255,255,255,.06)}
+.publishing-vector-shell:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 75% 20%,rgba(80,199,247,.18),transparent 30%),radial-gradient(circle at 20% 85%,rgba(234,183,94,.16),transparent 26%)}
+.publishing-svg{position:absolute;inset:22px 18px 84px;width:calc(100% - 36px);height:calc(100% - 106px)}
+.publishing-role-cloud{position:absolute;left:18px;right:18px;bottom:18px;display:flex;gap:7px;flex-wrap:wrap;justify-content:center}
+.publishing-role-cloud span{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.10);color:#e8eef7;font-size:11px;backdrop-filter:blur(8px)}
+.publishing-role-cloud span:nth-child(1),.publishing-role-cloud span:nth-child(5){color:#f2d497;border-color:rgba(234,183,94,.25);background:rgba(234,183,94,.08)}
+.publishing-btn{transition:transform .25s ease,box-shadow .25s ease}
+.publishing-btn:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(15,23,42,.18)}
+
+/* Services: three concise capability pillars */
+.services .section-intro{margin-bottom:34px}
+.services-inner.services-modern{grid-template-columns:repeat(3,1fr);gap:22px}
+.services-modern .services-block{position:relative;overflow:hidden;border:1px solid rgba(29,139,255,.10);border-radius:24px;background:#fff;padding:30px;box-shadow:0 14px 38px rgba(15,23,42,.07);transition:transform .3s ease,box-shadow .3s ease}
+.services-modern .services-block:hover{transform:translateY(-7px);box-shadow:0 22px 50px rgba(15,23,42,.12)}
+.service-vector{width:62px;height:62px;border-radius:18px;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,rgba(29,139,255,.10),rgba(80,199,247,.17));margin-bottom:20px}
+.service-vector svg{width:34px;height:34px;stroke:#1769d2;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.services-modern h3{font-size:22px;color:#0f172a;margin-bottom:12px}
+.services-modern p{font-size:15px;line-height:2;color:#58667a;margin:0}
+.service-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:17px}
+.service-tags span{font-size:11px;padding:4px 8px;border-radius:999px;background:#f3f7fc;color:#46617e;border:1px solid #e6edf6}
+
+.case-study h2,.projects h2,.idea-lab h2,.publishing-highlight h2,.services h2,.timeline-ai h2,.brand-dna h2{text-wrap:balance}
+.case-card .case-label{display:block;color:#8a98aa;font-size:12px;margin-bottom:5px}
+.case-card li strong{color:#1f2937}
+
+/* Better contact ending */
+.contact-modern{background:linear-gradient(135deg,#0d1728,#111f35);position:relative;overflow:hidden}
+.contact-modern:before,.contact-modern:after{content:'';position:absolute;border-radius:50%;filter:blur(70px);opacity:.22}
+.contact-modern:before{width:320px;height:320px;background:#1d8bff;right:-110px;top:-90px}
+.contact-modern:after{width:280px;height:280px;background:#eab75e;left:-100px;bottom:-120px}
+.contact-modern .container{position:relative;z-index:2}
+.contact-panel{max-width:900px;margin:auto;text-align:center;color:#fff}
+.contact-panel h2{color:#fff;font-size:38px;margin-bottom:14px}
+.contact-panel p{color:rgba(255,255,255,.74);font-size:17px;line-height:2;max-width:720px;margin:0 auto 28px}
+.contact-actions{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+.contact-action{display:inline-flex;align-items:center;gap:9px;padding:12px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);color:#fff!important;transition:.25s}
+.contact-action:hover{transform:translateY(-2px);background:rgba(255,255,255,.12)}
+.contact-action.primary{background:#fff;color:#0f172a!important;border-color:#fff;font-weight:700}
+.contact-action svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8}
+
+/* Active menu link and mobile polish */
+.navigation-bar ul li a{white-space:nowrap}
+.burger[aria-expanded="true"]{opacity:.92}
+
+/* Dark mode completion for new areas */
+body.darkmode .publishing-highlight{background:linear-gradient(180deg,#0f172a,#111827)}
+body.darkmode .publishing-content h2,body.darkmode .publishing-content p{color:#fff}
+body.darkmode .publishing-content p{color:rgba(255,255,255,.72)}
+body.darkmode .publishing-stat{background:#111a2f;border-color:rgba(255,255,255,.08)}
+body.darkmode .publishing-stat span{color:rgba(255,255,255,.65)}
+body.darkmode .services{background:#0f172a}
+body.darkmode .services h2,body.darkmode .services-modern h3{color:#fff}
+body.darkmode .services-modern .services-block{background:#111a2f;border-color:rgba(255,255,255,.08)}
+body.darkmode .services-modern p{color:rgba(255,255,255,.70)}
+body.darkmode .service-tags span{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.08);color:rgba(255,255,255,.72)}
+
+.btn-view-disabled{opacity:.58;cursor:default;pointer-events:none;white-space:nowrap}
+
+/* Respect reduced motion and save battery */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1!important;transform:none!important;transition:none!important}
+  .ai-strip:before{animation:none!important}
+  .dna-card,.case-card,.idea-orb,.services-modern .services-block,.publishing-btn{transition:none!important}
+  #hero-network{display:none}
+}
+@media(max-width:1100px){.services-inner.services-modern{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){
+  .publishing-visual{height:390px;margin-top:10px}
+  .publishing-vector-shell{height:360px;max-width:470px}
+}
+@media(max-width:768px){
+  .hero-focus{margin-bottom:18px}
+  .services-inner.services-modern{grid-template-columns:1fr}
+  .publishing-visual{height:340px}
+  .publishing-vector-shell{height:320px;border-radius:26px}
+  .contact-panel h2{font-size:30px}
+}
+
+
+/* ===== Organizational Document Digitization — compact homepage feature ===== */
+.document-case{position:relative;overflow:hidden;padding:76px 0;background:linear-gradient(135deg,#0d1728 0%,#101f34 58%,#0b1525 100%);color:#fff}
+.document-case:before{content:'';position:absolute;width:420px;height:420px;border-radius:50%;right:-170px;top:-210px;background:radial-gradient(circle,rgba(80,199,247,.18),transparent 68%)}
+.document-case:after{content:'';position:absolute;width:340px;height:340px;border-radius:50%;left:-150px;bottom:-200px;background:radial-gradient(circle,rgba(234,183,94,.12),transparent 68%)}
+.document-case .container{position:relative;z-index:2}
+.document-case-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:34px;align-items:center;padding:34px 38px;border-radius:28px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.10);box-shadow:0 22px 54px rgba(0,0,0,.18);backdrop-filter:blur(10px)}
+.document-case-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.055);color:#bfe4ff;font-size:11px;font-weight:700;margin-bottom:13px}
+.document-case-badge:before{content:'';width:7px;height:7px;border-radius:50%;background:#50c7f7;box-shadow:0 0 0 5px rgba(80,199,247,.09)}
+.document-case h2{font-size:clamp(28px,3.2vw,40px);line-height:1.55;color:#fff;margin:0 0 12px}
+.document-case-lead{font-size:15px;line-height:2.05;color:rgba(255,255,255,.75);margin:0;max-width:850px}
+.document-case-highlights{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.document-case-highlights span{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.76);font-size:11px}
+.document-case-action{display:flex;align-items:center;justify-content:flex-end}
+.document-case-link{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;padding:12px 19px;border-radius:999px;background:#fff;color:#0f172a!important;font-weight:800;transition:transform .25s ease,box-shadow .25s ease}
+.document-case-link:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(0,0,0,.18)}
+.timeline-card .timeline-link{display:inline-flex;margin-top:10px;color:#1769d2;font-size:13px;font-weight:800}
+.case-grid.case-grid-four{grid-template-columns:repeat(2,1fr)}
+.case-card.scan-case-card{background:linear-gradient(145deg,#ffffff,#f5faff);border-color:rgba(29,139,255,.18)}
+.case-card.scan-case-card .badge{background:rgba(234,183,94,.13);color:#9a681d}
+body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
+@media(max-width:900px){.document-case-card{grid-template-columns:1fr}.document-case-action{justify-content:flex-start}}
+@media(max-width:768px){.document-case{padding:62px 0}.document-case-card{padding:28px 24px;border-radius:22px}.case-grid.case-grid-four{grid-template-columns:1fr}}
+
+</style>
+</head>
 <body>
 <!-- Header -->
 <header>
 <div class="container">
 <nav class="nav d-flex" id="home">
 <div class="logo">
-<a href="#home">
-<img alt="لوگوی علی اسماعیل‌پور" class="logo-main" decoding="async" loading="eager" src="assets/images/logo.png"/>
-<img alt="لوگوی علی اسماعیل‌پور" class="logo-dark" decoding="async" loading="eager" src="assets/images/logo-white.png"/>
+<a href="#">
+<img alt="لوگوی علی اسماعیل‌پور" class="logo-main" src="assets/images/logo.png" loading="eager" decoding="async"/>
+<img alt="لوگوی علی اسماعیل‌پور" class="logo-dark" src="assets/images/logo-white.png" loading="eager" decoding="async"/>
 </a>
 </div>
 <!-- toggle icon -->
-<a aria-controls="nav" aria-expanded="false" aria-label="باز کردن منو" class="burger" href="javascript:void(0)" role="button">
+<a aria-expanded="false" aria-label="باز کردن منو" class="burger" href="javascript:void(0)">
 <span class="one"></span>
 <span class="two"></span>
 <span class="three"></span>
@@ -94,16 +445,16 @@
 <li><a href="#publishing">نشر</a></li>
 <li><a href="#contact">تماس</a></li>
 <li class="darkmode-btn d-desktop">
-<a aria-label="تغییر حالت روشن و تیره" aria-pressed="false" href="javascript:void(0)" role="button">
-<img alt="حالت روشن" class="bright" decoding="async" loading="eager" src="assets/images/brightness.svg"/>
-<img alt="حالت تیره" class="dark" decoding="async" loading="eager" src="assets/images/moon.svg"/>
+<a aria-label="تغییر حالت روشن و تیره" href="javascript:void(0)">
+<img alt="حالت روشن" class="bright" src="assets/images/brightness.svg" loading="eager" decoding="async"/>
+<img alt="حالت تیره" class="dark" src="assets/images/moon.svg" loading="eager" decoding="async"/>
 </a>
 </li>
 </ul>
 </div>
-<div class="darkmode-btn d-mobile"><a aria-label="تغییر حالت روشن و تیره" aria-pressed="false" href="javascript:void(0)" role="button">
-<img alt="brightness" class="bright" decoding="async" loading="eager" src="assets/images/brightness.svg"/>
-<img alt="moon" class="dark" decoding="async" loading="eager" src="assets/images/moon.svg"/> </a></div>
+<div class="darkmode-btn d-mobile"><a href="javascript:void(0)">
+<img alt="brightness" class="bright" src="assets/images/brightness.svg" loading="eager" decoding="async"/>
+<img alt="moon" class="dark" src="assets/images/moon.svg" loading="eager" decoding="async"/> </a></div>
 </nav>
 </div>
 </header>
@@ -131,10 +482,10 @@
 </div>
 <div class="social">
 <ul>
-<li class="social-icon"><a href="https://www.instagram.com/ali.esmaeelpoor" rel="noopener" target="_blank"><img alt="instagram" decoding="async" loading="eager" src="assets/images/social-icons/feather_instagram.svg"/></a></li>
-<li class="social-icon"><a href="https://www.linkedin.com/in/ali-esmaeelpoor" rel="noopener" target="_blank"><img alt="linkedin" decoding="async" loading="eager" src="assets/images/social-icons/feather_linkedin.svg"/></a></li>
-<li class="social-icon"><a href="https://github.com/esmaeelpoor" rel="noopener" target="_blank"><img alt="github" decoding="async" loading="eager" src="assets/images/social-icons/feather_github.svg"/></a></li>
-<li class="social-icon"><a aria-label="فیسبوک علی اسماعیل‌پور" href="https://m.facebook.com/esmaeelpoor" rel="noopener" target="_blank"><svg aria-hidden="true" class="social-svg" focusable="false" viewbox="0 0 24 24"><path d="M13.6 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5H17V3.9c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v3h3v8h3.6Z" fill="currentColor"></path></svg></a></li>
+<li class="social-icon"><a href="https://www.instagram.com/ali.esmaeelpoor"><img alt="instagram" src="assets/images/social-icons/feather_instagram.svg" loading="eager" decoding="async"/></a></li>
+<li class="social-icon"><a href="https://www.linkedin.com/in/ali-esmaeelpoor"><img alt="linkedin" src="assets/images/social-icons/feather_linkedin.svg" loading="eager" decoding="async"/></a></li>
+<li class="social-icon"><a href="https://github.com/esmaeelpoor"><img alt="github" src="assets/images/social-icons/feather_github.svg" loading="eager" decoding="async"/></a></li>
+<li class="social-icon"><a href="https://m.facebook.com/esmaeelpoor"><img alt="facebook" src="assets/images/social-icons/feather_dribbble.svg" loading="eager" decoding="async"/></a></li>
 </ul>
 </div>
 <div class="hero-stats">
@@ -147,7 +498,7 @@
 <div class="ai-portrait-wrap reveal">
 <div class="ai-portrait-glow"></div>
 <div class="ai-portrait-card">
-<img alt="پرتره حرفه‌ای علی اسماعیل‌پور برای سایت شخصی" decoding="async" fetchpriority="high" height="1500" loading="eager" src="https://esmaeelpoor.ir/assets/images/aliesmaeelpoor-2.png" width="1200"/>
+<img alt="پرتره حرفه‌ای علی اسماعیل‌پور برای سایت شخصی" src="https://esmaeelpoor.ir/assets/images/aliesmaeelpoor-2.png" loading="eager" fetchpriority="high" decoding="async" width="1200" height="1500"/>
 </div>
 <div class="hero-floating-note">
 <strong>تمرکز فعلی</strong>
@@ -172,7 +523,7 @@
 <div class="container">
 <div class="about-inner d-flex">
 <div class="about-col-left">
-<img alt="علی اسماعیل‌پور در مسیر حرفه‌ای فناوری، داده و آموزش" decoding="async" loading="lazy" src="assets/images/aliesmaeelpoor.jpg"/>
+<img alt="علی اسماعیل‌پور در مسیر حرفه‌ای فناوری، داده و آموزش" src="assets/images/aliesmaeelpoor.jpg" loading="lazy" decoding="async"/>
 </div>
 <div class="about-col-right">
 <h2 class="about-heading">درباره علی اسماعیل‌پور</h2>
@@ -281,6 +632,7 @@
 </div>
 </div>
 </section>
+
 <section class="document-case" id="document-digitization">
 <div class="container">
 <div class="document-case-card reveal">
@@ -288,7 +640,7 @@
 <div class="document-case-badge">۱۳۸۷–۱۳۹۲ · مدیریت پروژه فناوری</div>
 <h2>دیجیتال‌سازی و مکانیزاسیون اسناد سازمانی</h2>
 <p class="document-case-lead">مدیریت پروژه‌های تبدیل انبوه پرونده‌های کاغذی به آرشیو دیجیتال، با تیم‌های ۱۵ تا ۲۰ نفره و ترکیبی از نرم‌افزار اختصاصی، طراحی فرایند و نوآوری‌های عملیاتی برای افزایش سرعت، دقت و محرمانگی اطلاعات.</p>
-<div aria-label="ویژگی‌های شاخص پروژه" class="document-case-highlights">
+<div class="document-case-highlights" aria-label="ویژگی‌های شاخص پروژه">
 <span>Scan Studio اختصاصی</span>
 <span>اسکن گروهی و تفکیک خودکار</span>
 <span>پالایش نیمه‌خودکار اسناد</span>
@@ -474,7 +826,7 @@
 <!-- item -->
 <div class="project-item">
 <div class="project-image">
-<img alt="سایت i18.ir" decoding="async" loading="lazy" src="assets/images/projects/1.jpg"/>
+<img alt="سایت i18.ir" src="assets/images/projects/1.jpg" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>سایت i18.ir</h3>
@@ -489,7 +841,7 @@
 <!-- item -->
 <div class="project-item">
 <div class="project-image">
-<img alt="سایت خبرگزاری هوش مصنوعی ایران" decoding="async" loading="lazy" src="assets/images/projects/2.jpg"/>
+<img alt="سایت خبرگزاری هوش مصنوعی ایران" src="assets/images/projects/2.jpg" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>سایت خبرگزاری هوش مصنوعی ایران</h3>
@@ -504,7 +856,7 @@
 <!-- item -->
 <div class="project-item">
 <div class="project-image">
-<img alt="دیتاست مناطق 22گانه شهر تهران" decoding="async" loading="lazy" src="assets/images/projects/5.jpg"/>
+<img alt="دیتاست مناطق 22گانه شهر تهران" src="assets/images/projects/5.jpg" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>دیتاست مناطق 22گانه شهر تهران</h3>
@@ -517,7 +869,7 @@
 </div>
 <div class="project-item">
 <div class="project-image">
-<img alt="نرم افزار ارتباط با مشتریان آسمان" decoding="async" loading="lazy" src="assets/images/projects/8.jpg"/>
+<img alt="نرم افزار ارتباط با مشتریان آسمان" src="assets/images/projects/8.jpg" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>نرم افزار ارتباط با مشتریان آسمان</h3>
@@ -525,14 +877,14 @@
 <span>
 								نرم افزاری بسیار جذاب و مفید برای همه کسانی که به نحوی با مشتری سر و کار دارند. نرم افزاری که با حفظ و نگهداری کلیه سوابق مشتریان شما، باعث افزایش فروش و همچنین افزایش رضایتمندی آنها می شود.
 								</span>
-<span aria-disabled="true" class="btn-view btn-view-disabled">اطلاعات تکمیلی در دسترس نیست</span>
+<span class="btn-view btn-view-disabled" aria-disabled="true">اطلاعات تکمیلی در دسترس نیست</span>
 </div>
 </div>
 </div>
 <!-- item -->
 <div class="project-item">
 <div class="project-image">
-<img alt="سمینارهای موفقیت 1 و 2" decoding="async" loading="lazy" src="assets/images/projects/13.jpg"/>
+<img alt="سمینارهای موفقیت 1 و 2" src="assets/images/projects/13.jpg" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>سمینارهای موفقیت 1 و 2</h3>
@@ -545,14 +897,14 @@
 
 به همراه قسمتهایی از مستند راز
 				</span>
-<a aria-label="فیسبوک علی اسماعیل‌پور" class="btn-view" href="https://www.facebook.com/photo/?fbid=111087485704012&amp;set=ecnf.100081001554949" rel="noopener" target="_blank">مشاهده </a>
+<a class="btn-view" href="https://www.facebook.com/photo/?fbid=111087485704012&amp;set=ecnf.100081001554949" rel="noopener" target="_blank">مشاهده </a>
 </div>
 </div>
 </div>
 <!-- item -->
 <div class="project-item">
 <div class="project-image">
-<img alt="نرم افزار جامع موفقیت - کوله پشتی" decoding="async" loading="lazy" src="assets/images/projects/6.jpg"/>
+<img alt="نرم افزار جامع موفقیت - کوله پشتی" src="assets/images/projects/6.jpg" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>نرم افزار جامع موفقیت - کوله پشتی</h3>
@@ -566,7 +918,7 @@
 </div>
 <div class="project-item">
 <div class="project-image">
-<img alt="نرم افزار قصه های ماندگار" decoding="async" loading="lazy" src="assets/images/projects/7.jpg"/>
+<img alt="نرم افزار قصه های ماندگار" src="assets/images/projects/7.jpg" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>نرم افزار قصه های ماندگار</h3>
@@ -574,14 +926,14 @@
 <span>
 این نرم افزار در سال 1389 تولید شده و با بیش از 4500 داستان کوتاه و آموزنده محیطی بسیار جذاب برای یاد گرفتن و یاد دادن مهارت های زندگی در قالب داستان را فراهم می کند.
 								</span>
-<span aria-disabled="true" class="btn-view btn-view-disabled">اطلاعات تکمیلی در دسترس نیست</span>
+<span class="btn-view btn-view-disabled" aria-disabled="true">اطلاعات تکمیلی در دسترس نیست</span>
 </div>
 </div>
 </div>
 <!-- item -->
 <div class="project-item">
 <div class="project-image">
-<img alt="فروش دامنه" decoding="async" loading="lazy" src="assets/images/projects/19.jpg"/>
+<img alt="فروش دامنه" src="assets/images/projects/19.jpg" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>
@@ -649,7 +1001,7 @@
 <!-- item -->
 <div class="project-item" id="Fi360">
 <div class="project-image">
-<img alt="سواد مالی شخصی" decoding="async" loading="lazy" src="assets/images/projects/24.png"/>
+<img alt="سواد مالی شخصی" src="assets/images/projects/24.png" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>
@@ -673,7 +1025,7 @@
 <!-- item -->
 <div class="project-item" id="BioManagement">
 <div class="project-image">
-<img alt="کتاب مدیریت طبیعی" decoding="async" loading="lazy" src="assets/images/projects/21.jpg"/>
+<img alt="کتاب مدیریت طبیعی" src="assets/images/projects/21.jpg" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>
@@ -691,14 +1043,14 @@
 
 									این کتاب برای مدیران ارشد و میانی، کارآفرینان، رهبران تیم‌ها و علاقه‌مندان به مدیریت، فناوری و نوآوری نوشته شده است.
 								</span>
-<span aria-disabled="true" class="btn-view btn-view-disabled">جزئیات به‌زودی</span>
+<span class="btn-view btn-view-disabled" aria-disabled="true">جزئیات به‌زودی</span>
 </div>
 </div>
 </div>
 <!-- item -->
 <div class="project-item" id="aheste-peivaste">
 <div class="project-image">
-<img alt="کتاب آهسته و پیوسته بخرید" decoding="async" loading="lazy" src="assets/images/projects/20.jpg"/>
+<img alt="کتاب آهسته و پیوسته بخرید" src="assets/images/projects/20.jpg" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>
@@ -712,14 +1064,14 @@
 
 									کتاب «آهسته و پیوسته بخرید» یک راهنمای کاربردی برای توسعه سواد مالی شخصی است که مفاهیم سرمایه‌گذاری، مدیریت پول و تصمیم‌گیری مالی را به زبانی ساده و قابل اجرا ارائه می‌دهد. این کتاب بر این ایده استوار است که ثروت پایدار نه از تصمیم‌های هیجانی، بلکه از عادت‌های کوچک، منظم و بلندمدت شکل می‌گیرد؛ مانند پس‌انداز هوشمند، سرمایه‌گذاری تدریجی و کنترل رفتارهای احساسی در بازار. تمایز مهم اثر، اتصال مستقیم به واقعیت اقتصاد ایران است؛ به‌طوری‌که در انتهای هر فصل، داده‌های واقعی بازار شامل طلا، سکه، ارز و بورس اوراق بهادار ایران تحلیل و بررسی می‌شود. انتخاب، ترجمه و تدوین محتوای این کتاب نتیجه بیش از ده سال ارتباط نزدیک با سازمان بورس و همچنین گذراندن دوره MBA بازار سرمایه در دانشگاه خوارزمی است که پشتوانه‌ای تجربی و تخصصی به محتوای آن داده است.
 				</span>
-<span aria-disabled="true" class="btn-view btn-view-disabled">جزئیات به‌زودی</span>
+<span class="btn-view btn-view-disabled" aria-disabled="true">جزئیات به‌زودی</span>
 </div>
 </div>
 </div>
 <!-- item -->
 <div class="project-item" id="kartaas">
 <div class="project-image">
-<img alt="بازی کارتآس" decoding="async" loading="lazy" src="assets/images/projects/18.jpg"/>
+<img alt="بازی کارتآس" src="assets/images/projects/18.jpg" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>
@@ -740,7 +1092,7 @@
 <!-- item -->
 <div class="project-item" id="FiQ">
 <div class="project-image">
-<img alt="بازی رومیزی قهرمانان مالی - FiQ Heroes" decoding="async" loading="lazy" src="assets/images/projects/17.jpg"/>
+<img alt="بازی رومیزی قهرمانان مالی - FiQ Heroes" src="assets/images/projects/17.jpg" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>بازی رومیزی قهرمانان مالی - FiQ Heroes (1405) </h3>
@@ -760,7 +1112,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 <!-- item -->
 <div class="project-item" id="pazaa">
 <div class="project-image">
-<img alt="پزا - بسته‌های غذای خشک" decoding="async" loading="lazy" src="assets/images/projects/16.jpg"/>
+<img alt="پزا - بسته‌های غذای خشک" src="assets/images/projects/16.jpg" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>پزا - بسته‌های غذایی خشک (1404)</h3>
@@ -781,7 +1133,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 <!-- item -->
 <div class="project-item" id="Naghshe_Ketab">
 <div class="project-image">
-<img alt="نقشه دانشی کتاب" decoding="async" loading="lazy" src="assets/images/projects/23.jpg"/>
+<img alt="نقشه دانشی کتاب" src="assets/images/projects/23.jpg" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>نقشه دانشی کتاب (1382)</h3>
@@ -821,7 +1173,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 <!-- item -->
 <div class="project-item" id="angoshtar">
 <div class="project-image">
-<img alt="انگشتر چند گوهر" decoding="async" loading="lazy" src="assets/images/projects/22.jpg"/>
+<img alt="انگشتر چند گوهر" src="assets/images/projects/22.jpg" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>انگشتر چند گوهر (1405)</h3>
@@ -839,12 +1191,16 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 </div>
 </div>
 </div>
+
 <!-- item -->
+
+
 <!-- item -->
+
 <!-- item -->
 <div class="project-item" id="jahesh-quantomi">
 <div class="project-image">
-<img alt="مجموعه ویدئویی جهش کوانتومی" decoding="async" loading="lazy" src="assets/images/projects/9.jpg"/>
+<img alt="مجموعه ویدئویی جهش کوانتومی" src="assets/images/projects/9.jpg" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>مجموعه ویدئویی جهش کوانتومی</h3>
@@ -861,10 +1217,11 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 </div>
 </div>
 </div>
+
 <!-- item -->
 <div class="project-item">
 <div class="project-image">
-<img alt="کتابهای کودک و نوجوان" decoding="async" loading="lazy" src="assets/images/projects/4.jpg"/>
+<img alt="کتابهای کودک و نوجوان" src="assets/images/projects/4.jpg" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>کتابهای کودک و نوجوان</h3>
@@ -890,7 +1247,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 <!-- item -->
 <div class="project-item">
 <div class="project-image">
-<img alt="بررسی صنعت بانک در ایران" decoding="async" loading="lazy" src="assets/images/papers/paper1.png"/>
+<img alt="بررسی صنعت بانک در ایران" src="assets/images/papers/paper1.png" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>بررسی صنعت بانک در ایران - 1393</h3>
@@ -909,7 +1266,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 <!-- item -->
 <div class="project-item">
 <div class="project-image">
-<img alt="گروه مباحثاتی چندرسانه‌ای" decoding="async" loading="lazy" src="assets/images/papers/paper2.png"/>
+<img alt="گروه مباحثاتی چندرسانه‌ای" src="assets/images/papers/paper2.png" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>گروه مباحثاتی چندرسانه‌ای - 1382</h3>
@@ -924,7 +1281,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 <!-- item -->
 <div class="project-item">
 <div class="project-image">
-<img alt="سفر آرمان در سرزمین دانش" decoding="async" loading="lazy" src="assets/images/papers/paper3.png"/>
+<img alt="سفر آرمان در سرزمین دانش" src="assets/images/papers/paper3.png" loading="lazy" decoding="async"/>
 </div>
 <div class="project-content">
 <h3>سفر آرمان در سرزمین دانش - 1405</h3>
@@ -961,7 +1318,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 								برای نرم‌افزار جامع موفقیت
 							</p>
 <div class="client-data d-flex">
-<img alt="برگزیده دومین جشنوار ملی رسانه های دیجیتال" decoding="async" loading="lazy" src="assets/images/client-1.png"/>
+<img alt="برگزیده دومین جشنوار ملی رسانه های دیجیتال" src="assets/images/client-1.png" loading="lazy" decoding="async"/>
 <h4>
 								دومین جشنواره ملی رسانه‌های دیجیتال
                                     <br/> <span>
@@ -977,7 +1334,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 								برای جستجوگر سایت‌های قرآنی
 							</p>
 <div class="client-data d-flex">
-<img alt="برگزیده سومین جشنواره بینالمللی رسانه های دیجیتال" decoding="async" loading="lazy" src="assets/images/client-1.png"/>
+<img alt="برگزیده سومین جشنواره بینالمللی رسانه های دیجیتال" src="assets/images/client-1.png" loading="lazy" decoding="async"/>
 <h4>
 								سومین جشنواره بین‌المللی رسانه‌های دیجیتال
                                     <br/> <span>
@@ -993,7 +1350,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 								چهره برتر
 							</p>
 <div class="client-data d-flex">
-<img alt="نخستین جشنواره چهره‌های برتر فناوری اطلاعات و ارتباطات استان قم" decoding="async" loading="lazy" src="assets/images/client-3.png"/>
+<img alt="نخستین جشنواره چهره‌های برتر فناوری اطلاعات و ارتباطات استان قم" src="assets/images/client-3.png" loading="lazy" decoding="async"/>
 <h4>
 								نخستین جشنواره چهره‌های برتر فناوری اطلاعات و ارتباطات استان قم
                                     <br/> <span>
@@ -1012,7 +1369,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 
 							</p>
 <div class="client-data d-flex">
-<img alt="دارای دو گواهینامه ثبت اختراع" decoding="async" loading="lazy" src="assets/images/client-2.png"/>
+<img alt="دارای دو گواهینامه ثبت اختراع" src="assets/images/client-2.png" loading="lazy" decoding="async"/>
 <h4>اداره ثبت مالکیتهای صنعتی
                                     <br/> <span>جمهوری اسلامی ایران</span>
 </h4>
@@ -1026,7 +1383,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 										برای طرح برگزیده نوآوری
 						</p>
 <div class="client-data d-flex">
-<img alt="لوح تقدیر نوآوری از استاندار قم" decoding="async" loading="lazy" src="assets/images/client-3.png"/>
+<img alt="لوح تقدیر نوآوری از استاندار قم" src="assets/images/client-3.png" loading="lazy" decoding="async"/>
 <h4>استانداری استان قم
                                     <br/> <span>استاندار قم</span>
 </h4>
@@ -1040,7 +1397,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 										با بیش از 17 کتاب در نقش های مؤلف، مترجم، مصحح و ویراستار
 						</p>
 <div class="client-data d-flex">
-<img alt="عضو کانون اهل قلم" decoding="async" loading="lazy" src="assets/images/client-11.png"/>
+<img alt="عضو کانون اهل قلم" src="assets/images/client-11.png" loading="lazy" decoding="async"/>
 <h4>مؤسسه خانه کتاب و ادبیات ایران
                                     <br/> <span>معاونت فرهنگی وزارت فرهنگ و ارشاد اسلامی</span>
 </h4>
@@ -1054,7 +1411,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 										در رده نویسندگان
 						</p>
 <div class="client-data d-flex">
-<img alt="عضو صندوق اعتباری هنر" decoding="async" loading="lazy" src="assets/images/client-12.png"/>
+<img alt="عضو صندوق اعتباری هنر" src="assets/images/client-12.png" loading="lazy" decoding="async"/>
 <h4>
 <br/> <span>وزارت فرهنگ و ارشاد اسلامی</span>
 </h4>
@@ -1068,7 +1425,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 										
 						</p>
 <div class="client-data d-flex">
-<img alt="دارای پروانه فنی مهندسی از وزارت صنعت، معدن و تجارت" decoding="async" loading="lazy" src="assets/images/client-14.png"/>
+<img alt="دارای پروانه فنی مهندسی از وزارت صنعت، معدن و تجارت" src="assets/images/client-14.png" loading="lazy" decoding="async"/>
 <h4>
 <br/> <span>وزارت صنعت ، معدن و تجارت</span>
 </h4>
@@ -1080,7 +1437,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 <p align="right">
 </p>
 <div class="client-data d-flex">
-<img alt="عضو انجمن انفورماتیک ایران" decoding="async" loading="lazy" src="assets/images/client-13.png"/>
+<img alt="عضو انجمن انفورماتیک ایران" src="assets/images/client-13.png" loading="lazy" decoding="async"/>
 <h4>
 <br/> <span>وزارت علوم تحقیقات و فناوری</span>
 </h4>
@@ -1094,7 +1451,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 										اصول بازار سرمایه - 1403
 						</p>
 <div class="client-data d-flex">
-<img alt="دارای گواهینامه اصول بازار سرمایه" decoding="async" loading="lazy" src="assets/images/client-4.png"/>
+<img alt="دارای گواهینامه اصول بازار سرمایه" src="assets/images/client-4.png" loading="lazy" decoding="async"/>
 <h4>سازمان بورس و اوراق بهادار
                                     <br/> <span> ICMC - گواهینامه‌های حرفه ای بازار سرمایه</span>
 </h4>
@@ -1108,7 +1465,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 										کارشناسی عرضه و پذیرش - 1400
 						</p>
 <div class="client-data d-flex">
-<img alt="دارای گواهینامه عرضه و پذیرش" decoding="async" loading="lazy" src="assets/images/client-4.png"/>
+<img alt="دارای گواهینامه عرضه و پذیرش" src="assets/images/client-4.png" loading="lazy" decoding="async"/>
 <h4>سازمان بورس و اوراق بهادار
                                     <br/> <span> ICMC - گواهینامه‌های حرفه ای بازار سرمایه</span>
 </h4>
@@ -1122,7 +1479,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 										تحلیلگری بازار سرمایه - 1400
 						</p>
 <div class="client-data d-flex">
-<img alt="دارای گواهینامه تحلیلگری بازار سرمایه" decoding="async" loading="lazy" src="assets/images/client-4.png"/>
+<img alt="دارای گواهینامه تحلیلگری بازار سرمایه" src="assets/images/client-4.png" loading="lazy" decoding="async"/>
 <h4>سازمان بورس و اوراق بهادار
                                     <br/> <span> ICMC - گواهینامه‌های حرفه ای بازار سرمایه</span>
 </h4>
@@ -1136,7 +1493,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 										مدیریت نهادهای بازار سرمایه - 1400
 						</p>
 <div class="client-data d-flex">
-<img alt="دارای گواهینامه مدیریتنهادهای بازار سرمایه" decoding="async" loading="lazy" src="assets/images/client-4.png"/>
+<img alt="دارای گواهینامه مدیریتنهادهای بازار سرمایه" src="assets/images/client-4.png" loading="lazy" decoding="async"/>
 <h4>سازمان بورس و اوراق بهادار
                                     <br/> <span> ICMC - گواهینامه‌های حرفه ای بازار سرمایه</span>
 </h4>
@@ -1150,7 +1507,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 										بیوانفورماتیک - تحلیل داده های زیستی - 1403
 						</p>
 <div class="client-data d-flex">
-<img alt="گواهینامه حضور در دوره بیوانفورماتیک دکتر علی شریفی زارچی" decoding="async" loading="lazy" src="assets/images/client-5.png"/>
+<img alt="گواهینامه حضور در دوره بیوانفورماتیک دکتر علی شریفی زارچی" src="assets/images/client-5.png" loading="lazy" decoding="async"/>
 <h4>مکتبخونه
                                     <br/> <span>دکتر علی شریفی زارچی</span>
 </h4>
@@ -1164,7 +1521,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 										مربیگری و تدریس در حوزه سواد مالی - 1403
 						</p>
 <div class="client-data d-flex">
-<img alt="مربیگری وتدریس در حوزه سواد مالی" decoding="async" loading="lazy" src="assets/images/client-6.png"/>
+<img alt="مربیگری وتدریس در حوزه سواد مالی" src="assets/images/client-6.png" loading="lazy" decoding="async"/>
 <h4>خانه خلاق و نوآوری ترمه دانشگاه تهران
                                     <br/> <span>باشگاه مهارت آموزی کودک کارن</span>
 </h4>
@@ -1178,7 +1535,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 										Personal &amp; Family Financial Planning - 2020
 						</p>
 <div class="client-data d-flex">
-<img alt="مدرک مدیریت مالی شخصی از دانشگاه فلوریدا" decoding="async" loading="lazy" src="assets/images/client-7.png"/>
+<img alt="مدرک مدیریت مالی شخصی از دانشگاه فلوریدا" src="assets/images/client-7.png" loading="lazy" decoding="async"/>
 <h4>Coursera
                                     <br/> <span>UF - University of Florida</span>
 </h4>
@@ -1192,7 +1549,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 										Management Accounting &amp; Business Analytics - 2024
 						</p>
 <div class="client-data d-flex">
-<img alt="مدرک حسابداری مدیریت و هوش تجاری از icma" decoding="async" loading="lazy" src="assets/images/client-8.png"/>
+<img alt="مدرک حسابداری مدیریت و هوش تجاری از icma" src="assets/images/client-8.png" loading="lazy" decoding="async"/>
 <h4>CMA - Regional Director of ICMA Australia &amp; New Zeland
                                     <br/> <span>MaliSara</span>
 </h4>
@@ -1206,7 +1563,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 										Machine Learning Course - 2023
 						</p>
 <div class="client-data d-flex">
-<img alt="دارای مدرک ماشین لرنینگ" decoding="async" loading="lazy" src="assets/images/client-9.png"/>
+<img alt="دارای مدرک ماشین لرنینگ" src="assets/images/client-9.png" loading="lazy" decoding="async"/>
 <h4>IMT College
                                     <br/> <span>Mohammadreza Momeni</span>
 </h4>
@@ -1220,7 +1577,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 										دوره آموزشی جامع معامله گری طلا
 						</p>
 <div class="client-data d-flex">
-<img alt="گواهینامه دوره آموزش جامع معامله گری طلا" decoding="async" loading="lazy" src="assets/images/client-10.png"/>
+<img alt="گواهینامه دوره آموزش جامع معامله گری طلا" src="assets/images/client-10.png" loading="lazy" decoding="async"/>
 <h4>مکتبخونه
                                     <br/> <span>محمدصادق میرزایی</span>
 </h4>
@@ -1264,12 +1621,13 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 </div>
 </div>
 </section>
+
 </main>
 <!-- Footer -->
 <footer>
 <div class="container">
 <div class="footer-inner">
-<a class="footer-logo" href="#home"><img alt="لوگوی علی اسماعیل پور" decoding="async" loading="lazy" src="assets/images/logo-footer.png"/></a>
+<a class="footer-logo" href="#"><img alt="لوگوی علی اسماعیل پور" src="assets/images/logo-footer.png" loading="lazy" decoding="async"/></a>
 <div class="footer-nav">
 <ul>
 <li class="f-navlinks"><a href="#home">خانه</a></li>
@@ -1286,28 +1644,177 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 <a href="mailto:esmaeelpoor@gmail.com?Subject=سلام. من بازدیدکننده سایت هستم.">
 					علی اسماعیل‌پور</a></p>
 <div class="footer-social">
-<a class="footer-social" href="https://www.instagram.com/ali.esmaeelpoor" rel="noopener" target="_blank"><img alt="instagram - اینستاگرام علی اسماعیل پور" decoding="async" loading="lazy" src="assets/images/social-icons/feather_instagram.svg"/></a>
-<a class="footer-social" href="https://www.linkedin.com/in/ali-esmaeelpoor" rel="noopener" target="_blank"><img alt="linkedin - لینکدین علی اسماعیل پور" decoding="async" loading="lazy" src="assets/images/social-icons/feather_linkedin.svg"/></a>
-<a class="footer-social" href="https://github.com/esmaeelpoor" rel="noopener" target="_blank"><img alt="github - گیت هاب علی اسماعیل پور" decoding="async" loading="lazy" src="assets/images/social-icons/feather_github.svg"/></a>
-<a aria-label="فیسبوک علی اسماعیل‌پور" class="footer-social" href="https://m.facebook.com/esmaeelpoor" rel="noopener" target="_blank"><svg aria-hidden="true" class="social-svg" focusable="false" viewbox="0 0 24 24"><path d="M13.6 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5H17V3.9c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v3h3v8h3.6Z" fill="currentColor"></path></svg>
+<a class="footer-social" href="https://www.instagram.com/ali.esmaeelpoor"><img alt="instagram - اینستاگرام علی اسماعیل پور" src="assets/images/social-icons/feather_instagram.svg" loading="eager" decoding="async"/></a>
+<a class="footer-social" href="https://www.linkedin.com/in/ali-esmaeelpoor"><img alt="linkedin - لینکدین علی اسماعیل پور" src="assets/images/social-icons/feather_linkedin.svg" loading="eager" decoding="async"/></a>
+<a class="footer-social" href="https://github.com/esmaeelpoor"><img alt="github - گیت هاب علی اسماعیل پور" src="assets/images/social-icons/feather_github.svg" loading="eager" decoding="async"/></a>
+<a class="footer-social" href="https://m.facebook.com/esmaeelpoor"><img alt="فیسبوک" src="assets/images/social-icons/feather_dribbble.svg" loading="eager" decoding="async"/>
 </a></div>
 </div>
 </div>
 </div>
 </footer>
-
-
+<!-- Project view modal -->
+<div class="modal-container">
+<div class="modal">
+<div class="modal-image">
+<img alt="image" src="assets/images/projects/1.jpg" loading="lazy" decoding="async"/>
+</div>
+<div class="modal-content">
+<h3>عنوان</h3>
+<p class="requirments">توضیحات</p>
+<ul>
+<li><span>مشخصات:-</span> HTML, CSS, BOOTSTRAP 4, JAVASCRIPT, PHOTOSHOP</li>
+<li><span>آدرس پروژه:-</span> <a href="https://esmaeelpoor.ir">https://esmaeelpoor.ir</a>
+</li>
+</ul>
+<div class="close-btn">
+<a class="btn btn-blue close-modal" href="javascript:void(0)">بستن</a>
+</div>
+</div>
+</div>
+</div>
 <!-- Scroll up -->
 <a class="scrollup" href="javascript:void(0)">
-<img alt="arrow up" decoding="async" loading="eager" src="assets/images/uparrow.svg"/>
+<img alt="arrow up" src="assets/images/uparrow.svg" loading="lazy" decoding="async"/>
 </a>
+<script>
+(function(){
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const canvas = document.getElementById('hero-network');
 
+  if(canvas && !reduceMotion){
+    const ctx = canvas.getContext('2d');
+    let w=0,h=0,points=[],mouse={x:null,y:null};
+    let rafId=0,running=false,inViewport=false;
+    const ratio = Math.min(window.devicePixelRatio || 1, 2);
+
+    function resize(){
+      w = canvas.offsetWidth || canvas.parentElement.offsetWidth;
+      h = canvas.offsetHeight || canvas.parentElement.offsetHeight;
+      canvas.width = Math.max(1,Math.floor(w*ratio));
+      canvas.height = Math.max(1,Math.floor(h*ratio));
+      ctx.setTransform(ratio,0,0,ratio,0,0);
+      points = Array.from({length:w<768?34:58},()=>({
+        x:Math.random()*w,y:Math.random()*h,
+        vx:(Math.random()-.5)*0.45,vy:(Math.random()-.5)*0.45,
+        r:1.6+Math.random()*2.2
+      }));
+    }
+
+    function frame(){
+      if(!running) return;
+      ctx.clearRect(0,0,w,h);
+      for(let i=0;i<points.length;i++){
+        const p=points[i];
+        p.x+=p.vx; p.y+=p.vy;
+        if(p.x<0||p.x>w)p.vx*=-1;
+        if(p.y<0||p.y>h)p.vy*=-1;
+        const md = mouse.x==null?9999:Math.hypot(mouse.x-p.x,mouse.y-p.y);
+        if(md<120){p.x+=(p.x-mouse.x)*0.004;p.y+=(p.y-mouse.y)*0.004;}
+        ctx.beginPath();ctx.fillStyle='rgba(29,139,255,.7)';ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();
+        for(let j=i+1;j<points.length;j++){
+          const q=points[j],d=Math.hypot(p.x-q.x,p.y-q.y);
+          if(d<120){ctx.beginPath();ctx.strokeStyle=`rgba(80,199,247,${(1-d/120)*0.35})`;ctx.lineWidth=1;ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke();}
+        }
+      }
+      rafId=requestAnimationFrame(frame);
+    }
+
+    function start(){
+      if(running || !inViewport || document.hidden) return;
+      running=true; frame();
+    }
+    function stop(){
+      running=false;
+      if(rafId){cancelAnimationFrame(rafId);rafId=0;}
+    }
+
+    let resizeTimer;
+    window.addEventListener('resize',()=>{
+      clearTimeout(resizeTimer);
+      resizeTimer=setTimeout(resize,120);
+    },{passive:true});
+    canvas.addEventListener('mousemove',e=>{const r=canvas.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;},{passive:true});
+    canvas.addEventListener('mouseleave',()=>{mouse.x=null;mouse.y=null;},{passive:true});
+    document.addEventListener('visibilitychange',()=>{document.hidden?stop():start();});
+
+    const canvasObserver = new IntersectionObserver(entries=>{
+      inViewport = entries[0] && entries[0].isIntersecting;
+      inViewport ? start() : stop();
+    },{threshold:.05});
+
+    resize();
+    canvasObserver.observe(canvas);
+  }else if(canvas){
+    canvas.style.display='none';
+  }
+
+  const reveals = document.querySelectorAll('.reveal');
+  if(reduceMotion || !('IntersectionObserver' in window)){
+    reveals.forEach(el=>el.classList.add('in-view'));
+  }else{
+    const io = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    },{threshold:.14,rootMargin:'0px 0px -24px 0px'});
+    reveals.forEach(el=>io.observe(el));
+  }
+
+  const timelineRows = document.querySelectorAll('.timeline-row');
+  const progress = document.getElementById('timelineProgress');
+  if(timelineRows.length && progress && 'IntersectionObserver' in window){
+    const tio = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('active');
+          const rows=[...timelineRows];
+          const idx=rows.indexOf(entry.target)+1;
+          progress.style.height=((idx/rows.length)*100)+'%';
+        }
+      });
+    },{threshold:.5});
+    timelineRows.forEach(r=>tio.observe(r));
+  }
+})();
+</script>
 <script src="assets/js/jquery.min.js"></script>
-
-
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/gumshoe/dist/gumshoe.polyfills.min.js"></script>
 <script src="assets/js/owl.carousel.js"></script>
+<script src="assets/js/validate.js"></script>
+<script src="assets/js/main.js?v=20260822-hotfix2"></script>
+<script>
+$(document).ready(function(){
+/* Mobile navigation: close after selection, outside click or Escape. */
+    const $burger = $('.burger');
+    const $navBar = $('.navigation-bar');
+    const closeMobileMenu = function(){
+        $burger.removeClass('open').attr('aria-expanded','false');
+        $navBar.removeClass('show');
+    };
+    $burger.on('click.menuA11y', function(){
+        const self = this;
+        requestAnimationFrame(function(){
+            $(self).attr('aria-expanded', $(self).hasClass('open') ? 'true' : 'false');
+        });
+    });
+    $('#nav a[href^="#"]').on('click.mobileClose', closeMobileMenu);
+    $(document).on('click.mobileOutside', function(e){
+        if ($navBar.hasClass('show') && !$(e.target).closest('.navigation-bar,.burger').length) closeMobileMenu();
+    });
+    $(document).on('keydown.mobileEsc', function(e){ if(e.key === 'Escape') closeMobileMenu(); });
 
-<script src="assets/js/main.js"></script>
-
+    /* Slow down the achievements carousel for readable Persian content. */
+    const $slider = $('.testmonial-slider');
+    if ($slider.length && $slider.hasClass('owl-loaded')) {
+        $slider.trigger('stop.owl.autoplay');
+        $slider.trigger('play.owl.autoplay', [4500]);
+    }
+});
+</script>
 </body>
 </html>
