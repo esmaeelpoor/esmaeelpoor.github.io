@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 
 <html dir="rtl" lang="fa">
-<!--
-1405 / 05 / 31 - homepage update: document digitization case study - by Ali Esmaeelpoor
--->
 <head>
 <title>علی اسماعیل‌پور | فناوری، داده، هوش مصنوعی و یادگیری</title>
 <meta charset="utf-8"/>
@@ -411,6 +408,58 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 @media(max-width:768px){.document-case{padding:62px 0}.document-case-card{padding:28px 24px;border-radius:22px}.case-grid.case-grid-four{grid-template-columns:1fr}}
 
 </style>
+
+<style id="idea-lab-polish">
+.idea-lab .idea-grid{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:28px;
+    margin-top:35px;
+}
+.idea-lab .idea-card{
+    background:#fff;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    transition:transform .25s ease, box-shadow .25s ease;
+}
+.idea-lab .idea-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,.14);
+}
+.idea-lab .idea-card img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+}
+.idea-lab .idea-card h3{
+    padding:18px 18px 5px;
+    min-height:65px;
+    font-size:18px;
+}
+.idea-lab .idea-card p{
+    padding:0 18px;
+    flex-grow:1;
+    font-size:14px;
+}
+.idea-lab .idea-card .btn-view{
+    margin:15px 18px 20px;
+    text-align:center;
+}
+@media(max-width:1100px){
+    .idea-lab .idea-grid{grid-template-columns:repeat(3,1fr);}
+}
+@media(max-width:700px){
+    .idea-lab .idea-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:450px){
+    .idea-lab .idea-grid{grid-template-columns:1fr;}
+}
+</style>
+
 </head>
 <body>
 <!-- Header -->
@@ -1052,338 +1101,7 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 </section>
 
 <!-- Other projects -->
-<section class="projects ptb-100 projects-small" id="portfolio-other">
-<div class="container">
-<h2>
-					زیست‌بوم محصولات خلاقانه (آموزش، بازی و کتاب)
-				</h2>
-<div class="projects-inner d-grid">
-<!-- item -->
-<div class="project-item" id="Fi360">
-<div class="project-image">
-<img alt="سواد مالی شخصی" src="assets/images/projects/24.png"/>
-</div>
-<div class="project-content">
-<h3>
-								فی ۳۶۰| تجربه‌های یادگیری سواد مالی
-								(1396-تاکنون)
-							</h3>
-<div class="project-status-fix">
-								فی360
-							</div>
-<div class="project-view d-flex">
-<span>
-									فی ۳۶۰ (Fi360) مجموعه‌ای تخصصی در حوزه طراحی و ارائه محصولات آموزش سواد مالی است که با هدف تبدیل مفاهیم مالی به مهارت‌های کاربردی زندگی شکل گرفته است. این مجموعه با بهره‌گیری از کتاب، بازی، داستان، ویدئو و آموزش‌های تعاملی تلاش می‌کند کودکان، نوجوانان و خانواده‌ها را با مفاهیمی مانند شناخت پول، انتخاب و تصمیم‌گیری، مدیریت هزینه، پس‌انداز، سرمایه‌گذاری و کارآفرینی به شیوه‌ای جذاب و تجربه‌محور آشنا کند.
-<br/>
-محصولات سواد مالی فی ۳۶۰ شامل مجموعه‌ای از بازی‌های آموزشی مانند قهرمانان مالی (FiQ) و کارت‌آس، کتاب‌های داستانی و آموزشی سواد مالی، و برنامه‌های آموزش کارگاهی است که برای گروه‌های سنی مختلف طراحی شده‌اند. هدف فی ۳۶۰ ایجاد نسلی آگاه و توانمند است که بتواند از سال‌های نخست زندگی، تصمیم‌های مالی بهتر بگیرد و آینده اقتصادی خود را هوشمندانه‌تر بسازد.
-									
-								</span>
-<a class="btn-view" href="assets/Docs/Fi360_Personal_Finace_Products.pdf" rel="noopener" target="_blank">مشاهده </a>
-</div>
-</div>
-</div>
-<!-- item -->
-<div class="project-item" id="BioManagement">
-<div class="project-image">
-<img alt="کتاب مدیریت طبیعی" src="assets/images/projects/21.jpg"/>
-</div>
-<div class="project-content">
-<h3>
-								مدیریت طبیعی | BioManagement
-								(1405)
-							</h3>
-<div class="project-status">
-							در انتظار جذب سرمایه‌گذار
-							</div>
-<div class="project-view d-flex">
-<span>
-									کتاب «مدیریت طبیعی» تلاشی است برای نگاه دوباره به مدیریت از زاویه سیستم‌های زنده. این کتاب نشان می‌دهد مدیران چگونه می‌توانند از طبیعت، اکوسیستم‌ها، رفتار جمعی موجودات، بدن انسان و الگوریتم‌های الهام‌گرفته از طبیعت برای ساخت سازمان‌هایی چابک، تاب‌آور و هوشمند یاد بگیرند.
 
-									در این اثر، طبیعت فقط بهانه‌ای برای جملات انگیزشی نیست؛ بلکه به‌عنوان منبعی برای تصمیم‌گیری، رهبری، تیم‌سازی، نوآوری، بهره‌وری، مدیریت تغییر و حل مسائل پیچیده سازمانی بررسی می‌شود. هدف کتاب این است که مدیران از مشاهده طبیعت به اصل مدیریتی، ابزار اجرایی و شاخص سنجش برسند.
-
-									این کتاب برای مدیران ارشد و میانی، کارآفرینان، رهبران تیم‌ها و علاقه‌مندان به مدیریت، فناوری و نوآوری نوشته شده است.
-								</span>
-<a class="btn-view" href="" rel="noopener" target="_blank">مشاهده </a>
-</div>
-</div>
-</div>
-<!-- item -->
-<div class="project-item" id="aheste-peivaste">
-<div class="project-image">
-<img alt="کتاب آهسته و پیوسته بخرید" src="assets/images/projects/20.jpg"/>
-</div>
-<div class="project-content">
-<h3>
-								کتاب آهسته و پیوسته بخرید (1405)
-							</h3>
-<div class="project-status">
-							در انتظار جذب سرمایه‌گذار
-							</div>
-<div class="project-view d-flex">
-<span>
-
-									کتاب «آهسته و پیوسته بخرید» یک راهنمای کاربردی برای توسعه سواد مالی شخصی است که مفاهیم سرمایه‌گذاری، مدیریت پول و تصمیم‌گیری مالی را به زبانی ساده و قابل اجرا ارائه می‌دهد. این کتاب بر این ایده استوار است که ثروت پایدار نه از تصمیم‌های هیجانی، بلکه از عادت‌های کوچک، منظم و بلندمدت شکل می‌گیرد؛ مانند پس‌انداز هوشمند، سرمایه‌گذاری تدریجی و کنترل رفتارهای احساسی در بازار. تمایز مهم اثر، اتصال مستقیم به واقعیت اقتصاد ایران است؛ به‌طوری‌که در انتهای هر فصل، داده‌های واقعی بازار شامل طلا، سکه، ارز و بورس اوراق بهادار ایران تحلیل و بررسی می‌شود. انتخاب، ترجمه و تدوین محتوای این کتاب نتیجه بیش از ده سال ارتباط نزدیک با سازمان بورس و همچنین گذراندن دوره MBA بازار سرمایه در دانشگاه خوارزمی است که پشتوانه‌ای تجربی و تخصصی به محتوای آن داده است.
-				</span>
-<a class="btn-view" href="" rel="noopener" target="_blank">مشاهده </a>
-</div>
-</div>
-</div>
-<!-- item -->
-<div class="project-item" id="kartaas">
-<div class="project-image">
-<img alt="بازی کارتآس" src="assets/images/projects/18.jpg"/>
-</div>
-<div class="project-content">
-<h3>
-								کارتآس - بازی رومیزی کارت و تاس (1405)
-							</h3>
-<div class="project-status">
-							در انتظار جذب سرمایه‌گذار
-							</div>
-<div class="project-view d-flex">
-<span>
-
-									کارتآس یک بازی رومیزی ساده، سریع و پرهیجان است که با ترکیب کارت، تاس، شانس و تصمیم‌گیری طراحی شده است. این بازی برای دورهمی‌های خانوادگی و دوستانه ساخته شده؛ جایی که بازیکنان در هر نوبت با انتخاب‌های تازه، ریسک‌های کوچک و لحظه‌های غیرمنتظره روبه‌رو می‌شوند. کارتآس نه پیچیده است و نه تکراری؛ خیلی زود یاد گرفته می‌شود، اما هر بار می‌تواند تجربه‌ای متفاوت بسازد. چند کارت، چند تاس و یک جمع خوش‌حال کافی است تا بازی شروع شود.
-				</span>
-<a class="btn-view" href="assets/Docs/Kartas_Pitch.pdf" rel="noopener" target="_blank">مشاهده </a>
-</div>
-</div>
-</div>
-<!-- item -->
-<div class="project-item" id="FiQ">
-<div class="project-image">
-<img alt="بازی رومیزی قهرمانان مالی - FiQ Heroes" src="assets/images/projects/17.jpg"/>
-</div>
-<div class="project-content">
-<h3>بازی رومیزی قهرمانان مالی - FiQ Heroes (1405) </h3>
-<div class="project-status">
-							در انتظار جذب سرمایه‌گذار
-							</div>
-<div class="project-view d-flex">
-<span>
-قهرمانان مالی (FiQ) یک پروژه بازی‌محور آموزشی است که با هدف ارتقای سواد مالی و تقویت مسئولیت‌پذیری اقتصادی، به‌ویژه در نسل نوجوان و جوان طراحی شده است. این بازی با تکیه بر روایت، تصمیم‌گیری و تجربه عملی، مفاهیم پایه و کاربردی مالی مانند مدیریت منابع، انتخاب آگاهانه، ریسک، پس‌انداز و برنامه‌ریزی را به زبانی ساده و قابل لمس منتقل می‌کند؛ به‌گونه‌ای که یادگیری نه از مسیر آموزش مستقیم، بلکه از دل تجربه و مشارکت شکل می‌گیرد.
-
-FiQ بستری است برای مشارکت معنادار شرکت‌ها، بانک‌ها، نهادهای مالی و سازمان‌های عمومی که به توسعه پایدار، آموزش مالی و اثرگذاری اجتماعی باور دارند. این پروژه قابلیت اجرا در قالب برنامه‌های مسئولیت اجتماعی (CSR)، هدایای فرهنگی، رویدادهای آموزشی و طرح‌های مشترک با نهادهای مالی را دارد و می‌تواند به‌عنوان یک ابزار نوآورانه، پلی میان آموزش، فرهنگ‌سازی و آینده‌نگری اقتصادی ایجاد کند.									
-				</span>
-<a class="btn-view" href="assets/Docs/FiQ_Pitch.pdf" rel="noopener" target="_blank">مشاهده </a>
-</div>
-</div>
-</div>
-<!-- item -->
-<div class="project-item" id="pazaa">
-<div class="project-image">
-<img alt="پزا - بسته‌های غذای خشک" src="assets/images/projects/16.jpg"/>
-</div>
-<div class="project-content">
-<h3>پزا - بسته‌های غذایی خشک (1404)</h3>
-<div class="project-status">
-							در انتظار جذب سرمایه‌گذار
-							</div>
-<div class="project-view d-flex">
-<span>
-پزا (PAZAA) راهی ساده و مؤثر برای رساندن مواد غذایی ضروری به خانواده‌هایی است که بیش از هر چیز به امنیت غذایی نیاز دارند. این بسته‌ها با ترکیبی کاربردی از مواد خشک پرمصرف مثل اقلام مورد نیاز برای عدس‌پلو و قیمه قارچ طراحی شده‌اند؛ دقیق، قابل اتکا و مناسب استفاده روزمره. کمک شما دقیقاً تبدیل به غذا می‌شود، نه یک عدد مبهم.
-
-پزا امکان مشارکت افراد، شرکت‌ها و سازمان‌ها را در قالب مسئولیت اجتماعی فراهم می‌کند؛ شفاف، محترمانه و اثرگذار. بدون پیچیدگی، بدون واسطه‌های نامعلوم. فقط یک انتخاب انسانی که مستقیماً روی سفره یک خانواده می‌نشیند.
-									
-				</span>
-<a class="btn-view" href="https://pazaa.ir" rel="noopener" target="_blank">مشاهده </a>
-</div>
-</div>
-</div>
-<!-- item -->
-<div class="project-item" id="Naghshe_Ketab">
-<div class="project-image">
-<img alt="نقشه دانشی کتاب" src="assets/images/projects/23.jpg"/>
-</div>
-<div class="project-content">
-<h3>نقشه دانشی کتاب (1382)</h3>
-<div class="project-status">
-							در انتظار جذب سرمایه‌گذار
-							</div>
-<div class="project-view d-flex">
-<span>
-								    سامانه تحلیل روابط پنهان میان کتاب‌ها، نویسندگان، ناشران و موضوعات
-									<br/>
-									 هیچ کتابی از صفر شروع نمی‌شود. پشت هر کتاب، کتاب‌ها، آدم‌ها و فکرهایی هستند
-									        که روی شکل‌گیری آن اثر گذاشته‌اند.
-									
-									   <br/>
-<strong>«نقشه جریان دانش»</strong> این ارتباط‌های پنهان را پیدا می‌کند و نشان می‌دهد:
-									   <br/>
-									
-											-یک کتاب از چه کتاب‌هایی الهام گرفته است؛
-									<br/>
-									        -کدام نویسندگان روی فکر یکدیگر اثر گذاشته‌اند؛
-									<br/>
-									        -ناشران در چه مسیرهای فکری حرکت می‌کنند؛
-									<br/>
-									       	-و ایده‌ها چگونه از یک حوزه به حوزه دیگر منتقل می‌شوند.
-									<br/>
-									        این سامانه فقط نمی‌شمارد که یک کتاب چند بار مورد استفاده قرار گرفته؛
-									        بلکه داستان حرکت دانش را نشان می‌دهد؛ اینکه
-									        فکرها از کجا آمده‌اند، چگونه تغییر کرده‌اند و به کجا رسیده‌اند.
-									    <br/>						
-											پایه اولیه این ایده و نمونه عملی آن در سال ۲۰۰۳ در مؤسسه پارسا و با راهبری جناب دکتر محمد سمیعی ایجاد شد؛ پروژه‌ای زودهنگام که با وجود اجرای اولیه، تاکنون به ظرفیت کامل خود نرسیده است.
-										
-								</span>
-<a class="btn-view" href="assets/Docs/papers/14050415_ book_knowledge_flow_architecture.pdf" rel="noopener" target="_blank">مشاهده </a>
-</div>
-</div>
-</div>
-<!-- item -->
-<div class="project-item" id="angoshtar">
-<div class="project-image">
-<img alt="انگشتر چند گوهر" src="assets/images/projects/22.jpg"/>
-</div>
-<div class="project-content">
-<h3>انگشتر چند گوهر (1405)</h3>
-<div class="project-status">
-							در انتظار جذب سرمایه‌گذار
-							</div>
-<div class="project-view d-flex">
-<span>
-«انگشتر چندگوهر» یک جواهر مفهومی و شخصی‌سازی‌شده است که به‌جای استفاده از چند انگشتر یا چند نگین شلوغ، ذرات چند سنگ طبیعی را در یک حلقه واحد ترکیب می‌کند؛ برای مثال می‌تواند همزمان ترکیبی از عقیق، فیروزه، دُر و زمرد را در خود داشته باشد.
-
-این ترکیب می‌تواند درون حلقه پنهان باشد یا در قالب شیار رزینی ظریف و زیبا روی بدنه دیده شود. ارزش اصلی «حلقه چندگوهر» در زیبایی، معنا و روایت شخصی است؛ نه ادعای درمانی. هر حلقه می‌تواند نماینده مفهومی مانند آرامش، برکت، شهامت یا عشق باشد و به‌عنوان هدیه‌ای خاص، سبک و ماندگار عرضه شود.
-									
-				</span>
-<a class="btn-view" href="assets/images/projects/22-detail.jpg" rel="noopener" target="_blank">مشاهده </a>
-</div>
-</div>
-</div>
-<!-- item >
-                    <div class="project-item"  id="KarafarinaneFazayee">
-                        <div class="project-image">
-                            <img src="assets/images/projects/15.jpg" alt="کتاب کارآفرینان فضایی">
-                        </div>
-                        <div class="project-content">
-                            <h3>کتاب کارآفرینان فضایی (1403)</h3>
-							<div class="project-status-fix">
-							انتشارات ویژه نشر							
-							</div>
-                            <div class="project-view d-flex">
-                                <span>
-کار آفرینان فضایی داستان هیجان انگیز و آموزنده‌ای است که کودکان را با دنیای کارآفرینی و مدیریت مالی آشنا می‌کند. 
-
-در این کتاب مصور و پرماجرا شخصیتهای دوست داشتنی و جذاب داستان به همراه خوانندگان خود سفرهایی را آغاز می‌کنند تا کسب و کار خود را راه‌اندازی کنند.
-
-
-
-آنها با چالشها فرصتها و درس‌های ارزشمندی در زمینه برنامه‌ریزی کار گروهی و تصمیم‌گیری روبه رو می‌شوند و در نهایت با استفاده از خلاقیت و پشتکار خود موفقیت را تجربه می‌کنند. این کتاب نه تنها سرگرم کننده است بلکه به کودکان مهارت‌های مهم مالی و کارآفرینی را با زبانی ساده و دلنشین آموزش می‌دهد.
-
-
-
-کار آفرینان فضایی فرصتی است تا کودکان و نوجوانان با دنیای کسب و کار و نوآوری‌ها آشنا شوند و رؤیای کار آفرینی خود را شکوفا کنند.
-
-				</span>
-                                <a href="https://bookhall.ir/Products/%D9%83%D8%A7%D8%B1%D8%A2%D9%81%D8%B1%D9%8A%D9%86%D8%A7%D9%86-%D9%81%D8%B6%D8%A7%D9%8A%D9%8A-%D9%88%D9%8A%DA%98%D9%87-%D9%86%D8%B4%D8%B1-81132" target="_blank" rel="noopener" class="btn-view">مشاهده </a>
-                            </div>
-                        </div>
-                    </div>
-			
- <!-- item >
-                    <div class="project-item">
-                        <div class="project-image">
-                            <img src="assets/images/projects/14.jpg" alt="کتاب درآمد پرماجرا">
-                        </div>
-                        <div class="project-content">
-                            <h3>کتاب درآمد پرماجرا در سایت هدهد</h3>
-							<div class="project-status-fix">
-							انتشارات بورس
-							</div>
-                            <div class="project-view d-flex">
-                                <span>یکی ازجذاب ترین و پرطرفدارترین رمان و کتاب داستان در زمینه ماجراجویی کتاب درآمد پرماجرا اثر هرمن پریش می باشد. نویسنده این کتاب، هرمن پریش، با نوشتن داستانی هیجان انگیز و پر از چالش توانسته است خوانندگان زیادی را به خود جذب کند. کتاب درآمد پرماجرا دارای شخصیت های موفق و پیروز با نقش های متنوع است که در طول داستان با مشکلات های فراوانی روبرو می‌شوند.
-
-اثر هرمن پریش با داستان محتوایی مناسب و مفید ، زبان شیوا و توصیفات واقعی و جذاب، توانسته است به خوانندگانش احساس واقعیت و ارتباطات دوجانبه با اتفاقات داستان را تلقین کند. این کتاب به خوبی موضوعات اجتماعی و فرهنگی را بررسی کرده و با نگاهی کاملا تازه به مسائل مختلف، خواننده را به تفکر و تأمل وادار می‌کند.
-					
-				</span>
-                                <a href="https://hodhodtoybox.ir/adventurous-income/" target="_blank" rel="noopener" class="btn-view">مشاهده </a>
-                            </div>
-                        </div>
-				</div-->
-<!-- item -->
-
-<!-- item >
-                    <div class="project-item">
-                        <div class="project-image">
-                            <img src="assets/images/projects/11.jpg" alt="کتاب مالی برای کودکان">
-                        </div>
-                        <div class="project-content">
-                            <h3>کتاب مالی برای کودکان</h3>
-							<div class="project-status-fix">
-							انتشارات نگاه دانش
-							</div>
-                            <div class="project-view d-flex">
-                                <span>
-					کتاب ((مالی برای کودکان)) یک کتاب داستانی و تصویری برای کودکان است که به منظور آشنایی اولیه کودکان با مفاهیم پولی در دنیای واقعی به زبان ساده نگاشته شده است. کودکان در این کتاب در یک کلاس مالی حاضر می شوند و مفاهیمی را از زبان معلم خود می شنوند و آموزش می بینند این کتاب به صورت تالیف ترجمه بوده و برای استفاده کودکان این مرز و بوم ساد‌سازی و بومی‌سازی شده است.
-				</span>
-                                <a href="https://www.negahedanesh.com/fa/product/%D8%AD%D8%B3%D8%A7%D8%A8%D8%AF%D8%A7%D8%B1%DB%8C/898-%D9%85%D8%A7%D9%84%DB%8C-%D8%A8%D8%B1%D8%A7%DB%8C-%DA%A9%D9%88%D8%AF%DA%A9%D8%A7%D9%86.html" target="_blank" rel="noopener" class="btn-view">مشاهده </a>
-                            </div>
-                        </div>
-				</div-->
-<!-- item -->
-
-<!-- item -->
-<div class="project-item" id="jahesh-quantomi">
-<div class="project-image">
-<img alt="مجموعه ویدئویی جهش کوانتومی" src="assets/images/projects/9.jpg"/>
-</div>
-<div class="project-content">
-<h3>مجموعه ویدئویی جهش کوانتومی</h3>
-<div class="project-status-fix">
-							گروه صنعتی انتخاب
-							</div>
-<div class="project-view d-flex">
-<span>
-در این مجموعه ویدئویی، می‌توانید با تکنیکهای افزایش کارایی و بهره وری به صورت بسیار کوتاه و مختصر و مفید آشنا شوید . 
-					محتوا به صورت میکرولرنینگ ارائه شده است و ادامه دارد ...
-				
-				</span>
-<a class="btn-view" href="https://www.aparat.com/v/fax255v?playlist=12164629" rel="noopener" target="_blank">مشاهده </a>
-</div>
-</div>
-</div>
-<!-- item >
-                    <div class="project-item">
-                        <div class="project-image">
-                            <img src="assets/images/projects/3.jpg" alt="کتاب راهنمای تصویری مدیریت مالی شخصی">
-                        </div>
-                        <div class="project-content">
-                            <h3>کتاب راهنمای تصویری مدیریت مالی شخصی</h3>
-							<div class="project-status-fix">
-							انتشارات نگاه دانش
-							</div>
-                            <div class="project-view d-flex">
-                                <span>
-این کتاب تألیف میشل کاگان و الیزابت لاریویر است که با همکاری دکتر امید فرجی و خانم سمیه جهانی ترجمه و تألیف شده و توسط انتشارات نگاه دانش در سال ۱۴۰۳ منتشر شده است. این کتاب با هدف آموزش مهارت‌های مدیریت مالی شخصی به زبانی ساده و کاربردی تدوین شده است.
-								</span>
-                                <a  
-								href="https://www.negahedanesh.com/fa/product/%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA/2702-%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C-%D9%85%D8%B5%D9%88%D8%B1-%D8%A8%D8%B1%D8%A7%DB%8C-%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA-%D9%85%D8%A7%D9%84%DB%8C-%D8%B4%D8%AE%D8%B5%DB%8C.html" 
-								target="_blank" rel="noopener" class="btn-view">مشاهده </a>
-                            </div>
-                        </div>
-				</div-->
-<!-- item -->
-<div class="project-item">
-<div class="project-image">
-<img alt="کتابهای کودک و نوجوان" src="assets/images/projects/4.jpg"/>
-</div>
-<div class="project-content">
-<h3>کتابهای کودک و نوجوان</h3>
-<div class="project-status-fix">
-							انتشارات بورس
-							</div>
-<div class="project-view d-flex">
-<span>
-								ترجمه و تألیف کتاب در حوزه آموزش سواد مالی و ریاضیات ذهنی
-								</span>
-<a class="btn-view" href="https://boursepub.ir/%DA%A9%D9%88%D8%AF%DA%A9-%D9%88-%D9%86%D9%88%D8%AC%D9%88%D8%A7%D9%86?orderby=11" rel="noopener" target="_blank">مشاهده </a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
 <!-- Articles -->
 <section class="projects ptb-100" id="articles">
 <div class="container">
