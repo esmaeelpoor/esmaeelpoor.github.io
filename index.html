@@ -469,12 +469,12 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 }
 
 .idea-lab .idea-card img{
-    filter:grayscale(100%);
-    transition:filter .35s ease, transform .35s ease;
+    filter:grayscale(100%) brightness(1.18) contrast(.75) opacity(.58);
+    transition:filter .35s ease, transform .35s ease, opacity .35s ease;
 }
 
 .idea-lab .idea-card:hover img{
-    filter:grayscale(0%);
+    filter:grayscale(0%) brightness(1) contrast(1) opacity(1);
     transform:scale(1.03);
 }
 
@@ -482,12 +482,24 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
     transform:translateY(-5px);
 }
 
-.idea-lab .idea-card a,
-.idea-lab .idea-card .btn-view{
-    display:none;
+.idea-lab .idea-card{
+    cursor:pointer;
+}
+.idea-lab .idea-card a{
+    display:block;
 }
 </style>
 
+
+<style id="projects-fix-only">
+.projects-digital img,
+.digital-projects img,
+.project-card img{
+    max-width:100%;
+    height:auto;
+    object-fit:cover;
+}
+</style>
 </head>
 <body>
 <!-- Header -->
