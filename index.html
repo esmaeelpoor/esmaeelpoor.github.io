@@ -398,6 +398,49 @@ body.darkmode .service-tags span{background:rgba(255,255,255,.06);border-color:r
 }
 </style>
 
+
+<style>
+.idea-lab .idea-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+    align-items:start;
+}
+.idea-lab .idea-card{
+    display:flex;
+    flex-direction:column;
+    text-decoration:none;
+    text-align:center;
+    transition:.3s;
+}
+.idea-lab .idea-card img,
+.idea-placeholder{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:18px;
+}
+.idea-placeholder{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:80px;
+    background:#111827;
+}
+.idea-lab .idea-card h3{
+    margin-top:15px;
+}
+.idea-lab .idea-card span{
+    margin-top:8px;
+}
+@media(max-width:900px){
+ .idea-lab .idea-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:500px){
+ .idea-lab .idea-grid{grid-template-columns:1fr;}
+}
+</style>
+
 </head>
 
 <body>
@@ -453,17 +496,18 @@ body.darkmode .service-tags span{background:rgba(255,255,255,.06);border-color:r
     <main>
         <!-- Hero section -->
         
+
 <section class="idea-lab" id="idea-lab">
     <div class="container">
         <h2>آزمایشگاه ایده‌ها</h2>
         <p class="section-intro">
-            مجموعه‌ای از ایده‌ها، محصولات و تجربه‌های میان‌رشته‌ای در حوزه نوآوری، آموزش، دانش و طراحی محصول.
+            مجموعه‌ای از ایده‌ها و محصولات میان‌رشته‌ای در حوزه نوآوری، آموزش، دانش و طراحی محصول.
         </p>
 
         <div class="idea-grid">
 
-            <a class="idea-card" href="#Fi360">
-                <img src="assets/images/projects/fi360.jpg" alt="فی ۳۶۰">
+            <a class="idea-card" href="assets/Docs/Fi360_Personal_Finace_Products.pdf" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/projects/19.jpg" alt="فی ۳۶۰">
                 <h3>فی ۳۶۰</h3>
                 <span>تجربه‌های یادگیری سواد مالی</span>
             </a>
@@ -474,19 +518,19 @@ body.darkmode .service-tags span{background:rgba(255,255,255,.06);border-color:r
                 <span>مدل‌های مدیریتی الهام‌گرفته از سیستم‌های زنده</span>
             </a>
 
-            <a class="idea-card" href="#">
+            <a class="idea-card" href="#BioManagement">
                 <img src="assets/images/projects/20.jpg" alt="آهسته و پیوسته بخرید">
                 <h3>آهسته و پیوسته بخرید</h3>
                 <span>آموزش سرمایه‌گذاری و رفتار مالی</span>
             </a>
 
-            <a class="idea-card" href="#">
+            <a class="idea-card" href="assets/Docs/Kartas_Pitch.pdf" target="_blank" rel="noopener noreferrer">
                 <img src="assets/images/projects/18.jpg" alt="کارتآس">
                 <h3>کارتآس</h3>
-                <span>بازی رومیزی و تجربه یادگیری</span>
+                <span>بازی رومیزی کارت و تاس</span>
             </a>
 
-            <a class="idea-card" href="#">
+            <a class="idea-card" href="assets/Docs/FiQ_Pitch.pdf" target="_blank" rel="noopener noreferrer">
                 <img src="assets/images/projects/17.jpg" alt="قهرمانان مالی">
                 <h3>قهرمانان مالی | FiQ Heroes</h3>
                 <span>بازی آموزش مفاهیم مالی</span>
@@ -498,9 +542,22 @@ body.darkmode .service-tags span{background:rgba(255,255,255,.06);border-color:r
                 <span>پژوهش در دوقلوی دیجیتال انسان و تصمیم‌یار هوشمند</span>
             </a>
 
+            <a class="idea-card" href="assets/Docs/papers/14050415_ book_knowledge_flow_architecture.pdf" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/projects/23.jpg" alt="نقشه دانشی کتاب">
+                <h3>نقشه دانشی کتاب</h3>
+                <span>تحلیل جریان دانش میان کتاب‌ها، نویسندگان و ایده‌ها</span>
+            </a>
+
+            <a class="idea-card" href="https://pazaa.ir" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/projects/16.jpg" alt="پزا">
+                <h3>پزا | PAZAA</h3>
+                <span>نوآوری اجتماعی و امنیت غذایی</span>
+            </a>
+
         </div>
     </div>
 </section>
+
 
 
 
