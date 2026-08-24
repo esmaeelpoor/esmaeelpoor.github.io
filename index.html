@@ -460,6 +460,34 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 }
 </style>
 
+
+<style id="idea-lab-final-style">
+.idea-lab .idea-card{
+    text-decoration:none;
+    color:inherit;
+    transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.idea-lab .idea-card img{
+    filter:grayscale(100%);
+    transition:filter .35s ease, transform .35s ease;
+}
+
+.idea-lab .idea-card:hover img{
+    filter:grayscale(0%);
+    transform:scale(1.03);
+}
+
+.idea-lab .idea-card:hover{
+    transform:translateY(-5px);
+}
+
+.idea-lab .idea-card a,
+.idea-lab .idea-card .btn-view{
+    display:none;
+}
+</style>
+
 </head>
 <body>
 <!-- Header -->
@@ -526,7 +554,7 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
                             از سال ۱۳۷۸ مسیر حرفه‌ای من با نرم‌افزار، پایگاه داده و محتوای دیجیتال آغاز شد؛ مسیری که از مدیریت پروژه‌های دیجیتال‌سازی و مکانیزاسیون اسناد سازمانی عبور کرد و امروز به تحلیل داده، هوش مصنوعی، طراحی محصول، سواد مالی و پژوهش در کسب‌وکارهای هوشمند رسیده است. تمرکز من بر تبدیل فناوری و دانش به راهکارهایی است که تصمیم‌گیری، فرایند و یادگیری را بهتر می‌کنند.
                         </p>
 <div class="hero-cta">
-<a class="btn btn-blue" href="#timeline-ai">مشاهده مسیر حرفه‌ای</a>
+<a class="btn btn-blue" href="#timeline-ai"> مسیر حرفه‌ای</a>
 <a class="btn btn-black" href="#featured-work">پروژه‌های شاخص</a>
 </div>
 <div class="social">
@@ -697,7 +725,7 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 </div>
 </div>
 <div class="document-case-action">
-<a class="document-case-link" href="/projects/document-digitization/" target="_blank" rel="noopener noreferrer">مشاهده مطالعه موردی ←</a>
+<a class="document-case-link" href="/projects/document-digitization/" target="_blank" rel="noopener noreferrer"> مطالعه موردی ←</a>
 </div>
 </div>
 </div>
@@ -717,7 +745,7 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 <div class="publishing-stat"><strong>۲۰+</strong><span>سال تجربه نشر</span></div>
 <div class="publishing-stat"><strong>۱۰+</strong><span>نقش در زنجیره تولید</span></div>
 </div>
-<a class="publishing-btn" href="/publishing/">مشاهده سابقه نشر ←</a>
+<a class="publishing-btn" href="/publishing/"> سابقه نشر ←</a>
 </div>
 <div aria-label="نمایش وکتوری فرایند تولید کتاب" class="publishing-visual">
 <div class="publishing-vector-shell">
@@ -838,7 +866,7 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 <li>نقش: راه‌اندازی و توسعه با همکاری تیم همکاران</li>
 <li>ارزش: پیوند فناوری، محتوا و جامعه متخصصان هوش مصنوعی</li>
 </ul>
-<a href="https://hooshtaak.ir/" target="_blank" rel="noopener noreferrer">مشاهده پروژه ↗</a>
+<a href="https://hooshtaak.ir/" target="_blank" rel="noopener noreferrer"> پروژه ↗</a>
 </div>
 <div class="case-card reveal">
 <span class="badge">Data + Product</span>
@@ -849,7 +877,7 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 <li>نقش من: طراحی محصول، تحلیل و پیوند با داده</li>
 <li>فناوری: Database + Web + Analytics</li>
 </ul>
-<a href="https://www.i18.ir" rel="noopener" target="_blank">مشاهده پروژه ↗</a>
+<a href="https://www.i18.ir" rel="noopener" target="_blank"> پروژه ↗</a>
 </div>
 <div class="case-card reveal">
 <span class="badge">Learning Ecosystem</span>
@@ -860,7 +888,7 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 <li>خروجی: کتاب، بازی، کارگاه و تجربه تعاملی</li>
 <li>هویت: آموزش مالی برای کودکان و خانواده‌ها</li>
 </ul>
-<a href="#Fi360">مشاهده در سایت ↓</a>
+<a href="#Fi360"> در سایت ↓</a>
 </div>
 <div class="case-card reveal">
 <span class="badge">Publishing + Knowledge</span>
@@ -872,7 +900,7 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 <li><strong>تجربه:</strong> مشارکت در زنجیره کامل تبدیل محتوا به کتاب و محصول دانشی</li>
 <li><strong>ارزش:</strong> پیوند دانش، محتوا، طراحی و مدیریت فرایند انتشار</li>
 </ul>
-<a href="/publishing/">مشاهده سابقه نشر ←</a>
+<a href="/publishing/"> سابقه نشر ←</a>
 </div>
 </div>
 </div>
@@ -891,11 +919,8 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 </div>
 <div class="project-content">
 <h3>سایت i18.ir</h3>
-<div class="project-view d-flex">
-<span>
-								این سامانه، نقاط قوت و نقاط ضعف سهم‌ها و صنایع مختلف موجود در بازار سرمایه را به طور یکپارچه در دسترس کاربران قرار داده است.
-								</span>
-<a class="btn-view" href="https://www.i18.ir" rel="noopener" target="_blank">مشاهده</a>
+
+
 </div>
 </div>
 </div>
@@ -906,11 +931,8 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 </div>
 <div class="project-content">
 <h3>سایت خبرگزاری هوش مصنوعی ایران</h3>
-<div class="project-view d-flex">
-<span>
-								پایگاه خبری هوش مصنوعی در صدد است تا با بهره گیری از اخبار و اطلاعات هوش مصنوعی در سطح بین المللی و داخلی، فضایی مناسب برای تعامل فعالان و علاقه مندان به این حوزه را فراهم نماید.
-								</span>
-<a class="btn-view" href="https://www.hooshtaak.ir" rel="noopener" target="_blank">مشاهده</a>
+
+
 </div>
 </div>
 </div>
@@ -921,10 +943,8 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 </div>
 <div class="project-content">
 <h3>دیتاست مناطق 22گانه شهر تهران</h3>
-<div class="project-view d-flex">
-<span>
-								در سایت کگل تجربیات خوبی در زمینه دیتا دارم که یکی از آنها دیتاست بررسی مناطق شهری شهر تهران است</span>
-<a class="btn-view" href="https://www.linkedin.com/feed/update/urn:li:activity:7074311726287970304/" rel="noopener" target="_blank">مشاهده</a>
+
+
 </div>
 </div>
 </div>
@@ -934,11 +954,8 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 </div>
 <div class="project-content">
 <h3>نرم افزار ارتباط با مشتریان آسمان</h3>
-<div class="project-view d-flex">
-<span>
-								نرم افزاری بسیار جذاب و مفید برای همه کسانی که به نحوی با مشتری سر و کار دارند. نرم افزاری که با حفظ و نگهداری کلیه سوابق مشتریان شما، باعث افزایش فروش و همچنین افزایش رضایتمندی آنها می شود.
-								</span>
-<a class="btn-view" href="javascript:void(0)">مشاهده </a>
+
+
 </div>
 </div>
 </div>
@@ -949,16 +966,8 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 </div>
 <div class="project-content">
 <h3>سمینارهای موفقیت 1 و 2</h3>
-<div class="project-view d-flex">
-<span>
-								مجموعه سمینارهای موفقیت:
-مجموعه ای گلچین شده و کاربردی از سمینارهای 12 استاد برجسته روانشناسی و موفقیت
 
-آنتونی رابینز - وین دایر - استاد آزمندیان - استاد معظمی - استاد حلت - استاد فرهنگ - استاد احمدی منش - استاد معدلی - استاد غروی - استاد موسوی - استاد مدرسی - استاد عظیمی
 
-به همراه قسمتهایی از مستند راز
-				</span>
-<a class="btn-view" href="https://www.facebook.com/photo/?fbid=111087485704012&amp;set=ecnf.100081001554949" rel="noopener" target="_blank">مشاهده </a>
 </div>
 </div>
 </div>
@@ -969,11 +978,8 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 </div>
 <div class="project-content">
 <h3>نرم افزار جامع موفقیت - کوله پشتی</h3>
-<div class="project-view d-flex">
-<span>
-								این نرم افزار در سال 1387 تولید شده است. نرم افزار جامع موفقیت اولین نرم افزار صوتی و تصویری می باشد که در آن سعی شده، تا با تلفیق تکنیک‌های موفقیت از قرآن، احادیث، ضرب‌المثلها و سخنان بیش از 190 دانشمند داخلی و خارجی، محیطی متناسب با فرهنگ ایران زمین
-								</span>
-<a class="btn-view" href="assets/videos/kooleposhti.mp4" rel="noopener" target="_blank">مشاهده </a>
+
+
 </div>
 </div>
 </div>
@@ -983,11 +989,8 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 </div>
 <div class="project-content">
 <h3>نرم افزار قصه های ماندگار</h3>
-<div class="project-view d-flex">
-<span>
-این نرم افزار در سال 1389 تولید شده و با بیش از 4500 داستان کوتاه و آموزنده محیطی بسیار جذاب برای یاد گرفتن و یاد دادن مهارت های زندگی در قالب داستان را فراهم می کند.
-								</span>
-<a class="btn-view" href="javascript:void(0)">مشاهده </a>
+
+
 </div>
 </div>
 </div>
@@ -1000,17 +1003,8 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 <h3>
 							فروش دامنه‌های اینترنتی
 							</h3>
-<div class="project-view d-flex">
-<span>
 
-																		
-									یک دامنه خوب، فقط آدرس سایت نیست؛ شروع یک برند است.
-									در این صفحه مجموعه‌ای از دامنه‌های کوتاه، خوش‌نام و آماده انتقال را می‌بینید؛ نام‌هایی که می‌توانند برای یک استارتاپ، برند شخصی، پروژه آموزشی، مالی، فرهنگی یا کسب‌وکار آنلاین تبدیل به یک دارایی ارزشمند شوند.
-									
-									دامنه مناسب را انتخاب کنید و پیشنهاد خرید خود را ارسال کنید.
-																		
-								</span>
-<a class="btn-view" href="https://esmaeelpoor.ir/assets/Docs/my-domains.html" rel="noopener" target="_blank">مشاهده</a>
+
 </div>
 </div>
 </div></div>
@@ -1030,70 +1024,70 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 <img src="assets/images/projects/19.jpg" alt="فی ۳۶۰">
 <h3>فی ۳۶۰ | تجربه‌های یادگیری سواد مالی</h3>
 <p>مجموعه‌ای از کتاب، بازی، داستان، ویدئو و آموزش‌های تعاملی برای تبدیل مفاهیم مالی به مهارت‌های کاربردی زندگی.</p>
-<a class="btn-view" href="https://esmaeelpoor.ir/assets/Docs/Fi360_Personal_Finace_Products.pdf" target="_blank" rel="noopener noreferrer">مشاهده</a>
+
 </div>
 
 <div class="idea-card reveal">
 <img src="assets/images/projects/21.jpg" alt="مدیریت طبیعی">
 <h3>مدیریت طبیعی | BioManagement</h3>
 <p>نگاهی دوباره به مدیریت از زاویه سیستم‌های زنده برای ساخت سازمان‌های چابک، تاب‌آور و هوشمند.</p>
-<a class="btn-view" href="#contact">مشاهده</a>
+
 </div>
 
 <div class="idea-card reveal">
 <img src="assets/images/projects/20.jpg" alt="آهسته و پیوسته بخرید">
 <h3>کتاب آهسته و پیوسته بخرید</h3>
 <p>راهنمای کاربردی سواد مالی شخصی، سرمایه‌گذاری بلندمدت و تصمیم‌گیری مالی هوشمند.</p>
-<a class="btn-view" href="#contact">مشاهده</a>
+
 </div>
 
 <div class="idea-card reveal">
 <img src="assets/images/projects/18.jpg" alt="کارتآس">
 <h3>کارتآس | بازی رومیزی کارت و تاس</h3>
 <p>بازی رومیزی تجربه‌محور با ترکیب کارت، تاس، ریسک و تصمیم‌گیری.</p>
-<a class="btn-view" href="https://esmaeelpoor.ir/assets/Docs/Kartas_Pitch.pdf" target="_blank" rel="noopener noreferrer">مشاهده</a>
+
 </div>
 
 <div class="idea-card reveal">
 <img src="assets/images/projects/17.jpg" alt="قهرمانان مالی">
 <h3>قهرمانان مالی | FiQ Heroes</h3>
 <p>بازی آموزشی برای تقویت سواد مالی، انتخاب آگاهانه و مسئولیت‌پذیری اقتصادی.</p>
-<a class="btn-view" href="https://esmaeelpoor.ir/assets/Docs/FiQ_Pitch.pdf" target="_blank" rel="noopener noreferrer">مشاهده</a>
+
 </div>
 
 <div class="idea-card reveal">
 <img src="assets/images/projects/16.jpg" alt="پزا">
 <h3>پزا | بسته‌های غذایی خشک</h3>
 <p>مدل نوآوری اجتماعی برای تبدیل مشارکت افراد و سازمان‌ها به امنیت غذایی واقعی.</p>
-<a class="btn-view" href="https://pazaa.ir" target="_blank" rel="noopener noreferrer">مشاهده</a>
+
 </div>
 
 <div class="idea-card reveal">
 <img src="assets/images/projects/23.jpg" alt="نقشه دانشی کتاب">
 <h3>نقشه دانشی کتاب | Knowledge Flow</h3>
 <p>سامانه تحلیل روابط پنهان میان کتاب‌ها، نویسندگان، ناشران و مسیر انتقال ایده‌ها.</p>
-<a class="btn-view" href="https://esmaeelpoor.ir/assets/Docs/papers/14050415_%20book_knowledge_flow_architecture.pdf" target="_blank" rel="noopener noreferrer">مشاهده</a>
+
 </div>
 
 <div class="idea-card reveal">
 <img src="assets/images/projects/22.jpg" alt="انگشتر چند گوهر">
 <h3>انگشتر چند گوهر</h3>
 <p>یک محصول مفهومی شخصی‌سازی‌شده با تمرکز بر معنا، روایت و طراحی.</p>
-<a class="btn-view" href="https://esmaeelpoor.ir/assets/images/projects/22-detail.jpg" target="_blank" rel="noopener noreferrer">مشاهده</a>
+
 </div>
 
 <div class="idea-card reveal">
 <img src="assets/images/projects/9.jpg" alt="جهش کوانتومی">
 <h3>مجموعه ویدئویی جهش کوانتومی</h3>
 <p>میکرولرنینگ سازمانی برای افزایش کارایی و بهره‌وری در گروه صنعتی انتخاب.</p>
-<a class="btn-view" href="https://www.aparat.com/v/fax255v?playlist=12164629" target="_blank" rel="noopener noreferrer">مشاهده</a>
+
 </div>
 
 <div class="idea-card reveal">
 <img src="assets/images/projects/4.jpg" alt="کتاب کودک و نوجوان">
 <h3>کتاب‌های کودک و نوجوان</h3>
 <p>ترجمه و تألیف کتاب در حوزه آموزش سواد مالی و ریاضیات ذهنی.</p>
-<a class="btn-view" href="#contact">مشاهده</a>
+
 </div>
 
 </div>
@@ -1114,15 +1108,8 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 </div>
 <div class="project-content">
 <h3>بررسی صنعت بانک در ایران - 1393</h3>
-<div class="project-view d-flex">
-<span>
-								یکی از روشهای تحقیقات بازار، تحلیل و شناسایی صنعتهای مختلف میباشد و با توجه به اینکه در هر سال یکی از صنایع
-								بعنوان صنعت پیشتاز و به عنوان رهبر بازار شناخته میشود و امسال دو صنعت خودرو و بانک پیشتازان بازار هستند. بهمین
-								خاطر صنعت بانک انتخاب گردید. روش انجام کار بررسی اصطاحات این صنعت با استفاده از منابع موجود و همچنین
-								 بهرهگیری از نظرات خبرگان اقتصادی میباشد. در مورد انتخاب صنعت بانک بعنوان صنعت پیشرو در سال 1393 نیز از روش
-								تحقیق میدانی که توسط پایگاه اینترنتی بورس نیوز صورت گرفته، استفاده شده است.
-								</span>
-<a class="btn-view" href="assets/Docs/papers/iran-bank-industry-porter-swot.html" rel="noopener" target="_blank">مشاهده </a>
+
+
 </div>
 </div>
 </div>
@@ -1133,11 +1120,8 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 </div>
 <div class="project-content">
 <h3>گروه مباحثاتی چندرسانه‌ای - 1382</h3>
-<div class="project-view d-flex">
-<span>
-								یکی از روش‌های کاربردی در مهندسی نرم‌افزار، تحلیل و طراحی سامانه‌های تعاملی مبتنی بر وب است؛ سامانه‌هایی که بتوانند مشارکت کاربران و تبادل دانش را در یک محیط ساخت‌یافته تسهیل کنند. با توجه به گسترش استفاده از اینترنت و نیاز به محیط‌های گفتگو در میان کاربران تخصصی، موضوع «گروه مباحثاتی» انتخاب گردید و در این پروژه تمرکز اصلی بر افزودن قابلیت‌های چندرسانه‌ای به ساختار گفتگوها قرار گرفت. روش انجام کار شامل مطالعه نمونه‌های موجود، استخراج نیازمندی‌ها، طراحی ساختار داده و پیاده‌سازی عملی سامانه با فناوری‌های متداول زمان اجرا بوده است. همچنین برای ارزیابی کارکرد و بهبود قابلیت‌ها، از بازخورد کاربران و بررسی الگوهای رایج در انجمن‌های تخصصی استفاده شده است.
-								</span>
-<a class="btn-view" href="assets/Docs/papers/Design-and-Implementation-of-a-Multimedia-Discussion-Group.html" rel="noopener" target="_blank">مشاهده </a>
+
+
 </div>
 </div>
 </div>
@@ -1148,20 +1132,8 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 </div>
 <div class="project-content">
 <h3>سفر آرمان در سرزمین دانش - 1405</h3>
-<div class="project-view d-flex">
-<span>
-									
-									داستان‌نامه‌ای برای یادگیری ماندگار مفاهیم مدیریت، پژوهش و فناوری اطلاعات
-									
-									چرا بسیاری از مطالبی که می‌خوانیم، پس از مدتی فراموش می‌شوند؟
-									
-									«سفر آرمان در سرزمین دانش» تلاشی است برای تبدیل دانش به تجربه؛ سفری داستانی که مفاهیم پیچیده‌ای مانند فلسفه علم، روش‌شناسی پژوهش، نظریه‌های سازمان، تفکر سیستمی، استراتژی، اقتصاد دیجیتال، هوش مصنوعی و سازمان پایدار را در قالب روایت و تصویر ذهنی ارائه می‌کند.
-									
-									در این سفر، آرمان از دروازه حقیقت آغاز می‌کند و با عبور از سرزمین‌های دانش، مدیریت و فناوری، به درک عمیق‌تری از سازمان‌های آینده می‌رسد.
-									
-									این کتاب برای کسانی است که می‌خواهند به جای حفظ کردن مفاهیم، آن‌ها را بفهمند، ارتباطشان را ببینند و در ذهن خود ماندگار کنند.
-								</span>
-<a class="btn-view" href="assets/Docs/papers/arman-knowledge-page.html" rel="noopener" target="_blank">مشاهده </a>
+
+
 </div>
 </div>
 </div>
@@ -1457,7 +1429,7 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 <h3>دنبال علی اسماعیل‌پور دیگری هستید؟</h3>
 <p>برای جلوگیری از اشتباه در شناسایی و تفکیک هویت حرفه‌ای افراد هم‌نام، صفحه‌ای جداگانه ساخته‌ام تا هر «علی اسماعیل‌پور» با سابقه مستقل خودش معرفی شود.</p>
 </div>
-<a class="btn btn-blue" href="ali-esmaeelpoor-namesakes.html" rel="noopener" target="_blank">مشاهده صفحه هم‌نام‌ها</a>
+<a class="btn btn-blue" href="ali-esmaeelpoor-namesakes.html" rel="noopener" target="_blank"> صفحه هم‌نام‌ها</a>
 </div>
 </div>
 </section>
