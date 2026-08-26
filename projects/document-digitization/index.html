@@ -6,6 +6,8 @@
   <title>دیجیتال‌سازی و مکانیزاسیون اسناد سازمانی | علی اسماعیل‌پور</title>
   <meta name="description" content="مطالعه موردی پروژه‌های دیجیتال‌سازی، اسکن، کدگذاری و مکانیزاسیون اسناد سازمانی در سال‌های ۱۳۸۷ تا ۱۳۹۲؛ مدیریت پروژه، طراحی فرایند، نرم‌افزار اختصاصی و نوآوری عملیاتی.">
   <meta name="theme-color" content="#07101d">
+  <link rel="canonical" href="https://esmaeelpoor.ir/projects/document-digitization/">
+  <meta name="robots" content="index,follow">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <style>
     @font-face{
@@ -214,20 +216,80 @@
       html{scroll-behavior:auto}.beam{animation:none}[data-reveal]{opacity:1;transform:none;transition:none}.cta,.innovation{transition:none}
     }
   </style>
+<link rel="stylesheet" href="/assets/css/header.css?v=20260826-3">
+<script src="/assets/js/header.js?v=20260826-3" defer></script>
+
+<style id="case-study-map-style">
+.case-study-map{
+  padding:0 0 34px;
+  border-top:0;
+}
+.case-study-map__box{
+  padding:18px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:20px;
+  background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.015));
+  box-shadow:0 16px 38px rgba(0,0,0,.12);
+}
+.case-study-map__head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:13px;
+}
+.case-study-map__head strong{
+  color:#f2f6fb;
+  font-size:14px;
+}
+.case-study-map__head span{
+  color:#7f91a8;
+  font-size:11px;
+}
+.case-study-map__links{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:9px;
+}
+.case-study-map__links a{
+  position:relative;
+  min-height:64px;
+  padding:12px 13px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.075);
+  background:rgba(255,255,255,.018);
+  color:#cfdae8;
+  font-size:12px;
+  line-height:1.65;
+  transition:background .2s ease,border-color .2s ease,transform .2s ease;
+}
+.case-study-map__links a:hover,
+.case-study-map__links a:focus-visible{
+  background:rgba(86,166,255,.07);
+  border-color:rgba(86,166,255,.22);
+  transform:translateY(-2px);
+}
+.case-study-map__links b{
+  display:block;
+  color:#56a6ff;
+  font-size:10px;
+  margin-bottom:2px;
+  letter-spacing:.04em;
+}
+@media(max-width:900px){
+  .case-study-map__links{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:620px){
+  .case-study-map{padding-bottom:22px}
+  .case-study-map__head{display:block}
+  .case-study-map__head span{display:block;margin-top:3px}
+  .case-study-map__links{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+</style>
+
 </head>
 <body>
-<header>
-  <div class="container nav">
-    <a class="brand" href="https://esmaeelpoor.ir/">علی اسماعیل‌پور <span>/ پروژه‌های منتخب</span></a>
-    <nav class="navlinks" aria-label="ناوبری صفحه">
-      <a href="#problem">مسئله</a>
-      <a href="#process">فرایند</a>
-      <a href="#innovation">نوآوری‌ها</a>
-      <a href="#security">محرمانگی</a>
-      <a class="back" href="https://esmaeelpoor.ir/">بازگشت به سایت</a>
-    </nav>
-  </div>
-</header>
+<div id="site-header"></div>
 
 <main>
   <section class="hero">
@@ -266,6 +328,25 @@
             <div class="folder">پرونده ۰۲</div>
             <div class="folder">پرونده ۰۳</div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="case-study-map" aria-label="راهنمای مطالعه موردی">
+    <div class="container">
+      <div class="case-study-map__box">
+        <div class="case-study-map__head">
+          <strong>راهنمای این مطالعه موردی</strong>
+          <span>برای رفتن مستقیم به بخش موردنظر انتخاب کنید.</span>
+        </div>
+        <div class="case-study-map__links">
+          <a href="#problem"><b>01</b>مسئله و نقش من</a>
+          <a href="#process"><b>02</b>فرایند اجرا</a>
+          <a href="#innovation"><b>03</b>نوآوری‌های پروژه</a>
+          <a href="#security"><b>04</b>محرمانگی و کنترل</a>
+          <a href="#archive"><b>05</b>سند آرشیوی</a>
         </div>
       </div>
     </div>
