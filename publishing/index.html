@@ -205,6 +205,20 @@ input{min-width:280px} .result-count{color:var(--muted);font-size:13px;margin:10
 </style>
 <link rel="stylesheet" href="/assets/css/header.css">
 <script src="/assets/js/header.js" defer></script>
+
+<style id="publishing-evidence-additions">
+.pub-story-mini{display:grid;grid-template-columns:.72fr 1.28fr;gap:28px;align-items:center}
+.pub-story-mini figure,.pub-role-evidence,.pub-award-card{margin:0;overflow:hidden;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.025)}
+.pub-story-mini img,.pub-role-evidence img,.pub-award-card img{display:block;width:100%;height:auto;object-fit:contain;filter:grayscale(58%) saturate(.5) brightness(1.05) contrast(.9);opacity:.78;transition:filter .3s ease,opacity .3s ease,transform .3s ease}
+.pub-story-mini figure:hover img,.pub-role-evidence:hover img,.pub-award-card:hover img{filter:none;opacity:1;transform:scale(1.01)}
+.pub-caption{padding:13px 15px 16px;color:#95a5ba;font-size:12px;line-height:1.85}
+.pub-caption strong{display:block;color:#e8eef7;font-size:14px;margin-bottom:3px}
+.pub-role-grid{display:grid;grid-template-columns:1fr;gap:18px;max-width:840px;margin:0 auto}
+.pub-awards-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.pub-award-card img{max-height:360px}
+@media(max-width:760px){.pub-story-mini{grid-template-columns:1fr}.pub-awards-grid{grid-template-columns:1fr}}
+</style>
+
 </head>
 <body>
 <div id="site-header"></div>
@@ -221,6 +235,21 @@ input{min-width:280px} .result-count{color:var(--muted);font-size:13px;margin:10
   </div>
 </div></section>
 
+
+
+<section class="section" id="publishing-roots"><div class="container">
+  <div class="pub-story-mini">
+    <figure>
+      <img src="images/evidence/library-card-1367.webp" alt="کارت عضویت کتابخانه علی اسماعیل‌پور در سال ۱۳۶۷" loading="lazy" decoding="async" width="889" height="651">
+      <figcaption class="pub-caption"><strong>کارت عضویت کتابخانه | ۱۳۶۷</strong>یکی از قدیمی‌ترین نشانه‌های علاقه من به کتاب و مطالعه.</figcaption>
+    </figure>
+    <div>
+      <div class="eyebrow">از علاقه شخصی تا مسیر حرفه‌ای</div>
+      <h2>از کتابخانه تا مدیریت تولید دانش</h2>
+      <p class="lead">علاقه به کتاب برای من خیلی پیش‌تر از ورود حرفه‌ای به نشر آغاز شد. این سند کوچک قرار نیست یک «افتخار» باشد؛ فقط ریشه‌ای واقعی از رابطه‌ای است که بعدها به تألیف، ترجمه، تولید، مدیریت نشر و طراحی محصولات دانشی تبدیل شد.</p>
+    </div>
+  </div>
+</div></section>
 
 <section class="section" id="publishing-management"><div class="container">
   <div class="story-grid">
@@ -284,6 +313,18 @@ input{min-width:280px} .result-count{color:var(--muted);font-size:13px;margin:10
 
 
 
+
+<section class="section" id="publishing-design-role"><div class="container">
+  <h2>نقش اجرایی در طراحی و معرفی آثار</h2>
+  <p class="lead">نمونه‌ای از مشارکت مستقیم در طراحی اقلام معرفی آثار تخصصی بازار سرمایه.</p>
+  <div class="pub-role-grid">
+    <figure class="pub-role-evidence">
+      <img src="images/evidence/capital-market-history-poster.webp" alt="پوستر کتاب تاریخ بازار سرمایه ایران" loading="lazy" decoding="async" width="652" height="891">
+      <figcaption class="pub-caption"><strong>طراحی پوستر کتاب «تاریخ بازار سرمایه ایران»</strong>نمونه‌ای از نقش اجرایی در طراحی و آماده‌سازی اقلام معرفی و عرضه یک اثر تخصصی.</figcaption>
+    </figure>
+  </div>
+</div></section>
+
 <section class="section" id="publishing-evidence"><div class="container">
   <div class="evidence-head">
     <div>
@@ -304,6 +345,22 @@ input{min-width:280px} .result-count{color:var(--muted);font-size:13px;margin:10
 <img src="images/work/publishing-team.webp" alt="کار تیمی در انتشارات بورس" loading="lazy" decoding="async" width="1200" height="613">
 <figcaption><strong>کار تیمی در انتشارات بورس</strong><span>بخشی از تجربه اجرایی و سازمانی در زنجیره نشر تخصصی.</span></figcaption>
 </figure>
+  </div>
+</div></section>
+
+
+<section class="section" id="publishing-awards"><div class="container">
+  <h2>افتخارات و بازخورد حرفه‌ای</h2>
+  <p class="lead">دو نمونه از بازخوردها و تقدیرهایی که به فعالیت‌های مرتبط با کتاب و نشر تعلق گرفته‌اند.</p>
+  <div class="pub-awards-grid">
+    <figure class="pub-award-card">
+      <img src="images/evidence/ahl-e-ghalam-award.webp" alt="دریافت تندیس اهل قلم از انتشارات بورس" loading="lazy" decoding="async" width="713" height="894">
+      <figcaption class="pub-caption"><strong>تندیس اهل قلم</strong>دریافت تندیس مرتبط با فعالیت در حوزه کتاب و نشر از انتشارات بورس.</figcaption>
+    </figure>
+    <figure class="pub-award-card">
+      <img src="images/evidence/forough-sobh-danayi-award.webp" alt="لوح تقدیر فروغ صبح دانایی" loading="lazy" decoding="async" width="879" height="822">
+      <figcaption class="pub-caption"><strong>لوح تقدیر «فروغ صبح دانایی»</strong>تقدیر مرتبط با فعالیت‌های حوزه کتاب، آموزش و تولید محتوای دانشی.</figcaption>
+    </figure>
   </div>
 </div></section>
 
