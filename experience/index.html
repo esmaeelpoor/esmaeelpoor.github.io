@@ -105,6 +105,78 @@ a{color:inherit}
 </style>
 <link rel="stylesheet" href="/assets/css/header.css">
 <script src="/assets/js/header.js" defer></script>
+
+<style id="digipay-experience-style">
+.digipay-gallery{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:18px;
+  max-width:1080px;
+  margin:0 auto;
+}
+.digipay-photo{
+  margin:0;
+  overflow:hidden;
+  border-radius:20px;
+  background:#fff;
+  border:1px solid var(--line);
+  box-shadow:0 12px 32px rgba(15,23,42,.065);
+}
+.digipay-photo img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.digipay-photo figcaption{
+  padding:14px 17px 17px;
+  color:#66758a;
+  line-height:1.9;
+  font-size:13px;
+}
+.digipay-photo figcaption strong{
+  display:block;
+  color:#1e293b;
+  font-size:15px;
+  margin-bottom:3px;
+}
+@media(max-width:760px){
+  .digipay-gallery{grid-template-columns:1fr}
+  .digipay-photo{border-radius:16px}
+}
+</style>
+
+
+<style id="experience-image-hover-grayscale">
+.market-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}
+.market-gallery .evidence-card{height:100%}
+.market-gallery .evidence-card img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.market-gallery .evidence-card img{width:100%;height:auto;object-fit:contain}
+.image-muted img,
+.evidence-card img,
+.digipay-photo img{
+  filter:grayscale(1) saturate(.35) brightness(1.08) contrast(.88) opacity(.9);
+  transition:filter .35s ease, opacity .35s ease, transform .35s ease;
+}
+.image-muted:hover img,
+.image-muted:focus-within img,
+.evidence-card:hover img,
+.evidence-card:focus-within img,
+.digipay-photo:hover img,
+.digipay-photo:focus-within img{
+  filter:none;
+  opacity:1;
+  transform:translateY(-2px);
+}
+@media(max-width:900px){
+  .market-gallery{grid-template-columns:1fr}
+}
+</style>
+
 </head>
 <body>
 
@@ -171,6 +243,16 @@ a{color:inherit}
       </article>
 
       <article class="role-card">
+        <div class="time">نمایشگاه بازار سرمایه — جزیره کیش</div>
+        <h3>حضور در نمایشگاه بازار سرمایه</h3>
+        <p>
+          حضور در نمایشگاه بازار سرمایه در جزیره کیش در کنار همکاران سازمان بورس و ارکان؛
+          تجربه‌ای از تعامل حرفه‌ای در فضای تخصصی بازار سرمایه، معرفی خدمات و حضور در بستر رویدادی این اکوسیستم.
+        </p>
+        <div class="tags"><span>Kish Exhibition</span><span>Capital Market</span><span>Professional Presence</span></div>
+      </article>
+
+      <article class="role-card">
         <div class="time">گروه صنعتی انتخاب</div>
         <h3>مدیریت آموزش و نوآوری</h3>
         <p>
@@ -178,6 +260,17 @@ a{color:inherit}
           توسعه قابلیت‌های سازمان و تبدیل دانش به اقدام.
         </p>
         <div class="tags"><span>Learning</span><span>Innovation</span><span>Organization</span></div>
+      </article>
+
+
+      <article class="role-card">
+        <div class="time">دیجی‌پی</div>
+        <h3>سرپرستی آموزش و توسعه یادگیری</h3>
+        <p>
+          حضور در دوره آموزشی «هوش مصنوعی در منابع انسانی» به‌عنوان سرپرست آموزش دیجی‌پی،
+          در کنار همکاران دیجی‌کالا؛ با تمرکز بر کاربردهای عملی هوش مصنوعی در حوزه منابع انسانی و یادگیری سازمانی.
+        </p>
+        <div class="tags"><span>AI in HR</span><span>Learning</span><span>People Development</span></div>
       </article>
 
       <article class="role-card">
@@ -225,6 +318,41 @@ a{color:inherit}
   </div>
 </section>
 
+<section class="section" id="digipay-ai-hr">
+  <div class="container">
+    <h2>هوش مصنوعی در منابع انسانی | دیجی‌پی</h2>
+    <p class="section-intro">
+      حضور در دوره آموزشی هوش مصنوعی در منابع انسانی به‌عنوان سرپرست آموزش دیجی‌پی،
+      در کنار همکاران دیجی‌کالا؛ تجربه‌ای در پیوند یادگیری سازمانی، منابع انسانی و کاربردهای عملی هوش مصنوعی.
+    </p>
+
+    <div class="digipay-gallery">
+      <figure class="digipay-photo">
+        <img src="images/digipay-ai-hr-team.webp"
+             alt="حضور در دوره هوش مصنوعی در منابع انسانی به‌عنوان سرپرست آموزش دیجی‌پی در کنار همکاران دیجی‌کالا"
+             loading="lazy" decoding="async"
+             width="1400" height="1051">
+        <figcaption>
+          <strong>دوره آموزشی هوش مصنوعی در منابع انسانی</strong>
+          حضور به‌عنوان سرپرست آموزش دیجی‌پی در کنار همکاران دیجی‌کالا.
+        </figcaption>
+      </figure>
+
+      <figure class="digipay-photo">
+        <img src="images/digipay-ai-hr-workshop.webp"
+             alt="فعالیت گروهی در دوره آموزشی هوش مصنوعی در منابع انسانی"
+             loading="lazy" decoding="async"
+             width="1400" height="933">
+        <figcaption>
+          <strong>یادگیری و کار گروهی</strong>
+          تجربه عملی استفاده از هوش مصنوعی در حوزه منابع انسانی و یادگیری سازمانی.
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
 <section class="section" id="capital-market">
   <div class="container">
     <h2>تجربه سازمانی در بازار سرمایه</h2>
@@ -234,16 +362,40 @@ a{color:inherit}
     </p>
 
     <div class="capital-market-wrap">
-      <figure class="evidence-card">
-        <img src="images/iran-capital-market-50th.webp"
-             alt="پنجاه‌سالگی بازار سرمایه ایران"
-             loading="lazy" decoding="async"
-             width="1280" height="960">
-        <figcaption>
-          <strong>پنجاه‌سالگی بازار سرمایه ایران</strong>
-          حضور در تیم اجرایی رویدادهای سازمان بورس و بخشی از تجربه سازمانی در بازار سرمایه.
-        </figcaption>
-      </figure>
+      <div class="market-gallery evidence-block">
+        <figure class="evidence-card image-muted">
+          <img src="images/iran-capital-market-50th.webp"
+               alt="پنجاه‌سالگی بازار سرمایه ایران"
+               loading="lazy" decoding="async"
+               width="1280" height="960">
+          <figcaption>
+            <strong>پنجاه‌سالگی بازار سرمایه ایران</strong>
+            حضور در تیم اجرایی رویدادهای سازمان بورس و بخشی از تجربه سازمانی در بازار سرمایه.
+          </figcaption>
+        </figure>
+
+        <figure class="evidence-card image-muted">
+          <img src="images/kish-capital-market-exhibition.webp"
+               alt="حضور در نمایشگاه بازار سرمایه در جزیره کیش در کنار همکاران سازمان بورس و ارکان"
+               loading="lazy" decoding="async"
+               width="1232" height="1794">
+          <figcaption>
+            <strong>نمایشگاه بازار سرمایه در جزیره کیش</strong>
+            حضور در کنار همکاران سازمان بورس و ارکان بازار سرمایه در فضای نمایشگاهی و حرفه‌ای این حوزه.
+          </figcaption>
+        </figure>
+
+        <figure class="evidence-card image-muted">
+          <img src="images/capital-market-book-launch-ali-saeidi.webp"
+               alt="تصویر یادگاری در مراسم رونمایی کتاب تاریخ بازار سرمایه در کنار دکتر علی سعیدی"
+               loading="lazy" decoding="async"
+               width="1280" height="853">
+          <figcaption>
+            <strong>رونمایی کتاب «تاریخ بازار سرمایه»</strong>
+            تصویر یادگاری در مراسم رونمایی کتاب، در کنار نویسنده اثر، دکتر علی سعیدی.
+          </figcaption>
+        </figure>
+      </div>
 
       <div class="capital-market-note">
         <p>
