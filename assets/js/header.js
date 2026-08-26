@@ -2,6 +2,23 @@
 const mount=document.getElementById('site-header');if(!mount)return;
 fetch('/header.html',{cache:'no-cache'}).then(function(r){if(!r.ok)throw new Error('Header load failed: '+r.status);return r.text();}).then(function(markup){
 mount.innerHTML=markup;
+
+/* Keep the shared header permanently visible at the top of the viewport.
+   The mount keeps the same height so page content does not jump underneath it. */
+const sharedHeader=mount.querySelector('.shared-site-header');
+function syncFixedHeader(){
+  if(!sharedHeader)return;
+  sharedHeader.style.position='fixed';
+  sharedHeader.style.top='0';
+  sharedHeader.style.right='0';
+  sharedHeader.style.left='0';
+  sharedHeader.style.width='100%';
+  sharedHeader.style.zIndex='1000';
+  mount.style.height=sharedHeader.offsetHeight+'px';
+}
+syncFixedHeader();
+window.addEventListener('resize',syncFixedHeader);
+
 const nav=mount.querySelector('.shared-header__nav');const toggle=mount.querySelector('.shared-header__toggle');
 function closeMenu(){if(!nav||!toggle)return;nav.classList.remove('is-open');toggle.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');}
 if(nav&&toggle){toggle.addEventListener('click',function(){const open=nav.classList.toggle('is-open');toggle.classList.toggle('is-open',open);toggle.setAttribute('aria-expanded',open?'true':'false');});nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu);});document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});}
