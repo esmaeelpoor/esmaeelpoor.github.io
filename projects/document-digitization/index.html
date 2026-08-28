@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>دیجیتال‌سازی و مکانیزاسیون اسناد سازمانی | علی اسماعیل‌پور</title>
-  <meta name="description" content="مطالعه موردی پروژه‌های دیجیتال‌سازی، اسکن، کدگذاری و مکانیزاسیون اسناد سازمانی در سال‌های ۱۳۸۷ تا ۱۳۹۲؛ مدیریت پروژه، طراحی فرایند، نرم‌افزار اختصاصی و نوآوری عملیاتی.">
+  <meta name="description" content="مطالعه موردی پروژه‌های دیجیتال‌سازی، اسکن، کدگذاری و مکانیزاسیون اسناد سازمانی در سال‌های ۱۳۸۷ تا ۱۳۹۲؛ با تصاویر واقعی از عملیات، مدیریت پروژه، طراحی فرایند، نرم‌افزار اختصاصی و نوآوری عملیاتی.">
   <meta name="theme-color" content="#07101d">
   <link rel="canonical" href="https://esmaeelpoor.ir/projects/document-digitization/">
   <meta name="robots" content="index,follow">
@@ -215,6 +215,70 @@
     @media(prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}.beam{animation:none}[data-reveal]{opacity:1;transform:none;transition:none}.cta,.innovation{transition:none}
     }
+
+    /* Real project photography */
+    .hero-photo{
+      position:relative;margin:0;border:1px solid var(--line);border-radius:30px;
+      overflow:hidden;background:#0c1828;box-shadow:0 30px 70px rgba(0,0,0,.34);
+    }
+    .hero-photo img{display:block;width:100%;height:470px;object-fit:cover}
+    .hero-photo figcaption{
+      position:absolute;right:18px;left:18px;bottom:16px;padding:10px 13px;
+      border-radius:13px;background:rgba(7,16,29,.80);backdrop-filter:blur(8px);
+      color:#e6edf7;font-size:11px;line-height:1.75;border:1px solid rgba(255,255,255,.10)
+    }
+    .project-photo{
+      margin:28px 0 0;border:1px solid var(--line);border-radius:24px;overflow:hidden;
+      background:#0c1828;box-shadow:0 20px 48px rgba(0,0,0,.20)
+    }
+    .project-photo img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+    .project-photo figcaption{
+      padding:12px 15px;color:#b9c7d9;font-size:11px;line-height:1.8;
+      background:rgba(255,255,255,.018)
+    }
+    .process-photo-row{
+      display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px
+    }
+    .process-photo-row .project-photo{margin:0}
+    .photo-gallery{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px
+    }
+    .photo-gallery .project-photo{margin:0}
+    .photo-gallery .project-photo img{aspect-ratio:4/3}
+    .photo-gallery .project-photo.wide{grid-column:span 2}
+    @media(max-width:760px){
+      .hero-photo img{height:350px}
+      .process-photo-row,.photo-gallery{grid-template-columns:1fr}
+      .photo-gallery .project-photo.wide{grid-column:auto}
+    }
+
+    /* Photo treatment: grayscale by default, full color on hover/focus */
+    .hero-photo img,
+    .project-photo img{
+      filter:grayscale(1);
+      transition:filter .45s ease, transform .45s ease;
+    }
+    .hero-photo:hover img,
+    .hero-photo:focus-within img,
+    .project-photo:hover img,
+    .project-photo:focus-within img{
+      filter:grayscale(0);
+    }
+    .hero-photo,
+    .project-photo{
+      transition:border-color .3s ease, box-shadow .3s ease;
+    }
+    .hero-photo:hover,
+    .hero-photo:focus-within,
+    .project-photo:hover,
+    .project-photo:focus-within{
+      border-color:rgba(86,166,255,.28);
+    }
+    @media(prefers-reduced-motion:reduce){
+      .hero-photo img,
+      .project-photo img{transition:none}
+    }
+
   </style>
 <link rel="stylesheet" href="/assets/css/header.css?v=20260826-3">
 <script src="/assets/js/header.js?v=20260826-3" defer></script>
@@ -390,25 +454,15 @@
         </div>
       </div>
 
-      <div class="scan-stage" aria-hidden="true" data-reveal>
-        <div class="scan-halo"></div>
-        <div class="machine">
-          <div class="machine-top">
-            <div class="machine-brand">اسکن استودیو<small>پردازش و تفکیک اسناد</small></div>
-            <div class="lights"><i></i><i></i><i></i></div>
-          </div>
-          <div class="beam"></div>
-          <div class="tray">
-            <div class="separator"></div>
-            <div class="paper"></div>
-          </div>
-          <div class="folders">
-            <div class="folder">پرونده ۰۱</div>
-            <div class="folder">پرونده ۰۲</div>
-            <div class="folder">پرونده ۰۳</div>
-          </div>
-        </div>
-      </div>
+      <figure class="hero-photo" tabindex="0" data-reveal>
+        <img src="images/گروه-اسکن.webp"
+             alt="نمایی از محیط، اسناد و تجهیزات پروژه دیجیتال‌سازی"
+             loading="eager" decoding="async">
+        <figcaption>
+          بخشی از محیط واقعی عملیات دیجیتال‌سازی و پردازش اسناد
+        </figcaption>
+      </figure>
+
     </div>
   </section>
 
@@ -483,6 +537,21 @@
         <article class="step" data-reveal><span class="dot">۷</span><b>کنترل کیفیت</b><p>بررسی خوانایی، ترتیب، صحت دسته‌بندی و کامل بودن مجموعه دیجیتال.</p></article>
         <article class="step" data-reveal><span class="dot">۸</span><b>بازگردانی و تحویل</b><p>مرتب‌سازی مجدد اسناد، بازگرداندن به پرونده فیزیکی و تحویل خروجی دیجیتال.</p></article>
       </div>
+
+      <div class="process-photo-row" data-reveal>
+        <figure class="project-photo">
+          <img src="images/آماده-سازی-اسناد.webp"
+               alt="اپراتور در حال آماده‌سازی و مرتب‌سازی اسناد"
+               loading="lazy" decoding="async">
+          <figcaption>آماده‌سازی و مرتب‌سازی فیزیکی اسناد پیش از ورود به خط اسکن.</figcaption>
+        </figure>
+        <figure class="project-photo">
+          <img src="images/تیم-اسکن.webp"
+               alt="اپراتور در حال کار با تجهیزات اسکن اسناد"
+               loading="lazy" decoding="async">
+          <figcaption>نمونه‌ای از عملیات واقعی اسکن و پردازش اسناد در محیط پروژه.</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
@@ -514,6 +583,21 @@
           <p>برای بازگرداندن سریع صفحات به پرونده و استفاده از سوراخ‌های قبلی، یک سازه فلزی شیب‌دار با تکیه‌گاه ۹۰ درجه طراحی شد. پس از موفقیت نمونه اولیه، <strong>سه نمونه</strong> از آن در عملیات استفاده شد.</p>
         </article>
       </div>
+
+      <div class="photo-gallery" data-reveal>
+        <figure class="project-photo wide">
+          <img src="images/نمونه-پرونده.webp"
+               alt="حجم بالای اسناد و پرونده‌های پروژه"
+               loading="lazy" decoding="async">
+          <figcaption>حجم بالای اسناد و پرونده‌ها؛ تصویری که مقیاس مسئله عملیاتی پروژه را نشان می‌دهد.</figcaption>
+        </figure>
+        <figure class="project-photo">
+          <img src="images/تیم-اسکن.webp"
+               alt="تیم در حال پردازش و بررسی اسناد"
+               loading="lazy" decoding="async">
+          <figcaption>کار تیمی و پردازش هم‌زمان پرونده‌ها در عملیات.</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
@@ -537,8 +621,8 @@
   <section class="section">
     <div class="container jogger-grid">
       <figure class="jogger-visual" data-reveal>
-        <img src="images/paper-aligner-concept.png" alt="بازسازی مفهومی سازه فلزی یک‌تکه و شیب‌دار برای هم‌تراز کردن دسته‌های کاغذ" loading="lazy">
-        <figcaption class="jogger-label">بازسازی مفهومی سازه‌ای که برای هم‌تراز کردن دسته‌های کاغذ ساخته شد؛ یک ورق فلزی یک‌تکه با سطح شیب‌دار و خم انتهایی ۹۰ درجه.</figcaption>
+        <img src="images/paper-aligner-concept.png" alt="نمونه واقعی ابزار ساده ساخته‌شده برای هم‌تراز کردن دسته‌های کاغذ" loading="lazy">
+        <figcaption class="jogger-label">نمونه‌ای از ابزار ساخته‌شده برای هم‌تراز کردن سریع دسته‌های کاغذ و کمک به استفاده از سوراخ‌های قبلی صفحات.</figcaption>
       </figure>
       <div class="jogger-copy" data-reveal>
         <div class="eyebrow">حل مسئله در کف عملیات</div>
@@ -565,6 +649,13 @@
         <article class="security-card" data-reveal><b>ردیابی گردش اسناد</b><p>دریافت، پردازش، کنترل و بازگرداندن پرونده‌ها به‌صورت مرحله‌ای مدیریت می‌شد تا احتمال جابه‌جایی یا مفقودی کاهش یابد.</p></article>
         <article class="security-card" data-reveal><b>احراز صلاحیت و اعتماد سازمانی</b><p>برای حضور در برخی محیط‌های کاری و دسترسی مدیریتی، فرایندهای رسمی موردنظر کارفرما طی و الزامات محرمانگی رعایت می‌شد.</p></article>
       </div>
+
+      <figure class="project-photo" tabindex="0" style="margin-top:26px" data-reveal>
+        <img src="images/برخی-تجهیزات.webp"
+             alt="تجهیزات مورد استفاده در محیط پروژه دیجیتال‌سازی"
+             loading="lazy" decoding="async">
+        <figcaption>بخشی از تجهیزات مورد استفاده در محیط عملیاتی پروژه.</figcaption>
+      </figure>
     </div>
   </section>
 
