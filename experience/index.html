@@ -77,7 +77,7 @@ img{max-width:100%}
   position:relative;margin:0;background:#fff;border:1px solid var(--line);border-radius:22px;
   overflow:hidden;box-shadow:0 14px 38px rgba(15,23,42,.07)
 }
-.media-card img{display:block;width:100%;height:auto;max-height:470px;object-fit:cover}
+.media-card img{display:block;width:100%;height:auto;object-fit:contain;background:#f7f9fc}
 .media-card figcaption{padding:13px 16px 16px;color:#6a798b;font-size:11px;line-height:1.8}
 .media-card figcaption strong{display:block;color:#253246;font-size:13px;margin-bottom:2px}
 
@@ -91,7 +91,7 @@ img{max-width:100%}
 
 .media-stack{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .media-stack .media-card:first-child{grid-column:1/-1}
-.media-stack .media-card:not(:first-child) img{aspect-ratio:4/3}
+.media-stack .media-card:not(:first-child) img{aspect-ratio:4/3;object-fit:contain;background:#f7f9fc}
 
 .filmstrip{
   display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:15px
@@ -99,7 +99,7 @@ img{max-width:100%}
 .filmstrip figure{
   margin:0;border-radius:13px;overflow:hidden;border:1px solid var(--line);background:#fff
 }
-.filmstrip img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.filmstrip img{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:#f7f9fc;padding:4px}
 .filmstrip figcaption{padding:7px 8px;font-size:9px;color:#77879a;line-height:1.6}
 
 .milestone{
@@ -144,6 +144,58 @@ footer{padding:30px 0;border-top:1px solid #edf1f6;color:#7b8898;font-size:11px}
   html{scroll-behavior:auto}
   .media-card img,.filmstrip img{transition:none}
 }
+
+.media-card{
+  display:flex;
+  flex-direction:column;
+}
+.media-card img{
+  max-height:560px;
+}
+.media-card figcaption{
+  margin-top:auto;
+}
+.current-focus-card{
+  padding:28px;
+  border-radius:22px;
+  border:1px solid #dce7f4;
+  background:
+    radial-gradient(circle at 82% 16%,rgba(23,105,210,.10),transparent 28%),
+    linear-gradient(145deg,#fbfdff,#f4f8fd);
+  box-shadow:0 14px 38px rgba(15,23,42,.055);
+}
+.current-focus-card .focus-title{
+  font-size:13px;
+  font-weight:700;
+  color:var(--blue);
+  margin-bottom:14px;
+}
+.current-focus-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.current-focus-grid div{
+  padding:12px 13px;
+  border-radius:14px;
+  border:1px solid #e3ebf5;
+  background:#fff;
+}
+.current-focus-grid b{
+  display:block;
+  font-size:12px;
+  color:#26364b;
+  margin-bottom:3px;
+}
+.current-focus-grid span{
+  display:block;
+  font-size:10px;
+  color:#718198;
+}
+@media(max-width:650px){
+  .current-focus-grid{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 <body>
@@ -387,10 +439,15 @@ footer{padding:30px 0;border-top:1px solid #edf1f6;color:#7b8898;font-size:11px}
         <a class="story-link" href="/#contact">گفت‌وگوی حرفه‌ای ←</a>
       </div>
       <div class="media">
-        <figure class="media-card">
-          <img src="images/علی-اسماعیل-پور-مسیر-حرفه-ای-جیتکس-1402.webp" alt="حضور در اکوسیستم فناوری و نگاه به روندهای آینده" width="1600" height="900" loading="lazy" decoding="async">
-          <figcaption><strong>مسیر ادامه دارد</strong>ترکیب تجربه اجرایی گذشته با تمرکز امروز بر تحول دیجیتال، داده و فناوری اطلاعات.</figcaption>
-        </figure>
+        <div class="current-focus-card">
+          <div class="focus-title">تمرکز حرفه‌ای امروز</div>
+          <div class="current-focus-grid">
+            <div><b>تحول دیجیتال</b><span>پیوند فناوری با فرایند و مسئله کسب‌وکار</span></div>
+            <div><b>داده و هوش تجاری</b><span>تصمیم‌گیری مبتنی بر داده و طراحی قابلیت‌های تحلیلی</span></div>
+            <div><b>مدیریت فناوری اطلاعات</b><span>ترکیب نگاه مدیریتی با فهم اجرایی فناوری</span></div>
+            <div><b>نرم‌افزار و عملیات</b><span>حفظ ارتباط مستقیم با مسائل واقعی سامانه‌ها و کاربران</span></div>
+          </div>
+        </div>
       </div>
     </article>
 
