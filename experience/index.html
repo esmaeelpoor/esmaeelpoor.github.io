@@ -196,6 +196,25 @@ footer{padding:30px 0;border-top:1px solid #edf1f6;color:#7b8898;font-size:11px}
   .current-focus-grid{grid-template-columns:1fr}
 }
 
+
+.timeline-item.first-period .timeline-prelude{
+  grid-column:1 / -1;
+  grid-row:1;
+  max-width:720px;
+  width:100%;
+  margin:0 auto 12px;
+  position:relative;
+  z-index:2;
+}
+.timeline-item.first-period .timeline-prelude .media-card img{max-height:440px}
+.timeline-item.first-period .story{grid-row:2}
+.timeline-item.first-period .media{grid-row:2}
+@media(max-width:900px){
+  .timeline-item.first-period .timeline-prelude{grid-column:1;grid-row:1;margin-bottom:0}
+  .timeline-item.first-period .story{grid-row:2!important}
+  .timeline-item.first-period .media{grid-row:3!important}
+}
+
 </style>
 </head>
 <body>
@@ -232,7 +251,13 @@ footer{padding:30px 0;border-top:1px solid #edf1f6;color:#7b8898;font-size:11px}
 
   <div class="timeline">
 
-    <article class="timeline-item">
+    <article class="timeline-item first-period">
+      <div class="timeline-prelude">
+        <figure class="media-card">
+          <img src="images/علی-اسماعیل-پور-مسیر-حرفه-ای-ارائه-نرم-افزار-پارسا-1382.webp" alt="ارائه و کار با نرم‌افزار در مؤسسه پارسا در سال ۱۳۸۲" width="640" height="480" loading="lazy" decoding="async">
+          <figcaption><strong>از ساخت تا ارائه راهکار | ۱۳۸۲</strong>کار با سیستم در کنار توضیح و ارائه قابلیت‌های آن.</figcaption>
+        </figure>
+      </div>
       <div class="story">
         <span class="year">۱۳۷۸–۱۳۸۳</span>
         <h3>آغاز در نرم‌افزار و تحلیل سیستم</h3>
@@ -258,6 +283,8 @@ footer{padding:30px 0;border-top:1px solid #edf1f6;color:#7b8898;font-size:11px}
                  width="882" height="887" loading="lazy" decoding="async">
             <figcaption>پدیده رسانه برتر؛ یکی از تجربه‌های آغازین کار حرفه‌ای در نرم‌افزار.</figcaption>
           </figure>
+        
+          <figure><img src="images/علی-اسماعیل-پور-مسیر-حرفه-ای-نمایشگاه-محصولات-1383.webp" alt="حضور نمایشگاهی علی اسماعیل‌پور در سال ۱۳۸۳ در دوره کارمندی مؤسسه" width="1280" height="960" loading="lazy" decoding="async"><figcaption>حضور نمایشگاهی در دوره کارمندی | ۱۳۸۳</figcaption></figure>
         </div>
       </div>
     </article>
@@ -273,10 +300,7 @@ footer{padding:30px 0;border-top:1px solid #edf1f6;color:#7b8898;font-size:11px}
         <div class="tags"><span>Technical Operations</span><span>Implementation</span><span>Technology Business</span></div>
       </div>
       <div class="media media-stack">
-        <figure class="media-card">
-          <img src="images/علی-اسماعیل-پور-مسیر-حرفه-ای-ارائه-نرم-افزار-پارسا-1382.webp" alt="ارائه و کار با نرم‌افزار در مؤسسه پارسا در سال ۱۳۸۲" width="640" height="480" loading="lazy" decoding="async">
-          <figcaption><strong>از ساخت تا ارائه راهکار | ۱۳۸۲</strong>کار با سیستم در کنار توضیح و ارائه قابلیت‌های آن.</figcaption>
-        </figure>
+        
         <figure class="media-card">
           <img src="images/علی-اسماعیل-پور-مسیر-حرفه-ای-خدمات-فنی-سخت-افزار-1385.webp" alt="خدمات فنی و سخت‌افزاری در سال‌های ابتدایی فعالیت شرکت در ۱۳۸۵" width="1600" height="1200" loading="lazy" decoding="async">
           <figcaption><strong>کف عملیات فناوری | ۱۳۸۵</strong>تجربه مستقیم استقرار، پشتیبانی و حل مسئله فنی.</figcaption>
@@ -292,11 +316,11 @@ footer{padding:30px 0;border-top:1px solid #edf1f6;color:#7b8898;font-size:11px}
 
     <article class="timeline-item">
       <div class="story">
-        <span class="year">۱۳۸۳–۱۳۹۱</span>
+        <span class="year">۱۳۸۵–۱۳۹۱</span>
         <h3>از ساخت محصول تا رساندن آن به بازار</h3>
         <p>
-          حضور مستمر در نمایشگاه‌ها بخشی از کار بود: معرفی محصول، دریافت بازخورد، مذاکره با مخاطبان،
-          شناخت بازار و تبدیل توان فنی به محصولی که باید دیده، توضیح و عرضه می‌شد.
+          پس از شکل‌گیری فعالیت مستقل و توسعه محصولات، حضور در نمایشگاه‌ها بخشی از مسیر بازاریابی شد:
+          معرفی محصول، دریافت بازخورد، مذاکره با مخاطبان و شناخت بازار؛ یعنی رساندن توان فنی به مخاطب و بازار واقعی.
         </p>
         <div class="tags"><span>Product Marketing</span><span>Customer Interaction</span><span>Exhibitions</span></div>
       </div>
@@ -306,7 +330,7 @@ footer{padding:30px 0;border-top:1px solid #edf1f6;color:#7b8898;font-size:11px}
           <figcaption><strong>حضور نمایشگاهی و عرضه محصول</strong>بازاریابی برای محصولات فناورانه، نرم‌افزاری و محتوای دیجیتال.</figcaption>
         </figure>
         <div class="filmstrip" aria-label="نمونه‌ای از حضورهای نمایشگاهی">
-          <figure><img src="images/علی-اسماعیل-پور-مسیر-حرفه-ای-نمایشگاه-محصولات-1383.webp" alt="حضور در نمایشگاه سال ۱۳۸۳" width="1280" height="960" loading="lazy" decoding="async"><figcaption>نمایشگاه ۱۳۸۳</figcaption></figure>
+          
           <figure><img src="images/علی-اسماعیل-پور-مسیر-حرفه-ای-نمایشگاه-رسانه-دیجیتال-1389.webp" alt="حضور در نمایشگاه رسانه‌های دیجیتال سال ۱۳۸۹" width="1280" height="960" loading="lazy" decoding="async"><figcaption>رسانه‌های دیجیتال ۱۳۸۹</figcaption></figure>
           <figure><img src="images/علی-اسماعیل-پور-مسیر-حرفه-ای-نمایشگاه-الکامپ-1387.webp" alt="حضور در الکامپ سال ۱۳۸۷" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>الکامپ ۱۳۸۷</figcaption></figure>
         </div>
