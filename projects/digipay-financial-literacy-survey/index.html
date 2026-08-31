@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>پیمایش سواد مالی کاربران دیجی‌پی | مطالعه موردی علی اسماعیل‌پور</title>
+  <meta name="description" content="مطالعه موردی حرفه‌ای از طراحی، اجرا و تحلیل یک پیمایش سازمانی سواد مالی در دیجی‌پی با بیش از ۲۵ هزار مشارکت‌کننده؛ بدون انتشار داده‌ها و نتایج اختصاصی پژوهش.">
+  <meta name="theme-color" content="#07101d">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://esmaeelpoor.ir/projects/digipay-financial-literacy-survey/">
+  <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="/assets/css/header.css?v=20260826-3">
+  <script src="/assets/js/header.js?v=20260826-3" defer></script>
+
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="پیمایش سواد مالی کاربران دیجی‌پی | مطالعه موردی">
+  <meta property="og:description" content="نمونه‌ای از تجربه طراحی، اجرای پیمایش و تحلیل داده در مقیاس سازمانی؛ با رعایت مالکیت و محرمانگی نتایج دیجی‌پی.">
+  <meta property="og:url" content="https://esmaeelpoor.ir/projects/digipay-financial-literacy-survey/">
+  <meta property="og:site_name" content="علی اسماعیل‌پور">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CreativeWork",
+    "name":"پیمایش سواد مالی کاربران دیجی‌پی",
+    "description":"مطالعه موردی حرفه‌ای درباره طراحی، اجرا و تحلیل یک پیمایش سازمانی سواد مالی، بدون انتشار داده‌ها و نتایج اختصاصی.",
+    "dateCreated":"1404",
+    "author":{"@type":"Person","name":"علی اسماعیل‌پور","url":"https://esmaeelpoor.ir/"},
+    "copyrightHolder":{"@type":"Organization","name":"دیجی‌پی"},
+    "url":"https://esmaeelpoor.ir/projects/digipay-financial-literacy-survey/"
+  }
+  </script>
+
+  <style>
+    @font-face{
+      font-family:'Vazir';
+      src:url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir.woff2') format('woff2');
+      font-weight:400;font-style:normal;font-display:swap
+    }
+    @font-face{
+      font-family:'Vazir';
+      src:url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Bold.woff2') format('woff2');
+      font-weight:700;font-style:normal;font-display:swap
+    }
+    @font-face{
+      font-family:'Vazir';
+      src:url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Black.woff2') format('woff2');
+      font-weight:900;font-style:normal;font-display:swap
+    }
+
+    :root{
+      --bg:#07101d;
+      --bg2:#0a1524;
+      --panel:#101d2f;
+      --panel2:#0d1929;
+      --text:#f6f8fc;
+      --muted:#aab8cc;
+      --line:rgba(255,255,255,.09);
+      --blue:#56a6ff;
+      --blue2:#82c1ff;
+      --gold:#d7ad5e;
+      --green:#7ed9b4;
+      --danger:#ff9a9a;
+      --max:1220px;
+      --radius:24px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'Vazir',Tahoma,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 12% 4%,rgba(86,166,255,.14),transparent 25%),
+        radial-gradient(circle at 91% 8%,rgba(215,173,94,.10),transparent 22%),
+        linear-gradient(180deg,var(--bg),#091522 48%,#07111c);
+      line-height:1.95;
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+    .container{width:min(var(--max),calc(100% - 38px));margin:auto}
+    .section{padding:92px 0;border-top:1px solid var(--line)}
+    .section-soft{background:linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,.005))}
+    .eyebrow{font-size:13px;font-weight:900;color:var(--gold);letter-spacing:.02em;margin-bottom:12px}
+    h1,h2,h3{line-height:1.45;margin-top:0}
+    h1{font-size:clamp(40px,6.2vw,72px);margin-bottom:18px;max-width:930px}
+    h2{font-size:clamp(29px,4vw,43px);margin-bottom:14px}
+    h3{font-size:21px;margin-bottom:10px}
+    p{margin-top:0}
+    .lead{font-size:18px;color:var(--muted);max-width:900px}
+    .muted{color:var(--muted)}
+    .note{font-size:12px;color:#8fa0b6}
+
+
+    .digipay-brand{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:13px 17px;
+      margin-bottom:22px;
+      border-radius:18px;
+      background:#fff;
+      border:1px solid rgba(255,255,255,.18);
+      box-shadow:0 12px 34px rgba(0,0,0,.16);
+    }
+    .digipay-brand img{
+      display:block;
+      width:118px;
+      height:auto;
+      object-fit:contain;
+    }
+    .digipay-brand.compact{
+      flex:0 0 auto;
+      margin:0;
+      padding:10px 13px;
+      border-radius:14px;
+      box-shadow:none;
+      border-color:rgba(215,173,94,.18);
+    }
+    .digipay-brand.compact img{width:88px}
+    .project-owner{
+      display:flex;
+      align-items:center;
+      gap:13px;
+      margin-bottom:18px;
+      color:#cfd9e7;
+      font-size:12px;
+    }
+    .project-owner strong{
+      color:#fff;
+      font-weight:900;
+    }
+
+    /* Hero */
+    .hero{padding:86px 0 76px;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.13fr .87fr;gap:56px;align-items:center}
+    .hero-copy .lead{font-size:20px;line-height:2.05}
+    .hero-kicker{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:22px}
+    .hero-role{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 13px;border:1px solid rgba(86,166,255,.22);
+      background:rgba(86,166,255,.055);border-radius:999px;color:#d8eaff;font-size:12px
+    }
+    .hero-role i{width:7px;height:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 16px rgba(86,166,255,.8)}
+    .hero-role.confidential{
+      border-color:rgba(215,173,94,.26);
+      background:rgba(215,173,94,.06);color:#f0d8a2
+    }
+    .hero-role.confidential i{background:var(--gold);box-shadow:0 0 16px rgba(215,173,94,.65)}
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:27px}
+    .cta{display:inline-flex;align-items:center;gap:9px;padding:11px 16px;border-radius:13px;border:1px solid var(--line);font-weight:800;font-size:13px;transition:.2s}
+    .cta.primary{background:#f7fbff;color:#0a1524;border-color:#f7fbff}
+    .cta:hover{transform:translateY(-2px)}
+
+    /* abstract data visual */
+    .data-stage{position:relative;min-height:470px;display:grid;place-items:center}
+    .data-halo{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(86,166,255,.17),rgba(86,166,255,.018) 58%,transparent 72%)}
+    .dashboard{
+      position:relative;width:min(480px,100%);min-height:360px;
+      border:1px solid rgba(255,255,255,.11);
+      background:linear-gradient(160deg,#142640,#0b1728 62%,#081321);
+      border-radius:30px;box-shadow:0 34px 70px rgba(0,0,0,.35),inset 0 1px rgba(255,255,255,.05);
+      padding:22px;overflow:hidden
+    }
+    .dash-top{display:flex;align-items:center;justify-content:space-between;padding-bottom:18px;border-bottom:1px solid var(--line)}
+    .dash-title{font-weight:900;font-size:14px}
+    .dash-title small{display:block;font-size:9px;font-weight:400;color:var(--muted);margin-top:3px}
+    .secure-dot{display:flex;align-items:center;gap:7px;font-size:9px;color:#a7e7cd}
+    .secure-dot i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 14px rgba(126,217,180,.55)}
+    .dash-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:14px;margin-top:16px}
+    .chart-box,.metric-box{border:1px solid var(--line);background:rgba(255,255,255,.026);border-radius:18px;padding:15px}
+    .chart-box{min-height:216px}
+    .fake-label{height:7px;border-radius:99px;background:rgba(255,255,255,.10);margin-bottom:12px}
+    .fake-label.short{width:48%}
+    .bars{height:150px;display:flex;align-items:flex-end;gap:10px;padding-top:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+    .bar{flex:1;border-radius:7px 7px 2px 2px;background:linear-gradient(180deg,rgba(86,166,255,.85),rgba(86,166,255,.20));position:relative;filter:blur(.15px)}
+    .bar:after{content:'•••';position:absolute;top:8px;right:0;left:0;text-align:center;font-size:9px;color:rgba(255,255,255,.62);letter-spacing:2px}
+    .bar:nth-child(1){height:43%}.bar:nth-child(2){height:72%}.bar:nth-child(3){height:57%}.bar:nth-child(4){height:88%}.bar:nth-child(5){height:64%}
+    .metric-list{display:grid;gap:10px}
+    .metric{padding:12px;border-radius:13px;background:#0c1828;border:1px solid rgba(255,255,255,.07)}
+    .metric b{display:block;font-size:17px;color:#dceaff;letter-spacing:2px}
+    .metric span{display:block;font-size:9px;color:var(--muted);margin-top:2px}
+    .private-mask{
+      position:absolute;inset:auto 18px 18px 18px;padding:12px 14px;border-radius:14px;
+      background:rgba(7,16,29,.88);border:1px solid rgba(215,173,94,.22);
+      backdrop-filter:blur(7px);display:flex;align-items:center;gap:9px;font-size:11px;color:#e8d2a3
+    }
+    .lock{width:25px;height:25px;border-radius:8px;display:grid;place-items:center;background:rgba(215,173,94,.09);font-size:13px}
+
+    /* stats */
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:42px}
+    .stat{padding:20px 20px 18px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.028)}
+    .stat strong{display:block;font-size:29px;line-height:1.25;color:var(--gold);margin-bottom:5px}
+    .stat span{font-size:12px;color:var(--muted)}
+
+    /* panels */
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+    .panel{padding:30px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.018));border-radius:var(--radius)}
+    .panel ul{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+    .panel li{position:relative;padding-right:18px;color:#d9e3ef}
+    .panel li:before{content:'';position:absolute;right:0;top:13px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+    .role-cloud{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+    .pill{padding:7px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.025);font-size:11px;color:#c8d4e4}
+
+    /* process */
+    .process{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:34px;counter-reset:step}
+    .step{position:relative;padding:22px 16px 20px;border-radius:18px;border:1px solid var(--line);background:#0c1828;min-height:165px;overflow:hidden}
+    .step:after{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;left:10px;bottom:-8px;font-size:48px;font-weight:900;color:rgba(255,255,255,.035);line-height:1}
+    .step b{display:block;margin-bottom:8px;color:#fff;font-size:14px}.step p{font-size:11px;color:var(--muted);margin:0;line-height:1.85}
+    .step .dot{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;margin-bottom:15px;background:rgba(86,166,255,.09);border:1px solid rgba(86,166,255,.22);color:var(--blue);font-weight:900}
+
+    /* analysis framework */
+    .analysis-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
+    .analysis-card{position:relative;padding:27px 24px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(145deg,#101e31,#0b1728);min-height:205px;overflow:hidden}
+    .analysis-card .icon{width:45px;height:45px;border-radius:14px;display:grid;place-items:center;background:rgba(86,166,255,.08);border:1px solid rgba(86,166,255,.18);margin-bottom:17px}
+    .analysis-card p{font-size:13px;color:var(--muted);margin:0}
+    .analysis-card:after{content:'DATA';position:absolute;left:14px;bottom:-8px;font-size:45px;font-weight:900;color:rgba(255,255,255,.025);letter-spacing:2px}
+
+    /* outputs */
+    .deliverables{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+    .deliverable{padding:22px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.022)}
+    .deliverable b{display:block;color:#fff;margin-bottom:7px}
+    .deliverable p{font-size:12px;color:var(--muted);margin:0}
+
+    /* confidentiality */
+    .confidential-box{
+      position:relative;overflow:hidden;padding:34px;border-radius:28px;
+      border:1px solid rgba(215,173,94,.24);
+      background:linear-gradient(145deg,rgba(215,173,94,.07),rgba(255,255,255,.018));
+    }
+    .confidential-box:before{
+      content:'PRIVATE';position:absolute;left:18px;bottom:-18px;font-size:82px;font-weight:900;
+      color:rgba(215,173,94,.035);letter-spacing:4px
+    }
+    .conf-head{display:flex;align-items:flex-start;gap:16px;position:relative;z-index:1}
+    .conf-icon{flex:0 0 52px;width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:rgba(215,173,94,.10);border:1px solid rgba(215,173,94,.23);font-size:23px}
+    .confidential-box h3{font-size:26px;color:#f4dfb3;margin-bottom:8px}
+    .confidential-box p{color:#c6b48f;margin:0;max-width:930px}
+    .not-public{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px;position:relative;z-index:1}
+    .not-public span{padding:10px 12px;border-radius:12px;border:1px solid rgba(215,173,94,.13);background:rgba(7,16,29,.26);font-size:11px;color:#ddc89d}
+
+    /* value */
+    .value-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:stretch}
+    .quote-card{padding:34px;border-radius:26px;background:#f5f8fc;color:#0f172a;box-shadow:0 20px 55px rgba(0,0,0,.18)}
+    .quote-card .q{font-size:28px;line-height:1.8;font-weight:900;margin-bottom:15px}
+    .quote-card p{color:#536276;margin:0}
+    .value-points{display:grid;gap:12px}
+    .value-point{padding:19px 20px;border-radius:17px;border:1px solid var(--line);background:rgba(255,255,255,.025)}
+    .value-point b{display:block;margin-bottom:4px}.value-point span{font-size:12px;color:var(--muted)}
+
+    /* footer */
+    footer{padding:34px 0 45px;border-top:1px solid var(--line);color:#8798ad;font-size:12px}
+    .footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .footer-links{display:flex;gap:14px;flex-wrap:wrap}
+    .footer-links a:hover{color:#fff}
+
+    /* reveal */
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s ease}
+    .reveal.in-view{opacity:1;transform:none}
+
+    @media(max-width:1050px){
+      .hero-grid,.value-grid{grid-template-columns:1fr}
+      .data-stage{min-height:390px}
+      .process{grid-template-columns:repeat(3,1fr)}
+      .analysis-grid,.deliverables{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:760px){
+
+      .project-owner{align-items:flex-start}
+      .digipay-brand img{width:102px}
+
+.hero{padding:62px 0 56px}
+      .hero-grid{gap:20px}
+      .data-stage{min-height:350px}
+      .dashboard{min-height:330px}
+      .dash-grid{grid-template-columns:1fr 120px}
+      .stats,.two-col,.analysis-grid,.deliverables,.not-public{grid-template-columns:1fr}
+      .stats{grid-template-columns:repeat(2,1fr)}
+      .process{grid-template-columns:repeat(2,1fr)}
+      .section{padding:68px 0}
+      .conf-head{display:block}
+      .conf-icon{margin-bottom:14px}
+    }
+    @media(max-width:480px){
+      .container{width:min(var(--max),calc(100% - 24px))}
+      h1{font-size:37px}
+      .hero-copy .lead{font-size:17px}
+      .stats,.process{grid-template-columns:1fr}
+      .dash-grid{grid-template-columns:1fr}
+      .metric-box{display:none}
+      .data-stage{min-height:310px}
+      .dashboard{min-height:300px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .reveal{opacity:1;transform:none;transition:none}
+    }
+  </style>
+</head>
+
+<body>
+<div id="site-header"></div>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <div class="project-owner">
+            <span class="digipay-brand">
+              <img src="assets/digipay-logo.png" alt="لوگوی دیجی‌پی" width="118" height="62" loading="eager" decoding="async">
+            </span>
+            <span><strong>پروژه سازمانی دیجی‌پی</strong><br>Financial Literacy Research Project</span>
+          </div>
+          <div class="hero-kicker">
+            <span class="hero-role"><i></i>۱۴۰۴ · پروژه پژوهشی سازمانی</span>
+            <span class="hero-role confidential"><i></i>نتایج غیرعمومی</span>
+          </div>
+
+          <div class="eyebrow">Data Research · Financial Literacy · Decision Support</div>
+          <h1>پیمایش سواد مالی کاربران دیجی‌پی</h1>
+          <p class="lead">
+            طراحی و اجرای یک پیمایش داده‌محور در مقیاس بزرگ؛ از طراحی ابزار و گردآوری داده تا پاک‌سازی، تحلیل آماری،
+            تحلیل چندبعدی و استخراج بینش‌های قابل استفاده در تصمیم‌گیری آموزشی و مدیریتی.
+          </p>
+
+          <div class="cta-row">
+            <a class="cta primary" href="#case">مطالعه موردی ↓</a>
+            <a class="cta" href="#confidentiality">حدود انتشار و مالکیت داده</a>
+          </div>
+        </div>
+
+        <div class="data-stage reveal" aria-label="نمای مفهومی داشبورد تحلیل؛ اعداد واقعی نمایش داده نشده‌اند">
+          <div class="data-halo"></div>
+          <div class="dashboard">
+            <div class="dash-top">
+              <div class="dash-title">Financial Literacy Survey<small>Conceptual analytics view</small></div>
+              <div class="secure-dot"><i></i>Protected data</div>
+            </div>
+
+            <div class="dash-grid">
+              <div class="chart-box">
+                <div class="fake-label"></div>
+                <div class="fake-label short"></div>
+                <div class="bars">
+                  <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                </div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-list">
+                  <div class="metric"><b>••••</b><span>شاخص پژوهش</span></div>
+                  <div class="metric"><b>••••</b><span>تحلیل گروهی</span></div>
+                  <div class="metric"><b>••••</b><span>خروجی مدیریتی</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="private-mask">
+              <span class="lock">🔒</span>
+              <span>نمای مفهومی است؛ داده‌ها و نتایج واقعی پژوهش در این صفحه نمایش داده نمی‌شوند.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats reveal" aria-label="مقیاس پروژه">
+        <div class="stat"><strong>۲۵هزار+</strong><span>مشارکت‌کننده در مقیاس سازمانی</span></div>
+        <div class="stat"><strong>سراسری</strong><span>مشارکت از استان‌های مختلف کشور</span></div>
+        <div class="stat"><strong>آنلاین</strong><span>گردآوری ساختاریافته داده‌ها</span></div>
+        <div class="stat"><strong>چندبعدی</strong><span>تحلیل جمعیت‌شناختی و رفتاری</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="case">
+    <div class="container">
+      <div class="eyebrow">زمینه پروژه</div>
+      <h2>از یک پرسش آموزشی تا یک پروژه داده در مقیاس بزرگ</h2>
+      <p class="lead">
+        مسئله اصلی، صرفاً برگزاری یک آزمون نبود؛ هدف ایجاد تصویری قابل تحلیل از الگوهای سواد مالی در جامعه کاربران
+        و فراهم‌کردن یک مبنای داده‌ای برای تصمیم‌های آموزشی و مطالعات بعدی بود.
+      </p>
+
+      <div class="two-col" style="margin-top:32px">
+        <article class="panel reveal">
+          <div class="eyebrow">Challenge</div>
+          <h3>مسئله چه بود؟</h3>
+          <p class="muted">
+            برای تصمیم‌گیری بهتر در حوزه آموزش مالی، به داده‌ای گسترده، ساختاریافته و قابل تفکیک نیاز بود؛ داده‌ای که
+            امکان مشاهده الگوها در گروه‌های مختلف و مقایسه چندبعدی را فراهم کند.
+          </p>
+          <ul>
+            <li>طراحی تجربه‌ای ساده برای مشارکت گسترده کاربران</li>
+            <li>گردآوری داده با ساختار مناسب برای تحلیل آماری</li>
+            <li>کنترل کیفیت داده پیش از تحلیل</li>
+            <li>تبدیل خروجی آماری به بینش قابل استفاده برای مدیریت</li>
+          </ul>
+        </article>
+
+        <article class="panel reveal">
+          <div class="eyebrow">My Role</div>
+          <h3>نقش حرفه‌ای من در پروژه</h3>
+          <p class="muted">
+            در زمان اجرای این پروژه به‌عنوان مدیر آکادمی دیجی‌پی، در طراحی و اجرای پیمایش و تبدیل داده‌های حاصل
+            به ساختار تحلیلی و گزارش مدیریتی نقش داشتم.
+          </p>
+          <div class="role-cloud">
+            <span class="pill">طراحی ساختار پیمایش</span>
+            <span class="pill">انتخاب و تنظیم پرسش‌ها</span>
+            <span class="pill">اجرای آنلاین</span>
+            <span class="pill">پیش‌آزمون</span>
+            <span class="pill">پاک‌سازی و آماده‌سازی داده</span>
+            <span class="pill">تحلیل آماری</span>
+            <span class="pill">تحلیل چندمتغیره</span>
+            <span class="pill">استخراج بینش</span>
+            <span class="pill">گزارش مدیریتی</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Approach</div>
+      <h2>مسیر اجرا؛ از طراحی تا تصمیم</h2>
+      <p class="lead">
+        ارزش پروژه در اتصال مراحل مختلف بود: پرسش درست، جمع‌آوری کنترل‌شده، آماده‌سازی داده، تحلیل و در نهایت
+        ارائه خروجی قابل فهم برای استفاده مدیریتی.
+      </p>
+
+      <div class="process">
+        <div class="step reveal"><div class="dot">۱</div><b>طراحی</b><p>تعریف هدف، ساختار پیمایش و متغیرهای موردنیاز.</p></div>
+        <div class="step reveal"><div class="dot">۲</div><b>پیش‌آزمون</b><p>بررسی اولیه پرسشنامه و اصلاح ابهام‌های احتمالی.</p></div>
+        <div class="step reveal"><div class="dot">۳</div><b>اجرا</b><p>توزیع آنلاین و تسهیل مشارکت جامعه هدف.</p></div>
+        <div class="step reveal"><div class="dot">۴</div><b>پاک‌سازی</b><p>بررسی کیفیت، حذف رکوردهای نامعتبر و آماده‌سازی داده.</p></div>
+        <div class="step reveal"><div class="dot">۵</div><b>تحلیل</b><p>تحلیل توصیفی، مقایسه گروه‌ها و بررسی روابط میان متغیرها.</p></div>
+        <div class="step reveal"><div class="dot">۶</div><b>بینش</b><p>تبدیل یافته‌های آماری به گزارش و پیشنهادهای قابل استفاده.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="eyebrow">Analysis Framework</div>
+      <h2>تحلیل فقط یک «نمره کل» نبود</h2>
+      <p class="lead">
+        داده‌ها در چند لایه بررسی شدند تا به‌جای یک عدد واحد، امکان مشاهده تفاوت‌ها، الگوها و نقاط قابل توجه
+        در گروه‌های مختلف فراهم شود. جزئیات نتایج این تحلیل‌ها عمومی نیست.
+      </p>
+
+      <div class="analysis-grid">
+        <article class="analysis-card reveal">
+          <div class="icon">◫</div>
+          <h3>جمعیت‌شناسی</h3>
+          <p>بررسی الگوها با توجه به متغیرهایی مانند گروه سنی، جنسیت و سطح تحصیلات.</p>
+        </article>
+        <article class="analysis-card reveal">
+          <div class="icon">⌖</div>
+          <h3>جغرافیا</h3>
+          <p>امکان مقایسه و مشاهده الگوهای منطقه‌ای بدون انتشار رتبه یا امتیاز استان‌ها در این صفحه.</p>
+        </article>
+        <article class="analysis-card reveal">
+          <div class="icon">∑</div>
+          <h3>امتیاز و پاسخ‌ها</h3>
+          <p>تحلیل پاسخ‌ها، توزیع امتیاز و میزان تمایز پرسش‌ها در سطح کل و گروه‌های مختلف.</p>
+        </article>
+        <article class="analysis-card reveal">
+          <div class="icon">◷</div>
+          <h3>رفتار پاسخ‌گویی</h3>
+          <p>استفاده از زمان کل تکمیل به‌عنوان یک متغیر تکمیلی برای بررسی کیفیت و الگوی مشارکت.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section" id="data-science">
+    <div class="container">
+      <div class="eyebrow">Data · Statistics · Data Science</div>
+      <h2>پشت این پیمایش، یک فرایند کامل داده قرار داشت</h2>
+      <p class="lead">
+        این پروژه فقط جمع‌آوری پاسخ نبود. ارزش اصلی زمانی ایجاد شد که داده‌های خام به یک مجموعه قابل اتکا برای تحلیل تبدیل شدند
+        و سپس با استفاده از روش‌های آماری و تحلیل داده، الگوها، تفاوت‌ها و روابط میان متغیرها بررسی شدند.
+        جزئیات و نتایج عددی این تحلیل‌ها به دلیل مالکیت دیجی‌پی در این صفحه منتشر نمی‌شود.
+      </p>
+
+      <div class="analysis-grid">
+        <article class="analysis-card reveal">
+          <div class="icon">⌁</div>
+          <h3>Data Preparation</h3>
+          <p>
+            کنترل کیفیت داده، بررسی پاسخ‌های ناقص یا غیرعادی، استانداردسازی متغیرها، آماده‌سازی داده برای تحلیل و ایجاد ساختار مناسب برای مقایسه گروه‌ها.
+          </p>
+        </article>
+
+        <article class="analysis-card reveal">
+          <div class="icon">Σ</div>
+          <h3>Statistical Analysis</h3>
+          <p>
+            استفاده از آمار توصیفی، توزیع فراوانی، شاخص‌های مرکزی و پراکندگی، مقایسه گروه‌ها و بررسی روابط میان متغیرهای جمعیت‌شناختی و نمره سواد مالی.
+          </p>
+        </article>
+
+        <article class="analysis-card reveal">
+          <div class="icon">↔</div>
+          <h3>Multivariate View</h3>
+          <p>
+            تحلیل داده از چند زاویه به‌صورت هم‌زمان؛ از جنسیت و سن تا تحصیلات، موقعیت جغرافیایی و رفتار پاسخ‌گویی، برای جلوگیری از تفسیر تک‌بعدی نتایج.
+          </p>
+        </article>
+
+        <article class="analysis-card reveal">
+          <div class="icon">◇</div>
+          <h3>Insight Extraction</h3>
+          <p>
+            تبدیل خروجی‌های آماری به بینش‌های قابل فهم برای مدیران؛ تشخیص الگوها، بخش‌بندی گروه‌ها و شناسایی موضوعاتی که می‌توانند مبنای مداخله آموزشی یا پژوهش بعدی باشند.
+          </p>
+        </article>
+      </div>
+
+      <div class="two-col" style="margin-top:22px">
+        <article class="panel reveal">
+          <div class="eyebrow">Analytical Stack</div>
+          <h3>نوع کارهای تحلیلی انجام‌شده</h3>
+          <ul>
+            <li>پاک‌سازی و آماده‌سازی داده‌های پیمایش</li>
+            <li>آمار توصیفی و تحلیل توزیع پاسخ‌ها</li>
+            <li>مقایسه گروه‌های جمعیت‌شناختی</li>
+            <li>بررسی همبستگی و روابط میان متغیرها</li>
+            <li>تحلیل رفتار تکمیل پرسشنامه بر اساس زمان پاسخ‌گویی</li>
+            <li>تحلیل جغرافیایی در سطح استان‌ها</li>
+            <li>استخراج شاخص‌ها و Insightهای مدیریتی</li>
+          </ul>
+        </article>
+
+        <article class="panel reveal">
+          <div class="eyebrow">Data Science Perspective</div>
+          <h3>چرا این پروژه فقط «آمار» نبود؟</h3>
+          <p class="muted">
+            در یک پروژه داده، تحلیل آماری فقط یکی از مراحل است. مسئله باید درست تعریف شود، متغیرها طراحی شوند،
+            داده با کیفیت مناسب جمع‌آوری شود، داده‌های نامعتبر کنترل شوند، روابط میان متغیرها سنجیده شوند و در نهایت
+            خروجی به زبان تصمیم‌گیری ترجمه شود. این زنجیره، پروژه را به یک تجربه واقعی در مرز
+            <strong style="color:#fff">Data Analytics، Data Science و Business Insight</strong> تبدیل کرد.
+          </p>
+          <div class="role-cloud">
+            <span class="pill">Data Cleaning</span>
+            <span class="pill">Descriptive Statistics</span>
+            <span class="pill">Correlation Analysis</span>
+            <span class="pill">Segmentation</span>
+            <span class="pill">Data Quality</span>
+            <span class="pill">Visualization Logic</span>
+            <span class="pill">Business Insight</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+<section class="section">
+    <div class="container">
+      <div class="eyebrow">Deliverables</div>
+      <h2>خروجی پروژه چه بود؟</h2>
+      <p class="lead">
+        خروجی نهایی صرفاً مجموعه‌ای از جدول‌ها نبود؛ داده خام به مجموعه‌ای از تحلیل‌ها و خروجی‌های قابل استفاده
+        برای فهم بهتر مسئله و برنامه‌ریزی آینده تبدیل شد.
+      </p>
+
+      <div class="deliverables">
+        <article class="deliverable reveal"><b>گزارش مدیریتی</b><p>روایت فشرده و قابل استفاده از مهم‌ترین الگوهای مشاهده‌شده.</p></article>
+        <article class="deliverable reveal"><b>تحلیل‌های مقایسه‌ای</b><p>مقایسه گروه‌ها و مشاهده تفاوت‌ها در ابعاد مختلف داده.</p></article>
+        <article class="deliverable reveal"><b>بینش آموزشی</b><p>شناسایی زمینه‌هایی که می‌توانند در طراحی مداخلات آموزشی بعدی بررسی شوند.</p></article>
+        <article class="deliverable reveal"><b>پایه مطالعات بعدی</b><p>ایجاد تجربه و چارچوبی برای بهبود پیمایش‌ها و پایش‌های آتی.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="confidentiality">
+    <div class="container">
+      <div class="confidential-box reveal">
+        <div class="conf-head">
+          <div style="display:flex;flex-direction:column;gap:10px;align-items:center">
+            <div class="conf-icon">🔒</div>
+            <span class="digipay-brand compact">
+              <img src="assets/digipay-logo.png" alt="لوگوی دیجی‌پی" width="88" height="46" loading="lazy" decoding="async">
+            </span>
+          </div>
+          <div>
+            <div class="eyebrow">Ownership & Confidentiality</div>
+            <h3>پروژه و داده‌ها متعلق به دیجی‌پی است</h3>
+            <p>
+              این صفحه صرفاً برای معرفی تجربه حرفه‌ای من در طراحی، اجرا و تحلیل یک پروژه پژوهشی سازمانی تهیه شده است.
+              مالکیت داده‌ها، گزارش اصلی و نتایج تفصیلی متعلق به دیجی‌پی است و این صفحه گزارش رسمی دیجی‌پی محسوب نمی‌شود.
+              به همین دلیل، داده خام و خروجی‌های اختصاصی پژوهش عمداً منتشر نشده‌اند.
+            </p>
+          </div>
+        </div>
+
+        <div class="not-public" aria-label="مواردی که منتشر نشده‌اند">
+          <span>نتایج تفصیلی و امتیازهای گروه‌ها منتشر نشده‌اند</span>
+          <span>رتبه‌بندی و مقایسه استانی منتشر نشده است</span>
+          <span>ضرایب آماری و روابط داخلی منتشر نشده‌اند</span>
+          <span>متن کامل پرسشنامه منتشر نشده است</span>
+          <span>داشبورد و گزارش داخلی منتشر نشده‌اند</span>
+          <span>هیچ داده فردی یا قابل شناسایی نمایش داده نمی‌شود</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="value-grid">
+        <div class="quote-card reveal">
+          <div class="q">توانایی اصلی در این پروژه، «داشتن داده» نبود؛ تبدیل یک مسئله آموزشی به فرایند قابل اندازه‌گیری، تحلیل و تصمیم بود.</div>
+          <p>
+            این تجربه نمونه‌ای از پیوند میان طراحی پژوهش، مدیریت داده، تحلیل آماری، Data Science و نیاز واقعی کسب‌وکار است؛
+            همان نقطه‌ای که داده از یک خروجی آماری به ابزار پشتیبانی از تصمیم تبدیل می‌شود.
+          </p>
+        </div>
+
+        <div class="value-points">
+          <div class="value-point reveal"><b>طراحی مسئله</b><span>تبدیل نیاز کسب‌وکار به پرسش‌های قابل سنجش و متغیرهای قابل تحلیل.</span></div>
+          <div class="value-point reveal"><b>مقیاس اجرا</b><span>مدیریت یک پیمایش آنلاین با حجم مشارکت بالا و داده چندبعدی.</span></div>
+          <div class="value-point reveal"><b>تحلیل و تفسیر</b><span>فراتر رفتن از گزارش توصیفی و ساختن چارچوبی برای استخراج بینش.</span></div>
+          <div class="value-point reveal"><b>حاکمیت داده</b><span>تفکیک روشن میان تجربه حرفه‌ای قابل ارائه و داده سازمانی غیرقابل انتشار.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div>© علی اسماعیل‌پور — مطالعه موردی تجربه حرفه‌ای</div>
+    <div class="footer-links">
+      <a href="/">خانه</a>
+      <a href="/experience/">تجربه حرفه‌ای</a>
+      <a href="/#projects">پروژه‌ها</a>
+      <a href="/#contact">تماس</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('in-view');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold:.08});
+    items.forEach(el=>io.observe(el));
+  } else {
+    items.forEach(el=>el.classList.add('in-view'));
+  }
+</script>
+</body>
+</html>
