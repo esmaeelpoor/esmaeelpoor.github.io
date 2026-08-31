@@ -3,7 +3,7 @@
 .shared-header__inner{width:min(1140px,calc(100% - 36px));min-height:80px;margin:0 auto;display:flex;align-items:center;gap:28px}
 .shared-header__logo{flex:0 0 auto;display:flex;align-items:center;text-decoration:none}
 .shared-header__logo img{display:block;width:auto;height:54px;max-width:175px;object-fit:contain}
-.shared-header__nav{margin-right:auto}
+.shared-header__nav{margin-right:0;margin-left:auto}
 .shared-header__nav ul{display:flex;align-items:center;gap:27px;list-style:none;padding:0;margin:0}
 .shared-header__nav li{margin:0;padding:0;list-style:none}
 .shared-header__nav a{position:relative;display:block;padding:29px 0 25px;color:#18191f;text-decoration:none;font-size:14px;line-height:1.25;font-weight:400;white-space:nowrap}
