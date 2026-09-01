@@ -2,7 +2,6 @@
   const mount = document.getElementById('site-header');
   if (!mount) return;
 
-  /* A real spacer keeps page content below the fixed header. */
   let spacer = document.getElementById('site-header-spacer');
   if (!spacer) {
     spacer = document.createElement('div');
@@ -11,8 +10,6 @@
     mount.insertAdjacentElement('afterend', spacer);
   }
 
-  /* Fix the mount itself, not a child inside it. This is more robust
-     against page-specific CSS and overflow/position rules. */
   Object.assign(mount.style, {
     position: 'fixed',
     top: '0',
@@ -38,10 +35,49 @@
     }
   }
 
-  /* Reserve space immediately, even before header.html finishes loading. */
+  function setActiveNav() {
+    mount.querySelectorAll('[data-nav]').forEach(function (item) {
+      item.classList.remove('is-active');
+      const link = item.querySelector('a');
+      if (link) link.removeAttribute('aria-current');
+    });
+
+    const path = (window.location.pathname || '/').replace(/\/index\.html$/, '/');
+    const hash = window.location.hash || '';
+    let active = '';
+
+    if (path.indexOf('/experience/') === 0) active = 'experience';
+    else if (path === '/' || path === '') {
+      const map = {
+        '#brand-dna': 'dna',
+        '#portfolio': 'portfolio',
+        '#contact': 'contact'
+      };
+      active = map[hash] || '';
+    }
+
+    if (active) {
+      const item = mount.querySelector('[data-nav="' + active + '"]');
+      if (item) {
+        item.classList.add('is-active');
+        const link = item.querySelector('a');
+        if (link) link.setAttribute('aria-current', 'page');
+      }
+    }
+  }
+
+  function closeMenu() {
+    const nav = mount.querySelector('.shared-header__nav');
+    const toggle = mount.querySelector('.shared-header__toggle');
+    if (!nav || !toggle) return;
+    nav.classList.remove('is-open');
+    toggle.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
   syncHeaderSpace();
 
-  fetch('/header.html?v=20260826-3', { cache: 'no-store' })
+  fetch('/header.html?v=20260901-3', { cache: 'no-store' })
     .then(function (response) {
       if (!response.ok) throw new Error('Header load failed: ' + response.status);
       return response.text();
@@ -51,13 +87,6 @@
 
       const nav = mount.querySelector('.shared-header__nav');
       const toggle = mount.querySelector('.shared-header__toggle');
-
-      function closeMenu() {
-        if (!nav || !toggle) return;
-        nav.classList.remove('is-open');
-        toggle.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
 
       if (nav && toggle) {
         toggle.addEventListener('click', function () {
@@ -70,41 +99,18 @@
           link.addEventListener('click', closeMenu);
         });
 
+        document.addEventListener('click', function (event) {
+          if (window.innerWidth > 820) return;
+          if (!nav.classList.contains('is-open')) return;
+          if (!mount.contains(event.target)) closeMenu();
+        });
+
         document.addEventListener('keydown', function (event) {
           if (event.key === 'Escape') closeMenu();
         });
       }
 
-      function setActiveNav() {
-        mount.querySelectorAll('[data-nav]').forEach(function (item) {
-          item.classList.remove('is-active');
-        });
-
-        const path = (window.location.pathname || '/').replace(/\/index\.html$/, '/');
-        const hash = window.location.hash || '';
-        let active = 'home';
-
-        if (path.indexOf('/experience/') === 0) active = 'experience';
-        else if (path.indexOf('/publishing/') === 0) active = 'publishing';
-        else if (path === '/' || path === '') {
-          const map = {
-            '#about': 'about',
-            '#brand-dna': 'dna',
-            '#timeline-ai': 'timeline',
-            '#portfolio': 'portfolio',
-            '#contact': 'contact'
-          };
-          active = map[hash] || 'home';
-        }
-
-        const item = mount.querySelector('[data-nav="' + active + '"]');
-        if (item) item.classList.add('is-active');
-      }
-
       setActiveNav();
-      window.addEventListener('hashchange', setActiveNav);
-
-      /* Re-measure after DOM insertion and after layout settles. */
       syncHeaderSpace();
       requestAnimationFrame(syncHeaderSpace);
       setTimeout(syncHeaderSpace, 120);
@@ -114,6 +120,10 @@
       syncHeaderSpace();
     });
 
-  window.addEventListener('resize', syncHeaderSpace);
+  window.addEventListener('hashchange', setActiveNav);
+  window.addEventListener('resize', function () {
+    syncHeaderSpace();
+    if (window.innerWidth > 820) closeMenu();
+  });
   window.addEventListener('orientationchange', syncHeaderSpace);
 })();
