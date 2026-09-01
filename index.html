@@ -652,7 +652,38 @@ body.darkmode #featured-work .project-value strong{color:#fff}
 @media(prefers-reduced-motion:reduce){
   #portfolio-other .project-item{transition:none!important}
 }
-</style></head>
+</style>
+<style id="project-buttons-bottom-align">
+/* Keep all project intro buttons aligned at the bottom of equal-height cards */
+#featured-work .projects-inner{
+  align-items:stretch;
+}
+#featured-work .project-item{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+#featured-work .project-main-link{
+  display:flex;
+  flex-direction:column;
+  flex:1 1 auto;
+}
+#featured-work .project-content{
+  display:flex;
+  flex-direction:column;
+  flex:1 1 auto;
+}
+#featured-work .project-intro-btn{
+  margin-top:auto !important;
+  margin-right:18px !important;
+  margin-bottom:20px !important;
+  margin-left:18px !important;
+  width:calc(100% - 36px);
+  box-sizing:border-box;
+}
+</style>
+
+</head>
 <body>
 <!-- Header -->
 <header>
