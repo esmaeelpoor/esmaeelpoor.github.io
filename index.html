@@ -425,27 +425,7 @@ body.darkmode .document-case{background:linear-gradient(135deg,#08111f,#0d1b2f)}
 .project-dialog{max-width:650px;border:0;border-radius:20px;padding:30px;line-height:2}
 .project-dialog::backdrop{background:rgba(0,0,0,.5)}
 </style>
-<style id="project-card-executive-style">
-#portfolio .project-item{position:relative;overflow:hidden}
-#portfolio .project-main-link{display:block;color:inherit;text-decoration:none}
-#portfolio .project-main-link:hover,#portfolio .project-main-link:focus{color:inherit;text-decoration:none}
-#portfolio .project-main-link:not(.project-main-link-disabled){cursor:pointer}
-#portfolio .project-main-link:focus-visible{outline:3px solid rgba(23,105,210,.35);outline-offset:-3px;border-radius:16px}
-#portfolio .project-role,#portfolio .project-value{margin:10px 0 0;font-size:13px;line-height:1.95;color:#5d6b7e}
-#portfolio .project-role strong,#portfolio .project-value strong{color:#172033;font-weight:800}
-#portfolio .project-value{padding-top:9px;border-top:1px solid rgba(15,23,42,.07)}
-#portfolio .project-intro-btn{display:inline-flex;align-items:center;justify-content:center;margin:15px 18px 20px;padding:8px 15px;border:1px solid rgba(23,105,210,.18);border-radius:999px;background:#eef6ff;color:#1769d2;font:inherit;font-size:12px;font-weight:800;cursor:pointer;transition:background .2s ease,transform .2s ease}
-#portfolio .project-intro-btn:hover{background:#e1f0ff;transform:translateY(-1px)}
-.project-dialog{width:min(620px,calc(100vw - 28px));max-height:min(72vh,680px);margin:auto;padding:30px 32px;border:0;border-radius:24px;background:#fff;color:#172033;box-shadow:0 30px 90px rgba(15,23,42,.30);overflow:auto;text-align:right}
-.project-dialog[open]{animation:projectDialogIn .18s ease-out}
-.project-dialog::backdrop{background:rgba(15,23,42,.24);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
-.project-dialog h3{margin:0 0 14px;font-size:22px;color:#0f172a}.project-dialog p{margin:0;color:#526176;line-height:2.1;font-size:14px}
-@keyframes projectDialogIn{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:none}}
-body.darkmode .project-dialog{background:#111a2f;color:#fff}body.darkmode .project-dialog h3{color:#fff}body.darkmode .project-dialog p{color:rgba(255,255,255,.72)}
-body.darkmode #portfolio .project-role,body.darkmode #portfolio .project-value{color:rgba(255,255,255,.68)}body.darkmode #portfolio .project-role strong,body.darkmode #portfolio .project-value strong{color:#fff}
-@media(max-width:600px){.project-dialog{padding:24px 22px;border-radius:20px}}
-@media(prefers-reduced-motion:reduce){.project-dialog[open]{animation:none}#portfolio .project-intro-btn{transition:none}}
-</style><style id="homepage-visual-refinement-v2">
+<style id="homepage-visual-refinement-v2">
 /* ===== Homepage hierarchy + RTL header refinement 1405/06 ===== */
 header .nav{
   direction:rtl!important;
@@ -531,6 +511,147 @@ header .navigation-bar ul li a{font-size:13px;white-space:nowrap}
 @media(prefers-reduced-motion:reduce){
   #featured-work .project-item,#portfolio-other .project-item,#articles .project-item{transition:none!important}
 }
+</style><style id="project-card-executive-style-v2">
+/* Main project cards: technical evidence on card, general intro in modal */
+#featured-work .project-item{
+  position:relative;
+  overflow:hidden;
+}
+#featured-work .project-main-link{
+  display:block;
+  color:inherit;
+  text-decoration:none;
+}
+#featured-work .project-main-link:hover,
+#featured-work .project-main-link:focus{
+  color:inherit;
+  text-decoration:none;
+}
+#featured-work .project-main-link:not(.project-main-link-disabled){cursor:pointer}
+#featured-work .project-main-link:focus-visible{
+  outline:3px solid rgba(23,105,210,.35);
+  outline-offset:-3px;
+  border-radius:16px;
+}
+#featured-work .project-role,
+#featured-work .project-value{
+  margin:10px 0 0;
+  font-size:13px;
+  line-height:1.95;
+  color:#5d6b7e;
+}
+#featured-work .project-role strong,
+#featured-work .project-value strong{
+  color:#172033;
+  font-weight:800;
+}
+#featured-work .project-value{
+  padding-top:9px;
+  border-top:1px solid rgba(15,23,42,.07);
+}
+#featured-work .project-intro-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin:15px 18px 20px;
+  padding:8px 15px;
+  border:1px solid rgba(23,105,210,.18);
+  border-radius:999px;
+  background:#eef6ff;
+  color:#1769d2;
+  font:inherit;
+  font-size:12px;
+  font-weight:800;
+  cursor:pointer;
+  position:relative;
+  z-index:3;
+  transition:background .2s ease,transform .2s ease;
+}
+#featured-work .project-intro-btn:hover{
+  background:#e1f0ff;
+  transform:translateY(-1px);
+}
+.project-dialog{
+  position:fixed;
+  inset:0;
+  width:min(640px,calc(100vw - 30px));
+  max-height:min(72vh,680px);
+  margin:auto;
+  padding:30px 32px;
+  border:0;
+  border-radius:24px;
+  background:#fff;
+  color:#172033;
+  box-shadow:0 30px 90px rgba(15,23,42,.34);
+  overflow:auto;
+  text-align:right;
+}
+.project-dialog[open]{animation:projectDialogIn .18s ease-out}
+.project-dialog::backdrop{
+  background:rgba(15,23,42,.20);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+}
+.project-dialog h3{
+  margin:0 0 14px;
+  font-size:22px;
+  color:#0f172a;
+}
+.project-dialog p{
+  margin:0;
+  color:#526176;
+  line-height:2.15;
+  font-size:14px;
+}
+@keyframes projectDialogIn{
+  from{opacity:0;transform:translateY(8px) scale(.985)}
+  to{opacity:1;transform:none}
+}
+body.darkmode .project-dialog{background:#111a2f;color:#fff}
+body.darkmode .project-dialog h3{color:#fff}
+body.darkmode .project-dialog p{color:rgba(255,255,255,.74)}
+body.darkmode #featured-work .project-role,
+body.darkmode #featured-work .project-value{color:rgba(255,255,255,.68)}
+body.darkmode #featured-work .project-role strong,
+body.darkmode #featured-work .project-value strong{color:#fff}
+
+@media(max-width:600px){
+  .project-dialog{padding:24px 22px;border-radius:20px}
+}
+@media(prefers-reduced-motion:reduce){
+  .project-dialog[open]{animation:none}
+  #featured-work .project-intro-btn{transition:none}
+}
+</style><style id="idea-lab-card-behavior">
+/* Idea Lab: full concept description, no modal/button, monochrome -> color on hover */
+#portfolio-other .project-item{
+  filter:grayscale(100%);
+  -webkit-filter:grayscale(100%);
+  transition:filter .32s ease,-webkit-filter .32s ease,transform .25s ease,box-shadow .25s ease;
+}
+#portfolio-other .project-item:hover,
+#portfolio-other .project-item:focus-within{
+  filter:grayscale(0%);
+  -webkit-filter:grayscale(0%);
+}
+#portfolio-other .project-view{
+  display:block!important;
+}
+#portfolio-other .project-view span{
+  display:block!important;
+  -webkit-line-clamp:unset!important;
+  -webkit-box-orient:initial!important;
+  overflow:visible!important;
+  max-height:none!important;
+  white-space:normal!important;
+  line-height:2!important;
+}
+#portfolio-other .project-intro-btn{
+  display:none!important;
+}
+@media(prefers-reduced-motion:reduce){
+  #portfolio-other .project-item{transition:none!important}
+}
 </style></head>
 <body>
 <!-- Header -->
@@ -560,7 +681,6 @@ header .navigation-bar ul li a{font-size:13px;white-space:nowrap}
 <li class="active"><a href="#home">خانه</a></li>
 <li><a href="#about">درباره من</a></li>
 <li><a href="#brand-dna">هویت حرفه‌ای</a></li>
-
 <li><a href="#featured-work">پروژه‌ها</a></li><li><a href="#portfolio-other">آزمایشگاه ایده‌ها</a></li>
 <li><a href="#publishing">نشر</a></li>
 <li><a href="#contact">تماس</a></li>
@@ -703,37 +823,37 @@ header .navigation-bar ul li a{font-size:13px;white-space:nowrap}
 <!-- item -->
 <div class="project-item"><a aria-label="مشاهده سایت i18.ir" class="project-main-link" href="https://www.i18.ir" rel="noopener" target="_blank"><div class="project-image">
 <img alt="سایت i18.ir" decoding="async" loading="lazy" src="assets/images/projects/1.jpg"/>
-</div><div class="project-content"><h3>سایت i18.ir</h3><p class="project-role"><strong>نقش من: </strong>ایده‌پرداز و سرمایه‌گذار، مدیر پروژه و محصول، تحلیلگر کسب‌وکار و داده، طراح معماری اطلاعات و پایگاه داده</p><p class="project-value"><strong>ارزش ایجادشده: </strong>تبدیل داده‌های بازار سرمایه و صنایع به یک سامانه تحلیلی یکپارچه برای دسترسی سریع‌تر به اطلاعات و پشتیبانی از تصمیم‌گیری سرمایه‌گذاران.</p></div></a><button class="project-intro-btn" data-dialog="project-dialog-0" type="button">معرفی پروژه</button><dialog class="project-dialog" id="project-dialog-0"><h3>سایت i18.ir</h3><p>این پروژه از ایده تا پیاده‌سازی با مشارکت مستقیم من شکل گرفت. دامنه کار شامل تعریف مسئله و مدل محصول، مدیریت پروژه، تحلیل بازار سرمایه، طراحی ساختار داده و پایگاه داده، گردآوری و ورود داده، توسعه بخش‌هایی از سامانه با PHP و آماده‌سازی محصول برای عرضه بود. بخشی از مسئولیت من همچنین پیگیری‌های اجرایی و ثبت نرم‌افزار/محصول در مراجع مرتبط بود. ارزش اصلی پروژه، پیوند نرم‌افزار، داده و تحلیل بازار در یک محصول قابل استفاده بود.</p></dialog></div>
+</div><div class="project-content"><h3>سایت i18.ir</h3><p class="project-role"><strong>نقش فنی من: </strong>مدیریت محصول و پروژه، تحلیل کسب‌وکار، معماری اطلاعات و مدل داده، طراحی پایگاه داده، توسعه PHP، گردآوری و ورود داده و پیگیری ثبت نرم‌افزار.</p><p class="project-value"><strong>ارزش فنی ایجادشده: </strong>طراحی یک لایه یکپارچه داده و نرم‌افزار برای تجمیع، ساختاردهی و ارائه اطلاعات سهم‌ها و صنایع بازار سرمایه در یک محیط وب قابل تحلیل.</p></div></a><button class="project-intro-btn" data-dialog="project-dialog-0" type="button">معرفی پروژه</button><dialog class="project-dialog" id="project-dialog-0"><h3>سایت i18.ir</h3><p>i18.ir یک سامانه اطلاعاتی و تحلیلی برای بازار سرمایه است. هدف آن این بود که کاربر به‌جای جست‌وجوی پراکنده در منابع مختلف، اطلاعات مربوط به سهم‌ها و صنایع را در یک محیط یکپارچه ببیند و مقایسه کند. به زبان ساده، پروژه تلاش می‌کرد داده‌های بازار را از حالت پراکنده به اطلاعات قابل استفاده برای تصمیم‌گیری تبدیل کند.</p></dialog></div>
 <!-- item -->
 <div class="project-item"><a aria-label="مشاهده سایت خبرگزاری هوش مصنوعی ایران" class="project-main-link" href="https://www.hooshtaak.ir" rel="noopener" target="_blank"><div class="project-image">
 <img alt="سایت خبرگزاری هوش مصنوعی ایران" decoding="async" loading="lazy" src="assets/images/projects/2.jpg"/>
-</div><div class="project-content"><h3>سایت خبرگزاری هوش مصنوعی ایران</h3><p class="project-role"><strong>نقش من: </strong>عضو تیم مؤسس، ایده‌پرداز و مدیر پروژه، طراح ساختار محتوا و داده و راهبر توسعه پلتفرم وردپرسی</p><p class="project-value"><strong>ارزش ایجادشده: </strong>ایجاد یک رسانه تخصصی برای گردآوری، دسته‌بندی و انتشار منظم اخبار و دانش هوش مصنوعی و شکل‌دادن به یک پایگاه محتوایی قابل توسعه.</p></div></a><button class="project-intro-btn" data-dialog="project-dialog-1" type="button">معرفی پروژه</button><dialog class="project-dialog" id="project-dialog-1"><h3>سایت خبرگزاری هوش مصنوعی ایران</h3><p>در این پروژه به‌عنوان عضو تیم مؤسس و مدیر پروژه در تعریف ایده، طراحی ساختار سایت، سازمان‌دهی داده و محتوا و راهبری پیاده‌سازی وردپرسی مشارکت داشتم. فعالیت‌ها شامل طراحی طبقه‌بندی محتوا، گردآوری و ورود داده، مدیریت ساختار پایگاه داده و هماهنگی فرایند انتشار بود. تمرکز پروژه بر ایجاد یک بستر تخصصی و قابل گسترش برای محتوای هوش مصنوعی بود.</p></dialog></div>
+</div><div class="project-content"><h3>سایت خبرگزاری هوش مصنوعی ایران</h3><p class="project-role"><strong>نقش فنی من: </strong>عضو تیم مؤسس و مدیر پروژه، معماری اطلاعات و طبقه‌بندی محتوا، پیاده‌سازی و مدیریت WordPress، طراحی جریان گردآوری/ورود/انتشار داده و مدیریت ساختار محتوایی.</p><p class="project-value"><strong>ارزش فنی ایجادشده: </strong>ایجاد یک CMS تخصصی و جریان کاری محتوایی برای گردآوری، دسته‌بندی و انتشار منظم اخبار و دانش حوزه هوش مصنوعی.</p></div></a><button class="project-intro-btn" data-dialog="project-dialog-1" type="button">معرفی پروژه</button><dialog class="project-dialog" id="project-dialog-1"><h3>سایت خبرگزاری هوش مصنوعی ایران</h3><p>خبرگزاری هوش مصنوعی ایران یک رسانه تخصصی برای اخبار، رویدادها و محتوای مرتبط با هوش مصنوعی بود. هدف پروژه ایجاد مرجعی بود که مخاطب فارسی‌زبان بتواند خبرها و اطلاعات این حوزه را به‌صورت دسته‌بندی‌شده دنبال کند و فعالان و علاقه‌مندان این حوزه در یک بستر تخصصی به محتوا دسترسی داشته باشند.</p></dialog></div>
 <!-- item -->
 <div class="project-item"><a aria-label="مشاهده دیتاست مناطق 22گانه شهر تهران" class="project-main-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7074311726287970304/" rel="noopener" target="_blank"><div class="project-image">
 <img alt="دیتاست مناطق 22گانه شهر تهران" decoding="async" loading="lazy" src="assets/images/projects/5.jpg"/>
-</div><div class="project-content"><h3>دیتاست مناطق 22گانه شهر تهران</h3><p class="project-role"><strong>نقش من: </strong>گردآورنده و مهندس داده، طراح ساختار دیتاست و توسعه‌دهنده پردازش و تحلیل با Python</p><p class="project-value"><strong>ارزش ایجادشده: </strong>تبدیل داده‌های پراکنده مناطق تهران به یک دیتاست ساخت‌یافته و قابل استفاده برای تحلیل، مقایسه و پروژه‌های داده‌کاوی.</p></div></a><button class="project-intro-btn" data-dialog="project-dialog-2" type="button">معرفی پروژه</button><dialog class="project-dialog" id="project-dialog-2"><h3>دیتاست مناطق 22گانه شهر تهران</h3><p>پروژه شامل گردآوری داده‌های مرتبط با مناطق ۲۲گانه تهران، پاک‌سازی و ساختاردهی آن‌ها، طراحی دیتاست و آماده‌سازی برای تحلیل بود. خروجی در بستر Kaggle منتشر شد و در کنار داده، کدهای Python برای پردازش و تحلیل نیز تهیه شد. این پروژه نمونه‌ای از کار عملی من در چرخه گردآوری داده، پاک‌سازی، طراحی دیتاست و تحلیل است.</p></dialog></div>
+</div><div class="project-content"><h3>دیتاست مناطق 22گانه شهر تهران</h3><p class="project-role"><strong>نقش فنی من: </strong>Data Gathering، پاک‌سازی و ساختاردهی داده، طراحی Schema دیتاست، مدل‌سازی داده، توسعه کدهای Python و آماده‌سازی دیتاست و Source Code برای انتشار در Kaggle.</p><p class="project-value"><strong>ارزش فنی ایجادشده: </strong>تبدیل داده‌های پراکنده مناطق ۲۲گانه تهران به یک مجموعه‌داده ساخت‌یافته، قابل تکرار و آماده تحلیل برای مقایسه مناطق و پروژه‌های Data Analytics.</p></div></a><button class="project-intro-btn" data-dialog="project-dialog-2" type="button">معرفی پروژه</button><dialog class="project-dialog" id="project-dialog-2"><h3>دیتاست مناطق 22گانه شهر تهران</h3><p>این پروژه یک مجموعه‌داده درباره مناطق ۲۲گانه شهر تهران است. اطلاعات از منابع مختلف گردآوری، پاک‌سازی و در یک ساختار واحد قرار گرفت تا پژوهشگران و علاقه‌مندان بتوانند مناطق مختلف تهران را مقایسه و تحلیل کنند. علاوه بر خود داده‌ها، کدهای Python مورد استفاده برای پردازش و تحلیل نیز در پروژه قرار گرفت.</p></dialog></div>
 <!-- item -->
 <div class="project-item"><a aria-label="مشاهده پیمایش ملی سواد مالی دیجی‌پی" class="project-main-link" href="/projects/digipay-financial-literacy-survey/"><div class="project-image">
 <img alt="پیمایش ملی سواد مالی دیجی‌پی" decoding="async" loading="lazy" src="assets/images/projects/digipay-financial-literacy-survey.webp"/>
-</div><div class="project-content"><h3>پیمایش ملی سواد مالی دیجی‌پی</h3><p class="project-role"><strong>نقش من: </strong>پژوهشگر مالی، طراح چارچوب و سؤالات آزمون، تحلیلگر داده و مشارکت‌کننده در تفسیر نتایج</p><p class="project-value"><strong>ارزش ایجادشده: </strong>ایجاد تصویری داده‌محور از سواد و رفتار مالی بیش از ۲۵ هزار مشارکت‌کننده برای پشتیبانی از تصمیم‌های آموزشی و کسب‌وکاری.</p></div></a><button class="project-intro-btn" data-dialog="project-dialog-3" type="button">معرفی پروژه</button><dialog class="project-dialog" id="project-dialog-3"><h3>پیمایش ملی سواد مالی دیجی‌پی</h3><p>در این پیمایش در طراحی چارچوب سنجش سواد مالی، تدوین و ارزیابی سؤالات و تست‌های آزمون، تحلیل پاسخ‌های بیش از ۲۵ هزار مشارکت‌کننده و تفسیر نتایج مشارکت داشتم. پروژه در نقطه اتصال پژوهش مالی، طراحی ابزار سنجش، تحلیل آماری و تصمیم‌سازی قرار داشت. در نسخه عمومی سایت فقط اطلاعات سطح‌بالا و غیرحساس منتشر می‌شود و داده‌ها و یافته‌های اختصاصی پژوهش عمومی نمی‌شوند.</p></dialog></div>
+</div><div class="project-content"><h3>پیمایش ملی سواد مالی دیجی‌پی</h3><p class="project-role"><strong>نقش فنی من: </strong>طراحی پژوهش و چارچوب سنجش، پژوهش مالی، طراحی و ارزیابی Itemهای آزمون، تحلیل داده‌های پیمایش و تفسیر آماری پاسخ‌های بیش از ۲۵ هزار مشارکت‌کننده.</p><p class="project-value"><strong>ارزش فنی ایجادشده: </strong>ایجاد چارچوب سنجش و دیتاست تحلیلی در مقیاس بزرگ برای اندازه‌گیری الگوهای سواد و رفتار مالی و تبدیل پاسخ‌های پیمایش به بینش قابل استفاده در تصمیم‌سازی.</p></div></a><button class="project-intro-btn" data-dialog="project-dialog-3" type="button">معرفی پروژه</button><dialog class="project-dialog" id="project-dialog-3"><h3>پیمایش ملی سواد مالی دیجی‌پی</h3><p>این پروژه یک پیمایش گسترده برای سنجش سواد مالی و برخی الگوهای رفتاری مرتبط با پول بود که بیش از ۲۵ هزار نفر در آن مشارکت کردند. سؤالات برای سنجش جنبه‌های مختلف دانش و رفتار مالی طراحی شدند و پاسخ‌ها به‌صورت آماری تحلیل شد. داده‌های کامل و نتایج اختصاصی متعلق به دیجی‌پی است و در سایت فقط اطلاعات عمومی و غیرحساس پروژه معرفی می‌شود.</p></dialog></div>
 <div class="project-item"><div class="project-main-link project-main-link-disabled"><div class="project-image">
 <img alt="نرم افزار ارتباط با مشتریان آسمان" decoding="async" loading="lazy" src="assets/images/projects/8.jpg"/>
-</div><div class="project-content"><h3>نرم افزار ارتباط با مشتریان آسمان</h3><p class="project-role"><strong>نقش من: </strong>ایده‌پرداز و سرمایه‌گذار، مدیر پروژه، تحلیلگر کسب‌وکار، مدیر تیم توسعه و راهبر طراحی پایگاه داده</p><p class="project-value"><strong>ارزش ایجادشده: </strong>تبدیل فرایندهای پراکنده ارتباط با مشتری به یک سامانه متمرکز برای ثبت سوابق، پیگیری تعاملات و پشتیبانی از فروش و رضایت مشتری.</p></div></div><button class="project-intro-btn" data-dialog="project-dialog-4" type="button">معرفی پروژه</button><dialog class="project-dialog" id="project-dialog-4"><h3>نرم افزار ارتباط با مشتریان آسمان</h3><p>نقش من از شکل‌گیری ایده و تحلیل نیاز بازار تا مدیریت تیم توسعه و طراحی ساختار اطلاعاتی محصول ادامه داشت. فرایند شامل تحلیل نیازمندی‌ها، تعریف ماژول‌های CRM، طراحی پایگاه داده، هدایت توسعه، آزمون و آماده‌سازی برای عرضه بود. پیگیری ثبت نرم‌افزار در مراجع مرتبط نیز بخشی از فعالیت‌های اجرایی محصول بود.</p></dialog></div>
+</div><div class="project-content"><h3>نرم افزار ارتباط با مشتریان آسمان</h3><p class="project-role"><strong>نقش فنی من: </strong>Product Owner و مدیر پروژه، تحلیل و مدل‌سازی فرایند CRM، تحلیل نیازمندی، طراحی Schema پایگاه داده، مدیریت تیم Developer، آزمون و آماده‌سازی Release و پیگیری ثبت نرم‌افزار.</p><p class="project-value"><strong>ارزش فنی ایجادشده: </strong>دیجیتال‌سازی چرخه ارتباط با مشتری و تبدیل سوابق پراکنده تعاملات به یک مدل داده متمرکز برای پیگیری مشتری، فروش و خدمات.</p></div></div><button class="project-intro-btn" data-dialog="project-dialog-4" type="button">معرفی پروژه</button><dialog class="project-dialog" id="project-dialog-4"><h3>نرم افزار ارتباط با مشتریان آسمان</h3><p>آسمان یک نرم‌افزار مدیریت ارتباط با مشتریان (CRM) بود. این نرم‌افزار برای کسب‌وکارهایی طراحی شد که نیاز داشتند اطلاعات مشتریان، سابقه تماس‌ها و تعاملات و پیگیری‌های فروش را در یک محل نگهداری کنند. هدف اصلی، جلوگیری از پراکندگی اطلاعات مشتری و ایجاد امکان پیگیری منظم‌تر ارتباط با او بود.</p></dialog></div>
 <!-- item -->
 <div class="project-item"><a aria-label="مشاهده سمینارهای موفقیت 1 و 2" class="project-main-link" href="https://www.facebook.com/photo/?fbid=111087485704012&amp;set=ecnf.100081001554949" rel="noopener" target="_blank"><div class="project-image">
 <img alt="سمینارهای موفقیت 1 و 2" decoding="async" loading="lazy" src="assets/images/projects/13.jpg"/>
-</div><div class="project-content"><h3>سمینارهای موفقیت 1 و 2</h3><p class="project-role"><strong>نقش من: </strong>پژوهشگر محتوا، ایده‌پرداز و مدیر تولید، طراح تجربه و رابط کاربری و راهبر بسته‌بندی محصول</p><p class="project-value"><strong>ارزش ایجادشده: </strong>تبدیل مجموعه‌ای پراکنده از ویدئوهای آموزشی به یک محصول چندرسانه‌ای ساختاریافته و قابل عرضه با تجربه کاربری منسجم.</p></div></a><button class="project-intro-btn" data-dialog="project-dialog-5" type="button">معرفی پروژه</button><dialog class="project-dialog" id="project-dialog-5"><h3>سمینارهای موفقیت 1 و 2</h3><p>این پروژه شامل تحقیق و انتخاب محتوای آموزشی، گردآوری ویدئوها، ساختاردهی موضوعی، طراحی رابط کاربری محصول و طراحی بسته‌بندی بود. نقش من علاوه بر ایده‌پردازی، مدیریت فرایند تبدیل مجموعه محتوا به یک محصول نهایی و قابل عرضه بود.</p></dialog></div>
+</div><div class="project-content"><h3>سمینارهای موفقیت 1 و 2</h3><p class="project-role"><strong>نقش فنی من: </strong>پژوهش و Curate محتوا، طراحی ساختار اطلاعات، طراحی Interface و تجربه کاربری محصول چندرسانه‌ای، مدیریت تولید و طراحی بسته‌بندی.</p><p class="project-value"><strong>ارزش فنی ایجادشده: </strong>تبدیل مجموعه‌ای از منابع ویدئویی پراکنده به یک محصول چندرسانه‌ای ساختاریافته با ناوبری، هویت بصری و تجربه استفاده یکپارچه.</p></div></a><button class="project-intro-btn" data-dialog="project-dialog-5" type="button">معرفی پروژه</button><dialog class="project-dialog" id="project-dialog-5"><h3>سمینارهای موفقیت 1 و 2</h3><p>سمینارهای موفقیت ۱ و ۲ مجموعه‌ای چندرسانه‌ای از سخنرانی‌ها و ویدئوهای آموزشی منتخب بود. محتوای منابع مختلف بررسی و دسته‌بندی شد و سپس در قالب یک محصول دارای رابط کاربری و بسته‌بندی مشخص ارائه شد تا مخاطب بتواند به‌جای مجموعه‌ای پراکنده از فایل‌ها، محتوای انتخاب‌شده را به‌شکل منظم استفاده کند.</p></dialog></div>
 <!-- item -->
 <div class="project-item"><a aria-label="مشاهده نرم افزار جامع موفقیت - کوله پشتی" class="project-main-link" href="assets/videos/kooleposhti.mp4" rel="noopener" target="_blank"><div class="project-image">
 <img alt="نرم افزار جامع موفقیت - کوله پشتی" decoding="async" loading="lazy" src="assets/images/projects/6.jpg"/>
-</div><div class="project-content"><h3>نرم افزار جامع موفقیت - کوله پشتی</h3><p class="project-role"><strong>نقش من: </strong>ایده‌پرداز و سرمایه‌گذار، مدیر پروژه و محصول، پژوهشگر محتوا، تحلیلگر و توسعه‌دهنده نرم‌افزار و داده</p><p class="project-value"><strong>ارزش ایجادشده: </strong>تولید یک محصول چندرسانه‌ای بومی با ترکیب پژوهش، نرم‌افزار، پایگاه داده و محتوای ساختاریافته و رساندن آن تا مرحله عرضه و فروش.</p></div></a><button class="project-intro-btn" data-dialog="project-dialog-6" type="button">معرفی پروژه</button><dialog class="project-dialog" id="project-dialog-6"><h3>نرم افزار جامع موفقیت - کوله پشتی</h3><p>این محصول با مشارکت مستقیم من در کل چرخه شکل گرفت: ایده‌پردازی، سرمایه‌گذاری، پژوهش و گردآوری محتوا، تحلیل و طراحی ساختار محصول، برنامه‌نویسی PHP، طراحی و مدیریت پایگاه داده، ورود و سازمان‌دهی داده، آزمون، ثبت نرم‌افزار در مراجع مرتبط، عرضه و فروش. پروژه نمونه‌ای از تجربه End-to-End من در تبدیل ایده به محصول دیجیتال است.</p></dialog></div>
+</div><div class="project-content"><h3>نرم افزار جامع موفقیت - کوله پشتی</h3><p class="project-role"><strong>نقش فنی من: </strong>Product Owner و مدیر پروژه، پژوهش و مدل‌سازی محتوا، توسعه PHP، طراحی و مدیریت Database، Data Gathering/Data Entry، آزمون، ثبت نرم‌افزار، عرضه و فروش.</p><p class="project-value"><strong>ارزش فنی ایجادشده: </strong>ساخت یک Knowledge Base چندرسانه‌ای بومی با اتصال محتوای ساختاریافته، پایگاه داده و نرم‌افزار برای ارائه یک تجربه آموزشی قابل جست‌وجو و استفاده.</p></div></a><button class="project-intro-btn" data-dialog="project-dialog-6" type="button">معرفی پروژه</button><dialog class="project-dialog" id="project-dialog-6"><h3>نرم افزار جامع موفقیت - کوله پشتی</h3><p>کوله‌پشتی یک نرم‌افزار چندرسانه‌ای آموزشی بود که در سال ۱۳۸۷ تولید شد. محتوای آن از منابع مختلف، از جمله متون و آموزه‌های ایرانی و اسلامی و دیدگاه‌های نویسندگان و سخنرانان حوزه موفقیت، گردآوری و سازمان‌دهی شده بود. مخاطب می‌توانست به‌جای استفاده از فایل‌ها و منابع پراکنده، مجموعه‌ای ساخت‌یافته از صوت، تصویر و متن را در یک نرم‌افزار واحد در اختیار داشته باشد.</p></dialog></div>
 <div class="project-item"><div class="project-main-link project-main-link-disabled"><div class="project-image">
 <img alt="نرم افزار قصه های ماندگار" decoding="async" loading="lazy" src="assets/images/projects/7.jpg"/>
-</div><div class="project-content"><h3>نرم افزار قصه های ماندگار</h3><p class="project-role"><strong>نقش من: </strong>ایده‌پرداز و سرمایه‌گذار، مدیر پروژه و محصول، پژوهشگر محتوا، تحلیلگر داده و طراح منطق پیشنهاد محتوا</p><p class="project-value"><strong>ارزش ایجادشده: </strong>ساخت یک پایگاه داستانی ساخت‌یافته با بیش از ۴۵۰۰ داستان و ایجاد زمینه برای پیشنهاد هوشمند داستان بر اساس ویژگی‌ها و نیاز مخاطب.</p></div></div><button class="project-intro-btn" data-dialog="project-dialog-7" type="button">معرفی پروژه</button><dialog class="project-dialog" id="project-dialog-7"><h3>نرم افزار قصه های ماندگار</h3><p>پروژه قصه‌های ماندگار شامل پژوهش و گردآوری بیش از ۴۵۰۰ داستان، طبقه‌بندی و ورود داده، طراحی پایگاه داده، توسعه نرم‌افزار و مدیریت چرخه محصول بود. بخش مهم‌تر ایده، ایجاد ارتباط میان ویژگی‌های فردی مخاطب و موضوعات داستان‌ها برای پیشنهاد مناسب‌تر محتوا بود؛ رویکردی که از منطق داده و شخصی‌سازی برای تجربه یادگیری استفاده می‌کرد. پیگیری ثبت و عرضه نرم‌افزار نیز در چرخه اجرایی پروژه قرار داشت.</p></dialog></div>
+</div><div class="project-content"><h3>نرم افزار قصه های ماندگار</h3><p class="project-role"><strong>نقش فنی من: </strong>Product Owner و مدیر پروژه، طراحی Taxonomy و Metadata محتوا، توسعه PHP و Database، Data Gathering/Data Entry و طراحی منطق Recommendation مبتنی بر تطبیق ویژگی‌های فرد با موضوعات داستان.</p><p class="project-value"><strong>ارزش فنی ایجادشده: </strong>ساخت یک مخزن ساخت‌یافته با بیش از ۴۵۰۰ داستان و ایجاد لایه پیشنهاد محتوا بر پایه ارتباط ویژگی‌های مخاطب با برچسب‌ها و موضوعات داستانی.</p></div></div><button class="project-intro-btn" data-dialog="project-dialog-7" type="button">معرفی پروژه</button><dialog class="project-dialog" id="project-dialog-7"><h3>نرم افزار قصه های ماندگار</h3><p>قصه‌های ماندگار یک نرم‌افزار شامل بیش از ۴۵۰۰ داستان کوتاه و آموزنده بود که برای یادگیری و انتقال مهارت‌ها و مفاهیم از طریق داستان طراحی شد. داستان‌ها فقط به‌صورت یک فهرست ساده ذخیره نشده بودند؛ برای آن‌ها موضوع و ویژگی تعریف می‌شد تا سامانه بتواند با توجه به ویژگی‌ها یا نیاز مخاطب، داستان‌های مناسب‌تری را پیشنهاد کند.</p></dialog></div>
 <!-- item -->
 <div class="project-item"><a aria-label="مشاهده فروش دامنه‌های اینترنتی" class="project-main-link" href="https://esmaeelpoor.ir/assets/Docs/my-domains.html" rel="noopener" target="_blank"><div class="project-image">
 <img alt="فروش دامنه" decoding="async" loading="lazy" src="assets/images/projects/19.jpg"/>
-</div><div class="project-content"><h3>فروش دامنه‌های اینترنتی</h3><p class="project-role"><strong>نقش من: </strong>مدیریت دارایی‌های دیجیتال و ارزیابی نام‌های تجاری و دامنه‌های قابل توسعه</p><p class="project-value"><strong>ارزش ایجادشده: </strong>شناسایی و نگهداری دارایی‌های دامنه‌ای با قابلیت استفاده در محصولات، برندها و کسب‌وکارهای دیجیتال.</p></div></a><button class="project-intro-btn" data-dialog="project-dialog-8" type="button">معرفی پروژه</button><dialog class="project-dialog" id="project-dialog-8"><h3>فروش دامنه‌های اینترنتی</h3><p>این فعالیت به مدیریت مجموعه‌ای از دامنه‌های کوتاه و قابل برندشدن مربوط است. نگاه من به دامنه صرفاً خرید و فروش نیست؛ دامنه می‌تواند نقطه شروع هویت یک محصول یا کسب‌وکار دیجیتال باشد. انتخاب نام، ارزیابی قابلیت برندشدن و نگهداری این دارایی‌ها بخشی از تجربه من در توسعه دارایی‌های دیجیتال است.</p></dialog></div></div>
+</div><div class="project-content"><h3>فروش دامنه‌های اینترنتی</h3><p class="project-role"><strong>نقش فنی من: </strong>مدیریت Portfolio دارایی‌های دیجیتال، ارزیابی Naming و Brandability، ثبت و نگهداری دامنه و طراحی مسیر عرضه و انتقال دارایی.</p><p class="project-value"><strong>ارزش فنی ایجادشده: </strong>ایجاد و مدیریت مجموعه‌ای از دامنه‌های قابل‌برندسازی به‌عنوان دارایی دیجیتال و نقطه شروع بالقوه برای محصولات و کسب‌وکارهای آنلاین.</p></div></a><button class="project-intro-btn" data-dialog="project-dialog-8" type="button">معرفی پروژه</button><dialog class="project-dialog" id="project-dialog-8"><h3>فروش دامنه‌های اینترنتی</h3><p>این بخش مجموعه‌ای از دامنه‌های اینترنتی است که برای فروش یا استفاده در پروژه‌های آینده نگهداری شده‌اند. یک دامنه مناسب می‌تواند نام و نقطه شروع یک برند، محصول یا کسب‌وکار آنلاین باشد؛ بنابراین انتخاب آن‌ها بر اساس کوتاهی، قابلیت به‌خاطرسپاری و امکان استفاده تجاری انجام شده است.</p></dialog></div></div>
 </div>
 </section><section class="services ptb-100" id="services">
 <div class="container">
@@ -778,7 +898,7 @@ header .navigation-bar ul li a{font-size:13px;white-space:nowrap}
 <div class="project-status-fix">
 								فی360
 							</div>
-<button class="project-intro-btn" type="button">معرفی پروژه</button><div class="project-view d-flex">
+<div class="project-view d-flex">
 <span>
 									فی ۳۶۰ (Fi360) مجموعه‌ای تخصصی در حوزه طراحی و ارائه محصولات آموزش سواد مالی است که با هدف تبدیل مفاهیم مالی به مهارت‌های کاربردی زندگی شکل گرفته است. این مجموعه با بهره‌گیری از کتاب، بازی، داستان، ویدئو و آموزش‌های تعاملی تلاش می‌کند کودکان، نوجوانان و خانواده‌ها را با مفاهیمی مانند شناخت پول، انتخاب و تصمیم‌گیری، مدیریت هزینه، پس‌انداز، سرمایه‌گذاری و کارآفرینی به شیوه‌ای جذاب و تجربه‌محور آشنا کند.
 <br/>
@@ -801,7 +921,7 @@ header .navigation-bar ul li a{font-size:13px;white-space:nowrap}
 <div class="project-status">
 							در انتظار جذب سرمایه‌گذار
 							</div>
-<button class="project-intro-btn" type="button">معرفی پروژه</button><div class="project-view d-flex">
+<div class="project-view d-flex">
 <span>
 									کتاب «مدیریت طبیعی» تلاشی است برای نگاه دوباره به مدیریت از زاویه سیستم‌های زنده. این کتاب نشان می‌دهد مدیران چگونه می‌توانند از طبیعت، اکوسیستم‌ها، رفتار جمعی موجودات، بدن انسان و الگوریتم‌های الهام‌گرفته از طبیعت برای ساخت سازمان‌هایی چابک، تاب‌آور و هوشمند یاد بگیرند.
 
@@ -824,7 +944,7 @@ header .navigation-bar ul li a{font-size:13px;white-space:nowrap}
 <div class="project-status">
 							در انتظار جذب سرمایه‌گذار
 							</div>
-<button class="project-intro-btn" type="button">معرفی پروژه</button><div class="project-view d-flex">
+<div class="project-view d-flex">
 <span>
 
 									کتاب «آهسته و پیوسته بخرید» یک راهنمای کاربردی برای توسعه سواد مالی شخصی است که مفاهیم سرمایه‌گذاری، مدیریت پول و تصمیم‌گیری مالی را به زبانی ساده و قابل اجرا ارائه می‌دهد. این کتاب بر این ایده استوار است که ثروت پایدار نه از تصمیم‌های هیجانی، بلکه از عادت‌های کوچک، منظم و بلندمدت شکل می‌گیرد؛ مانند پس‌انداز هوشمند، سرمایه‌گذاری تدریجی و کنترل رفتارهای احساسی در بازار. تمایز مهم اثر، اتصال مستقیم به واقعیت اقتصاد ایران است؛ به‌طوری‌که در انتهای هر فصل، داده‌های واقعی بازار شامل طلا، سکه، ارز و بورس اوراق بهادار ایران تحلیل و بررسی می‌شود. انتخاب، ترجمه و تدوین محتوای این کتاب نتیجه بیش از ده سال ارتباط نزدیک با سازمان بورس و همچنین گذراندن دوره MBA بازار سرمایه در دانشگاه خوارزمی است که پشتوانه‌ای تجربی و تخصصی به محتوای آن داده است.
@@ -844,7 +964,7 @@ header .navigation-bar ul li a{font-size:13px;white-space:nowrap}
 <div class="project-status">
 							در انتظار جذب سرمایه‌گذار
 							</div>
-<button class="project-intro-btn" type="button">معرفی پروژه</button><div class="project-view d-flex">
+<div class="project-view d-flex">
 <span>
 
 									کارتآس یک بازی رومیزی ساده، سریع و پرهیجان است که با ترکیب کارت، تاس، شانس و تصمیم‌گیری طراحی شده است. این بازی برای دورهمی‌های خانوادگی و دوستانه ساخته شده؛ جایی که بازیکنان در هر نوبت با انتخاب‌های تازه، ریسک‌های کوچک و لحظه‌های غیرمنتظره روبه‌رو می‌شوند. کارتآس نه پیچیده است و نه تکراری؛ خیلی زود یاد گرفته می‌شود، اما هر بار می‌تواند تجربه‌ای متفاوت بسازد. چند کارت، چند تاس و یک جمع خوش‌حال کافی است تا بازی شروع شود.
@@ -862,7 +982,7 @@ header .navigation-bar ul li a{font-size:13px;white-space:nowrap}
 <div class="project-status">
 							در انتظار جذب سرمایه‌گذار
 							</div>
-<button class="project-intro-btn" type="button">معرفی پروژه</button><div class="project-view d-flex">
+<div class="project-view d-flex">
 <span>
 قهرمانان مالی (FiQ) یک پروژه بازی‌محور آموزشی است که با هدف ارتقای سواد مالی و تقویت مسئولیت‌پذیری اقتصادی، به‌ویژه در نسل نوجوان و جوان طراحی شده است. این بازی با تکیه بر روایت، تصمیم‌گیری و تجربه عملی، مفاهیم پایه و کاربردی مالی مانند مدیریت منابع، انتخاب آگاهانه، ریسک، پس‌انداز و برنامه‌ریزی را به زبانی ساده و قابل لمس منتقل می‌کند؛ به‌گونه‌ای که یادگیری نه از مسیر آموزش مستقیم، بلکه از دل تجربه و مشارکت شکل می‌گیرد.
 
@@ -881,7 +1001,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 <div class="project-status">
 							در انتظار جذب سرمایه‌گذار
 							</div>
-<button class="project-intro-btn" type="button">معرفی پروژه</button><div class="project-view d-flex">
+<div class="project-view d-flex">
 <span>
 پزا (PAZAA) راهی ساده و مؤثر برای رساندن مواد غذایی ضروری به خانواده‌هایی است که بیش از هر چیز به امنیت غذایی نیاز دارند. این بسته‌ها با ترکیبی کاربردی از مواد خشک پرمصرف مثل اقلام مورد نیاز برای عدس‌پلو و قیمه قارچ طراحی شده‌اند؛ دقیق، قابل اتکا و مناسب استفاده روزمره. کمک شما دقیقاً تبدیل به غذا می‌شود، نه یک عدد مبهم.
 
@@ -901,7 +1021,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 <div class="project-status">
 							در انتظار جذب سرمایه‌گذار
 							</div>
-<button class="project-intro-btn" type="button">معرفی پروژه</button><div class="project-view d-flex">
+<div class="project-view d-flex">
 <span>
 								    سامانه تحلیل روابط پنهان میان کتاب‌ها، نویسندگان، ناشران و موضوعات
 									<br/>
@@ -940,7 +1060,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 <div class="project-status">
 							در انتظار جذب سرمایه‌گذار
 							</div>
-<button class="project-intro-btn" type="button">معرفی پروژه</button><div class="project-view d-flex">
+<div class="project-view d-flex">
 <span>
 «انگشتر چندگوهر» یک جواهر مفهومی و شخصی‌سازی‌شده است که به‌جای استفاده از چند انگشتر یا چند نگین شلوغ، ذرات چند سنگ طبیعی را در یک حلقه واحد ترکیب می‌کند؛ برای مثال می‌تواند همزمان ترکیبی از عقیق، فیروزه، دُر و زمرد را در خود داشته باشد.
 
@@ -962,7 +1082,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 <div class="project-status-fix">
 							گروه صنعتی انتخاب
 							</div>
-<button class="project-intro-btn" type="button">معرفی پروژه</button><div class="project-view d-flex">
+<div class="project-view d-flex">
 <span>
 در این مجموعه ویدئویی، می‌توانید با تکنیکهای افزایش کارایی و بهره وری به صورت بسیار کوتاه و مختصر و مفید آشنا شوید . 
 					محتوا به صورت میکرولرنینگ ارائه شده است و ادامه دارد ...
@@ -981,7 +1101,7 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 <div class="project-status-fix">
 							انتشارات بورس
 							</div>
-<button class="project-intro-btn" type="button">معرفی پروژه</button><div class="project-view d-flex">
+<div class="project-view d-flex">
 <span>
 								ترجمه و تألیف کتاب در حوزه آموزش سواد مالی و ریاضیات ذهنی
 								</span>
@@ -1427,26 +1547,14 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 </div>
 </div>
 </section>
-
-
 <!-- Publishing Experience -->
-
 <!-- Services -->
-
 <!-- CTA -->
-
-
 <!-- Projects -->
-
 <!-- Other projects -->
-
 <!-- Articles -->
-
 <!-- Testmonial -->
-
-
 <!-- Contact Me -->
-
 </main>
 <!-- Footer -->
 <footer>
@@ -1457,7 +1565,6 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 <ul>
 <li class="f-navlinks"><a href="#home">خانه</a></li>
 <li class="f-navlinks"><a href="#about">درباره من</a></li>
-
 <li class="f-navlinks"><a href="#featured-work">پروژه‌ها</a></li>
 <li class="f-navlinks"><a href="#publishing">نشر</a></li>
 <li class="f-navlinks"><a href="Links.html" rel="noopener" target="_blank">لینک‌ها</a></li>
@@ -1478,7 +1585,6 @@ FiQ بستری است برای مشارکت معنادار شرکت‌ها، ب�
 </div>
 </div>
 <!-- Digital Transformation Positioning -->
-
 </footer>
 <!-- Scroll up -->
 <button aria-label="بازگشت به بالای صفحه" class="scrollup" type="button">
@@ -1615,20 +1721,29 @@ $(document).ready(function(){
 
 });
 </script>
-<script id="project-dialog-script">
+<script id="project-dialog-script-v2">
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('#portfolio .project-intro-btn').forEach(function (btn) {
+  document.querySelectorAll('#featured-work .project-intro-btn').forEach(function (btn) {
     btn.addEventListener('click', function (e) {
-      e.preventDefault(); e.stopPropagation();
-      var dialog=document.getElementById(btn.dataset.dialog);
-      if(dialog && typeof dialog.showModal==='function') dialog.showModal();
+      e.preventDefault();
+      e.stopPropagation();
+      var dialog = document.getElementById(btn.dataset.dialog);
+      if (!dialog) return;
+      if (typeof dialog.showModal === 'function') {
+        dialog.showModal();
+      } else {
+        dialog.setAttribute('open','');
+      }
     });
   });
-  document.querySelectorAll('#portfolio .project-dialog').forEach(function(dialog){
-    dialog.addEventListener('click', function(e){
-      var r=dialog.getBoundingClientRect();
-      var inside=e.clientX>=r.left && e.clientX<=r.right && e.clientY>=r.top && e.clientY<=r.bottom;
-      if(!inside) dialog.close();
+
+  document.querySelectorAll('#featured-work .project-dialog').forEach(function (dialog) {
+    dialog.addEventListener('click', function (e) {
+      var r = dialog.getBoundingClientRect();
+      var outside =
+        e.clientX < r.left || e.clientX > r.right ||
+        e.clientY < r.top  || e.clientY > r.bottom;
+      if (outside) dialog.close();
     });
   });
 });
