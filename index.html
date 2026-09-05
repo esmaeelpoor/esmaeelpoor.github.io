@@ -842,15 +842,40 @@ body.darkmode #portfolio .project-value strong{color:#fff}
 }
 </style>
 <style>
-/* Group the digital transformation case studies visually */
-.document-case-secondary{
-    margin-top:0 !important;
-    padding-top:40px !important;
-    background:#f5f8fc !important;
-    border-top:1px solid rgba(86,166,255,.15);
+.publishing-case {
+    margin-top: 80px;
+    padding-top: 80px;
+    background: linear-gradient(180deg, rgba(86,166,255,.045), rgba(7,16,29,0));
+    border-top: 1px solid rgba(86,166,255,.18);
 }
-.document-case-secondary .document-case-card{
-    background:linear-gradient(145deg,#101d2f,#0b1728);
+.publishing-case .document-case-card {
+    background: linear-gradient(145deg, #101d2f, #0b1728);
+    border-color: rgba(86,166,255,.18);
+}
+</style>
+
+
+<style>
+/* Fix contrast for book publishing case study */
+#book-publishing-workflow,
+#book-publishing-workflow * {
+    color: inherit;
+}
+#book-publishing-workflow .document-case-card {
+    background: linear-gradient(145deg,#101d2f,#0b1728) !important;
+    color: #f6f8fc !important;
+}
+#book-publishing-workflow h2,
+#book-publishing-workflow p,
+#book-publishing-workflow .document-case-lead {
+    color: #f6f8fc !important;
+}
+#book-publishing-workflow .document-case-badge,
+#book-publishing-workflow .document-case-highlights span {
+    color: #d8e6f7 !important;
+}
+#book-publishing-workflow .document-case-link {
+    color: #ffffff !important;
 }
 </style>
 
@@ -976,9 +1001,7 @@ body.darkmode #portfolio .project-value strong{color:#fff}
 </div>
 </div>
 </section>
-
-
-<section class="document-case document-case-secondary" id="book-publishing-workflow">
+<section class="document-case publishing-case" id="book-publishing-workflow">
 <div class="container">
 <div class="document-case-card">
 <div>
