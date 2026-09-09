@@ -1,13 +1,39 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
-<url>
-<loc>https://esmaeelpoor.ir/</loc>
-<lastmod>2024-12-16T09:11:04+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://esmaeelpoor.ir/assets/Docs/AliEsmaeelpoor-2024.pdf</loc>
-<lastmod>2024-12-16T09:11:04+00:00</lastmod>
-<priority>0.80</priority>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://esmaeelpoor.ir/</loc>
+  </url>
+  <url>
+    <loc>https://esmaeelpoor.ir/achievements/</loc>
+  </url>
+  <url>
+    <loc>https://esmaeelpoor.ir/experience/</loc>
+  </url>
+  <url>
+    <loc>https://esmaeelpoor.ir/publishing/</loc>
+  </url>
+  <url>
+    <loc>https://esmaeelpoor.ir/projects/document-digitization/</loc>
+  </url>
+  <url>
+    <loc>https://esmaeelpoor.ir/projects/book-publishing-workflow/</loc>
+  </url>
+  <url>
+    <loc>https://esmaeelpoor.ir/projects/digipay-financial-literacy-survey/</loc>
+  </url>
+  <url>
+    <loc>https://esmaeelpoor.ir/assets/Docs/papers/iran-bank-industry-porter-swot.html</loc>
+  </url>
+  <url>
+    <loc>https://esmaeelpoor.ir/assets/Docs/papers/Design-and-Implementation-of-a-Multimedia-Discussion-Group.html</loc>
+  </url>
+  <url>
+    <loc>https://esmaeelpoor.ir/assets/Docs/papers/arman-knowledge-page.html</loc>
+  </url>
+  <url>
+    <loc>https://esmaeelpoor.ir/ali-esmaeelpoor-namesakes.html</loc>
+  </url>
+  <url>
+    <loc>https://esmaeelpoor.ir/assets/Docs/AliEsmaeelpoor-2025-En.pdf</loc>
+  </url>
 </urlset>
