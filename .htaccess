@@ -2,3 +2,29 @@ RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
 Header always set Content-Security-Policy "upgrade-insecure-requests;"
+
+# === esmaeelpoor.ir SEO canonical/redirect patch ===
+# Add these rules near the TOP of your existing .htaccess,
+# after RewriteEngine On (or add it if it does not already exist).
+
+RewriteEngine On
+
+# 1) Canonical host: force HTTPS + non-www
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.esmaeelpoor\.ir$ [NC]
+RewriteRule ^ https://esmaeelpoor.ir%{REQUEST_URI} [R=301,L]
+
+# 2) Fix old/incorrect citation URL for the banking paper
+RewriteRule ^papers/iran-bank-industry-porter-swot\.html$ /assets/Docs/papers/iran-bank-industry-porter-swot.html [R=301,L,NE]
+
+# 3) Redirect obsolete 2024 English resume to the current English resume
+RewriteRule ^assets/Docs/AliEsmaeelpoor-2024\.pdf$ /assets/Docs/AliEsmaeelpoor-2025-En.pdf [R=301,L,NE]
+
+# 4) Keep Links.html out of search results while allowing crawlers to follow links.
+# Requires mod_headers (normally available on cPanel/Apache).
+<IfModule mod_headers.c>
+  <Files "Links.html">
+    Header set X-Robots-Tag "noindex, follow"
+  </Files>
+</IfModule>
+# === end patch ===
