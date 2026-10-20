@@ -1399,21 +1399,23 @@ a:focus-visible{
 .testmonial-slider .owl-dots .owl-dot span{margin:0 !important;}
 
 
-/* اصلاح نمایش تصاویر شاخص مقالات */
-.project-image {
-    width: 100%;
-    height: 330px;
-    overflow: hidden;
-    background: #f4f6f9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* اصلاح قطعی نسبت ابعاد تصاویر شاخص مقالات */
+.projects-inner .project-item .project-image {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 2 !important;
+    overflow: hidden !important;
+    display: block !important;
+    background: #fff !important;
 }
 
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    display: block;
+.projects-inner .project-item .project-image img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    aspect-ratio: 3 / 2 !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
 }
