@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="معرفی اسلاید تئوری منحنی لبخند زنجیره ارزش (Smile Curve)؛ بررسی جایگاه فعالیت‌های پیش از تولید و پس از تولید در خلق ارزش، به کوشش علی اسماعیل‌پور.">
+  <meta name="theme-color" content="#101b2c">
+  <title>منحنی لبخند زنجیره ارزش | علی اسماعیل‌پور</title>
+  <style>
+    :root {
+      --navy: #101b2c;
+      --navy-soft: #182840;
+      --gold: #d6b56d;
+      --gold-light: #f0dfb0;
+      --paper: #f7f5ef;
+      --ink: #202b3a;
+      --muted: #647084;
+      --line: #e3dfd4;
+      --white: #ffffff;
+      --radius: 22px;
+      --shadow: 0 18px 55px rgba(16, 27, 44, .10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: Tahoma, Arial, sans-serif; line-height: 1.95; }
+    a { color: inherit; }
+    .wrap { width: min(1100px, calc(100% - 36px)); margin-inline: auto; }
+    .topline { height: 5px; background: linear-gradient(90deg, var(--gold), #f3e7c7, var(--gold)); }
+    header { background: var(--navy); color: var(--white); position: relative; overflow: hidden; isolation: isolate; }
+    header::before, header::after { content: ""; position: absolute; border: 1px solid rgba(214,181,109,.20); border-radius: 50%; z-index: -1; pointer-events: none; }
+    header::before { width: 520px; height: 520px; top: -300px; left: -100px; }
+    header::after { width: 340px; height: 340px; bottom: -245px; right: 8%; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 22px 0; }
+    .brand { font-size: 14px; color: #e9e4d8; text-decoration: none; }
+    .brand strong { color: var(--gold-light); font-size: 16px; }
+    .nav-note { color: #b8c1ce; font-size: 12px; }
+    .hero { padding: 55px 0 76px; display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr); gap: 42px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--gold-light); font-size: 13px; margin-bottom: 15px; }
+    .eyebrow::before { content: ""; width: 27px; height: 1px; background: var(--gold); }
+    h1 { font-size: clamp(30px, 4.1vw, 48px); line-height: 1.55; letter-spacing: -.8px; margin: 0 0 18px; font-weight: 800; }
+    h1 span { color: var(--gold-light); }
+    .subtitle { color: #d2d9e2; font-size: clamp(15px, 1.8vw, 18px); max-width: 720px; margin: 0 0 24px; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 9px 22px; color: #b8c3d1; font-size: 13px; }
+    .hero-meta span { display: inline-flex; align-items: center; gap: 7px; }
+    .hero-meta span::before { content: "•"; color: var(--gold); font-size: 20px; }
+    .hero-art { min-height: 280px; display: grid; place-items: center; }
+    .chart-card { width: 100%; max-width: 390px; background: linear-gradient(145deg, #1c3049, #111d2e); border: 1px solid rgba(214,181,109,.42); border-radius: 22px; padding: 22px 18px 16px; box-shadow: 0 20px 55px rgba(0,0,0,.18); }
+    .chart-title { color: var(--gold-light); font-size: 13px; font-weight: bold; text-align: center; margin-bottom: 7px; }
+    .chart-card svg { display: block; width: 100%; height: auto; overflow: visible; }
+    .chart-caption { display: flex; justify-content: space-between; gap: 8px; color: #c7d1dd; font-size: 10px; margin-top: 2px; }
+    main { padding: 0 0 64px; }
+    .intro-card { margin-top: -27px; background: var(--white); border: 1px solid rgba(227,223,212,.8); border-radius: var(--radius); box-shadow: var(--shadow); padding: 27px clamp(22px, 4vw, 42px); position: relative; }
+    .section-kicker { color: #987a38; font-size: 12px; font-weight: bold; margin-bottom: 4px; }
+    h2 { margin: 0 0 13px; color: var(--navy); font-size: clamp(21px, 2.4vw, 27px); line-height: 1.6; }
+    p { margin: 0 0 13px; }
+    .pullquote { border-right: 3px solid var(--gold); padding: 9px 17px 9px 0; margin: 22px 0 0; color: #39465a; font-size: 16px; font-weight: bold; }
+    .section { padding: 54px 0 0; }
+    .section-head { margin-bottom: 22px; }
+    .section-head p { color: var(--muted); max-width: 750px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .concept { background: var(--white); border: 1px solid var(--line); border-radius: 17px; padding: 22px; min-height: 185px; }
+    .concept .num { color: #9b7b35; font-size: 12px; font-weight: bold; margin-bottom: 9px; }
+    .concept h3 { color: var(--navy); font-size: 17px; margin: 0 0 8px; }
+    .concept p { color: var(--muted); font-size: 13px; margin: 0; }
+    .framework { border-radius: var(--radius); background: var(--navy); color: white; padding: clamp(24px, 4vw, 42px); overflow: hidden; }
+    .framework h2 { color: white; }
+    .framework .section-kicker { color: var(--gold-light); }
+    .framework > p { color: #c8d0db; max-width: 760px; }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 27px; }
+    .step { position: relative; background: #192a40; border: 1px solid rgba(214,181,109,.30); padding: 18px 14px; border-radius: 14px; }
+    .step strong { display: block; color: var(--gold-light); font-size: 14px; margin-bottom: 6px; }
+    .step span { display: block; color: #c4cfdb; font-size: 12px; line-height: 1.8; }
+    .step:not(:last-child)::after { content: "←"; color: var(--gold); position: absolute; top: 50%; left: -12px; transform: translateY(-50%); z-index: 1; background: var(--navy); width: 18px; text-align: center; }
+    .note { background: #f0eadb; border: 1px solid #e5d8b9; padding: 20px 23px; border-radius: 16px; color: #51472f; }
+    .note strong { color: #745a20; }
+    .keywords { display: flex; flex-wrap: wrap; gap: 9px; }
+    .keywords span { border: 1px solid #e0d7c3; background: #fffdf8; border-radius: 999px; padding: 6px 13px; color: #5c6470; font-size: 12px; }
+    .author { display: flex; justify-content: space-between; align-items: center; gap: 24px; background: #eeeae0; border-radius: var(--radius); padding: 27px clamp(22px, 4vw, 38px); margin-top: 52px; }
+    .author h2 { margin-bottom: 3px; font-size: 21px; }
+    .author p { color: var(--muted); margin: 0; font-size: 13px; }
+    .button { display: inline-flex; justify-content: center; align-items: center; text-decoration: none; border-radius: 999px; padding: 11px 20px; font-size: 13px; font-weight: bold; transition: transform .2s, background .2s; white-space: nowrap; }
+    .button:hover { transform: translateY(-2px); }
+    .button.primary { color: var(--navy); background: var(--gold-light); }
+    .button.secondary { color: var(--navy); border: 1px solid #c9c1ae; background: transparent; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
+    footer { border-top: 1px solid var(--line); padding: 23px 0 30px; color: #77808d; font-size: 12px; }
+    footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+    footer a { color: #596578; text-decoration: none; }
+    @media (max-width: 760px) { .hero { grid-template-columns: 1fr; padding: 38px 0 60px; gap: 15px; } .hero-art { min-height: 230px; } .grid { grid-template-columns: 1fr; } .concept { min-height: 0; } .steps { grid-template-columns: 1fr 1fr; } .step:nth-child(2)::after { display: none; } .author { align-items: flex-start; flex-direction: column; } .nav-note { display: none; } }
+    @media (max-width: 430px) { .wrap { width: min(100% - 24px, 1100px); } .steps { grid-template-columns: 1fr; } .step::after { display: none !important; } .hero-meta { flex-direction: column; gap: 2px; } .intro-card { padding: 22px 18px; } }
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <div class="wrap">
+      <nav class="nav" aria-label="ناوبری اصلی">
+        <a class="brand" href="https://esmaeelpoor.ir/"><strong>علی اسماعیل‌پور</strong> <span> / پژوهش و فناوری اطلاعات</span></a>
+        <span class="nav-note">مدیریت زنجیره ارزش · راهبرد کسب‌وکار</span>
+      </nav>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">اسلاید آموزشی و تحلیلی</div>
+          <h1>منحنی لبخند<br><span>زنجیره ارزش (Smile Curve)</span></h1>
+          <p class="subtitle">چرا در بسیاری از زنجیره‌های ارزش، فعالیت‌های پیش از تولید و پس از تولید می‌توانند ارزش افزوده بیشتری از خودِ تولید ایجاد کنند؟</p>
+          <div class="hero-meta"><span>علی اسماعیل‌پور</span><span>مدیریت فناوری اطلاعات</span><span>مفهوم راهبردی زنجیره ارزش</span></div>
+          <div class="actions" aria-label="دریافت اسلاید"><a class="button primary" href="./Smile-Theory-Slide.pdf" target="_blank" rel="noopener">دریافت اسلاید تئوری لبخند ↗</a></div>
+        </div>
+        <div class="hero-art" aria-label="نمودار مفهومی منحنی لبخند زنجیره ارزش">
+          <div class="chart-card">
+            <div class="chart-title">ارزش افزوده در زنجیره ارزش</div>
+            <svg viewBox="0 0 360 235" role="img" aria-label="منحنی U شکل که ارزش بالاتر در تحقیق و توسعه و بازاریابی و خدمات و ارزش پایین‌تر در تولید را نشان می‌دهد">
+              <defs><linearGradient id="curveFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d6b56d" stop-opacity=".28"/><stop offset="1" stop-color="#d6b56d" stop-opacity="0"/></linearGradient></defs>
+              <path d="M35 34 V190 H335" stroke="#8392a6" stroke-width="1.2" fill="none"/>
+              <path d="M42 55 C105 55 110 158 183 160 C250 162 262 55 328 55 L328 190 L42 190 Z" fill="url(#curveFill)"/>
+              <path d="M42 55 C105 55 110 158 183 160 C250 162 262 55 328 55" stroke="#f0dfb0" stroke-width="4" stroke-linecap="round" fill="none"/>
+              <circle cx="42" cy="55" r="5" fill="#d6b56d"/><circle cx="183" cy="160" r="5" fill="#d6b56d"/><circle cx="328" cy="55" r="5" fill="#d6b56d"/>
+              <g fill="#f3f5f8" font-family="Tahoma, Arial, sans-serif" font-size="11" text-anchor="middle"><text x="53" y="35">تحقیق و توسعه</text><text x="183" y="183">تولید</text><text x="300" y="35">بازاریابی و خدمات</text></g>
+              <g stroke="#d6b56d" stroke-width="1" stroke-dasharray="3 4" opacity=".75"><path d="M42 62 V188"/><path d="M183 166 V188"/><path d="M328 62 V188"/></g>
+              <text x="15" y="118" fill="#c7d1dd" font-family="Tahoma, Arial, sans-serif" font-size="9" transform="rotate(-90 15 118)" text-anchor="middle">ارزش افزوده</text>
+            </svg>
+            <div class="chart-caption"><span>فعالیت‌های بالادستی</span><span>فعالیت‌های پایین‌دستی</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="intro-card" id="summary">
+      <div class="section-kicker">درباره اسلاید</div>
+      <h2>ارزش زنجیره فقط در مرحله تولید ساخته نمی‌شود</h2>
+      <p>منحنی لبخند (Smile Curve) مدلی مفهومی برای توضیح چگونگی توزیع ارزش افزوده در مراحل مختلف زنجیره ارزش است. در بسیاری از صنایع، فعالیت‌هایی مانند تحقیق‌وتوسعه، طراحی و توسعه محصول در ابتدای زنجیره و برند‌سازی، بازاریابی، توزیع و خدمات پس از فروش در انتهای زنجیره می‌توانند سهم بیشتری از ارزش را به خود اختصاص دهند؛ در حالی که تولید و مونتاژ، به‌ویژه در زنجیره‌های جهانی، ممکن است با حاشیه ارزش افزوده کمتری همراه باشند.</p>
+      <p>این الگو به‌عنوان یک چارچوب تحلیلی به کسب‌وکارها کمک می‌کند جایگاه خود را در زنجیره ارزش بررسی کنند و درباره سرمایه‌گذاری در قابلیت‌هایی مانند نوآوری، طراحی، مالکیت فکری، برند و ارتباط با مشتری تصمیم آگاهانه‌تری بگیرند. شکل منحنی و میزان ارزش هر مرحله در همه صنایع یکسان نیست و باید با توجه به شواهد همان صنعت تحلیل شود.</p>
+      <div class="pullquote">پرسش راهبردی این است: کسب‌وکار در کدام بخش از زنجیره ارزش، قابلیت متمایز و قدرت خلق ارزش پایدار دارد؟</div>
+    </section>
+    <section class="section">
+      <div class="section-head"><div class="section-kicker">اجزای اصلی مدل</div><h2>سه بخش کلیدی منحنی لبخند</h2><p>این مدل توجه را از تمرکز صرف بر تولید، به مجموعه فعالیت‌های پیش و پس از تولید گسترش می‌دهد.</p></div>
+      <div class="grid">
+        <article class="concept"><div class="num">۰۱ / پیش از تولید</div><h3>تحقیق، توسعه و طراحی</h3><p>شناخت نیاز مشتری، پژوهش، نوآوری، طراحی محصول و توسعه فناوری؛ فعالیت‌هایی که می‌توانند مزیت رقابتی و مالکیت فکری ایجاد کنند.</p></article>
+        <article class="concept"><div class="num">۰۲ / تولید</div><h3>ساخت و مونتاژ</h3><p>تبدیل طرح به محصول یا خدمت قابل ارائه. اهمیت این بخش پابرجاست، اما در برخی صنایع، رقابت‌پذیری و مقیاس‌پذیری می‌تواند حاشیه ارزش آن را محدود کند.</p></article>
+        <article class="concept"><div class="num">۰۳ / پس از تولید</div><h3>برند، فروش و خدمات</h3><p>بازاریابی، توزیع، تجربه مشتری، خدمات پس از فروش و پشتیبانی؛ فعالیت‌هایی که ارتباط با بازار و وفاداری مشتری را تقویت می‌کنند.</p></article>
+      </div>
+    </section>
+    <section class="section">
+      <div class="framework"><div class="section-kicker">کاربرد مدیریتی</div><h2>چطور از منحنی لبخند استفاده کنیم؟</h2><p>این چارچوب به‌تنهایی نسخه قطعی برای انتقال منابع از تولید نیست؛ بلکه نقطه شروعی برای تحلیل جایگاه کسب‌وکار، توانمندی‌های رقابتی و توزیع ارزش در صنعت موردنظر است.</p>
+        <div class="steps"><div class="step"><strong>۱. ترسیم زنجیره</strong><span>فعالیت‌های اصلی و پشتیبان کسب‌وکار را از ایده تا خدمات مشخص کنید.</span></div><div class="step"><strong>۲. سنجش ارزش</strong><span>حاشیه سود، هزینه، تمایز و قدرت چانه‌زنی هر مرحله را بررسی کنید.</span></div><div class="step"><strong>۳. یافتن قابلیت متمایز</strong><span>توانمندی‌هایی را شناسایی کنید که رقبا به‌سادگی تقلید نمی‌کنند.</span></div><div class="step"><strong>۴. انتخاب اقدام</strong><span>سرمایه‌گذاری، همکاری یا بازطراحی فعالیت‌ها را بر اساس شواهد انجام دهید.</span></div></div>
+      </div>
+    </section>
+    <section class="section"><div class="section-head"><div class="section-kicker">نکته تحلیلی</div><h2>منحنی لبخند یک قانون همگانی نیست</h2></div><div class="note"><strong>در تفسیر مدل دقت کنیم:</strong> شکل منحنی به صنعت، ساختار بازار، فناوری، مالکیت برند و دارایی‌های فکری، قدرت تأمین‌کنندگان و موقعیت شرکت در زنجیره جهانی ارزش وابسته است. در بعضی صنایع، تولید پیشرفته، کیفیت ساخت یا توان عملیاتی خود می‌تواند منبع اصلی ارزش و مزیت رقابتی باشد؛ بنابراین تحلیل باید با داده‌های واقعی تکمیل شود.</div></section>
+    <section class="section"><div class="section-head"><div class="section-kicker">واژگان کلیدی</div><h2>مفاهیم مرتبط</h2></div><div class="keywords"><span>منحنی لبخند</span><span>زنجیره ارزش</span><span>ارزش افزوده</span><span>مزیت رقابتی</span><span>زنجیره ارزش جهانی</span><span>نوآوری</span><span>برند و خدمات</span></div></section>
+    <section class="author"><div><h2>علی اسماعیل‌پور</h2><p>پژوهش و فناوری اطلاعات · مدیریت و کسب‌وکار هوشمند</p></div><a class="button secondary" href="https://esmaeelpoor.ir/">مشاهده وب‌سایت ↗</a></section>
+  </main>
+  <footer><div class="wrap"><span>© علی اسماعیل‌پور</span><a href="https://esmaeelpoor.ir/">esmaeelpoor.ir</a></div></footer>
+</body>
+</html>
