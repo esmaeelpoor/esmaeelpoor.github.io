@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="معرفی مقاله دوقلوی دیجیتال انسانی در مدیریت دانش سازمانی؛ توسعه چارچوب لایه دانش انسانی برای تداوم دسترسی به دانش خبرگان، نوشته علی اسماعیل‌پور.">
+  <meta name="theme-color" content="#101b2c">
+  <title>دوقلوی دیجیتال انسانی در مدیریت دانش سازمانی | علی اسماعیل‌پور</title>
+  <style>
+    :root {
+      --navy: #101b2c;
+      --navy-soft: #182840;
+      --gold: #d6b56d;
+      --gold-light: #f0dfb0;
+      --paper: #f7f5ef;
+      --ink: #202b3a;
+      --muted: #647084;
+      --line: #e3dfd4;
+      --white: #ffffff;
+      --radius: 22px;
+      --shadow: 0 18px 55px rgba(16, 27, 44, .10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Tahoma, Arial, sans-serif;
+      line-height: 1.95;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1100px, calc(100% - 36px)); margin-inline: auto; }
+    .topline { height: 5px; background: linear-gradient(90deg, var(--gold), #f3e7c7, var(--gold)); }
+    header {
+      background: var(--navy);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    header::before, header::after {
+      content: ""; position: absolute; border: 1px solid rgba(214,181,109,.20);
+      border-radius: 50%; z-index: -1; pointer-events: none;
+    }
+    header::before { width: 520px; height: 520px; top: -300px; left: -100px; }
+    header::after { width: 340px; height: 340px; bottom: -245px; right: 8%; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 22px 0; }
+    .brand { font-size: 14px; color: #e9e4d8; text-decoration: none; letter-spacing: .1px; }
+    .brand strong { color: var(--gold-light); font-size: 16px; }
+    .nav-note { color: #b8c1ce; font-size: 12px; }
+    .hero { padding: 55px 0 76px; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(240px, .6fr); gap: 50px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--gold-light); font-size: 13px; margin-bottom: 15px; }
+    .eyebrow::before { content: ""; width: 27px; height: 1px; background: var(--gold); }
+    h1 { font-size: clamp(30px, 4.1vw, 48px); line-height: 1.55; letter-spacing: -.8px; margin: 0 0 18px; font-weight: 800; }
+    h1 span { color: var(--gold-light); }
+    .subtitle { color: #d2d9e2; font-size: clamp(15px, 1.8vw, 18px); max-width: 720px; margin: 0 0 24px; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 9px 22px; color: #b8c3d1; font-size: 13px; }
+    .hero-meta span { display: inline-flex; align-items: center; gap: 7px; }
+    .hero-meta span::before { content: "•"; color: var(--gold); font-size: 20px; }
+    .hero-art { min-height: 260px; display: grid; place-items: center; position: relative; }
+    .orbit { width: min(260px, 100%); aspect-ratio: 1; border: 1px solid rgba(214,181,109,.42); border-radius: 50%; display: grid; place-items: center; position: relative; }
+    .orbit::before { content: ""; position: absolute; inset: 22px; border: 1px dashed rgba(214,181,109,.40); border-radius: 50%; }
+    .orbit::after { content: ""; position: absolute; width: 12px; height: 12px; border-radius: 50%; background: var(--gold); top: 25px; right: 55px; box-shadow: 0 0 24px rgba(214,181,109,.65); }
+    .core { width: 128px; height: 128px; border-radius: 34px; border: 1px solid rgba(240,223,176,.7); background: linear-gradient(145deg, #233752, #111c2e); display: flex; flex-direction: column; justify-content: center; align-items: center; color: var(--gold-light); box-shadow: 0 20px 45px rgba(0,0,0,.2); transform: rotate(-4deg); }
+    .core svg { width: 45px; height: 45px; margin-bottom: 5px; }
+    .core b { font-size: 13px; transform: rotate(4deg); }
+    .orbit-label { position: absolute; background: #1a2a40; border: 1px solid rgba(214,181,109,.38); border-radius: 10px; color: #e7d6a9; font-size: 11px; padding: 5px 10px; }
+    .orbit-label.one { top: 22px; left: -18px; }
+    .orbit-label.two { bottom: 23px; right: -20px; }
+    main { padding: 0 0 64px; }
+    .intro-card { margin-top: -27px; background: var(--white); border: 1px solid rgba(227,223,212,.8); border-radius: var(--radius); box-shadow: var(--shadow); padding: 27px clamp(22px, 4vw, 42px); position: relative; }
+    .section-kicker { color: #987a38; font-size: 12px; font-weight: bold; letter-spacing: .2px; margin-bottom: 4px; }
+    h2 { margin: 0 0 13px; color: var(--navy); font-size: clamp(21px, 2.4vw, 27px); line-height: 1.6; }
+    p { margin: 0 0 13px; }
+    .pullquote { border-right: 3px solid var(--gold); padding: 9px 17px 9px 0; margin: 22px 0 0; color: #39465a; font-size: 16px; font-weight: bold; }
+    .section { padding: 54px 0 0; }
+    .section-head { margin-bottom: 22px; }
+    .section-head p { color: var(--muted); max-width: 750px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .concept { background: var(--white); border: 1px solid var(--line); border-radius: 17px; padding: 22px; min-height: 185px; }
+    .concept .num { color: #9b7b35; font-size: 12px; font-weight: bold; margin-bottom: 9px; }
+    .concept h3 { color: var(--navy); font-size: 17px; margin: 0 0 8px; }
+    .concept p { color: var(--muted); font-size: 13px; margin: 0; }
+    .framework { border-radius: var(--radius); background: var(--navy); color: white; padding: clamp(24px, 4vw, 42px); overflow: hidden; position: relative; }
+    .framework h2 { color: white; }
+    .framework .section-kicker { color: var(--gold-light); }
+    .framework > p { color: #c8d0db; max-width: 760px; }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 27px; }
+    .step { position: relative; background: #192a40; border: 1px solid rgba(214,181,109,.30); padding: 18px 14px; border-radius: 14px; }
+    .step strong { display: block; color: var(--gold-light); font-size: 14px; margin-bottom: 6px; }
+    .step span { display: block; color: #c4cfdb; font-size: 12px; line-height: 1.8; }
+    .step:not(:last-child)::after { content: "←"; color: var(--gold); position: absolute; top: 50%; left: -12px; transform: translateY(-50%); z-index: 1; background: var(--navy); width: 18px; text-align: center; }
+    .note { background: #f0eadb; border: 1px solid #e5d8b9; padding: 20px 23px; border-radius: 16px; color: #51472f; }
+    .note strong { color: #745a20; }
+    .keywords { display: flex; flex-wrap: wrap; gap: 9px; }
+    .keywords span { border: 1px solid #e0d7c3; background: #fffdf8; border-radius: 999px; padding: 6px 13px; color: #5c6470; font-size: 12px; }
+    .author { display: flex; justify-content: space-between; align-items: center; gap: 24px; background: #eeeae0; border-radius: var(--radius); padding: 27px clamp(22px, 4vw, 38px); margin-top: 52px; }
+    .author h2 { margin-bottom: 3px; font-size: 21px; }
+    .author p { color: var(--muted); margin: 0; font-size: 13px; }
+    .button { display: inline-flex; justify-content: center; align-items: center; text-decoration: none; border-radius: 999px; padding: 11px 20px; font-size: 13px; font-weight: bold; transition: transform .2s, background .2s; white-space: nowrap; }
+    .button:hover { transform: translateY(-2px); }
+    .button.primary { color: var(--navy); background: var(--gold-light); }
+    .button.secondary { color: var(--navy); border: 1px solid #c9c1ae; background: transparent; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
+    footer { border-top: 1px solid var(--line); padding: 23px 0 30px; color: #77808d; font-size: 12px; }
+    footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+    footer a { color: #596578; text-decoration: none; }
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; padding: 38px 0 60px; gap: 15px; }
+      .hero-art { min-height: 230px; }
+      .orbit { width: 215px; }
+      .core { width: 108px; height: 108px; }
+      .grid { grid-template-columns: 1fr; }
+      .concept { min-height: 0; }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .step:nth-child(2)::after { display: none; }
+      .author { align-items: flex-start; flex-direction: column; }
+      .nav-note { display: none; }
+    }
+    @media (max-width: 430px) {
+      .wrap { width: min(100% - 24px, 1100px); }
+      .steps { grid-template-columns: 1fr; }
+      .step::after { display: none !important; }
+      .hero-meta { flex-direction: column; gap: 2px; }
+      .intro-card { padding: 22px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <div class="wrap">
+      <nav class="nav" aria-label="ناوبری اصلی">
+        <a class="brand" href="https://esmaeelpoor.ir/"><strong>علی اسماعیل‌پور</strong> <span> / پژوهش و فناوری اطلاعات</span></a>
+        <span class="nav-note">مقاله پژوهشی · مدیریت دانش · فناوری‌های هوشمند</span>
+      </nav>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">پژوهش در مدیریت دانش سازمانی</div>
+          <h1>دوقلوی دیجیتال انسانی<br><span>در مدیریت دانش سازمانی</span></h1>
+          <p class="subtitle">توسعه چارچوب «لایه دانش انسانی» برای تداوم دسترسی به دانش خبرگان</p>
+          <div class="hero-meta">
+            <span>علی اسماعیل‌پور</span>
+            <span>مدیریت فناوری اطلاعات</span>
+            <span>پژوهش مفهومی و توسعه چارچوب</span>
+          </div>
+          <div class="actions" aria-label="دریافت محتوای مقاله">
+            <a class="button primary" href="./human-digital-twin-knowledge-paper.pdf" target="_blank" rel="noopener">متن کامل مقاله ↗</a>
+            <a class="button secondary" href="./human-digital-twin-knowledge-slides.pdf" target="_blank" rel="noopener">اسلاید معرفی مقاله ↗</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="نماد مفهومی ارتباط انسان، دانش و دوقلوی دیجیتال">
+          <div class="orbit">
+            <span class="orbit-label one">دانش خبرگان</span>
+            <span class="orbit-label two">تداوم سازمانی</span>
+            <div class="core">
+              <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                <circle cx="32" cy="18" r="9" stroke="#f0dfb0" stroke-width="2.4"/>
+                <path d="M14 49c1-10 8-16 18-16s17 6 18 16" stroke="#f0dfb0" stroke-width="2.4" stroke-linecap="round"/>
+                <path d="M7 26h9M48 26h9M32 3v5M32 53v7" stroke="#d6b56d" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="7" cy="26" r="2" fill="#d6b56d"/><circle cx="57" cy="26" r="2" fill="#d6b56d"/>
+              </svg>
+              <b>انسان + دانش</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="intro-card" id="summary">
+      <div class="section-kicker">درباره مقاله</div>
+      <h2>وقتی خبره از سازمان می‌رود، دانش او چه می‌شود؟</h2>
+      <p>بخش مهمی از دانش سازمانی در اسناد و پایگاه‌های داده ثبت نشده است؛ این دانش در تجربه، قضاوت حرفه‌ای، مهارت‌های ضمنی و شیوه حل مسئله کارکنان خبره شکل می‌گیرد. بازنشستگی، جابه‌جایی یا خروج این افراد می‌تواند دسترسی سازمان به چنین دانشی را محدود کند.</p>
+      <p>این مقاله، دوقلوی دیجیتال انسانی را از منظر مدیریت دانش بررسی می‌کند و چارچوبی مفهومی با عنوان «لایه دانش انسانی» پیشنهاد می‌دهد؛ لایه‌ای برای سازمان‌دهی، پیوند دادن و حفظ دسترسی به دانش مرتبط با خبرگان، با تأکید بر این‌که بازنمایی دیجیتال باید پشتیبان انسان و فرایندهای سازمانی باشد، نه جایگزین کامل فرد یا تجربه زیسته او.</p>
+      <div class="pullquote">هدف، صرفاً دیجیتالی‌کردن اطلاعات کارکنان نیست؛ هدف، حفظ امکان دسترسی مسئولانه به دانش ارزشمند انسانی است.</div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div class="section-kicker">مسئله و ایده محوری</div>
+        <h2>سه مسئله‌ای که چارچوب به آن‌ها می‌پردازد</h2>
+        <p>تمرکز مقاله بر پیوند میان دانش ضمنی، بازنمایی دیجیتال و تداوم قابلیت‌های دانشی سازمان است.</p>
+      </div>
+      <div class="grid">
+        <article class="concept">
+          <div class="num">۰۱ / چالش دانشی</div>
+          <h3>دانش ضمنی و تجربه خبرگان</h3>
+          <p>بخشی از دانش حرفه‌ای در تصمیم‌ها، تشخیص موقعیت‌ها و تجربه عملی نهفته است و به‌سادگی به دستورالعمل یا سند تبدیل نمی‌شود.</p>
+        </article>
+        <article class="concept">
+          <div class="num">۰۲ / پاسخ فناورانه</div>
+          <h3>دوقلوی دیجیتال انسانی</h3>
+          <p>بازنمایی دیجیتالِ به‌روزشونده از جنبه‌های مرتبط با فرد، کار و دانش او که می‌تواند پیوند میان منابع دانشی را تقویت کند.</p>
+        </article>
+        <article class="concept">
+          <div class="num">۰۳ / ارزش سازمانی</div>
+          <h3>تداوم دسترسی به دانش</h3>
+          <p>کمک به بازیابی تجربه، انتقال دانش و کاهش وابستگی سازمان به حافظه فردی، همراه با توجه به حریم خصوصی و مالکیت دانش.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="framework">
+        <div class="section-kicker">نمای مفهومی چارچوب</div>
+        <h2>از تجربه انسانی تا دسترسی سازمانی به دانش</h2>
+        <p>«لایه دانش انسانی» در این طرح، لایه‌ای واسط میان منابع دانشی مرتبط با خبره و نیازهای کاری سازمان است. مراحل زیر نمایش ساده‌ای از منطق پیشنهادی چارچوب‌اند، نه ادعای وجود یک سامانه پیاده‌سازی‌شده.</p>
+        <div class="steps">
+          <div class="step"><strong>۱. دانش و تجربه</strong><span>تجربه حرفه‌ای، تصمیم‌ها، مهارت‌ها و منابع دانشی مرتبط با خبره</span></div>
+          <div class="step"><strong>۲. گردآوری و پیوند</strong><span>مستندسازی هدفمند و ارتباط‌دادن دانش به زمینه و موقعیت کاری</span></div>
+          <div class="step"><strong>۳. لایه دانش انسانی</strong><span>سازمان‌دهی، به‌روزرسانی، ردیابی منشأ و مدیریت دسترسی</span></div>
+          <div class="step"><strong>۴. استفاده سازمانی</strong><span>بازیابی دانش، یادگیری، انتقال تجربه و پشتیبانی از تصمیم‌گیری</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div class="section-kicker">ملاحظات کلیدی</div>
+        <h2>فناوری به‌تنهایی کافی نیست</h2>
+      </div>
+      <div class="note">
+        <strong>ملاحظات انسانی و حکمرانی داده:</strong>
+        طراحی چنین چارچوبی نیازمند تعیین هدف و حدود بازنمایی دیجیتال، رضایت و مشارکت کارکنان، کنترل دسترسی، حفاظت از اطلاعات شخصی، شفافیت در منشأ داده‌ها و سازوکار اصلاح یا حذف اطلاعات نادرست است. دوقلوی دیجیتال انسانی نباید به‌عنوان نسخه‌ای کامل از هویت، آگاهی یا توانایی‌های فرد معرفی شود.
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div class="section-kicker">واژگان پژوهش</div>
+        <h2>مفاهیم کلیدی</h2>
+      </div>
+      <div class="keywords" aria-label="کلیدواژه‌های مقاله">
+        <span>دوقلوی دیجیتال انسانی</span>
+        <span>مدیریت دانش</span>
+        <span>دانش ضمنی</span>
+        <span>دانش خبرگان</span>
+        <span>حافظه سازمانی</span>
+        <span>انتقال دانش</span>
+        <span>تداوم دانش</span>
+        <span>حکمرانی داده</span>
+        <span>فناوری اطلاعات</span>
+      </div>
+    </section>
+
+    <section class="author">
+      <div>
+        <div class="section-kicker">درباره نویسنده</div>
+        <h2>علی اسماعیل‌پور</h2>
+        <p>پژوهشگر حوزه مدیریت فناوری اطلاعات، مدیریت دانش و کاربردهای فناوری‌های دیجیتال در سازمان.</p>
+      </div>
+      <a class="button primary" href="https://esmaeelpoor.ir/">مشاهده آثار و پروژه‌ها ↗</a>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <span>© ۱۴۰۵ علی اسماعیل‌پور</span>
+      <a href="https://esmaeelpoor.ir/">esmaeelpoor.ir</a>
+    </div>
+  </footer>
+</body>
+</html>
