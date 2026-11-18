@@ -198,5 +198,25 @@ window.QURAN_VOICES = [
     "place": "مسجد النبی امیرآباد",
     "duration": "",
     "file": "Voices/14041206_Anaam-1to52-AliEsmaeelpoor-Tartil-Tehran-MasjedAlnnabi.mp3"
+  },
+  {
+    "id": "voice-21",
+    "city": "اصفهان-شهرضا",
+    "type": "صوت",
+    "surah": "الرحمن",
+    "ayah": "1 تا 13",
+    "place": "حسینیه امام رضا ع",
+    "duration": "",
+    "file": "Voices/14030428_Alrahmaan-1to13-AliEsmaeelpoor-Sowt-Isfahan_Shahreza-Hoseiniye_Emamreza_a.mp3"
+  },
+  {
+    "id": "voice-22",
+    "city": "تهران",
+    "type": "ترتیل",
+    "surah": "غافر",
+    "ayah": "1 تا 25",
+    "place": "حسینیه کربلاییها",
+    "duration": "",
+    "file": "Voices/14040104_Ghaafer-1to25-AliEsmaeelpoor-Tartil-Tehran-Hoseiniye_Karbalaayeeha.mp3"
   }
 ];
